@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(python *)",
+      "Bash(pip install *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell('{\"model\":{\"display_name\":\"Opus 4.7\"},\"context_window\":{\"used_percentage\":23},\"rate_limits\":{\"five_hour\":{\"used_percentage\":42,\"resets_at\":1747000000},\"seven_day\":{\"used_percentage\":18}},\"cost\":{\"total_cost_usd\":0.47}}' | node \"$env:USERPROFILE\\\\.claude\\\\statusline.js\")",
+      "PowerShell(claude *)",
+      "PowerShell(cmd /c \"node \"\"%USERPROFILE%\\\\.claude\\\\statusline.js\"\"\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)"
+    ]
+  }
+}

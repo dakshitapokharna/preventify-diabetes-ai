@@ -36,7 +36,7 @@ No code has been written. The three reference documents are working drafts desig
 |------|--------|
 | Clinical scope boundary (DSMES only, no Rx/diagnosis) | Finalized |
 | Risk escalation model (5 tiers, red-flag library) | Finalized |
-| Knowledge corpus sources (Tier 1–3 identified, ingestion strategy defined) | Finalized |
+| Knowledge corpus sources (Tier 1–3 identified, ingestion strategy defined) | Finalized — 10 PDFs downloaded to `corpus/`; 3 Tier 1 + all Tier 3 still need manual/licensed acquisition |
 | RAG chunking strategy and retrieval logic | Finalized |
 | Conversational architecture (3 literacy registers, MI scaffolds) | Finalized |
 | Kerala nutrition knowledge layer (food-by-food, festivals, fasting, monsoon) | Detailed — 15 clinical placeholders remain |
@@ -108,27 +108,42 @@ Patient (Malayalam voice/text)
 
 ### Knowledge Corpus (3 Tiers)
 
-**Tier 1 — Core clinical (patient-facing RAG):**
-- ADA Standards of Care in Diabetes 2026 (re-ingest annually)
-- RSSDI-ESI Clinical Practice Recommendations for T2DM 2022 (primary India authority)
-- ICMR Guidelines for Management of T2DM 2018
-- ICMR Standard Treatment Workflow for T2DM 2024
-- ADA/ADCES 2022 National Standards for DSMES
-- KDIGO 2022 Guideline for Diabetes Management in CKD
-- KDIGO 2024 CKD Guideline
-- IDF Diabetes Atlas 11th Edition 2025 (epidemiology only — tag to never surface for treatment queries)
+All corpus files live in `corpus/`. See `corpus/README.md` for full download status, source URLs, and update cadence.
 
-**Tier 2 — India regulatory (`compliance` namespace only):**
-- Telemedicine Practice Guidelines India 2020
-- Digital Personal Data Protection Act 2023 + Rules 2025
-- MoHFW National Guidelines for GDM/DIPSI 2018
+**Tier 1 — Core clinical (patient-facing RAG) — `corpus/tier1_clinical/`:**
 
-**Tier 3 — Supplementary:**
-- South Asian nutrition consensus (Anoop Misra et al.)
-- WHO HEARTS Technical Package
-- ESC 2023 CV disease in diabetes guidelines
-- Kerala State NCD Cell / Aardram protocols
-- IDF-DAR Practical Guidelines for Diabetes and Ramadan
+| Folder | Document | File Status |
+|--------|----------|-------------|
+| `ADA_2026/` | ADA Standards of Care in Diabetes 2026 | **Manual download needed** — 17 open-access chapters at diabetesjournals.org/care/issue/49/Supplement_1; re-ingest annually each January |
+| `RSSDI_2022/` | RSSDI Clinical Practice Recommendations for T2DM 2022 | Downloaded |
+| `RSSDI_2017/` | RSSDI Clinical Practice Recommendations for T2DM 2017 | Downloaded (supplementary depth) |
+| `ICMR_2018/` | ICMR Guidelines for Management of T2DM 2018 | Downloaded |
+| `ICMR_STW_2024/` | ICMR Standard Treatment Workflow for T2DM 2024 | Downloaded |
+| `ADA_ADCES_DSMES_2022/` | ADA/ADCES 2022 National Standards for DSMES | **Manual download needed** — open access at diabetesjournals.org/care/article/45/2/484 |
+| `KDIGO_2022_DM_CKD/` | KDIGO 2022 Guideline for Diabetes Management in CKD | Downloaded |
+| `KDIGO_2024_CKD/` | KDIGO 2024 CKD Guideline | Downloaded |
+| `IDF_Atlas_2025/` | IDF Diabetes Atlas 11th Edition 2025 (epidemiology only — never surface for treatment queries) | **Manual download needed** — requires form registration at diabetesatlas.org/resources/idf-diabetes-atlas-2025/ |
+
+**Tier 2 — India regulatory (`compliance` namespace only) — `corpus/tier2_regulatory/`:**
+
+| Folder | Document | File Status |
+|--------|----------|-------------|
+| `Telemedicine_2020/` | Telemedicine Practice Guidelines India 2020 | Downloaded |
+| `DPDP_2023/` | Digital Personal Data Protection Act 2023 | Downloaded |
+| `DPDP_Rules_2025/` | Digital Personal Data Protection Rules 2025 | Downloaded |
+| `DIPSI_GDM_2018/` | MoHFW National Guidelines for GDM/DIPSI 2018 | Downloaded |
+
+**Tier 3 — Supplementary — `corpus/tier3_supplementary/`:**
+
+| Folder | Document | File Status |
+|--------|----------|-------------|
+| `Anoop_Misra_South_Asian_Nutrition/` | South Asian nutrition consensus (Anoop Misra et al.) | Manual — PubMed search required |
+| `WHO_HEARTS/` | WHO HEARTS Technical Package | Manual download — who.int/teams/noncommunicable-diseases/hearts |
+| `ESC_2023_CV_DM/` | ESC 2023 CV disease in diabetes guidelines | Paywalled — requires institutional access |
+| `Kerala_NCD_Aardram/` | Kerala State NCD Cell / Aardram protocols | Institutional request — not publicly hosted |
+| `IDF_DAR/` | IDF-DAR Practical Guidelines for Diabetes and Ramadan | Manual download — idf.org/our-activities/care-prevention/diabetes-and-ramadan.html |
+| `ICMR_NIN/` | ICMR-NIN Food Composition Tables | Manual — nin.res.in; used for B2 nutrition placeholder validation |
+| `ADCES_Curriculum/` | ADCES Diabetes Education Curriculum | Requires license — contact ADCES |
 
 ### Risk Escalation Tiers
 

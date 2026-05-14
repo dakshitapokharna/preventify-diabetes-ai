@@ -39,11 +39,9 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-PDF_PATH = Path(
-    "corpus/tier1_clinical/Anoop_Misra_South_Asian_Nutrition/"
-    "Anoop_Misra_Consensus_Dietary_Guidelines_Asian_Indians_2011.pdf"
-)
-OUT_DIR = Path("parsed")
+ROOT = Path(__file__).parent.parent.parent
+PDF_PATH = ROOT / "corpus/tier1_clinical/Anoop_Misra_South_Asian_Nutrition/Anoop_Misra_Consensus_Dietary_Guidelines_Asian_Indians_2011.pdf"
+OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "Anoop_Misra_docling.md"
 
 SOURCE_KEY = "Anoop_Misra_South_Asian_Nutrition"

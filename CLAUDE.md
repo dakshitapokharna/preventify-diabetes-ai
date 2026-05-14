@@ -120,21 +120,21 @@ Three sources use Docling-based extractors — for two-column layouts, complex t
 
 | Extractor script | Backend | Source PDF | Output |
 |-----------------|---------|-----------|--------|
-| `extract_ada_docling.py` | Docling | All 15 `ADA_2026_S*.pdf` in `corpus/tier1_clinical/ADA_2026/` | `parsed/ADA_2026_docling.md` |
-| `extract_anoop_misra_docling.py` | Docling | `corpus/tier1_clinical/Anoop_Misra_South_Asian_Nutrition/Anoop_Misra_Consensus_Dietary_Guidelines_Asian_Indians_2011.pdf` | `parsed/Anoop_Misra_docling.md` |
-| `extract_icmr_stw_docling.py` | Docling | `corpus/tier1_clinical/ICMR_STW_2024/ICMR_STW_Diabetes_T2DM_2024.pdf` | `parsed/ICMR_STW_2024_docling.md` |
-| `extract_icmr_nin_docling.py` | pdfplumber | `corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf` | `parsed/ICMR_NIN_docling.md` |
-| `extract_rssdi_docling.py` | Docling | `corpus/tier1_clinical/RSSDI_2022/RSSDI_Clinical_Practice_Recommendations_T2DM_2022.pdf` | `parsed/RSSDI_2022_docling.md` |
+| `ingestion/extractors/ada.py` | Docling | All 15 `ADA_2026_S*.pdf` in `corpus/tier1_clinical/ADA_2026/` | `parsed/ADA_2026_docling.md` |
+| `ingestion/extractors/anoop_misra.py` | Docling | `corpus/tier1_clinical/Anoop_Misra_South_Asian_Nutrition/Anoop_Misra_Consensus_Dietary_Guidelines_Asian_Indians_2011.pdf` | `parsed/Anoop_Misra_docling.md` |
+| `ingestion/extractors/icmr_stw.py` | Docling | `corpus/tier1_clinical/ICMR_STW_2024/ICMR_STW_Diabetes_T2DM_2024.pdf` | `parsed/ICMR_STW_2024_docling.md` |
+| `ingestion/extractors/icmr_nin.py` | pdfplumber | `corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf` | `parsed/ICMR_NIN_docling.md` |
+| `ingestion/extractors/rssdi.py` | Docling | `corpus/tier1_clinical/RSSDI_2022/RSSDI_Clinical_Practice_Recommendations_T2DM_2022.pdf` | `parsed/RSSDI_2022_docling.md` |
 
 **Why ICMR-NIN uses pdfplumber:** The IFCT PDF is 585 pages of fixed-column composition tables. Docling's VLM renderer crashes with `std::bad_alloc` on this PDF (too many dense-table pages for CPU RAM). The existing `ICMRNINParser` in `ingestion/parsers/food_table.py` was built specifically for IFCT's layout (fixed x-position column detection) and produces clean structured output. `extract_icmr_nin_docling.py` is a thin wrapper that runs it and emits grouped markdown tables with a RAG header.
 
 **To re-run any extractor:**
 ```
-python extract_ada_docling.py
-python extract_anoop_misra_docling.py
-python extract_icmr_stw_docling.py
-python extract_icmr_nin_docling.py
-python extract_rssdi_docling.py
+python ingestion/extractors/ada.py
+python ingestion/extractors/anoop_misra.py
+python ingestion/extractors/icmr_stw.py
+python ingestion/extractors/icmr_nin.py
+python ingestion/extractors/rssdi.py
 ```
 
 **What every Docling extractor does (the shared pattern):**

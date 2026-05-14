@@ -24,8 +24,9 @@ from pathlib import Path
 # Windows console safety
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-ADA_DIR = Path("corpus/tier1_clinical/ADA_2026")
-OUT_DIR = Path("parsed")
+ROOT = Path(__file__).parent.parent.parent
+ADA_DIR = ROOT / "corpus/tier1_clinical/ADA_2026"
+OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "ADA_2026_docling.md"
 
 CITATION = "Diabetes Care 2026;49(Suppl. 1)"

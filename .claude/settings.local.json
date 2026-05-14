@@ -68,7 +68,11 @@
       "Bash(touch ingestion/__init__.py ingestion/parsers/__init__.py ingestion/chunkers/__init__.py rag/__init__.py engine/__init__.py api/__init__.py api/routes/__init__.py tests/__init__.py tests/ingestion/__init__.py tests/rag/__init__.py tests/engine/__init__.py)",
       "Bash(touch data/extracted/.gitkeep data/chunks/.gitkeep data/qdrant_storage/.gitkeep data/postgres/.gitkeep)",
       "Bash(Remove-Item *)",
-      "Bash(pip show *)"
+      "Bash(pip show *)",
+      "Bash(mkdir -p D:/dakshita/exlaty/ingestion/extractors)",
+      "Bash(git mv *)",
+      "Bash(git rm *)",
+      "Bash(git push *)"
     ]
   }
 }

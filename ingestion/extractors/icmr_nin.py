@@ -27,8 +27,9 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-PDF_PATH = Path("corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf")
-OUT_DIR = Path("parsed")
+ROOT = Path(__file__).parent.parent.parent
+PDF_PATH = ROOT / "corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf"
+OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "ICMR_NIN_docling.md"
 
 SOURCE_KEY = "ICMR_NIN"
@@ -132,7 +133,7 @@ def main() -> None:
         sys.exit(1)
 
     # Import parser relative to project root
-    sys.path.insert(0, str(Path(__file__).parent))
+    sys.path.insert(0, str(ROOT))
     from ingestion.parsers.food_table import ICMRNINParser
 
     print("ICMR-NIN Food Composition Tables — pdfplumber extractor")

@@ -34,8 +34,9 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-PDF_PATH = Path("corpus/tier1_clinical/RSSDI_2022/RSSDI_Clinical_Practice_Recommendations_T2DM_2022.pdf")
-OUT_DIR = Path("parsed")
+ROOT = Path(__file__).parent.parent.parent
+PDF_PATH = ROOT / "corpus/tier1_clinical/RSSDI_2022/RSSDI_Clinical_Practice_Recommendations_T2DM_2022.pdf"
+OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "RSSDI_2022_docling.md"
 
 SOURCE_KEY = "RSSDI_2022"
@@ -236,7 +237,7 @@ def main() -> None:
         print(f"[ERROR] PDF not found: {PDF_PATH.resolve()}")
         sys.exit(1)
 
-    sys.path.insert(0, str(Path(__file__).parent))
+    sys.path.insert(0, str(ROOT))
     from ingestion.parsers.recommendation import RSSDirectParser
 
     print("RSSDI 2022 — pdfplumber extractor")

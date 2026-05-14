@@ -35,7 +35,7 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-ROOT = Path(__file__).parent.parent.parent
+ROOT = Path(__file__).parent.parent.parent.parent
 PDF_PATH = ROOT / "corpus/tier1_clinical/ICMR_STW_2024/ICMR_STW_Diabetes_T2DM_2024.pdf"
 OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "ICMR_STW_2024_docling.md"

@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-ROOT = Path(__file__).parent.parent.parent
+ROOT = Path(__file__).parent.parent.parent.parent
 PDF_PATH = ROOT / "corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf"
 OUT_DIR = ROOT / "parsed"
 OUT_FILE = OUT_DIR / "ICMR_NIN_docling.md"

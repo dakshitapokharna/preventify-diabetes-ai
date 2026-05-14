@@ -1,7 +1,7 @@
 # Base Model Specification — Preventify Diabetes Educator AI
 
-**Version:** 0.1  
-**Date:** 2026-05-12  
+**Version:** 0.2  
+**Date:** 2026-05-13  
 **Scope:** English-only query/response pipeline — the foundation layer before Malayalam/voice features are added.
 
 ---
@@ -143,22 +143,24 @@ Reads patient state from Postgres and evaluates hard-coded red-flag triggers:
 
 Rationale: ~90% of the corpus is unstructured guideline text (PDFs) suited for semantic retrieval. The structured/relational data (escalation rules, drug cautions, nutrition tables) is simple enough to encode as rules and lookup tables — a knowledge graph would add operational complexity with no quality gain at current scope.
 
-#### 3a. Vector DB — Clinical Corpus (Tier 1)
+#### 3a. Vector DB — Clinical Corpus
 
-| Source | Re-ingest cadence | Population filter | Geography tag |
-|--------|------------------|-------------------|---------------|
-| ADA Standards of Care 2026 | Annual (January) | T1DM, T2DM, GDM | global |
-| RSSDI-ESI CPR for T2DM 2022 | Every 2–3 years | T2DM | India |
-| ICMR Guidelines T2DM 2018 | On new release | T2DM | India |
-| ICMR STW T2DM 2024 | On new release | T2DM | India |
-| ADA/ADCES DSMES Standards 2022 | Every 2–3 years | T2DM | global |
-| KDIGO 2022 Diabetes in CKD | On new release | T2DM+CKD | global |
-| KDIGO 2024 CKD Guideline | On new release | CKD | global |
-| IDF Atlas 11th Ed. 2025 | On new edition | epidemiology only | global |
-| Kerala Nutrition Annex (internal) | On clinical sign-off | T2DM | Kerala |
-| Drug education monographs (internal) | On clinical sign-off | T2DM | India |
+| Source | Retrieval tier | Re-ingest cadence | india_specific | Parser class |
+|--------|---------------|-------------------|---------------|-------------|
+| RSSDI 2022 | core | Every 2–3 years | true | `RSSDirectParser` |
+| ICMR STW 2024 | core | On new release | true | `ICMRWorkflowParser` |
+| ADA 2026 (S01–S15) | core (fallback) | Annual (January) | false | `ADAJournalParser` |
+| ICMR-NIN IFCT 2024 rev. | core | On new release | true | `ICMRNINParser` |
+| Anoop Misra 2011 | core | Static | true | `ADAJournalParser` |
+| KDIGO 2022 DM-CKD | triggered: ckd | On new release | false | `KDIGOParser` |
+| IDF-DAR 2021 | triggered: ramadan | On new edition | true | `IDFDARParser` |
+| ESC 2023 CV-DM | triggered: cardio | On new release | false | `ADAJournalParser` |
+| WHO HEARTS | triggered: hypertension | On new release | false | `NarrativeParser` |
+| Telemedicine Guidelines 2020 | compliance | On MoHFW amendment | true | `NarrativeParser` |
 
-**Chunking strategy:** By clinical recommendation unit — one chunk = one recommendation or one coherent clinical statement. Never chunk by token count. Tables must be preserved as atomic units.
+> DPDP Rules 2025 and ADA/ADCES DSMES 2022 live in `reference/` as team documents — never ingested.
+
+**Chunking strategy:** By clinical recommendation unit — one chunk = one recommendation or one coherent clinical statement. Never chunk by token count. Tables are preserved as atomic units. Implemented in `ingestion/chunkers/` (next build step).
 
 **Chunk metadata schema:**
 
@@ -171,24 +173,25 @@ Rationale: ~90% of the corpus is unstructured guideline text (PDFs) suited for s
   "population_scope": ["T2DM"],
   "age_scope": "adult",
   "topic_tags": ["medication", "metformin", "glycemic"],
-  "geography_tag": "India"
+  "retrieval_tier": "core",
+  "condition_trigger": null,
+  "india_specific": true
 }
 ```
 
+> No `geography_tag`. All patients are Kerala-based. `india_specific` is the only retrieval-relevant geography distinction — whether a source was calibrated for Indian physiology or is a global fallback.
+
 **Retrieval priority:**
 1. Population type match (T2DM query never returns T1DM chunk)
-2. India/Kerala-specific source preferred over global when both available
-3. Recency (newer guideline preferred if same geography and population)
+2. `india_specific: true` preferred over `false` when both available for same topic
+3. Recency (newer guideline preferred if same population)
 4. Semantic similarity score (after above filters applied)
 
-#### 3b. Compliance Namespace (Tier 2) — separate, never surfaced to patient
+#### 3b. Compliance Namespace — separate, never surfaced to patient
 
-- Telemedicine Practice Guidelines India 2020
-- DPDP Act 2023 + Rules 2025
-- MoHFW GDM/DIPSI Guidelines 2018
-- SaMD regulatory documents
+- Telemedicine Practice Guidelines India 2020 (`corpus/compliance/`)
 
-Queried only by internal system logic (consent flows, audit checks, escalation SOPs).
+Queried only by internal system logic (consent flows, audit checks, escalation SOPs). DPDP Rules 2025 and DSMES 2022 are reference-only documents in `reference/` — not ingested.
 
 #### 3c. Structured Reference Tables (JSON / Postgres)
 
@@ -216,10 +219,11 @@ Example: metformin → eGFR <30 → flag for Tier 2 escalation, educate on why d
 
 Runs before vector similarity search. Applies hard exclusions:
 
-- If `intent = nutrition_education` AND `patient = T2DM` → exclude T1DM-specific chunks, exclude IDF Atlas (epidemiology tag)
-- If `geography_available = India` → deprioritize global-only sources
-- If `compliance namespace` → never include in patient-facing retrieval
+- If `intent = nutrition_education` AND `patient = T2DM` → restrict to food/nutrition topic tags
+- If `india_specific = true` sources available for topic → deprioritize `india_specific = false` sources
+- If `retrieval_tier = compliance` → never include in patient-facing retrieval
 - If `evidence_grade = E` (expert opinion) AND a Grade A source exists for same topic → prefer Grade A
+- If `condition_trigger` is set → only include matching Tier 2 source for that trigger
 
 This reduces the search space before semantic scoring, improving both precision and latency.
 
@@ -230,9 +234,7 @@ This reduces the search space before semantic scoring, improving both precision 
 **Input:** Top-20 chunks from vector similarity search  
 **Output:** Top-3 to 5 chunks ranked by clinical relevance to query
 
-**Model options (B1 decision):**
-- `bge-reranker-large` — open source, self-hosted, lower latency
-- `Cohere Rerank` — managed API, strong multilingual performance (relevant for later Malayalam phase)
+**Model: `BAAI/bge-reranker-large`** — self-hosted via FlagEmbedding, configured in `config/settings.py`.
 
 Reranking is a meaningful quality lever for clinical content — do not skip. Vector similarity alone retrieves plausible-sounding but sometimes clinically mismatched chunks.
 
@@ -263,9 +265,9 @@ This is rule-based, not ML. Runs in <50ms.
 - Source attribution format ("According to [ADA 2026 / RSSDI guidelines]…")
 - Motivational Interviewing tone cues (OARS: Open questions, Affirmations, Reflections, Summaries)
 
-**Conversation history:** Last N turns kept in context window to maintain continuity. N = TBD based on model context window and latency budget (B1).
+**Conversation history:** Last N turns kept in context window to maintain continuity. N = TBD based on latency budget testing.
 
-**Model selection:** TBD (B1). Key requirements: strong instruction-following, low hallucination rate on clinical content, context window ≥ 16K tokens.
+**Model: `claude-sonnet-4-6`** via Anthropic SDK (`config/settings.py`). Context window 200K tokens — sufficient for full conversation history plus retrieved chunks.
 
 ---
 
@@ -284,10 +286,9 @@ Final safety pass before response is returned:
 
 | Store | Technology | What lives here |
 |-------|-----------|-----------------|
-| Vector DB | Pinecone / Weaviate / pgvector (B1) | Clinical guideline chunks (Tier 1) |
-| Compliance namespace | Separate vector DB namespace | Tier 2 regulatory docs |
-| Relational DB | Postgres | Patient profiles, risk tiers, conversation logs, audit records |
-| Reference tables | JSON (embedded) or Postgres | Nutrition carb/GI lookup, drug-disease cautions, monitoring schedules |
+| Vector DB | **Qdrant** (self-hosted, `docker-compose.yml`) | Clinical guideline chunks — clinical + compliance namespaces |
+| Relational DB | **Postgres 16** (self-hosted, `docker-compose.yml`) | Patient profiles, risk tiers, conversation logs, audit records |
+| Reference tables | JSON in Postgres | Nutrition carb/GI lookup, drug-disease cautions, monitoring schedules |
 
 ---
 
@@ -305,17 +306,19 @@ Final safety pass before response is returned:
 
 ---
 
-## Open Decisions (Blocking Build)
+## Decisions Log
 
-| # | Decision | Blocker |
-|---|----------|---------|
-| D1 | LLM model selection | B1 |
-| D2 | Embedding model selection | B1 |
-| D3 | Vector DB platform (Pinecone vs Weaviate vs pgvector) | B1 |
-| D4 | Reranker choice (bge-reranker-large vs Cohere) | B1 |
-| D5 | Conversation history window size (N turns) | B1 |
-| D6 | Nutrition table values (carb/GI) | B2 clinical sign-off |
-| D7 | Drug education monograph content | B3 clinical sign-off |
+| # | Decision | Status | Resolution |
+|---|----------|--------|------------|
+| D1 | LLM model | **Done** | `claude-sonnet-4-6` |
+| D2 | Embedding model | **Done** | `BAAI/bge-large-en-v1.5` |
+| D3 | Vector DB platform | **Done** | Qdrant (self-hosted) |
+| D4 | Reranker | **Done** | `BAAI/bge-reranker-large` |
+| D5 | PDF parsing approach | **Done** | Custom parser per source — `ingestion/parsers/` |
+| D6 | Conversation history window (N turns) | Open | Determine from latency testing |
+| D7 | EMR integration design | Open | B1 remaining item |
+| D8 | Nutrition table values (carb/GI) | Open | B2 clinical sign-off |
+| D9 | Drug education monograph content | Open | B3 clinical sign-off |
 
 ---
 

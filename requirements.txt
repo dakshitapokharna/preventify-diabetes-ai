@@ -1,0 +1,27 @@
+# Parsing
+docling
+pdfplumber
+
+# Embeddings + Reranking
+sentence-transformers
+FlagEmbedding
+
+# Vector store
+qdrant-client
+
+# Database
+psycopg2-binary
+sqlalchemy
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# LLM
+anthropic
+
+# Utilities
+python-dotenv
+tqdm

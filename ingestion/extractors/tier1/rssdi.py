@@ -213,7 +213,7 @@ def _blocks_to_markdown(doc) -> str:
             raw = getattr(block, "raw_table", None)
             if raw:
                 # Convert raw table (list of lists) to markdown table
-                rows = [[str(c or "").replace("|", "/").strip() for c in row] for row in raw]
+                rows = [[re.sub(r"\s+", " ", str(c or "").replace("|", "/")).strip() for c in row] for row in raw]
                 # Filter empty rows
                 rows = [r for r in rows if any(c for c in r)]
                 if rows:

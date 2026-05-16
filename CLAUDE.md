@@ -116,7 +116,7 @@ The `parsed/` directory is gitignored (large JSON files). If you need to share p
 
 ### Docling Extractor Pattern (used for complex PDFs)
 
-Three sources use Docling-based extractors — for two-column layouts, complex tables, or rotated headers that pdfplumber garbles. Two sources use pdfplumber-based extractors (faster, better suited to their structure).
+Four sources use Docling-based extractors — for two-column layouts, complex tables, or rotated headers that pdfplumber garbles. Two sources use pdfplumber-based extractors (faster, better suited to their structure). One compliance extractor handles the Telemedicine Guidelines.
 
 | Extractor script | Backend | Source PDF | Output |
 |-----------------|---------|-----------|--------|
@@ -125,6 +125,11 @@ Three sources use Docling-based extractors — for two-column layouts, complex t
 | `ingestion/extractors/tier1/icmr_stw.py` | Docling | `corpus/tier1_clinical/ICMR_STW_2024/ICMR_STW_Diabetes_T2DM_2024.pdf` | `parsed/ICMR_STW_2024_docling.md` |
 | `ingestion/extractors/tier1/icmr_nin.py` | pdfplumber | `corpus/tier1_clinical/ICMR_NIN/ICMR_NIN_Indian_Food_Composition_Tables.pdf` | `parsed/ICMR_NIN_docling.md` |
 | `ingestion/extractors/tier1/rssdi.py` | pdfplumber | `corpus/tier1_clinical/RSSDI_2022/RSSDI_Clinical_Practice_Recommendations_T2DM_2022.pdf` | `parsed/RSSDI_2022_docling.md` |
+| `ingestion/extractors/tier2/esc_2023.py` | Docling | `corpus/tier2_condition/ESC_2023_CV_DM/ESC_2023_CVD_Diabetes_Guidelines.pdf` | `parsed/ESC_2023_CVD_DM_docling.md` |
+| `ingestion/extractors/tier2/idf_dar.py` | pdfplumber | `corpus/tier2_condition/IDF_DAR/IDF_DAR_Practical_Guidelines_Diabetes_Ramadan.pdf` | `parsed/IDF_DAR_Ramadan_docling.md` |
+| `ingestion/extractors/tier2/kdigo_2022.py` | pdfplumber | `corpus/tier2_condition/KDIGO_2022_DM_CKD/KDIGO_2022_Diabetes_Management_in_CKD.pdf` | `parsed/KDIGO_2022_DM_CKD_docling.md` |
+| `ingestion/extractors/tier2/who_hearts.py` | Docling | `corpus/tier2_condition/WHO_HEARTS/WHO_HEARTS_Technical_Package.pdf` | `parsed/WHO_HEARTS_docling.md` |
+| `ingestion/extractors/compliance/telemedicine.py` | Docling | `corpus/compliance/Telemedicine_Practice_Guidelines_India_2020.pdf` | `parsed/Telemedicine_Guidelines_India_2020.md` |
 
 **Why ICMR-NIN uses pdfplumber:** The IFCT PDF is 585 pages of fixed-column composition tables. Docling's VLM renderer crashes with `std::bad_alloc` on this PDF (too many dense-table pages for CPU RAM). The existing `ICMRNINParser` in `ingestion/parsers/food_table.py` was built specifically for IFCT's layout (fixed x-position column detection) and produces clean structured output. `extract_icmr_nin_docling.py` is a thin wrapper that runs it and emits grouped markdown tables with a RAG header.
 
@@ -135,6 +140,11 @@ python ingestion/extractors/tier1/anoop_misra.py
 python ingestion/extractors/tier1/icmr_stw.py
 python ingestion/extractors/tier1/icmr_nin.py
 python ingestion/extractors/tier1/rssdi.py
+python ingestion/extractors/tier2/esc_2023.py
+python ingestion/extractors/tier2/idf_dar.py
+python ingestion/extractors/tier2/kdigo_2022.py
+python ingestion/extractors/tier2/who_hearts.py
+python ingestion/extractors/compliance/telemedicine.py
 ```
 
 **What every Docling extractor does (the shared pattern):**
@@ -171,6 +181,43 @@ python ingestion/extractors/tier1/rssdi.py
 - `_inject_section_metadata()` — inserts `<!-- rag_metadata ... -->` comments after substantive headings covering glycemic targets, drug classes, complication screening, comorbidities, and special populations
 - `_annotate_evidence_grades()` — detects inline RSSDI grade markers `(A)`, `(B)`, `(C)`, `(E)` on recommendation lines (>40 chars) and prepends a rag_metadata comment with `evidence_grade` field; enables grade-filtered retrieval to surface Grade A recommendations preferentially for safety-critical queries
 - RAG document header with primary-source priority note (RSSDI first over ADA for all India queries)
+
+**ESC 2023 CVD-DM extras (source-specific):**
+- `_annotate_esc_recommendation_blocks()` — scans every table header line; when a header row contains both "Class" and "Level" columns (the standard ESC recommendation schema), prepends a `rag_metadata` comment with `evidence_schema: ESC_Class_I_IIa_IIb_III / Level_A_B_C` so every recommendation block can be retrieved by evidence class without relying on section context alone. This is the critical annotation — without it, Class I / Level A recommendations cannot be filtered at query time.
+- `_annotate_class_level_inline()` — detects free-text "Class I, Level A" / "(Class IIa, Level B)" patterns in body paragraphs (>60 chars, non-table lines) and prepends a `rag_metadata` comment with explicit `evidence_class` and `evidence_level` fields; covers the minority of ESC recommendations stated outside formal tables.
+- `_inject_section_metadata()` — standard section annotation; SCORE2-Diabetes sections get the `CVD_risk, SCORE2_diabetes, risk_stratification` tag so queries like "how do I calculate CV risk in a diabetic patient" rank them first.
+- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: cardio`, `india_specific: false`; the retrieval engine gates this source behind the cardio flag and overrides Tier 1 sources for all CV-specific sub-queries.
+
+**IDF-DAR 2021 extras (source-specific) — pdfplumber backend:**
+- Uses pdfplumber `extract_text()` per page — Docling's VLM renderer crashes with `std::bad_alloc` on this 333-page PDF from page 14 onwards (same root cause as ICMR-NIN). pdfplumber extracts all 333 pages cleanly. No content post-processing applied; raw text written as-is. Post-processing decisions deferred.
+- Each page prefixed with a `<!-- page N -->` marker preserving page provenance.
+- `_annotate_risk_stratification_lines()` — detects lines carrying IDF-DAR risk-factor or scoring terms (risk category, very-high/high risk, do not fast, HbA1c/hypoglycaemia/duration + points) and prepends a `rag_metadata` comment tagged `chunk_note: keep_atomic_large_window` so the chunker keeps scoring content atomic.
+- `_annotate_meal_timing_adjustments()` — detects lines (>40 chars) co-occurring a meal-timing keyword (Suhoor/Sahur/Sehri/Iftar/predawn) with a drug-class name and prepends a `rag_metadata` comment with explicit `meal_context` field. Prevents Suhoor dose-halving guidance from being served in response to an Iftar query.
+- `_annotate_break_fast_safety()` — detects lines (>40 chars) containing the exact IDF-DAR BG thresholds (< 70 mg/dL / < 3.9 mmol/L; > 300 mg/dL / > 16.7 mmol/L) and prepends a `rag_metadata` comment with `safety_redline=true` and `chunk_note: zero_loss_standalone_node`.
+- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: ramadan`, `india_specific: false`; SMBG thresholds quoted verbatim in header so retrievable independent of body chunk boundaries.
+- Quality signals (last run): 75 suhoor refs, 155 iftar refs, 97 risk annotations, 17 meal-timing annotations, 13 safety redline annotations across 333 pages.
+
+**KDIGO 2022 DM-CKD extras (source-specific):**
+- **pdfplumber backend** — Docling's VLM crashes with `std::bad_alloc` on pages 13–128 (same issue as ICMR-NIN and IDF-DAR); switched to pdfplumber which extracts all 128 pages cleanly.
+- **No post-processing annotation passes.** Raw pdfplumber text per page, with `<!-- page N -->` markers, written as-is. All annotation decisions deferred — add `_annotate_*` passes in a future session when chunking strategy is confirmed.
+- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: ckd`, `india_specific: false`; key eGFR thresholds quoted verbatim in header (Metformin stop <30, SGLT2i initiate ≥20, BP <120 mmHg) so they are retrievable independent of body chunk boundaries.
+- Quality signals (last run): 128 pages, 575 KB, 325 eGFR refs, 25 recommendation blocks, 80 practice points, 39 grade refs (1A–2D), 163 CKD G-stage refs.
+
+**WHO HEARTS Technical Package extras (source-specific):**
+- **Docling backend** — WHO HEARTS is a structured single-column modular document; no std::bad_alloc issue expected (unlike ICMR-NIN, IDF-DAR, KDIGO). Docling handles the protocol tables and risk charts correctly.
+- `_annotate_treatment_protocol_steps()` — detects "Step 1 / Step 2 / Step 3" lines in the antihypertensive titration ladders (Module E) and prepends a rag_metadata comment with `chunk_note: keep_atomic_large_window`; prevents the chunker from splitting a step-up protocol mid-sequence, which would produce a partial and potentially dangerous dosing instruction.
+- `_annotate_bp_decision_thresholds()` — detects lines carrying specific BP threshold values used as clinical decision triggers (≥140/90, ≥130/80, target <130/80, systolic <120 mmHg) and prepends `safety_critical=true`; these are the initiate/intensify decision nodes and must be retrieved verbatim.
+- `_annotate_cvd_risk_scoring()` — detects lines referencing 10-year CVD risk scores, WHO/ISH risk charts, and risk categories (low/moderate/high/very high) and prepends `chunk_note: keep_atomic_large_window`; risk chart rows must not be separated from their row-header context.
+- `_inject_section_metadata()` — HEARTS module-aware section annotation; headings matching Module H/E/A/R/T/S content get the corresponding `hearts_module_*` tag so every sub-chunk inherits module context without relying on surrounding heading text.
+- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: hypertension`, `india_specific: false`; key BP thresholds and the HEARTS step-up ladder quoted verbatim in header so retrievable independent of body chunk boundaries.
+- All annotation passes are purely additive — no content is filtered, dropped, or reformatted beyond html.unescape and grid table rendering.
+- Quality signals (last run): 32,441 chars, 2 India state protocols (Maharashtra + Punjab), 6-step antihypertensive ladder each (Amlodipine→Telmisartan→Chlorthalidone), 12 step-up ladder annotations, 3 BP threshold annotations, 36 section metadata annotations. Special population sections (T2DM, CKD, pregnancy, prior heart attack/stroke) annotated per state.
+
+**Telemedicine Guidelines 2020 extras (compliance namespace — source-specific):**
+- `_annotate_drug_lists()` — detects `List O`, `List A`, `List B` header lines (also bold-variant `**List A**`) and prepends a rag_metadata comment with `list_type` and the prescribing-constraint tags for that list; keeps every drug item bound to its access rule so "metformin" chunks also carry `list_type: List A`
+- `_annotate_consultation_flows()` — detects lines (>40 chars) that contain consultation-mode keywords (`text-only`, `audio`, `video`, `first consultation`, `follow-up`, `established patient`, etc.) and prepends a rag_metadata comment with `flow_step`; keeps mode-selection decision logic retrievable without crossing into prescribing or penalty sections
+- `_inject_section_metadata()` — standard section annotation with compliance-specific topic tags (consent_framework, RMP_duties, penalties, scope_boundary, etc.)
+- RAG document header declares `namespace: compliance` and `retrieval_tier: compliance`; the bot queries this namespace silently for scope-boundary enforcement, never exposing it to the patient
 
 **To create a new Docling extractor for another source**, copy either script and change: `PDF_PATH`, `OUT_FILE`, `SOURCE_KEY`, `CITATION`, `YEAR`. Keep the `_clean_cell` / `_render_table_grid` / `_MD_TABLE_RE` / `html.unescape` core unchanged — that part is proven and shared.
 

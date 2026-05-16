@@ -1,0 +1,108 @@
+{
+  "tier1_clinical": [
+    {
+      "source": "RSSDI_2022",
+      "folder": "corpus/tier1_clinical/RSSDI_2022",
+      "year": 2022,
+      "retrieval_tier": "core",
+      "condition_trigger": null,
+      "india_specific": true,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "ICMR_STW_2024",
+      "folder": "corpus/tier1_clinical/ICMR_STW_2024",
+      "year": 2024,
+      "retrieval_tier": "core",
+      "condition_trigger": null,
+      "india_specific": true,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "ADA_2026",
+      "folder": "corpus/tier1_clinical/ADA_2026",
+      "year": 2026,
+      "retrieval_tier": "core",
+      "condition_trigger": null,
+      "india_specific": false,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "ICMR_NIN",
+      "folder": "corpus/tier1_clinical/ICMR_NIN",
+      "year": 2024,
+      "retrieval_tier": "core",
+      "condition_trigger": null,
+      "india_specific": true,
+      "parser": "pdfplumber",
+      "chunker": "food_table"
+    },
+    {
+      "source": "Anoop_Misra_South_Asian_Nutrition",
+      "folder": "corpus/tier1_clinical/Anoop_Misra_South_Asian_Nutrition",
+      "year": 2011,
+      "retrieval_tier": "core",
+      "condition_trigger": null,
+      "india_specific": true,
+      "parser": "docling",
+      "chunker": "narrative"
+    }
+  ],
+  "tier2_condition": [
+    {
+      "source": "KDIGO_2022_DM_CKD",
+      "folder": "corpus/tier2_condition/KDIGO_2022_DM_CKD",
+      "year": 2022,
+      "retrieval_tier": "triggered",
+      "condition_trigger": "ckd",
+      "india_specific": false,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "IDF_DAR",
+      "folder": "corpus/tier2_condition/IDF_DAR",
+      "year": 2021,
+      "retrieval_tier": "triggered",
+      "condition_trigger": "ramadan",
+      "india_specific": true,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "ESC_2023_CV_DM",
+      "folder": "corpus/tier2_condition/ESC_2023_CV_DM",
+      "year": 2023,
+      "retrieval_tier": "triggered",
+      "condition_trigger": "cardio",
+      "india_specific": false,
+      "parser": "docling",
+      "chunker": "recommendation"
+    },
+    {
+      "source": "WHO_HEARTS",
+      "folder": "corpus/tier2_condition/WHO_HEARTS",
+      "year": 2023,
+      "retrieval_tier": "triggered",
+      "condition_trigger": "hypertension",
+      "india_specific": false,
+      "parser": "docling",
+      "chunker": "narrative"
+    }
+  ],
+  "compliance": [
+    {
+      "source": "Telemedicine_Guidelines_2020",
+      "folder": "corpus/compliance",
+      "year": 2020,
+      "retrieval_tier": "compliance",
+      "condition_trigger": null,
+      "india_specific": true,
+      "parser": "pdfplumber",
+      "chunker": "narrative"
+    }
+  ]
+}

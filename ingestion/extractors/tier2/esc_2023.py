@@ -193,70 +193,6 @@ _INLINE_CLASS_RE = re.compile(
 )
 
 
-def _clean_cell(text: str) -> str:
-    text = html.unescape(text or "")
-    text = re.sub(r"\n+", " · ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    text = text.replace("|", "/")
-    return text
-
-
-def _render_table_grid(table_item) -> str:
-    """
-    Render a Docling TableItem from its raw grid.
-    - Spanning cells emitted only at top-left position (id() tracking).
-    - Footnote rows (all non-empty cells identical) collapsed to first column.
-    Falls back to export_to_markdown() on error.
-    """
-    try:
-        data = table_item.data
-        grid = data.grid
-        num_cols = data.num_cols
-    except Exception:
-        return table_item.export_to_markdown()
-
-    if not grid or num_cols == 0:
-        return table_item.export_to_markdown()
-
-    seen: set[int] = set()
-    str_rows: list[list[str]] = []
-
-    for grid_row in grid:
-        row_cells: list[str] = []
-        for cell in grid_row:
-            if cell is None:
-                row_cells.append("")
-            elif id(cell) in seen:
-                row_cells.append("")
-            else:
-                seen.add(id(cell))
-                row_cells.append(_clean_cell(cell.text))
-        while len(row_cells) < num_cols:
-            row_cells.append("")
-        str_rows.append(row_cells[:num_cols])
-
-    if not str_rows:
-        return table_item.export_to_markdown()
-
-    # Collapse footnote rows: all non-empty cells carry the same text
-    clean_rows: list[list[str]] = []
-    for row in str_rows:
-        non_empty = [c for c in row if c]
-        if len(non_empty) > 1 and len(set(non_empty)) == 1:
-            clean_rows.append([non_empty[0]] + [""] * (num_cols - 1))
-        else:
-            clean_rows.append(row)
-
-    sep = ["---"] * num_cols
-    lines: list[str] = [
-        "| " + " | ".join(clean_rows[0]) + " |",
-        "| " + " | ".join(sep) + " |",
-    ]
-    for row in clean_rows[1:]:
-        lines.append("| " + " | ".join(row) + " |")
-
-    return "\n".join(lines)
-
 
 def _section_tags(heading_text: str) -> str:
     for pattern, tags in SECTION_TAG_MAP:
@@ -343,42 +279,102 @@ def _annotate_class_level_inline(md: str) -> str:
     return "\n".join(out_lines)
 
 
-def convert_document(pdf_path: Path) -> str:
-    """Convert the ESC 2023 CVD-DM PDF to clean RAG-ready Markdown."""
-    from docling.document_converter import DocumentConverter
+def _is_real_table(rows: list[list]) -> bool:
+    if not rows or len(rows) < 2:
+        return False
+    max_cols = max(len(r) for r in rows)
+    if max_cols < 2:
+        return False
+    total = sum(len(r) for r in rows)
+    non_empty = sum(1 for r in rows for c in r if c is not None and str(c).strip())
+    return (non_empty / total) >= 0.30
 
-    converter = DocumentConverter()
-    result = converter.convert(str(pdf_path))
-    doc = result.document
 
-    md = html.unescape(doc.export_to_markdown())
+def _render_markdown_table(rows: list[list]) -> str:
+    def _fmt(cell) -> str:
+        if cell is None:
+            return ""
+        return str(cell).replace("|", "/").replace("\n", " ").strip()
 
-    # Replace raw markdown tables with grid-rendered versions
-    tables = list(doc.tables)
-    counter: list[int] = [0]
+    if not rows:
+        return ""
+    max_cols = max(len(r) for r in rows)
+    norm = [[_fmt(c) for c in (r + [None] * (max_cols - len(r)))] for r in rows]
+    header = "| " + " | ".join(norm[0]) + " |"
+    sep    = "| " + " | ".join(["---"] * max_cols) + " |"
+    body   = ["| " + " | ".join(row) + " |" for row in norm[1:]]
+    return "\n".join([header, sep] + body)
 
-    def _replace(match: re.Match) -> str:
-        idx = counter[0]
-        counter[0] += 1
-        if idx < len(tables):
-            return _render_table_grid(tables[idx]) + "\n\n"
-        return match.group(0)
 
-    md = _MD_TABLE_RE.sub(_replace, md)
+def _extract_page(page) -> str:
+    try:
+        found = page.find_tables()
+    except Exception:
+        found = []
 
-    found = counter[0]
-    if found != len(tables):
-        print(
-            f"\n  [WARN] {len(tables)} tables in doc but regex matched {found}",
-            end="",
-        )
+    real: list = []
+    for ft in found:
+        try:
+            rows = ft.extract()
+        except Exception:
+            continue
+        if _is_real_table(rows):
+            real.append((ft.bbox, rows))
 
-    # ESC-specific annotations (order matters: tables first, then inline, then sections)
-    md = _annotate_esc_recommendation_blocks(md)
-    md = _annotate_class_level_inline(md)
-    md = _inject_section_metadata(md)
+    table_bboxes = [bb for bb, _ in real]
 
-    return md
+    def _in_table(bbox) -> bool:
+        x0, top, x1, bottom = bbox
+        for tb in table_bboxes:
+            if x0 >= tb[0] - 2 and top >= tb[1] - 2 and x1 <= tb[2] + 2 and bottom <= tb[3] + 2:
+                return True
+        return False
+
+    try:
+        words = page.extract_words(x_tolerance=3, y_tolerance=3)
+    except Exception:
+        words = []
+
+    body_words = [w for w in words if not _in_table((w["x0"], w["top"], w["x1"], w["bottom"]))]
+
+    lines_map: dict[int, list] = {}
+    for w in body_words:
+        key = round(w["top"])
+        lines_map.setdefault(key, []).append(w)
+
+    text_lines = []
+    for key in sorted(lines_map):
+        row = sorted(lines_map[key], key=lambda w: w["x0"])
+        text_lines.append(" ".join(w["text"] for w in row))
+    body_text = "\n".join(text_lines)
+
+    parts: list[tuple[float, str]] = []
+    for tb_top, (_, rows) in zip([bb[1] for bb, _ in real], real):
+        parts.append((tb_top, _render_markdown_table(rows)))
+
+    body_top = 0.0
+    chunks: list[str] = []
+    for tb_top, table_md in sorted(parts, key=lambda x: x[0]):
+        chunks.append(body_text)
+        chunks.append(table_md)
+
+    if not chunks:
+        chunks.append(body_text)
+
+    return "\n\n".join(c for c in chunks if c.strip())
+
+
+def extract_document(pdf_path: Path) -> str:
+    import pdfplumber
+    pages_md: list[str] = []
+    with pdfplumber.open(str(pdf_path)) as pdf:
+        total = len(pdf.pages)
+        for i, page in enumerate(pdf.pages, 1):
+            page_text = _extract_page(page)
+            pages_md.append(f"<!-- page {i} -->\n{page_text}")
+            if i % 20 == 0:
+                print(f"    ... {i}/{total} pages", flush=True)
+    return "\n\n".join(pages_md)
 
 
 def main() -> None:
@@ -388,37 +384,44 @@ def main() -> None:
         print(f"[ERROR] PDF not found: {PDF_PATH.resolve()}")
         sys.exit(1)
 
-    print("ESC 2023 CVD in Diabetes — Docling extractor")
+    print("ESC 2023 CVD in Diabetes — pdfplumber extractor")
     print(f"  Input  : {PDF_PATH.resolve()}")
     print(f"  Output : {OUT_FILE.resolve()}")
     print()
-    print("  Converting ... (ESC guidelines are large; expect 5–15 min on CPU)", flush=True)
 
     try:
-        md = convert_document(PDF_PATH)
+        raw = extract_document(PDF_PATH)
     except Exception as exc:
-        print(f"ERROR — {exc}")
+        print(f"[ERROR] — {exc}")
         import traceback; traceback.print_exc()
         sys.exit(1)
 
-    # Quality signals
-    class_i_hits = len(re.findall(r"\bClass\s+I\b", md, re.I))
-    level_a_hits = len(re.findall(r"\bLevel\s+A\b", md, re.I))
-    score2_hits = md.lower().count("score2")
-    table_count = md.count("| --- |")
-    print(
-        f"OK  ({len(md):,} chars, ~{table_count} tables, "
-        f"~{class_i_hits} Class I refs, ~{level_a_hits} Level A refs, "
-        f"~{score2_hits} SCORE2-Diabetes refs)"
-    )
+    # ESC-specific annotations (order matters: tables first, then inline, then sections)
+    md = _annotate_esc_recommendation_blocks(raw)
+    md = _annotate_class_level_inline(md)
+    md = _inject_section_metadata(md)
 
     full_md = RAG_HEADER + md
 
     OUT_FILE.write_text(full_md, encoding="utf-8")
+
+    # Quality signals
+    class_i_hits = len(re.findall(r"\bClass\s+I\b", full_md, re.I))
+    level_a_hits = len(re.findall(r"\bLevel\s+A\b", full_md, re.I))
+    score2_hits = full_md.lower().count("score2")
+    table_count = full_md.count("\n| --- |")
+    page_count  = full_md.count("<!-- page ")
+    rec_blocks  = full_md.count('evidence_schema="ESC_Class')
+    inline_cls  = full_md.count('evidence_class=')
+
+    print(f"\n  OK  ({len(full_md):,} chars, {page_count} pages, {table_count} tables)")
+    print(f"  Class I refs                         : {class_i_hits}")
+    print(f"  Level A refs                         : {level_a_hits}")
+    print(f"  SCORE2-Diabetes refs                 : {score2_hits}")
+    print(f"  Recommendation table blocks annotated: {rec_blocks}")
+    print(f"  Inline Class/Level annotations       : {inline_cls}")
     print(f"\n  Saved : {OUT_FILE.resolve()}")
     print(f"  Total chars : {len(full_md):,}")
-    print(f"  Recommendation table blocks annotated: {full_md.count('evidence_schema=\"ESC_Class')}")
-    print(f"  Inline Class/Level annotations       : {full_md.count('evidence_class=')}")
 
 
 if __name__ == "__main__":

@@ -175,8 +175,10 @@ These guidelines should be used in conjunction with the other national clinical 
 |  |  | education/ counseling |  |  |
 | Patients may consult with an RMP for diagnosis and treatment of her condition or for health education and counseling |  |  |  |  |
 
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="follow_up" topic_tags="consultation_workflow, follow_up" namespace="compliance" -->
 |  | Follow-up consult with the same RMP |  |
 | --- | --- | --- |
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="follow_up" topic_tags="consultation_workflow, follow_up" namespace="compliance" -->
 | Patients may use this service for follow up consultation on his ongoing treatment with the same RMP who prescribed the treatment in an earlier in-person consult. |  |  |
 
 | Follow-up consult with the same |
@@ -205,9 +207,10 @@ These guidelines should be used in conjunction with the other national clinical 
 
 | Mode | Strengths | Limitations |
 | --- | --- | --- |
-| VIDEO: Telemedicine facility, Apps, Video on chat platforms, Facetime etc. |  Closest to an in person-consult, real time interaction  Patient identification is easier  RMP can see the patient and discuss with the caregiver  Visual cues can be perceived  Inspection of patient can be carried out |  Is dependent on high quality internet connection at both ends, else will lead to a sub optimal exchange of information  Since there is a possibility of abuse/ misuse, ensuring privacy of patients in video consults is extremely important |
-| AUDIO: Phone, VOIP, Apps etc. |  Convenient and fast  Unlimited reach  Suitable for urgent cases  No separate infrastructure required  Privacy ensured  Real-time interaction. |  Non-verbal cues may be missed  Not suitable for conditions that require a visual inspection (e.g. skin, eye or tongue examination), or physical touch  Patient identification needs to be clearer, greater chance of imposters representing the real patient |
 <!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
+| VIDEO: Telemedicine facility, Apps, Video on chat platforms, Facetime etc. |  Closest to an in person-consult, real time interaction  Patient identification is easier  RMP can see the patient and discuss with the caregiver  Visual cues can be perceived  Inspection of patient can be carried out |  Is dependent on high quality internet connection at both ends, else will lead to a sub optimal exchange of information  Since there is a possibility of abuse/ misuse, ensuring privacy of patients in video consults is extremely important |
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
+| AUDIO: Phone, VOIP, Apps etc. |  Convenient and fast  Unlimited reach  Suitable for urgent cases  No separate infrastructure required  Privacy ensured  Real-time interaction. |  Non-verbal cues may be missed  Not suitable for conditions that require a visual inspection (e.g. skin, eye or tongue examination), or physical touch  Patient identification needs to be clearer, greater chance of imposters representing the real patient |
 | TEXT BASED: Specialized Chat based Telemedicine Smartphone Apps, SMS, Websites, |  Convenient and quick  Documentation & Identification may be an integral feature of the platform  Suitable for urgent cases, or follow-ups, second opinions provided RMP has enough context from other sources, |  Besides the visual and physical touch, text-based interactions also miss the verbal cues  Difficult to establish rapport with the patient. |
 
 
@@ -221,11 +224,11 @@ These guidelines should be used in conjunction with the other national clinical 
 <!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
 Mode Strengths Limitations VIDEO:  Closest to an in person-consult,  Is dependent on high quality Telemedicine real time interaction internet connection at both ends, facility,  Patient identification is easier else will lead to a sub optimal Apps,  RMP can see the patient and exchange of information Video on chat discuss with the caregiver  Since there is a possibility of platforms,  Visual cues can be perceived abuse/ misuse, ensuring privacy of Facetime etc.  Inspection of patient can be patients in video consults is carried out extremely important AUDIO:  Convenient and fast  Non-verbal cues may be missed Phone,  Unlimited reach  Not suitable for conditions that VOIP,  Suitable for urgent cases require a visual inspection (e.g. Apps etc.  No separate infrastructure skin, eye or tongue examination), required or physical touch  Privacy ensured  Real-time interaction.  Patient identification needs to be clearer, greater chance of imposters representing the real patient TEXT BASED:  Convenient and quick  Besides the visual and physical Specialized  Documentation & Identification touch, text-based interactions also Chat based may be an integral feature of the miss the verbal cues Telemedicine platform  Difficult to establish rapport with Smartphone  Suitable for urgent cases, or the patient. Apps, SMS, follow-ups, second opinions Websites, provided RMP has enough context from other sources,
 
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
 | messaging systems e.g. WhatsApp, Google Hangouts, FB Messenger |  No separate infrastructure required,  Can be real time |  Cannot be sure of identity of the doctor or the patient |
-<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
 | --- | --- | --- |
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="follow_up" topic_tags="consultation_workflow, follow_up" namespace="compliance" -->
 | ASYNCHRONO US: Email Fax, recordings etc. |  Convenient and easy to document  No specific app or download requirement  Images, data, reports readily shared  No separate infrastructure required  More useful when accompanied with test reports and follow up and second opinions |  Not a real time interaction, so just one-way context is available, relying solely on the articulation by the patient  Patient identification is document based only and difficult to confirm  Non-verbal cues are missed  There may be delays because the Doctor may not see the mail immediately |
-<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
 
 
 <!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="real_time" topic_tags="consultation_workflow, real_time" namespace="compliance" -->
@@ -444,8 +447,10 @@ as appropriate.
 
 | Table: Matrix of the permissible drug lists based on the type and mode of consultation |  |  |  |
 | --- | --- | --- | --- |
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="follow_up" topic_tags="consultation_workflow, follow_up" namespace="compliance" -->
 | List Group | Mode of Consultation [Video/Audio/Text] | Nature of Consultation [First-consultation/ Follow-up] | List of Medicines |
 | O | Any | Any | List O1 |
+<!-- rag_metadata source=Telemedicine_Guidelines_India_2020 flow_step="follow_up" topic_tags="consultation_workflow, follow_up" namespace="compliance" -->
 | A | Video | First Consultation Follow-up, for continuation of medications | List A2 |
 | B | Any | Follow-up | List B3 |
 | Prohibited | Not to be prescribed | Not to be prescribed | Schedule X of Drug and Cosmetic Act and Rules or any Narcotic and Psychotropic substance listed in the Narcotic Drugs and Psychotropic Substances, Act, 19854 |

@@ -171,18 +171,33 @@ def _inject_section_metadata(md: str) -> str:
 
 
 def _annotate_evidence_grades(md: str) -> str:
-    """Prepend a rag_metadata comment before lines with RSSDI grade markers."""
+    """Prepend a rag_metadata comment before lines with RSSDI grade markers.
+
+    Collects ALL grade letters found on the line (a single recommendation can
+    reference multiple grades, e.g. '...ACEi (A) or ARB if intolerant (B)').
+    The highest grade found is used as the primary evidence_grade field so
+    grade-filtered retrieval always surfaces the strongest evidence first.
+    """
+    _GRADE_ORDER = {"A": 0, "B": 1, "C": 2, "E": 3}
+
     out_lines: list[str] = []
     for line in md.splitlines():
-        m = _GRADE_RE.search(line)
-        if m and len(line.strip()) > 40:
-            grade = (m.group(1) or m.group(2)).upper()
-            comment = (
-                f"<!-- rag_metadata source={SOURCE_KEY} "
-                f"evidence_grade=\"{grade}\" "
-                f"topic_tags=\"recommendation, grade_{grade}\" -->"
-            )
-            out_lines.append(comment)
+        if len(line.strip()) > 40:
+            grades = [
+                (m.group(1) or m.group(2)).upper()
+                for m in _GRADE_RE.finditer(line)
+                if (m.group(1) or m.group(2))
+            ]
+            if grades:
+                primary = min(grades, key=lambda g: _GRADE_ORDER.get(g, 99))
+                all_grades = ",".join(sorted(set(grades), key=lambda g: _GRADE_ORDER.get(g, 99)))
+                comment = (
+                    f"<!-- rag_metadata source={SOURCE_KEY} "
+                    f"evidence_grade=\"{primary}\" "
+                    f"all_grades=\"{all_grades}\" "
+                    f"topic_tags=\"recommendation, grade_{primary}\" -->"
+                )
+                out_lines.append(comment)
         out_lines.append(line)
     return "\n".join(out_lines)
 

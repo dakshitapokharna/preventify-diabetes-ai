@@ -44,17 +44,26 @@ class BaseParser:
 
 import re
 
-EVIDENCE_GRADE_RE = re.compile(r"\(([ABCE])\)\s*$")
+EVIDENCE_GRADE_RE = re.compile(r"\(([ABCE])\)")
 
 
 def extract_evidence_grade(text: str) -> tuple[str, str]:
-    """Return (cleaned_text, grade) where grade is '' if not found."""
-    m = EVIDENCE_GRADE_RE.search(text)
-    if m:
-        grade = m.group(1)
-        clean = text[: m.start()].rstrip()
-        return clean, grade
-    return text, ""
+    """Return (cleaned_text, grade) where grade is '' if not found.
+
+    Searches anywhere in the line (not just end-of-line) so grades embedded
+    before slide page numbers like '...first-line. (A) 41 RSSDI GUIDELINES'
+    are still captured.  When multiple grades appear, the last one wins
+    (RSSDI convention: trailing grade overrides any mid-sentence parenthetical).
+    """
+    matches = list(EVIDENCE_GRADE_RE.finditer(text))
+    if not matches:
+        return text, ""
+    # Use the last match — most likely to be the recommendation grade rather
+    # than a parenthetical letter mid-sentence (e.g. "option (a) or (b)").
+    m = matches[-1]
+    grade = m.group(1).upper()
+    clean = (text[: m.start()] + text[m.end():]).strip()
+    return clean, grade
 
 
 def group_words_into_lines(

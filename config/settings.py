@@ -11,10 +11,10 @@ class Settings(BaseSettings):
     llm_api_key: str = ""
 
     # Embedding
-    embedding_model: str = "BAAI/bge-large-en-v1.5"
+    embedding_model: str = "BAAI/bge-m3"
 
     # Reranker
-    reranker_model: str = "BAAI/bge-reranker-large"
+    reranker_model: str = "BAAI/bge-reranker-v2-m3"
     reranker_top_k: int = 20
 
     # Qdrant

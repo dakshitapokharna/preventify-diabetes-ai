@@ -316,18 +316,56 @@ GRADE_PRIORITY = {
     # ADA / RSSDI
     "A": 1, "B": 2, "C": 3, "E": 4,
 
-    # KDIGO
-    "1A": 1, "2A": 2,
-    "1B": 2, "2B": 3,
-    "1C": 3, "2C": 4,
-    "1D": 4, "2D": 5,
+    # KDIGO — two-axis grading:
+    #   first digit = recommendation strength (1 = strong/"We recommend",
+    #                                          2 = weak/"We suggest")
+    #   letter      = evidence quality (A = high, B = moderate, C = low, D = very low)
+    # Strong recs always rank higher than weak recs at the same evidence quality.
+    # E.g. 1B (strong/moderate, priority 2) > 2A (weak/high, priority 3).
+    "1A": 1,   # strong rec, high evidence
+    "1B": 2,   # strong rec, moderate evidence
+    "1C": 3,   # strong rec, low evidence
+    "1D": 4,   # strong rec, very low evidence
+    "2A": 3,   # weak rec, high evidence   ← priority 3, not 2
+    "2B": 3,   # weak rec, moderate evidence
+    "2C": 4,   # weak rec, low evidence
+    "2D": 5,   # weak rec, very low evidence
 
-    # ESC — merge evidence_class + evidence_level into one string first
-    # Class I=1, IIa=2, IIb=3, III=4 | Level A/B=+0, C=+1 → cap at 5
+    # ESC — merge evidence_class + evidence_level first (e.g. "I-A", "IIb-C")
+    # Class I=1, IIa=2, IIb=3 | Level A/B=+0, C=+1 → cap at 5
+    # Class III (harm/no benefit) → priority 5 + safety_critical=True (see below)
 }
 
-CONSENSUS_PRIORITY = 5  # no formal grade
+CONSENSUS_PRIORITY = 5  # no formal grade (WHO HEARTS, Anoop Misra)
 ```
+
+**KDIGO note — why 2A = 3, not 2:**
+KDIGO 1B and 2A previously both mapped to priority 2. The first digit encodes recommendation
+strength (1 = "We recommend" / strong; 2 = "We suggest" / weak) — a clinically meaningful
+distinction. A strong recommendation with moderate evidence (1B) outranks a weak recommendation
+with high evidence (2A). Both axes are now encoded: strong recs always rank one level higher
+than weak recs at the same evidence quality.
+
+**ESC Class-III special rule:**
+ESC `Class-III` means the intervention is **not recommended or potentially harmful** — it is
+not a grading tier but a contraindication signal. These chunks always get:
+- `grade_priority = 5`
+- `safety_critical = True` (set by the recommendation chunker, not just the extractor annotation)
+
+The bot retrieves Class-III chunks precisely *because* they are harmful — the RAG response
+must know what NOT to advise. They are flagged so the response generation layer can handle
+them as "do not recommend" signals, not as evidence to cite in favour of the intervention.
+
+**ESC case normalization:**
+`normalize_esc_grade()` normalises class and level to uppercase internally before lookup,
+so `"IIa"`, `"IIA"`, and `"iia"` all resolve correctly. Previously the dict used mixed-case
+keys (`"IIa"`, `"IIb"`) which caused silent priority-5 fallback when callers passed uppercase
+values (as the table scanner does via `.upper()`).
+
+**Unrecognised grade strings:**
+Any grade string not in the lookup table gets `grade_priority = 5` and a `WARNING` log line
+(via Python `logging`). This surfaces extractor annotation gaps during corpus development
+without stopping the pipeline.
 
 For ESC chunks: the extractor produces `evidence_class` (I/IIa/IIb/III) and `evidence_level`
 (A/B/C) as two fields. The chunker resolves these to a single `grade_priority` integer and

@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 
 from .base import (
-    Chunk, _RAG_META_RE, context_header, make_chunk_id,
+    Chunk, ESC_CLASS_III_HARM, _RAG_META_RE, context_header, make_chunk_id,
     normalize_esc_grade, normalize_grade, parse_rag_metadata, token_estimate,
     split_text_with_ceiling,
 )
@@ -192,6 +192,12 @@ def chunk_recommendation_source(
 
         safety_raw = meta.get("safety_critical", meta.get("safety_redline", ""))
         safety_critical = safety_raw.lower() in ("true", "1")
+
+        # ESC Class-III (harm / no benefit) chunks must always be retrieved so the
+        # bot knows what NOT to advise.  Mark them safety_critical regardless of the
+        # annotation flag — the Class-III schema sentinel is set by normalize_esc_grade().
+        if ev_schema == ESC_CLASS_III_HARM:
+            safety_critical = True
 
         chunk_note = meta.get("chunk_note") or None
         kerala_food = meta.get("kerala_food", "").lower() in ("true", "1")

@@ -3,33 +3,78 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import re
 from dataclasses import asdict, dataclass, field
 from typing import Optional
 
+_logger = logging.getLogger(__name__)
+
 
 # ── Evidence grade normalization (CHUNKING_LOGIC.md) ─────────────────────────
+
+# Sentinel schema name for ESC Class-III (harm / no benefit) recommendations.
+# The recommendation chunker detects this and sets safety_critical=True so
+# these chunks are always retrieved — the bot must know what NOT to advise.
+ESC_CLASS_III_HARM = "ESC_Class_III_HARM"
+
 EVIDENCE_NORMALIZATION: dict[str, tuple[str, str, int]] = {
+    # ADA / RSSDI schema  (A = strongest evidence, E = expert opinion)
     "A":  ("A",  "ADA_RSSDI_ABCE", 1),
     "B":  ("B",  "ADA_RSSDI_ABCE", 2),
     "C":  ("C",  "ADA_RSSDI_ABCE", 3),
     "E":  ("E",  "ADA_RSSDI_ABCE", 4),
-    "1A": ("1A", "KDIGO_grading", 1),
-    "1B": ("1B", "KDIGO_grading", 2),
-    "1C": ("1C", "KDIGO_grading", 3),
-    "1D": ("1D", "KDIGO_grading", 4),
-    "2A": ("2A", "KDIGO_grading", 2),
-    "2B": ("2B", "KDIGO_grading", 3),
-    "2C": ("2C", "KDIGO_grading", 4),
-    "2D": ("2D", "KDIGO_grading", 5),
+
+    # KDIGO schema — two-axis grading:
+    #   first digit  = recommendation strength  (1 = "We recommend" / strong,
+    #                                            2 = "We suggest"   / weak)
+    #   letter       = evidence quality          (A = high, B = moderate,
+    #                                            C = low,  D = very low)
+    # Priority encodes BOTH dimensions: strong recs always rank higher than
+    # weak recs at the same evidence quality level.
+    # E.g. 1B (strong/moderate) = 2 > 2A (weak/high) = 3.
+    "1A": ("1A", "KDIGO_grading", 1),  # strong rec, high evidence
+    "1B": ("1B", "KDIGO_grading", 2),  # strong rec, moderate evidence
+    "1C": ("1C", "KDIGO_grading", 3),  # strong rec, low evidence
+    "1D": ("1D", "KDIGO_grading", 4),  # strong rec, very low evidence
+    "2A": ("2A", "KDIGO_grading", 3),  # weak rec, high evidence   ← 3 (not 2)
+    "2B": ("2B", "KDIGO_grading", 3),  # weak rec, moderate evidence
+    "2C": ("2C", "KDIGO_grading", 4),  # weak rec, low evidence
+    "2D": ("2D", "KDIGO_grading", 5),  # weak rec, very low evidence
 }
 
 
 def normalize_esc_grade(evidence_class: str, evidence_level: str) -> tuple[str, str, int]:
-    class_priority = {"I": 1, "IIa": 2, "IIb": 3, "III": 4}
-    level_modifier = {"A": 0, "B": 0, "C": 1}
+    """Resolve ESC Class (I / IIa / IIb / III) × Level (A / B / C) to a priority integer.
+
+    Priority formula for Class I / IIa / IIb:
+        class_priority: I=1, IIa=2, IIb=3
+        level_modifier: A/B=+0, C=+1
+        combined = class_priority + level_modifier, capped at 5
+
+    Class-III special rule:
+        ESC Class-III means the intervention is NOT recommended or potentially harmful.
+        These always get priority=5 AND schema=ESC_CLASS_III_HARM.
+        The recommendation chunker sets safety_critical=True for all Class-III chunks
+        so they are always retrieved — the bot must know what not to advise.
+
+    Case-insensitive: "IIa", "IIA", "iia" are all treated identically.
+    Unknown class/level → priority 5 (consistent with all other unknown fallbacks).
+    """
+    cls = evidence_class.upper().strip()
+    lvl = evidence_level.upper().strip()
     merged = f"{evidence_class}-{evidence_level}"
-    priority = class_priority.get(evidence_class, 4) + level_modifier.get(evidence_level, 1)
+
+    # Class-III = harm / no benefit — not a grading tier, a contraindication signal
+    if cls == "III":
+        return merged, ESC_CLASS_III_HARM, 5
+
+    # IIa / IIb come in mixed case ("IIa") or all-upper ("IIA") depending on caller
+    class_priority = {"I": 1, "IIA": 2, "IIB": 3}
+    level_modifier = {"A": 0, "B": 0, "C": 1}
+
+    # Unknown class → 5 (was 4 — inconsistent with every other unknown fallback)
+    priority = class_priority.get(cls, 5) + level_modifier.get(lvl, 1)
     return merged, "ESC_Class_Level", min(int(priority), 5)
 
 
@@ -37,9 +82,17 @@ CONSENSUS_GRADE: tuple[str, str, int] = ("consensus", "source_consensus", 5)
 
 
 def normalize_grade(raw: str | None) -> tuple[str | None, str | None, int]:
+    """Map a raw grade string from any source to (label, schema, grade_priority).
+
+    Handles:
+    - ADA/RSSDI: "A", "B", "C", "E"  (also "grade_A" prefix form)
+    - KDIGO:     "1A", "1B", … "2D"
+    - Unknown:   returned as-is with schema=None and priority=5; a warning is logged
+                 so corpus engineers can catch extractor annotation gaps early.
+    """
     if not raw:
         return None, None, 5
-    # Strip "grade_" prefix used by some extractors
+    # Strip "grade_" prefix used by some extractors (e.g. ADA: "grade_A" → "A")
     key = raw.strip()
     if key.lower().startswith("grade_"):
         key = key[6:]
@@ -47,6 +100,11 @@ def normalize_grade(raw: str | None) -> tuple[str | None, str | None, int]:
     if key in EVIDENCE_NORMALIZATION:
         g, schema, priority = EVIDENCE_NORMALIZATION[key]
         return g, schema, priority
+    # Unrecognised grade string — log so extractor annotation gaps surface early
+    _logger.warning(
+        "normalize_grade: unrecognised grade %r → assigned priority 5 (check extractor annotation)",
+        raw.strip(),
+    )
     return raw.strip(), None, 5
 
 

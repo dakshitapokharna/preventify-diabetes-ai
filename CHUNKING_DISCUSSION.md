@@ -428,6 +428,114 @@ Measuring the assembled text avoids all rounding issues. The check is slightly m
 
 ---
 
+---
+
+## Grade normalization audit and fixes (2026-05-23)
+
+Four bugs were found in `ingestion/chunkers/base.py` during a focused audit of the evidence
+grade normalization logic. All fixed in the same session.
+
+### Bug 17a — KDIGO 2A and 1B both mapped to priority 2
+
+**File:** `ingestion/chunkers/base.py` — `EVIDENCE_NORMALIZATION` dict
+
+**Symptom:** KDIGO "1B" (strong recommendation, moderate evidence) and "2A" (weak
+recommendation, high evidence) both produced `grade_priority = 2`. A retrieval filter
+of `grade_priority <= 2` would include weak-recommendation content at the same rank as
+strong-recommendation content.
+
+**Root cause:** The priority mapping treated evidence quality (the letter) as the sole
+determinant. The first digit of KDIGO grades encodes recommendation *strength*
+(1 = "We recommend" / strong; 2 = "We suggest" / weak) — a clinically meaningful axis
+that was being collapsed. For a patient-facing system, a strong recommendation with
+moderate evidence (1B) should outrank a weak recommendation with high evidence (2A).
+
+**Fix:** `"2A"` → `grade_priority = 3` (was 2). The full corrected mapping:
+
+| Grade | Strength | Evidence quality | Priority (old) | Priority (new) |
+|-------|----------|-----------------|---------------|---------------|
+| 1A    | strong   | high            | 1             | 1 (unchanged) |
+| 1B    | strong   | moderate        | 2             | 2 (unchanged) |
+| 1C    | strong   | low             | 3             | 3 (unchanged) |
+| 1D    | strong   | very low        | 4             | 4 (unchanged) |
+| 2A    | weak     | high            | **2**         | **3** ← fixed |
+| 2B    | weak     | moderate        | 3             | 3 (unchanged) |
+| 2C    | weak     | low             | 4             | 4 (unchanged) |
+| 2D    | weak     | very low        | 5             | 5 (unchanged) |
+
+---
+
+### Bug 17b — ESC Class-III treated as low priority, not as a contraindication signal
+
+**File:** `ingestion/chunkers/base.py` — `normalize_esc_grade()`
+
+**Symptom:** ESC `Class-III` recommendations ("intervention not recommended / potentially
+harmful") were assigned `grade_priority = 4` or `5` — treated identically to "low-quality
+evidence". They were not flagged as safety-critical and could be excluded from retrieval
+on safety queries (which filter `grade_priority <= 2`).
+
+**Root cause:** `class_priority = {"I": 1, "IIa": 2, "IIb": 3, "III": 4}` treated
+Class-III as the bottom of a quality scale. ESC Class-III does not mean "poor evidence" —
+it means "do not do this / this causes harm". The bot must retrieve these chunks to know
+what NOT to advise. Missing a contraindication signal is a patient safety risk.
+
+**Fix:**
+- `normalize_esc_grade()` now special-cases `"III"`: returns `(merged, "ESC_Class_III_HARM", 5)`.
+- The recommendation chunker detects `ev_schema == ESC_CLASS_III_HARM` and sets
+  `safety_critical = True` — ensuring these chunks are always retrieved on relevant queries.
+- The `ESC_CLASS_III_HARM` sentinel constant is exported from `base.py` and imported in
+  `recommendation.py`.
+
+---
+
+### Bug 17c — ESC class/level lookup broke on uppercase input
+
+**File:** `ingestion/chunkers/base.py` — `normalize_esc_grade()`
+
+**Symptom:** When the table scanner in `recommendation.py` passed `cls_val.upper()` (e.g.
+`"IIA"`, `"IIB"`) to `normalize_esc_grade()`, the dict lookup failed silently and returned
+priority 5. Only the inline annotation path (which passes mixed-case `"IIa"`, `"IIb"`)
+worked correctly.
+
+**Root cause:** The dict used mixed-case keys `{"IIa": 2, "IIb": 3}` but the table scanner
+always uppercases values before calling the function. `"IIA"` is not in the dict, so it fell
+through to the default of 4 (itself wrong — see Bug 17d), added `level_modifier.get(lvl, 1)`,
+producing priority 5.
+
+**Fix:** `normalize_esc_grade()` now normalises both inputs to uppercase internally before
+lookup. The class dict keys are updated to `{"I": 1, "IIA": 2, "IIB": 3}` — fully
+case-insensitive for all callers.
+
+---
+
+### Bug 17d — ESC unknown class defaulted to 4, not 5
+
+**File:** `ingestion/chunkers/base.py` — `normalize_esc_grade()`
+
+**Symptom:** Any ESC `evidence_class` value not in the dict (e.g. unrecognised annotation
+like `"Class IIc"`) returned `class_priority.get(cls, 4)` = 4, then added a level modifier,
+producing priority 4 or 5. Priority 4 is higher than the "unknown/ungraded" floor of 5 used
+everywhere else in the normalization logic — inconsistent.
+
+**Fix:** Default changed from `4` → `5`: `class_priority.get(cls, 5)`. All unknown inputs
+now consistently produce priority 5. The existing warning log in `normalize_grade()` surfaces
+the gap.
+
+---
+
+### Bug 17e — `normalize_grade()` silently discarded unrecognised grade strings
+
+**File:** `ingestion/chunkers/base.py` — `normalize_grade()`
+
+**Symptom:** Grade strings not in `EVIDENCE_NORMALIZATION` (e.g. `"Strong"`, `"Moderate"`,
+`"Level B"`) returned `(raw, None, 5)` with no log output. Extractor annotation gaps during
+corpus development were invisible until a manual audit.
+
+**Fix:** Added `_logger.warning(...)` for unrecognised grade strings. The pipeline continues
+(priority 5 assigned) but the gap appears in logs during corpus development runs.
+
+---
+
 ## What is NOT done yet
 
 1. **Embedder + pgvector upsert** — the next engineering step; reads `data/chunks/*.jsonl`, embeds with `bge-large-en-v1.5`, upserts to pgvector (Neon). Full design in `CLAUDE.md` → Embedder section.

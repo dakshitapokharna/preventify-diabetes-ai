@@ -214,7 +214,7 @@ python ingestion/chunkers/run.py --dry-run     # count only, no files written
 **`retrieval_tier`:** `core` (Tier 1 — every turn) | `triggered` (Tier 2 — condition flag only) | `compliance`  
 **`condition_trigger`:** `null` for Tier 1 | `ckd` | `cardio` | `ramadan` | `hypertension`  
 **`india_specific`:** `true` = RSSDI/ICMR/ICMR-NIN; `false` = ADA/ESC/KDIGO/WHO  
-**`grade_priority`:** 1 (strongest) → 5 (consensus/ungraded) — pre-filter for safety-critical queries only  
+**`grade_priority`:** 1 (strongest) → 5 (consensus/ungraded/contraindicated) — pre-filter for safety-critical queries; ESC Class-III (harm/no benefit) chunks get priority 5 AND `safety_critical=True`  
 **`kerala_food`:** `true` on ICMR-NIN Type B individual Kerala food row chunks only  
 **`token_estimate`:** `len(text) // 4` — cost tracking
 

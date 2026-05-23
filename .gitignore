@@ -12,6 +12,9 @@ __pycache__/
 venv/
 *.egg-info/
 
+# Logs — embed failure logs contain chunk text, not patient data, but keep out of git
+logs/
+
 # OS
 .DS_Store
 Thumbs.db

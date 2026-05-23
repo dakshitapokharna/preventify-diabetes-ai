@@ -27,11 +27,11 @@ Always read these before making decisions about clinical scope, data sourcing, o
 
 ---
 
-## Current Project Stage (as of 2026-05-13)
+## Current Project Stage (as of 2026-05-21)
 
-**Stage: Build — Ingestion Pipeline in Progress**
+**Stage: Build — Chunking Pipeline Complete; Embedder + pgvector Upsert Next**
 
-Specification phase is complete. Engineering has started. The base model spec (`base_model_spec.md`) is the authoritative engineering reference. The next milestone is a working end-to-end English query → RAG response pipeline.
+Specification phase is complete. Ingestion pipeline (extraction → chunking) is fully built and producing output. The next milestone is the embedder + pgvector upsert step, then the end-to-end English query → RAG response pipeline.
 
 ### What is locked and ready
 
@@ -40,22 +40,14 @@ Specification phase is complete. Engineering has started. The base model spec (`
 | Clinical scope boundary (DSMES only, no Rx/diagnosis) | Finalized |
 | Risk escalation model (5 tiers, red-flag library) | Finalized |
 | Knowledge corpus sources (2-tier retrieval model defined) | Finalized — all 10 PDFs downloaded; Tier 1 core: 5/5 complete; Tier 2 condition-triggered: 4/4 complete |
-| RAG chunking strategy and retrieval logic | Finalized — Tier 1 always-active (RSSDI/ICMR first → ADA fallback); Tier 2 condition-triggered (KDIGO on CKD, IDF-DAR on Ramadan, ESC on cardio, etc.) |
+| RAG chunking strategy and retrieval logic | Finalized — see `CHUNKING_LOGIC.md` for full spec |
 | Conversational architecture (3 literacy registers, MI scaffolds) | Finalized |
 | Kerala nutrition knowledge layer (food-by-food, festivals, fasting, monsoon) | Detailed — 15 clinical placeholders remain |
 | Compliance hooks (DPDP, Telemedicine Guidelines, SaMD Class B posture) | Framed — not yet filed |
-| Tech stack — LLM, embedding, reranker, vector DB, PDF parsing | **Decided and partially implemented** — see B1 below |
+| Tech stack — LLM, embedding, reranker, vector DB, PDF parsing | **Fully decided** — all locked, see B1 |
 | PDF ingestion parsers (`ingestion/parsers/`) | **Built** — custom parser per source, all 10 corpus sources covered |
-
-### Engineering work completed
-
-| Module | Location | Status |
-|--------|----------|--------|
-| Config + settings | `config/settings.py`, `config/corpus_manifest.json` | Done |
-| Docker services (Qdrant + Postgres) | `docker-compose.yml` | Done |
-| PDF parsers — all 10 corpus sources | `ingestion/parsers/` | Done |
-| Base model specification | `base_model_spec.md` | Done |
-| Corpus extraction runner | `extract_corpus.py` | Done — run once per source, output lives in `parsed/` |
+| Corpus extractors (`ingestion/extractors/`) | **Built + run** — all 10 parsed markdown files in `parsed/` |
+| Chunking pipeline (`ingestion/chunkers/`) | **Built + run** — 4,059 chunks across 10 JSONL files in `data/chunks/`; token ceiling fully enforced (0 chunks over 512 tok, max exactly 512) |
 
 ### What is blocking full pipeline completion
 
@@ -67,6 +59,16 @@ Specification phase is complete. Engineering has started. The base model spec (`
 | B4 | RMP Loop Design | Preventify Operations |
 | B5 | SaMD Regulatory Pathway | Compliance |
 | B6 | Operations & Clinic Handoff | Preventify Operations |
+
+### Immediate next engineering step
+
+Build the **embedder + pgvector upsert pipeline** (`ingestion/embedder/`). Full design is documented in the RAG System Design → Embedder section below. Summary:
+1. Load each `data/chunks/*.jsonl`
+2. Embed `text` field with `BAAI/bge-large-en-v1.5` in batches of 32
+3. Upsert to pgvector table `preventify_corpus` (Neon/PostgreSQL) with full metadata payload
+4. On re-run for a source: delete all existing rows for that source, re-insert fresh
+5. Failed chunks logged to `logs/embed_failures.jsonl` — recoverable via `--retry-failed`
+6. Add indexes on: `source`, `retrieval_tier`, `condition_trigger`, `india_specific`, `kerala_food`, `safety_critical`, `grade_priority`, `text_hash`
 
 ---
 
@@ -89,12 +91,25 @@ These are SaMD safety boundaries. Any code path that could violate these — LLM
 
 ```
 Patient (Malayalam voice/text)
-    → ASR (code-mixed Malayalam-English)
-    → RAG retrieval (clinical corpus)
-    → Risk scoring (5-tier escalation)
-    → Response generation (literacy-register adapted)
+    → ASR (code-mixed Malayalam-English speech recognition)
+    → Malayalam → English translation        ← all search/embed/generate works in English
+    → [Risk engine runs in parallel — deterministic, no RAG]
+    → Metadata pre-filter (population type, retrieval tier, india_specific)
+    → Embedder: bge-large-en-v1.5 encodes English query → 1024-dim vector
+    → pgvector ANN search → top-20 candidate chunks
+    → Reranker: bge-reranker-large scores each (query, chunk) pair → top-5
+    → Constraint check (no Rx/dose/diagnosis language)
+    → Claude Sonnet 4.6 generates English response
+    → English → Malayalam translation
+    → Patient receives Malayalam response
     → Clinic referral when indicated → Sugar Care Clinics
 ```
+
+**Key architectural decision — language layer is upstream of RAG:**
+The entire RAG pipeline (embedding, vector search, reranking, generation) operates in English. Malayalam is handled exclusively at the edges — ASR + translation on input, translation on output. This means:
+- `bge-large-en-v1.5` (English-only) is the correct embedder — no multilingual model needed
+- The clinical corpus (all guidelines) is in English — query and corpus are in the same language space
+- When Malayalam voice/translation is added, it slots in before and after the existing English pipeline — the RAG code does not change
 
 ### PDF Extraction — One-Time Run Pattern
 
@@ -131,7 +146,7 @@ Four sources use Docling-based extractors — for two-column layouts, complex ta
 | `ingestion/extractors/tier2/who_hearts.py` | Docling | `corpus/tier2_condition/WHO_HEARTS/WHO_HEARTS_Technical_Package.pdf` | `parsed/WHO_HEARTS_docling.md` |
 | `ingestion/extractors/compliance/telemedicine.py` | Docling | `corpus/compliance/Telemedicine_Practice_Guidelines_India_2020.pdf` | `parsed/Telemedicine_Guidelines_India_2020.md` |
 
-**Why ICMR-NIN uses pdfplumber:** The IFCT PDF is 585 pages of fixed-column composition tables. Docling's VLM renderer crashes with `std::bad_alloc` on this PDF (too many dense-table pages for CPU RAM). The existing `ICMRNINParser` in `ingestion/parsers/food_table.py` was built specifically for IFCT's layout (fixed x-position column detection) and produces clean structured output. `extract_icmr_nin_docling.py` is a thin wrapper that runs it and emits grouped markdown tables with a RAG header.
+**Note on backends:** ICMR-NIN, IDF-DAR, and KDIGO use pdfplumber (Docling crashes with `std::bad_alloc` on their dense multi-hundred-page PDFs). All others use Docling. See individual extractor scripts for annotation logic.
 
 **To re-run any extractor:**
 ```
@@ -147,106 +162,61 @@ python ingestion/extractors/tier2/who_hearts.py
 python ingestion/extractors/compliance/telemedicine.py
 ```
 
-**What every Docling extractor does (the shared pattern):**
-
-1. `DocumentConverter().convert(pdf_path)` — Docling VLM parse
-2. `html.unescape(doc.export_to_markdown())` — full document markdown; `html.unescape` restores `<`/`>` operators that Docling HTML-encodes as `&lt;`/`&gt;`
-3. Table replacement — regex finds every markdown table block in the output, replaces it with a grid-rendered version built from `doc.tables[i].data.grid`:
-   - Tracks `id(cell)` to emit spanning cells only once (no repeated content across rows)
-   - Collapses footnote rows where all non-empty cells are identical text
-   - `_clean_cell()` runs `html.unescape` + normalises whitespace + converts `\n` → ` · ` for multi-line cells
-4. Writes final markdown to `parsed/`
-
-**Anoop Misra extras (source-specific):**
-- `_restore_comparison_operators()` — replaces `\x15` (U+0015, how the 2011 PDF font encodes `≥`) with the correct symbol
-- `_inject_section_metadata()` — inserts `<!-- rag_metadata ... -->` comments after substantive headings (generic headings like "Recommendations", "References", "Appendix" are skipped via `_SKIP_METADATA_SECTIONS` blocklist)
-- RAG document header with citation, population, topic tags
-- Indian food glossary appended (35 Hindi/regional food terms mapped to English)
-
-**ADA extras (source-specific):**
-- Loops over all 15 section PDFs in order; inserts a `<!-- source: ADA_2026 | file: ADA_2026_Sxx.pdf | citation: ... -->` separator between sections in the merged output
-
-**ICMR STW 2024 extras (source-specific):**
-- `_inject_section_metadata()` — inserts `<!-- rag_metadata ... -->` comments after substantive headings with clinical topic tags (treatment_algorithm, drug_escalation, HbA1c_targets, etc.)
-- `_annotate_algorithm_steps()` — detects "Step N" lines (treatment escalation steps) and prepends a rag_metadata comment so chunks covering algorithm steps rank higher on clinical workflow queries
-- RAG document header with GoI-context note (reflects what PHC/Aardram facilities actually stock and prescribe)
-
-**ICMR-NIN extras (source-specific) — pdfplumber backend:**
-- Uses `ICMRNINParser` from `ingestion/parsers/food_table.py` (fixed x-position column detection for IFCT's layout)
-- Groups 7,000+ food rows by IFCT food group letter (A=Cereals, B=Legumes, C=Vegetables, K=Marine Fish, etc.) and renders each group as a markdown table
-- Each group heading gets a `<!-- rag_metadata ... -->` comment with food group topic tag
-- Kerala food metadata (food-row level tags) is deferred to chunking time — not applied at extraction
-
-**RSSDI 2022 extras (source-specific):**
-- `_inject_section_metadata()` — inserts `<!-- rag_metadata ... -->` comments after substantive headings covering glycemic targets, drug classes, complication screening, comorbidities, and special populations
-- `_annotate_evidence_grades()` — detects inline RSSDI grade markers `(A)`, `(B)`, `(C)`, `(E)` on recommendation lines (>40 chars) and prepends a rag_metadata comment with `evidence_grade` field; enables grade-filtered retrieval to surface Grade A recommendations preferentially for safety-critical queries
-- RAG document header with primary-source priority note (RSSDI first over ADA for all India queries)
-
-**ESC 2023 CVD-DM extras (source-specific):**
-- `_annotate_esc_recommendation_blocks()` — scans every table header line; when a header row contains both "Class" and "Level" columns (the standard ESC recommendation schema), prepends a `rag_metadata` comment with `evidence_schema: ESC_Class_I_IIa_IIb_III / Level_A_B_C` so every recommendation block can be retrieved by evidence class without relying on section context alone. This is the critical annotation — without it, Class I / Level A recommendations cannot be filtered at query time.
-- `_annotate_class_level_inline()` — detects free-text "Class I, Level A" / "(Class IIa, Level B)" patterns in body paragraphs (>60 chars, non-table lines) and prepends a `rag_metadata` comment with explicit `evidence_class` and `evidence_level` fields; covers the minority of ESC recommendations stated outside formal tables.
-- `_inject_section_metadata()` — standard section annotation; SCORE2-Diabetes sections get the `CVD_risk, SCORE2_diabetes, risk_stratification` tag so queries like "how do I calculate CV risk in a diabetic patient" rank them first.
-- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: cardio`, `india_specific: false`; the retrieval engine gates this source behind the cardio flag and overrides Tier 1 sources for all CV-specific sub-queries.
-
-**IDF-DAR 2021 extras (source-specific) — pdfplumber backend:**
-- Uses pdfplumber `extract_text()` per page — Docling's VLM renderer crashes with `std::bad_alloc` on this 333-page PDF from page 14 onwards (same root cause as ICMR-NIN). pdfplumber extracts all 333 pages cleanly. No content post-processing applied; raw text written as-is. Post-processing decisions deferred.
-- Each page prefixed with a `<!-- page N -->` marker preserving page provenance.
-- `_annotate_risk_stratification_lines()` — detects lines carrying IDF-DAR risk-factor or scoring terms (risk category, very-high/high risk, do not fast, HbA1c/hypoglycaemia/duration + points) and prepends a `rag_metadata` comment tagged `chunk_note: keep_atomic_large_window` so the chunker keeps scoring content atomic.
-- `_annotate_meal_timing_adjustments()` — detects lines (>40 chars) co-occurring a meal-timing keyword (Suhoor/Sahur/Sehri/Iftar/predawn) with a drug-class name and prepends a `rag_metadata` comment with explicit `meal_context` field. Prevents Suhoor dose-halving guidance from being served in response to an Iftar query.
-- `_annotate_break_fast_safety()` — detects lines (>40 chars) containing the exact IDF-DAR BG thresholds (< 70 mg/dL / < 3.9 mmol/L; > 300 mg/dL / > 16.7 mmol/L) and prepends a `rag_metadata` comment with `safety_redline=true` and `chunk_note: zero_loss_standalone_node`.
-- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: ramadan`, `india_specific: false`; SMBG thresholds quoted verbatim in header so retrievable independent of body chunk boundaries.
-- Quality signals (last run): 75 suhoor refs, 155 iftar refs, 97 risk annotations, 17 meal-timing annotations, 13 safety redline annotations across 333 pages.
-
-**KDIGO 2022 DM-CKD extras (source-specific):**
-- **pdfplumber backend** — Docling's VLM crashes with `std::bad_alloc` on pages 13–128 (same issue as ICMR-NIN and IDF-DAR); switched to pdfplumber which extracts all 128 pages cleanly.
-- **No post-processing annotation passes.** Raw pdfplumber text per page, with `<!-- page N -->` markers, written as-is. All annotation decisions deferred — add `_annotate_*` passes in a future session when chunking strategy is confirmed.
-- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: ckd`, `india_specific: false`; key eGFR thresholds quoted verbatim in header (Metformin stop <30, SGLT2i initiate ≥20, BP <120 mmHg) so they are retrievable independent of body chunk boundaries.
-- Quality signals (last run): 128 pages, 575 KB, 325 eGFR refs, 25 recommendation blocks, 80 practice points, 39 grade refs (1A–2D), 163 CKD G-stage refs.
-
-**WHO HEARTS Technical Package extras (source-specific):**
-- **Docling backend** — WHO HEARTS is a structured single-column modular document; no std::bad_alloc issue expected (unlike ICMR-NIN, IDF-DAR, KDIGO). Docling handles the protocol tables and risk charts correctly.
-- `_annotate_treatment_protocol_steps()` — detects "Step 1 / Step 2 / Step 3" lines in the antihypertensive titration ladders (Module E) and prepends a rag_metadata comment with `chunk_note: keep_atomic_large_window`; prevents the chunker from splitting a step-up protocol mid-sequence, which would produce a partial and potentially dangerous dosing instruction.
-- `_annotate_bp_decision_thresholds()` — detects lines carrying specific BP threshold values used as clinical decision triggers (≥140/90, ≥130/80, target <130/80, systolic <120 mmHg) and prepends `safety_critical=true`; these are the initiate/intensify decision nodes and must be retrieved verbatim.
-- `_annotate_cvd_risk_scoring()` — detects lines referencing 10-year CVD risk scores, WHO/ISH risk charts, and risk categories (low/moderate/high/very high) and prepends `chunk_note: keep_atomic_large_window`; risk chart rows must not be separated from their row-header context.
-- `_inject_section_metadata()` — HEARTS module-aware section annotation; headings matching Module H/E/A/R/T/S content get the corresponding `hearts_module_*` tag so every sub-chunk inherits module context without relying on surrounding heading text.
-- RAG document header declares `retrieval_tier: triggered`, `condition_trigger: hypertension`, `india_specific: false`; key BP thresholds and the HEARTS step-up ladder quoted verbatim in header so retrievable independent of body chunk boundaries.
-- All annotation passes are purely additive — no content is filtered, dropped, or reformatted beyond html.unescape and grid table rendering.
-- Quality signals (last run): 32,441 chars, 2 India state protocols (Maharashtra + Punjab), 6-step antihypertensive ladder each (Amlodipine→Telmisartan→Chlorthalidone), 12 step-up ladder annotations, 3 BP threshold annotations, 36 section metadata annotations. Special population sections (T2DM, CKD, pregnancy, prior heart attack/stroke) annotated per state.
-
-**Telemedicine Guidelines 2020 extras (compliance namespace — source-specific):**
-- `_annotate_drug_lists()` — detects `List O`, `List A`, `List B` header lines (also bold-variant `**List A**`) and prepends a rag_metadata comment with `list_type` and the prescribing-constraint tags for that list; keeps every drug item bound to its access rule so "metformin" chunks also carry `list_type: List A`
-- `_annotate_consultation_flows()` — detects lines (>40 chars) that contain consultation-mode keywords (`text-only`, `audio`, `video`, `first consultation`, `follow-up`, `established patient`, etc.) and prepends a rag_metadata comment with `flow_step`; keeps mode-selection decision logic retrievable without crossing into prescribing or penalty sections
-- `_inject_section_metadata()` — standard section annotation with compliance-specific topic tags (consent_framework, RMP_duties, penalties, scope_boundary, etc.)
-- RAG document header declares `namespace: compliance` and `retrieval_tier: compliance`; the bot queries this namespace silently for scope-boundary enforcement, never exposing it to the patient
-
-**To create a new Docling extractor for another source**, copy either script and change: `PDF_PATH`, `OUT_FILE`, `SOURCE_KEY`, `CITATION`, `YEAR`. Keep the `_clean_cell` / `_render_table_grid` / `_MD_TABLE_RE` / `html.unescape` core unchanged — that part is proven and shared.
-
 ---
 
 ### RAG System Design
 
-**Chunking:** By clinical recommendation unit — not by token count. Each chunk must carry structured metadata:
+**Chunking pipeline is built.** See `CHUNKING_LOGIC.md` for the full specification and `CHUNKING_DISCUSSION.md` for design rationale. Implementation lives in `ingestion/chunkers/`. Output: `data/chunks/*.jsonl`.
 
+**To run the chunker pipeline:**
+```
+python ingestion/chunkers/run.py               # all sources
+python ingestion/chunkers/run.py RSSDI_2022    # single source
+python ingestion/chunkers/run.py --dry-run     # count only, no files written
+```
+
+**Chunker types and current output counts:**
+
+| Source | Chunker | Chunks |
+|--------|---------|--------|
+| RSSDI_2022 | `recommendation` | 764 |
+| ICMR_STW_2024 | `recommendation` | 10 |
+| ADA_2026 | `recommendation` | 658 |
+| ICMR_NIN | `food_table` | 71 |
+| Anoop_Misra_South_Asian_Nutrition | `narrative` | 58 |
+| KDIGO_2022_DM_CKD | `page_window` | 891 |
+| IDF_DAR | `page_window` | 1,103 |
+| ESC_2023_CV_DM | `recommendation` | 419 |
+| WHO_HEARTS | `narrative` | 20 |
+| Telemedicine_Guidelines_2020 | `narrative` | 65 |
+| **Total** | | **4,059** |
+
+**Chunk metadata schema** — 14 fields, patient-first (see `CHUNKING_LOGIC.md` for full spec):
 ```json
 {
-  "source": "RSSDI_2022",
-  "year": 2022,
-  "section_ref": "S5.2",
-  "evidence_grade": "A",
-  "population_scope": ["T2DM"],
-  "age_scope": "adult",
-  "topic_tags": ["medication", "metformin"],
-  "retrieval_tier": "core",
+  "chunk_id":          "a3f2b89c1d4e5f67",
+  "source":            "RSSDI_2022",
+  "year":              2022,
+  "section_title":     "Glycemic Targets",
+  "text":              "[RSSDI 2022 — Glycemic Targets]\n\nHbA1c target...",
+  "retrieval_tier":    "core",
   "condition_trigger": null,
-  "india_specific": true
+  "india_specific":    true,
+  "kerala_food":       false,
+  "safety_critical":   false,
+  "grade_priority":    1,
+  "meal_context":      null,
+  "text_hash":         "sha256[:32]",
+  "token_estimate":    87
 }
 ```
 
-**`retrieval_tier` values:** `core` (Tier 1 — every turn) | `triggered` (Tier 2 — condition flag only) | `compliance`  
-**`condition_trigger` values:** `null` for Tier 1 | `ckd` | `cardio` | `ramadan` | `hypertension`  
-**`india_specific`:** `true` = RSSDI/ICMR/ICMR-NIN/IDF-DAR; `false` = ADA/ESC/KDIGO/WHO (global, used as fallback or specialist override)
-
-> **No geography_tag.** All patients are Kerala-based Malayalam speakers. Geography is not a retrieval dimension — it only creates noise. `india_specific` captures the only meaningful distinction: whether a source was calibrated for Indian physiology or is a global guideline used as fallback.
+**`retrieval_tier`:** `core` (Tier 1 — every turn) | `triggered` (Tier 2 — condition flag only) | `compliance`  
+**`condition_trigger`:** `null` for Tier 1 | `ckd` | `cardio` | `ramadan` | `hypertension`  
+**`india_specific`:** `true` = RSSDI/ICMR/ICMR-NIN; `false` = ADA/ESC/KDIGO/WHO  
+**`grade_priority`:** 1 (strongest) → 5 (consensus/ungraded) — pre-filter for safety-critical queries only  
+**`kerala_food`:** `true` on ICMR-NIN Type B individual Kerala food row chunks only  
+**`token_estimate`:** `len(text) // 4` — cost tracking
 
 **Retrieval logic** (hard rule — not a preference):
 
@@ -261,7 +231,112 @@ python ingestion/extractors/compliance/telemedicine.py
 - **ESC 2023** — Cardio flag (heart disease / cardiovascular / angina / heart failure)
 - **WHO HEARTS** — Hypertension flag (triggered alongside ESC for BP-primary queries)
 
-**Reranker:** Apply on top-20 candidates (bge-reranker-large or Cohere Rerank). This is a meaningful quality lever — do not skip.
+**Embedder pipeline** — `ingestion/embedder/` (next build step):
+
+*Database — pgvector table `preventify_corpus` on Neon (PostgreSQL):*
+```sql
+CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE preventify_corpus (
+    id                SERIAL PRIMARY KEY,
+    chunk_id          TEXT UNIQUE NOT NULL,
+    source            TEXT NOT NULL,
+    year              INT,
+    section_title     TEXT,
+    text              TEXT NOT NULL,
+    embedding         vector(1024),
+    retrieval_tier    TEXT,
+    condition_trigger TEXT,
+    india_specific    BOOLEAN,
+    kerala_food       BOOLEAN,
+    safety_critical   BOOLEAN,
+    grade_priority    INT,
+    meal_context      TEXT,
+    token_estimate    INT,
+    text_hash         TEXT,
+    inserted_at       TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX ON preventify_corpus (source);
+CREATE INDEX ON preventify_corpus (retrieval_tier);
+CREATE INDEX ON preventify_corpus (condition_trigger);
+CREATE INDEX ON preventify_corpus (india_specific);
+CREATE INDEX ON preventify_corpus (kerala_food);
+CREATE INDEX ON preventify_corpus (safety_critical);
+CREATE INDEX ON preventify_corpus (grade_priority);
+CREATE INDEX ON preventify_corpus (text_hash);
+```
+
+*Connection:* `DATABASE_URL` in `.env` at project root (never committed). Loaded via `python-dotenv`.
+
+*Run modes:*
+```
+python ingestion/embedder/run.py                  # embed all 10 sources
+python ingestion/embedder/run.py RSSDI_2022       # single source only
+python ingestion/embedder/run.py --dry-run        # count what would be inserted, no writes
+python ingestion/embedder/run.py --retry-failed   # re-try chunks in logs/embed_failures.jsonl
+```
+
+*Re-run behaviour (single source):* Delete all existing rows for that source first, then re-insert everything fresh. This is the correct approach for guideline updates (e.g. ADA 2027 replaces ADA 2026).
+
+*Batch size:* 32 chunks per embedding call — safe for CPU, ~2–4 GB RAM.
+
+*Failure handling and recovery:*
+- If a chunk fails to embed or insert, it is logged to `logs/embed_failures.jsonl` and the run continues
+- Each failure line contains the **full chunk JSON** (all 14 fields) plus `error` message and `failed_at` timestamp — enough to re-process without reading the original JSONL again
+- `--retry-failed` reads `logs/embed_failures.jsonl`, re-embeds each chunk, upserts by `chunk_id` (`INSERT ... ON CONFLICT (chunk_id) DO UPDATE`) — this places the chunk at its correct position in the DB regardless of when it is re-run
+- On successful retry → entry removed from `logs/embed_failures.jsonl`
+- On failed retry → error and timestamp updated in place, kept in log
+- Run ends with a summary: total inserted, total skipped, total still failing
+
+```json
+// Example logs/embed_failures.jsonl entry
+{
+  "chunk_id": "a3f2b89c1d4e5f67",
+  "source": "RSSDI_2022",
+  "error": "ConnectionError: timed out after 30s",
+  "failed_at": "2026-05-23T14:32:01Z",
+  "chunk": {
+    "chunk_id": "a3f2b89c1d4e5f67",
+    "source": "RSSDI_2022",
+    "year": 2022,
+    "section_title": "Glycemic Targets",
+    "text": "[RSSDI 2022 — Glycemic Targets]\n\nHbA1c target < 7.0%...",
+    "retrieval_tier": "core",
+    "condition_trigger": null,
+    "india_specific": true,
+    "kerala_food": false,
+    "safety_critical": false,
+    "grade_priority": 1,
+    "meal_context": null,
+    "token_estimate": 87,
+    "text_hash": "a3f2b89c1d4e5f67890abcd"
+  }
+}
+```
+
+*Dependencies:* `sentence-transformers`, `psycopg2-binary`, `pgvector`, `python-dotenv`, `tqdm`
+
+**Two-stage retrieval — embedder then reranker (both required, do not skip either):**
+
+*Stage 1 — Embedder (fast, approximate):*
+`BAAI/bge-large-en-v1.5` encodes the English query into a 1024-dim vector. pgvector ANN search runs against all ~4,059 stored chunk vectors and returns **top-20 candidates** in milliseconds. This is fast but approximate — cosine similarity compares query and chunk *independently*, so it can return plausible-sounding but clinically mismatched chunks.
+
+*Stage 2 — Reranker (slower, precise):*
+`BAAI/bge-reranker-large` (self-hosted via FlagEmbedding) is a **cross-encoder** — it takes the query and each of the 20 chunks *together as a pair* and outputs a single relevance score per pair. Because it reads both simultaneously, it understands the relationship between query and chunk, not just surface similarity. The 20 pairs are scored, sorted, and the **top-5** are passed to Claude.
+
+```
+query + chunk_1  →  bge-reranker-large  →  score: 0.91  ✓ keep
+query + chunk_2  →  bge-reranker-large  →  score: 0.43  ✗ drop
+...
+query + chunk_20 →  bge-reranker-large  →  score: 0.67  ✓ keep
+```
+
+*Why two stages instead of reranker alone:*
+Running a cross-encoder over all 4,059 chunks on every query would be too slow — each pair requires a full model forward pass. The embedder narrows the search space cheaply; the reranker applies expensive precision only to the shortlist.
+
+*Why bge-large + bge-reranker-large pair:*
+Both are from the BAAI family, trained on the same data distribution. The reranker was fine-tuned to re-score candidates that a BGE embedder retrieves — using the same family avoids distribution mismatch.
 
 **Namespacing:** Only the Telemedicine Practice Guidelines go into the `compliance` namespace — the bot queries this in real time to enforce scope boundaries. DPDP Rules 2025 and DSMES 2022 are not corpus sources; they live in `reference/` as team documents and must not be ingested into any namespace.
 
@@ -314,6 +389,76 @@ Risk scoring runs silently in the background on every conversation turn.
 - **Family as clinical unit:** family members enrollable with patient consent
 - **Faith/fasting handling:** Ramadan (IDF-DAR stratification), Ekadashi, Lent, Navratri — with clinical guardrails on each
 
+### Lead Capture Architecture (v0.3)
+
+Full spec: `preventify lead architecture v2.pdf`. The bot has a lead capture layer that runs silently alongside the clinical education layer. Patients never experience it as a sales flow — it is designed to feel like a natural continuation of the conversation.
+
+**Build principles (non-negotiable):**
+- **Safety first** — clinical escalation always overrides lead capture routing
+- **Cost** — lean token footprint; save tokens in chunking, prompts, and memory retrieval
+- **Lean footprint** — single PostgreSQL (Neon) for all data: vectors, user memory, lead data; no separate services
+- **User-level rate limiting** — to be implemented once the database schema is set
+
+**Agentic decision loop — every message turn:**
+```
+Receive message
+→ Recall user memory (identity + clinical profile + lifetime score)
+→ Classify: assign Question Depth Score (QDS 1–5) via LLM
+→ Route: answer from RAG / escalate clinically / trigger consent / update lead
+→ Respond + update memory and lifetime score
+```
+
+**Question Depth Score (QDS):**
+
+| Score | Intent | Example |
+|-------|--------|---------|
+| 1 | General awareness | "What is HbA1c?" |
+| 2 | Personal relevance | "My HbA1c came back at 7.2 — is that okay?" |
+| 3 | Active management | "Should I take metformin before or after food?" |
+| 4 | Complication concern | "My feet go numb at night — is that from diabetes?" |
+| 5 | Complex / distressed | "My doctor wants to put me on insulin. I'm scared." |
+
+QDS is assigned by the LLM agent — not keyword matching. Dr. Rakesh must validate classification on 50 real questions before go-live.
+
+**Volume decay — prevents score inflation from low-depth questions:**
+- Q1–Q4 (low depth): 1.0× full value
+- Q5–Q7 (low depth): 0.5×
+- Q8+ (low depth): 0.25×
+- QDS 3, 4, 5: always 1.0× regardless of volume
+
+**Persistent user memory — 3 layers:**
+- Layer 1 — Identity: WhatsApp number (primary key), name, age, first contact date
+- Layer 2 — Clinical profile: detected diabetes type, complications mentioned, medications referenced, highest QDS ever asked
+- Layer 3 — Engagement: lifetime score (with decay), number of sessions, recency weight, consent status + timestamp, lead status
+
+Recency weighting: current session = 1.0×, last 30 days = 0.8×, older = 0.5×.
+
+**Capture trigger — both conditions must be true simultaneously:**
+- Condition A: lifetime score ≥ 8 (with decay applied)
+- Condition B: at least one QDS 3+ question in lifetime history
+- Minimum floor: 3 total messages lifetime before capture can fire
+- Clinical escalation questions (hypoglycemia, chest pain, acute symptoms) are never routed into capture — always follow clinical escalation path
+
+**Consent moment:**
+- Agent waits for a natural pause after delivering a full answer — never interrupts mid-answer
+- Consent message must reference a specific topic from the conversation (LLM-generated, never templated)
+- Collects only name + age in-chat; WhatsApp number already captured
+- DPDP Act 2023 compliant — user told explicitly what data is used for and by whom; timestamp stored
+- If declined: no re-prompt in same session; returning users who declined can be re-prompted once when lifetime score exceeds 12
+
+**AI brief — generated at consent, pushed to CRM via webhook:**
+- Identity (name, number, age)
+- Detected condition type (T1/T2/GDM/Prediabetes/Undiagnosed)
+- Concern summary — 2–3 lines, LLM-generated from full conversation history, never templated
+- Engagement score at capture
+- Peak concern (highest QDS topic ever raised)
+- Capture timestamp (IST)
+
+**Sales pipeline — 4 stages:**
+New Lead → Contacted → Qualified → Converted/Closed
+
+Recommended CRM: Zoho CRM Free or HubSpot Starter. Chatbot pushes leads via webhook on consent — no manual entry.
+
 ---
 
 ## Kerala-Specific Knowledge Layer
@@ -348,7 +493,7 @@ Each blocker is self-contained and can be picked up independently in a new chat.
 | LLM | **Decided** | `claude-sonnet-4-6` via Anthropic SDK |
 | Embedding model | **Decided** | `BAAI/bge-large-en-v1.5` (sentence-transformers) |
 | Reranker | **Decided** | `BAAI/bge-reranker-large` (self-hosted, top-20 → top-5) |
-| Vector store | **Decided** | Qdrant (self-hosted via Docker) |
+| Vector store | **Decided** | pgvector on Neon (PostgreSQL) — single DB for vectors, user memory, and lead data; no Qdrant |
 | PDF parsing | **Decided + built** | Custom parser per source — `ingestion/parsers/`; pdfplumber for all sources |
 | Risk scoring engine | **Decided** | Hard-coded rule engine, deterministic, no ML, <500ms target |
 | ASR strategy | Open — post base model | Evaluate Whisper fine-tuned on Malayalam vs Google STT |

@@ -109,13 +109,60 @@ def _cluster_lines(words: list[dict]) -> list[list[dict]]:
     return lines
 
 
+def _correct_column_shift(food_data: dict) -> None:
+    """
+    Fix column mis-assignment for fish, seafood, and meat sections.
+
+    The parser was calibrated on page 41 (cereals). Fish/seafood/meat pages later
+    in the IFCT PDF have different column x-positions, causing three systematic
+    mis-assignments that produce biologically impossible values:
+
+      1. carbohydrate_g > 100  →  this is actually energy_kj
+         (fish/meat carbohydrate is always <1 g/100 g; kJ values are 200–800)
+
+      2. protein_g > 50        →  this is actually moisture_%
+         (no whole food has >50 g protein/100 g; fish moisture is 65–85%)
+
+      3. fiber_total_g appears with a plausible fat value (0.5–15) when
+         carbohydrate was already flagged as mis-assigned →  this is actually fat_g
+         (fish/meat have no measurable dietary fibre)
+
+    Recovery logic:
+      - Move mis-assigned carbohydrate to energy_kj (only if energy slot is empty)
+      - Move mis-assigned protein to moisture_g; zero out protein slot
+      - If energy slot was empty before correction, promote fiber→fat
+    """
+    carb = food_data.get("carbohydrate_g")
+    protein = food_data.get("protein_g")
+    energy = food_data.get("energy_kj")
+    fiber = food_data.get("fiber_total_g")
+
+    carb_shifted = carb is not None and carb > 100
+    protein_shifted = protein is not None and protein > 50
+
+    if carb_shifted:
+        if energy is None:
+            food_data["energy_kj"] = carb
+        food_data["carbohydrate_g"] = None
+
+    if protein_shifted:
+        food_data["moisture_g"] = protein
+        food_data["protein_g"] = None
+
+    # When both carb and protein were shifted, the fat value lands in the
+    # fiber_total_g slot (fiber columns shift left along with the others).
+    if carb_shifted and protein_shifted and fiber is not None:
+        if food_data.get("fat_g") is None:
+            food_data["fat_g"] = fiber
+        food_data["fiber_total_g"] = None
+
+
 def _build_block(
     food_code: str,
     accumulated_words: list[dict],
     page_num: int,
 ) -> Optional[ParsedBlock]:
     """Convert accumulated words for one food item into a ParsedBlock."""
-    # Assign each word to its column
     col_tokens: dict[int, list[str]] = {}
     for w in accumulated_words:
         idx = _col_index(w)
@@ -130,9 +177,25 @@ def _build_block(
     for idx in range(2, len(_COL_NAMES)):
         label = _COL_NAMES[idx]
         tokens = col_tokens.get(idx, [])
-        # Join tokens (sometimes a value like "9.20" is split) then parse
         raw = "".join(tokens)
         food_data[label] = _parse_number(raw)
+
+    # Fix column mis-assignment for fish/seafood/meat pages
+    _correct_column_shift(food_data)
+
+    # Drop rows whose energy value is physically impossible — these are garbled
+    # multi-food-code rows where the parser concatenated numbers from adjacent
+    # PDF lines (e.g. "400" + "1083" → 4001083). Maximum real food energy is
+    # ~3700 kJ/100g (pure fat). Anything above 4000 is a concatenation artifact.
+    energy_val = food_data.get("energy_kj")
+    if energy_val is not None and energy_val > 4000:
+        return None
+
+    # Similarly, carbohydrate_g > 100 is impossible after column correction
+    # (should have been moved to energy by _correct_column_shift); drop if still present
+    carb_val = food_data.get("carbohydrate_g")
+    if carb_val is not None and carb_val > 100:
+        return None
 
     # Skip rows that have no nutrient data at all
     has_any = any(

@@ -1,4 +1,19 @@
+<!-- rag_metadata
+  source: ADA_2026
+  title: ADA Standards of Care in Diabetes 2026
+  citation: Diabetes Care 2026;49(Suppl. 1)
+  year: 2026
+  population: Adults and children with T1DM, T2DM, prediabetes, GDM; global with US focus
+  topic_tags: T2DM, T1DM, glycemic_targets, drug_selection, elderly, CGM, hypoglycemia, CVD_risk, pregnancy, GDM, complication_screening, lifestyle, obesity, ADA_evidence_graded
+  retrieval_tier: core
+  condition_trigger: null
+  india_specific: false
+  age_scope: adult_and_paediatric
+  evidence_grade: A/B/C/E
+-->
+
 # ADA_2026 — Standards of Care in Diabetes 2026
+<!-- rag_metadata source=ADA_2026 section="ADA_2026 — Standards of Care in Diabetes 2026" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 **Citation:** Diabetes Care 2026;49(Suppl. 1)  
 
@@ -15,21 +30,29 @@
 <!-- source: ADA_2026 | file: ADA_2026_S01.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S01
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S01" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 1.  Improving Care and Promoting Health in Populations: Standards of  Care  in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="1.  Improving Care and Promoting Health in Populations: Standards of  Care  in  Diabetes-2026" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S13-S26 | https://doi.org/10.2337/dc26-S001
 
 The American Diabetes Association (ADA) 'Standards of Care in Diabetes' includes the ADA's current clinical practice recommendations and is intended to provide the components of diabetes care, general treatment goals and guidelines, and tools to evaluate quality of care. Members of the ADA Professional Practice Committee for Diabetes, an  interprofessional  expert committee, are responsible  for  updating  the Standards of Care annually, or more frequently as warranted. For a detailed description of ADA standards, statements, and reports, as well as the evidence-grading system  for  ADA's  clinical  practice  recommendations  and  a  full  list  of  Professional Practice Committee members, please refer to Introduction and Methodology. Readers  who  wish  to  comment  on  the  Standards  of  Care  are  invited  to  do  so  at professional.diabetes.org/SOC.
 
 ## SYSTEMS TO SUPPORT DIABETES POPULATION HEALTH
+<!-- rag_metadata source=ADA_2026 section="SYSTEMS TO SUPPORT DIABETES POPULATION HEALTH" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.1 Ensure treatment decisions are timely, rely on evidence-based guidelines, address  social  determinants  of  health,  and  incorporate  shared  decision-making based  on  individual  values,  preferences,  prognoses,  comorbidities,  and  informed financial considerations. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 1.2 Align  approaches  to  diabetes  management  with  evidence-based  care  models.  These  models  emphasize  person-centered  team  care,  integrated  long-term treatment approaches to diabetes and comorbidities, and ongoing collaborative communication and goal setting among all team members and with people with diabetes. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.3 Care  systems  should  facilitate  in-person  and  virtual  team-based  care,  include those knowledgeable and experienced in diabetes management as part of  the  team,  and  utilize  patient  registries,  decision  support  tools,  proactive care planning, and community involvement to meet needs of individuals with diabetes. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.4 Assess  diabetes  management,  risk  factors,  and  complications  using  reliable and  relevant  data  metrics  to  improve  processes  of  care  and  health  outcomes, with  attention  to  individual  values,  preferences,  goals  for  care,  and  treatment burden, including costs of care. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 1.5 Health  systems  should  adopt  a  culture  of  continuous  quality  improvement, implement benchmarking programs, and engage interprofessional teams to support  sustainable  and  scalable  process  changes  to  improve  quality  of  care  and health outcomes. A
 
 American Diabetes Association Professional Practice Committee for Diabetes *
@@ -45,6 +68,7 @@ Suggested citation: American Diabetes Association Professional Practice Committe
 S13
 
 ## Diabetes and Population Health
+<!-- rag_metadata source=ADA_2026 section="Diabetes and Population Health" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Population  health  is  a  multidimensional concept that refers to the health outcomes of  a  group  of  individuals  and  the  potentially varied distribution of those outcomes within the group (1). These outcomes can be measured in terms of health indicators (mortality,  morbidity,  quality  of  life,  and functional  status),  disease  epidemiology (incidence and prevalence), and behavioral and metabolic factors (physical activity, nutrition, A1C, time in range, etc.) (1). In clinical  practice,  population  health  commonly refers to the measurement and improvement of  health  outcomes  for  a  defined group of individuals, often those receiving care within a particular health system or practice, and is central to operational 'population health management,' or the proactive,  team-based,  and  data-driven approaches to improving health care experiences  and  team  well-being  while  minimizing  costs  and  addressing  inequities,  in alignment with the Quadruple  Aim  (2). More  broadly,  population  health  refers  to the health of all people living in a geographic area  or  community,  and  it  centers  on upstream drivers of health that must be addressed,  often  through  cross-sector collaboration and policy, to improve the broader conditions that influence health.
 
@@ -55,6 +79,7 @@ Clinical  practice  recommendations  are tools  for  health  care  professionals
 To  provide  actionable  guidance  for  improving the health outcomes of people with or at risk for diabetes, this section examines care delivery and payment models demonstrated  to  support  high-quality,  evidencebased care; offers guidance on practical strategies  for  system-level  improvement, including identifying and addressing gaps in diabetes  care  and  outcomes  experienced by population subgroups; and discusses opportunities to expand access to health care and diabetes self-management education  and  support  (DSMES)  through  telehealth,  mobile  platforms,  interprofessional team care, and engagement of communitybased care partners and resources.
 
 ## State of Diabetes and Diabetes Care
+<!-- rag_metadata source=ADA_2026 section="State of Diabetes and Diabetes Care" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 In 2021, an estimated 38.4 million people were  living  with  diabetes,  representing 11.6%  of  the  U.S.  population.  This  includes  38.1  million  adults  aged  18  years and older (14.7% of U.S. adults), of whom 8.7 million were unaware of their diagnosis. An additional 97.6 million adults aged 18  years  and  older  (38.0%  of  the  U.S. population)  were living  with  prediabetes (6),  and over 100 million adults 20 years and older (41.9% of U.S. adults) were living with obesity (7), placing them at high risk  for  developing  type  2  diabetes. The prevalence of diabetes is increasing among children and adolescents as well. In 2017, the  year  for  which  the  most  recent  data are available, the prevalence of type 1 diabetes  was  2.15  per 10,000  individuals aged 19 years and under, and the prevalence  of  type  2  diabetes  was  0.67  per 1,000 individuals 10-19 years of age (prevalence  among  those  under  10  years  old was too  low  to  be  reported)  (8).  Obesity prevalence has also increased significantly among children and adolescents in recent years, affecting approximately 14.7 million individuals between 2 and 19 years (19.7% of all U.S. children and adolescents) (9).
 
@@ -69,6 +94,7 @@ Diabetes and its associated health complications  pose  a  significant  financia
 The growing gaps in diabetes care quality  and  outcomes,  the  high  and  rising costs of diabetes care across the U.S., and the disparities experienced by individuals from  racial  and  ethnic  minoritized  backgrounds and those facing socioeconomic barriers to care call for urgent, substantial, and multisectoral system-level improvements to care delivery (19).
 
 ## Evidence-Based Care Delivery and Payment Models to Improve Population Health
+<!-- rag_metadata source=ADA_2026 section="Evidence-Based Care Delivery and Payment Models to Improve Population Health" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 A  major  barrier  to  comprehensive  highquality diabetes care is a delivery system that  is  often  fragmented,  lacks  clinical information  capabilities,  is  not  appropriately  incentivized  and  funded,  does  not adequately engage people with diabetes and the communities where they live, and is poorly designed for the coordinated and longitudinal  delivery  of  chronic  care  (20). Several  models  have  been  demonstrated to improve aspects of diabetes care delivery and health outcomes.
 
@@ -104,6 +130,7 @@ Table 1.1-Considerations for engaging interprofessional members of a comprehensi
 Initiatives such as the Patient-Centered Medical  Home  (PCMH)  model  can  improve health outcomes by fostering comprehensive primary care and offering new opportunities for team-based chronic disease  management  (33-35).  Accountable Care  Organizations  (ACOs),  primary  carecentered delivery and payment models, can support  the  implementation  of  the CCM  and  ultimately  improve  diabetesrelated metrics in participating organizations  (36).  The  Accountable  Health Communities  Model  was  introduced  to support identifying and addressing healthrelated  social  needs  to  improve  disease management  and  health  outcomes  (37); early evidence showed reduction in emergency  department  use  among  Medicare and Medicaid beneficiaries, but diabetesspecific  metrics  were  not  examined,  and program  effectiveness  has  been  limited by scarcity of resources to meet identified health-related  social  needs  (38).  Alternative  Payment  Models  (APMs)  have  had mixed  effects  on  diabetes  care  delivery and outcomes, with higher-risk APMs (i.e., models with greater financial risk assumed by the provider, such as capitated payment models) generally associated with greater improvements in diabetes care processes than  lower-risk  APMs  (39).  Value-based payment models are hypothesized to better support the implementation and sustainability  of  innovative  care  delivery models  seeking  to  improve  population health  (33,40),  though  evidence  for  currently available value-based insurance designs is limited (39).
 
 ## Flexible Modalities of Care Delivery: Telehealth and Support for Behavioral Change and Well-being
+<!-- rag_metadata source=ADA_2026 section="Flexible Modalities of Care Delivery: Telehealth and Support for Behavioral Change and Well-being" topic_tags="mental_health, psychosocial" population="T2DM T1DM global" year=2026 -->
 
 Telehealth uses digital tools like video conferencing, mobile apps, and remote monitoring to deliver a range of health services remotely, including clinical care, education, and administrative support. Telemedicine, a subset of telehealth, focuses specifically on remote clinical care, supporting diagnosis,  treatment,  and  consultations  through real-time  communication.  Increased  access  to  and  effective  use  of  telehealth services,  alongside  in-person  care,  can enhance  timely  access  to  diabetes  care and  DSMES  services  for  individuals  with diabetes (41-45).
 
@@ -116,6 +143,7 @@ Successful diabetes care also requires a systematic approach to supporting the b
 P < 0.001), and DSMES MD -0.2% (95% CI -0.3%  to -0.0%; P < 0.001)  (64). These curricula should be tailored to the needs of their intended populations, including demographic characteristics, diabetes  knowledge,  emotional  support, and cultural beliefs, and address the digital divide,  i.e.,  access  to  the  technology  required for implementation (54,65,66).
 
 ## Strategies for System-Level Improvement
+<!-- rag_metadata source=ADA_2026 section="Strategies for System-Level Improvement" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Optimal  diabetes  management  requires a  systematic  approach  and  coordinated team of health care professionals working in an environment where person-centered, high-quality  care  is  a  priority  (23,67-69). While  many  diabetes  care  processes  and access to technologies have improved nationally  in  the  past  decade,  the  overall quality of care for people with diabetes remains suboptimal (13).  Efforts to  increase the quality of diabetes care include providing care that is concordant with evidencebased  guidelines  (70),  expanding  the  role of teams to implement more intensive disease management strategies (71), tracking medication-taking behavior (70), redesigning care processes (71), implementing electronic health record (EHR) population health  tools  (72),  empowering  and  educating people with diabetes (73), reducing financial  barriers  (74),  leveraging  telehealth  to  improve  access  to  care  (51), assessing  and  addressing  psychosocial issues (63,75), and engaging community resources  and  public  policies  that  support healthy lifestyles (76). The National Diabetes  Education  Program  maintains an  online  resource  (cdc.gov/diabetes/ php/toolkits/index.html) to help health care  professionals  design  and  implement  more  effective  health  care  delivery  systems  for  people  with  diabetes. Given  the  pluralistic  needs  of  people with  diabetes  and  the  challenges  they experience  (complex  insulin  treatment plans, new technologies, changes in capacity  for  self-management,  etc.)  vary over the course of disease management and  life  span,  engagement  of  an  interprofessional team with complementary expertise is essential (25). Findings from a  systematic  review  and  meta-analysis of  35  team-based care interventions with adults  with  type  1  or  type  2  diabetes showed a -0.5% (95% CI -0.7  to -0.3) change in A1C, -5.5 mmHg (95% CI -8.1 to -3.0) change in systolic blood pressure, -3.2 mmHg (95% CI -4.8 to -1.5) change in diastolic  blood  pressure, -8.0 mg/dL (95% CI -11.8 to -4.3) change in LDL cholesterol, and -7.4 mg/dL (95% CI -13.9 to -0.9) change in total cholesterol (25). Team-based care  has  also  been  shown  to  reduce  atherosclerotic cardiovascular disease (ASCVD) risks.  Results  from  the  Center  for  Integrated and Novel Approaches in VascularMetabolic  Disease  (CINEMA)  Program demonstrated improvements in ASCVD risk factors  and  evidence-based therapies  with team-based care for adults with type 2 diabetes or prediabetes via reductions in body weight ( -5.5 lb [ -2.5 kg]), BMI ( -0.9 kg/m 2 ), systolic ( -3.6 mmHg)  and  diastolic ( -1.2 mmHg) blood pressure, A1C ( -0.5%), LDL ( -9.0 mg/dL)  and  total cholesterol ( -10.7 mg/dL), triglycerides ( -13.5 mg/dL), and  absolute  10-year  ASCVD  risk  ( -2.4%) (77).
 
@@ -128,24 +156,30 @@ The ADA recommends that health systems use proven QI methods to translate the  S
 In  addition  to  QI  approaches,  other strategies  that  simultaneously  improve the quality of care and potentially reduce costs are gaining momentum and include reimbursement structures that, in contrast to visit-based billing, reward the provision of  appropriate  and  high-quality  care  to achieve metabolic goals (84), value-based payments,  and  incentives  that  accommodate personalized care goals (67,85). Alignment  of  payment  models,  health system care delivery models and resource availability, community-based organizations and  supports,  and  regulatory  policies  is needed  to  fully  support  whole-person, comprehensive care for people with diabetes.  See  EVIDENCE-BASED  CARE  DELIVERY  AND PAYMENT  MODELS  TO  IMPROVE  POPULATION  HEALTH, above, for more information.
 
 ## Access to Care
+<!-- rag_metadata source=ADA_2026 section="Access to Care" topic_tags="health_equity, SDOH" population="T2DM T1DM global" year=2026 -->
 
 The Affordable Care Act and Medicaid expansion have increased access to care for many individuals with diabetes, emphasizing the  protection  of  people  with  preexisting conditions,  health  promotion,  and  disease prevention  (86).  In  2024,  population-level data for the U.S. civilian noninstitutionalized population included in the  National Health Interview  Survey  (NHIS)  showed  that  just 4.9%  of  children  and  adolescents  (aged 17  years  and  younger),  11.1%  of  adults aged  18-64  years,  and  0.6%  of  adults aged 65 years and older were uninsured (87). People with diabetes who have consistent private or public insurance coverage  (i.e.,  are  not  uninsured)  are  more likely to meet quality indicators for diabetes  care  (86).  However,  even  individuals with  insurance  coverage  can  experience financial  barriers  to  care,  particularly  if enrolled  in  high-deductible  health  plans. In 2021, 28% of individuals with employersponsored health plans were enrolled in high-deductible  health  plans  (88).  Such plans are increasing in popularity; by 2023, 51%  of  private  industry  employees  had the  option  to  enroll  in  a  high-deductible health plan, although only 36% had access to  health  savings  accounts,  which  can offset  some  of  the  out-of-pocket  costs incurred with high-deductible plans (89). Switching  to  a  high-deductible  health plan has been shown to increase financial  hardship among people with diabetes  (90),  decrease  and  delay  screening for  retinopathy  (91),  decrease  monitoring of  blood  pressure  and  A1C  (91),  and  increase the risks of experiencing both acute (severe  hypoglycemia,  hyperglycemic  crises)  (92)  and  chronic  (myocardial  infarction,  stroke,  hospitalization  for  heart failure, kidney failure, lower-extremity complications, proliferative retinopathy, and blindness) (93)  diabetes  complications. However,  health  plan  adoption  of  preventive drug lists that reduce or eliminate out-of-pocket  cost  sharing for  a  wide range of medications used to treat chronic conditions  like  diabetes  reduces  outof-pocket  expenditures  for  people  with diabetes  and  narrows  gaps  in  diabetes care (94). Insurance coverage and formulary design influence treatment decisions; it  is  essential  that  payors cover evidencebased diabetes care with minimal cost sharing  by  people  with  diabetes.  Health  care teams should also discuss insurance coverage  and  financial  barriers to  care  with all  individuals  with  diabetes  and  pursue therapeutic  strategies  that  minimize  financial hardship (74).
 
 Access to primary and specialty care is essential for people with diabetes. While most adults with diabetes have access to a primary care clinician-a 2016 nationally representative population-based study found  that  88%  of  adults  with  diabetes saw a primary care clinician in the prior year (95)-fewer have access to specialty endocrinology/diabetes care (96). A study of Medicare beneficiaries found that just 33% of older adults with type 1 diabetes, 14% of  adults  with  type  2  diabetes  and history  of  severe  hypoglycemia,  and  9% of other adults with type 2 diabetes saw an  endocrinologist  in  2019  (96).  Racial and ethnic  minoritized  individuals,  those with low income, those living in rural areas, and those residing in a long-term care facility were less likely to receive endocrinology care.  Improving  health  outcomes  for  people  with  diabetes  will  therefore  require improving availability of and access to primary and specialty services, and interdisciplinary  care  from  the  full  diabetes  care team, to meet the full range of their health care needs ( Table 1.1 ).
 
 ## Cost Considerations
+<!-- rag_metadata source=ADA_2026 section="Cost Considerations" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 The cost of diabetes medications and devices  is  an  ongoing  barrier  to  achieving glycemic  goals  and  preventing  diabetes complications. Medication underuse due to cost has been termed 'cost-related medication nonadherence' (here referred to as cost-related barriers to medication use). Based  on  a  national  survey  conducted in 2021, 18.6% of U.S. adults with type 1 diabetes and 15.8% of adults with insulin-treated type 2 diabetes reported rationing (i.e., skipping, taking less, and/or delaying) their insulin to save money (97). The  ADA  Insulin  Access  and  Affordability Working Group has recommended systemlevel approaches to address this issue, including concepts such as cost-sharing for insured people with diabetes based on the lowest price available, a list price for insulins that closely reflects the net price, and health plans that ensure people with diabetes can access insulin without undue administrative burden or excessive cost (98). In 2021, the Centers for Medicare & Medicaid  Services  (CMS)  launched  the  Part  D Senior  Savings  Model  (99),  which  required capped monthly out-of-pocket payments for covered insulins at $35 per insulin per month. In 2022, 43% of standalone  Part  D  plan  enrollees  and  60%  of Medicare  Advantage  Part  D  plan  enrollees  participated  in  the  Senior  Savings Model  (99).  Most  recently,  the  Inflation Reduction Act of 2022 capped outof-pocket payments for insulin  at $35 per insulin per month for all Medicare beneficiaries.  A  patchwork  of  solutions  has  also been introduced for individuals with commercial insurance and those without health insurance.  Over  the past  5 years,  25 states and the District of Columbia have capped  out-of-pocket  expenditures  for insulin  in  select  state-regulated  commercial health plans (100), which has resulted in modest decreases in insulin outof-pocket  spending  for  eligible  enrollees (101). Between 2023 and 2024, three major  insulin  manufacturers  similarly  lowered  the price of insulin to  $35  per month in select circumstances (102). These programs may help reduce the financial hardship of  diabetes  management,  though  many  are  challenging  to navigate, not all people with diabetes can benefit, and costs for insulin delivery and glucose monitoring remain high. Thus, all people with diabetes should be screened for  financial  hardship of treatment, costrelated  barriers  to  medication  use,  and rationing  of  other  essential  services  due to medical costs (103).
 
 The cost of medications (not only insulin)  influences  prescribing  patterns  and medication  use  because  of  the  financial strain  on  the  person  with  diabetes  and the lack of secondary payor support (public and private insurance) for effective approved  glucose-lowering,  cardiovascular and kidney disease risk-reducing, and obesity management therapies. There is robust evidence  of  gaps  in  the  use  of  evidence- based therapies among individuals from racial  and  ethnic  minoritized  backgrounds, those with lower income levels, those living in rural areas, and those with limited insurance coverage  (11,104-112). Identifying and addressing financial barriers should be a focus of treatment goals and clinical decisions (104). (See TAILORING  TREATMENT  FOR  SOCIAL CONTEXT .)
 
 ## TAILORING TREATMENT FOR SOCIAL CONTEXT
+<!-- rag_metadata source=ADA_2026 section="TAILORING TREATMENT FOR SOCIAL CONTEXT" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.6 Health systems should assess and address  gaps  in  diabetes  care  and health  outcomes  (e.g.,  by  stratifying clinical quality data by factors such as insurance status, race, ethnicity, preferred language for health care discussions, disability, and social determinants of health). B
 - 1.7 During clinical encounters, assess for social determinants of health, including food insecurity, A housing insecurity, financial barriers,  health insurance and health care access, environmental  and  neighborhood  factors,  and  social  capital/social  community  support, B to  inform  treatment decisions,  with  referral  to  appropriate local community resources.
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.8 Provide  people with diabetes additional self-management support from lay health coaches, navigators, or  community  health  workers  when available. A Digital  self-management tools or coaches may be considered as appropriate. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 1.9 Consider the involvement of community health workers to support management of diabetes  and  cardiovascular and kidney risk factors, especially in  underserved communities and health care systems. B
 
 Health  inequities  related  to  diabetes and its complications are well documented, are heavily influenced by SDOH, and  have  been  associated  with  greater risk  for  developing  diabetes,  higher  disease prevalence, and worse diabetesrelated outcomes (4). Greater exposure to adverse  SDOH  over  the  life  course  results in poor health (113). Interventions to address SDOH can improve diabetesrelated outcomes (114,115). Using clinical  quality  data  to  identify  inequities and  opportunities  for  improvement  is valuable for health care professionals, health  systems,  payors,  policymakers,  and people with diabetes (116). The Joint Commission requires that all accredited organizations in its ambulatory health care, behavioral health care and human services, critical access hospital, and hospital accreditation programs collect race and ethnicity information and implement specific steps to reduce health care disparities. The Joint Commission specifically  requires that  organizations designate an individual or individuals to lead efforts to reduce health care disparities, assess health-related social  needs  and  provide  information  on community resources to meet these needs, identify health care disparities by stratifying quality  and  safety  data  using  sociodemographic  characteristics,  develop  an  action plan  to  address  health  care  disparities, work to actively  reduce  health  care disparities, and inform key stakeholders about progress to reduce health care disparities  (117).  The  CMS  Framework  for Health Equity similarly prioritizes collection, reporting, and analysis of standardized individual-level demographic (including race, ethnicity, language, gender identity, sex, sexual  orientation,  and  disability  status)  and SDOH data as well as assessing for and addressing disparities through improved access to  culturally  tailored  services,  team-based care, and community resources (118). Quality measures assessing SDOH screening and intervention  have  been  introduced  by  the National Committee for Quality Assurance (focused on food, housing, and transportation insecurity) (113) and CMS (focused on food, housing, and transportation insecurity,  utility  difficulties,  and  interpersonal safety) (119).
@@ -159,16 +193,19 @@ A population in which such issues must be particularly considered is older adult
 Creating  system-level  mechanisms  to screen  for  SDOH  may  help  overcome structural barriers  and  communication gaps between people with  diabetes and health care professionals (126,130). A number of studies have proven the effectiveness of identifying SDOH by using validated  screening  tools  (131).  In  addition, brief,  validated  screening  tools  for  some SDOH exist and could facilitate discussion around  factors  that  significantly  impact treatment during clinical encounters.
 
 ## Food Insecurity
+<!-- rag_metadata source=ADA_2026 section="Food Insecurity" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Food insecurity is a household-level economic  and  social  condition  of  limited  or uncertain access to adequate food (132). In  2022,  almost  13%  of  Americans  were food insecure (132), and food insecurity is associated  with  increased  risk  of  type  2 diabetes  and  higher-than-recommended glycemia (133-135). The rate is disproportionately higher among some groups that have  been  historically  marginalized,  lowincome households, and households headed by  single  mothers.  Additionally, those  facing food insecurity have lower engagement in self-care behaviors and medication use, have higher rates of depression and diabetes distress, and have worse glycemic management  compared  with  individuals  who are  food  secure  (133,134).  Older  adults with food insecurity are more likely to have emergency department visits and hospitalizations  compared  with  older  adults  who do  not  report  food  insecurity  (136).  The risk  for  food  insecurity  can  be  assessed with a validated two-item screening tool that  includes  the  following  statements: 1 ) 'Within the past 12 months, we worried whether our food would run out before we got  money  to  buy  more'  and 2 )  'Within the past 12 months the food we bought just didn't last, and we didn't have money to get more' (137). Interventions such as food  prescription  programs  are  considered promising to address food insecurity by integrating community resources into primary care settings and directly dealing with  food  deserts  in  underserved  communities (135).
 
 In those with diabetes and food insecurity, the priority is mitigating the increased risk for severe hyperglycemia and hypoglycemia  (138,139).  The  reasons  for  the  increased risk of hyperglycemia can include the consumption of inexpensive carbohydraterich processed foods, binge eating, financial constraints to filling diabetes medication prescriptions, anxiety and depression, and poor sleep, all  contributing to hyperglycemia  and  poor  diabetes  self-care  behaviors.  Hypoglycemia  can  occur  as  a result  of  inadequate  or  inconsistent  carbohydrate consumption following the administration  of  a  sulfonylurea  or  insulin. Health care professionals should consider these factors when making treatment decisions for people with food insecurity and seek  local  resources  to  help  people  with diabetes and their family members obtain appropriate food more regularly (140).
 
 ## Housing Insecurity
+<!-- rag_metadata source=ADA_2026 section="Housing Insecurity" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Housing insecurity has been shown to be directly associated with a person's ability to  maintain  appropriate  diabetes  selfmanagement  (141).  Housing  insecurity often  coexists  with  other  barriers  that challenge diabetes self-management. Food insecurity, lack of health insurance, cognitive  impairment,  behavioral  health  concerns, and low literacy and numeracy skills are also factors (140). The prevalence of diabetes  among  people  experiencing  housing  insecurity  is  estimated  to  be  around 8% in the U.S. (142). Additionally,  people with diabetes and housing insecurity need secure places to keep their diabetes medications and supplies as well as refrigerator access  to  safely  store  insulin. The  risk  for housing  insecurity  can  be  ascertained  using a brief risk assessment tool developed and  validated  for  use  among  veterans (143). Given the potential challenges, health care professionals who care for housinginsecure  individuals  should  be  familiar with resources to support these individuals or have access to social workers who can  facilitate  stable  housing  as  a  way  to improve diabetes care (144).
 
 ## Refugee Populations and Migrant and Seasonal Agricultural Workers
+<!-- rag_metadata source=ADA_2026 section="Refugee Populations and Migrant and Seasonal Agricultural Workers" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Refugee  status,  like  having  a  diabetes diagnosis,  is  an  independent  risk  factor for cardiovascular disease (145). In areas experiencing  humanitarian  crises,  refugees  are  at  greater  risk  for  obstacles  to optimal chronic disease management, but  unfortunately  there  are  few  quality investigations  into  diabetes  care  and  its outcomes  among  refugees.  There  have been  efforts  to  develop  models  of  care specifically aimed at improving the health of refugee populations, but more work is needed  to  demonstrate  effectiveness  of those care models and approaches (146).
 
@@ -181,18 +218,21 @@ Migrant  farmworkers  and  other  agricultural workers encounter numerous and ov
 Health  care  professionals  need  to  be attuned  to  the  working  and  living  conditions of people with diabetes. For example, if a farmworker with diabetes presents for care, appropriate referrals should be initiated to social workers and community resources, as available, to assist with removing barriers to care.
 
 ## Language Barriers
+<!-- rag_metadata source=ADA_2026 section="Language Barriers" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Health systems and health care professionals caring for those with limited English proficiency should develop or offer educational programs and materials in culturally appropriate  languages.  Professional  language assistance (i.e., interpreters) should be  provided  to  individuals  with  limited English  proficiency  and/or other communication  needs at  no  cost to  them  (150). Use  of  untrained  interpreters,  including family members, should be avoided when possible, as this can result in confusing or inaccurate conveyance of information. Accompanying written materials should be in the language appropriate for the individual being supported and at a reading level that is  not  overly  complicated-typically  this  is defined  as  a  sixth-grade  reading  level. Numerous  medical  translation  tools  are available and show promise in addressing language  barriers,  although  further  research  is  needed  to  establish  their  efficacy in diabetes care (151).
 
 The  National  Standards  for  Culturally and Linguistically  Appropriate Services in Health  and  Health  Care  (National  CLAS Standards) provide guidance on how health care  professionals  can  reduce  language barriers by improving their cultural competency,  addressing  health  literacy,  and ensuring communication with professional language assistance (150). In addition, the National  CLAS  Standards  website  offers several  resources  and  materials  that  can be used to improve the quality of care delivery  to  individuals  with  limited  English proficiency.
 
 ## Health Literacy and Numeracy
+<!-- rag_metadata source=ADA_2026 section="Health Literacy and Numeracy" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Health  literacy  is  the  degree  to  which individuals  can  obtain,  process,  and  understand  basic  health  information  and services  needed  to  make  appropriate decisions  (152,153).  Health  literacy  is strongly associated with individuals engaging in complex disease management and self-care (154). Approximately 9 out of  10  American  adults  are  estimated to have limited or low health literacy (152,155).  Health  care  professionals and diabetes care and education specialists  should  provide  easy-to-understand information and reduce unnecessary complexity  when  developing  care  plans.  Interventions  addressing  low  health  literacy  in populations with diabetes demonstrate improvements  in  A1C,  diabetes  knowledge, and  self-management  behaviors  (156). However, more research is needed to establish the most effective strategies for enhancing retention and application of diabetes knowledge among various populations of people with diabetes (154,157).
 
 Health  numeracy  is  also  essential  in diabetes  prevention  and  management. Health  numeracy  requires  primary  numeric skills, applied health numeracy, and interpretive health numeracy, which is especially important for people using diabetes technologies like insulin pumps (158). People with prediabetes or diabetes often need  to  perform  numeric  tasks,  such  as interpreting  glucose  readings,  decoding food  labels,  and  understanding  medication  doses,  timings,  and  refills,  to  make treatment decisions. Thus, both health literacy and numeracy are necessary for enabling  effective  communication between people with diabetes and health care professionals,  arriving  at  a  treatment  plan, and  making  diabetes  self-management task decisions. If people with diabetes appear  not  to  understand  concepts  associated  with  treatment decisions,  both  can be assessed using standardized screening measures (159). Adjunctive education and support may be indicated if limited health literacy and numeracy are barriers to optimal care decisions (75).
 
 ## Social and Community Support
+<!-- rag_metadata source=ADA_2026 section="Social and Community Support" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Social support, which comprises community  and  personal  network  instrumental support, promotes better health, whereas lack  of  social  support  is  associated  with poorer  health  outcomes  in  individuals with diabetes (114). Of particular concern are  the  SDOH,  including,  among  others, racism  and  discrimination  (160).  These factors  are  rarely  addressed  in  routine clinical practice but may be drivers of adverse health outcomes and lower engagement in beneficial self-care behaviors and medication use. Identifying and leveraging community resources are core components of chronic care management (21,161).
 
@@ -226,8 +266,10 @@ Improving individual and population health for people with and at risk for diabe
 <!-- source: ADA_2026 | file: ADA_2026_S02.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S02
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S02" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes-2026" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S27-S49 | https://doi.org/10.2337/dc26-S002
 
@@ -236,6 +278,7 @@ The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'
 Diabetes mellitus is a group of metabolic disorders of carbohydrate metabolism in  which  glucose  is  both  underutilized  as  an  energy  source  and  overproduced due to inappropriate gluconeogenesis and glycogenolysis, resulting in hyperglycemia  (1).  Diabetes  can  be  diagnosed  by  demonstrating  increased  concentrations  of  glucose  in  venous  plasma  or  increased  A1C  in  the  blood.  Diabetes  is classified  conventionally  into  several  clinical  categories  (e.g.,  type  1  or  type  2 diabetes,  gestational  diabetes  mellitus,  and  other  specific  types  derived  from other  causes,  such  as  monogenic  diabetes,  exocrine  pancreatic  disorders,  and high-risk medications) (2).
 
 ## DIAGNOSTIC TESTS FOR DIABETES
+<!-- rag_metadata source=ADA_2026 section="DIAGNOSTIC TESTS FOR DIABETES" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 Diabetes may be diagnosed based on A1C or plasma glucose criteria. Plasma glucose criteria  include  either  the  fasting  plasma  glucose  (FPG),  2-h  plasma  glucose  (2-h  PG) during a 75-g oral glucose tolerance test (OGTT), or random glucose accompanied by classic symptoms of hyperglycemia (e.g., polyuria, polydipsia, and unexplained weight loss)  or  hyperglycemic  crises  (i.e.,  diabetic  ketoacidosis  [DKA]  and/or  hyperglycemic hyperosmolar state [HHS]) ( Table 2.1 ).
 
@@ -260,6 +303,7 @@ Suggested citation: American Diabetes Association Professional Practice Committe
 ©  2025  by  the  American  Diabetes  Association. Readers may use this work for educational, noncommercial  purposes if properly cited and unaltered.  The  version  of  record  may  be  linked at  https://diabetesjournals.org/care,  but  ADA permission  is  required  to  post  this  work  on  any third-party  site  or  platform. This  publication  and  its contents  may  not  be  reproduced,  distributed,  or used  for  text  or  data  mining,  machine  learning, or  similar  technologies  without  prior  written permission.  Requests  to  reuse,  adapt,  or  distribute this  work  may  be  sent  to  permissions@diabetes .org.  More  information  is  available  at  https:// diabetesjournals.org/journals/pages/license.
 
 ## Table 2.1-Criteria for the diagnosis of diabetes in nonpregnant individuals
+<!-- rag_metadata source=ADA_2026 section="Table 2.1-Criteria for the diagnosis of diabetes in nonpregnant individuals" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 A1C ≥ 6.5% ( ≥ 48 mmol/mol). The test should be performed in a laboratory using a method that is NGSP certified and standardized to the DCCT assay.*
 
@@ -278,12 +322,14 @@ In an individual with classic symptoms of hyperglycemia or hyperglycemic crisis,
 DCCT, Diabetes Control and Complications Trial; FPG, fasting plasma glucose; OGTT, oral glucose  tolerance  test;  NGSP,  National  Glycohemoglobin  Standardization Program;  WHO, World Health  Organization;  2-h  PG,  2-h  plasma  glucose. *In  the  absence  of  unequivocal  hyperglycemia, diagnosis requires two abnormal results from different tests, which may be obtained at the same time (e.g., A1C and FPG), or the same test at two different time points.
 
 ## Screening and Diagnosis of Diabetes
+<!-- rag_metadata source=ADA_2026 section="Screening and Diagnosis of Diabetes" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 FPG, 2-h PG during 75-g OGTT, and A1C are  appropriate  for  screening  and  diagnosis. It  should be noted that detection rates of different screening tests vary in both  populations  and  individuals.  FPG,  2-h PG,  and  A1C  reflect  different  aspects of glucose metabolism, and diagnostic cut  points  for  the  different  tests  will identify  groups  with  incomplete  concordance (3). Compared with FPG and A1C cut points, the 2-h PG value diagnoses  more  people  with  prediabetes and diabetes (4). Moreover, the efficacy of  interventions  for  primary  prevention of  type  2  diabetes  (i.e.,  preventing  conversion of prediabetes to type 2 diabetes) has  been  demonstrated  mainly  among individuals  with  prediabetes  who  have impaired  glucose  tolerance  (IGT)  with or without elevated fasting glucose, not for  individuals  with  isolated  impaired fasting  glucose  (IFG)  or  for  those  with prediabetes  defined  by  A1C  criteria (5-8).
 
 The same tests may be used to screen for  and  diagnose  diabetes  and  to  detect individuals with prediabetes (9) ( Table 2.1 and Table 2.2 ). Diabetes may be identified anywhere  along  the  spectrum  of  clinical scenarios-in seemingly low-risk individuals  who  coincidentally  undergo  glucose monitoring, in individuals screened based on diabetes risk assessment, and in  individuals  with  symptoms  and  signs of  hyperglycemia. There  is  presently  insufficient  evidence  to  support  the  use  of continuous  glucose  monitoring  (CGM)  for screening  or  diagnosis  of  prediabetes  or diabetes. For additional details on the evidence  used  to  establish  the  criteria  for the  diagnosis  of diabetes  or  prediabetes, see  the  American  Diabetes  Association (ADA)  position  statement  'Diagnosis  and Classification  of  Diabetes Mellitus' (2)  and other reports (1,3,10,11).
 
 ## Table 2.2-Criteria defining prediabetes in nonpregnant individuals
+<!-- rag_metadata source=ADA_2026 section="Table 2.2-Criteria defining prediabetes in nonpregnant individuals" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 A1C 5.7-6.4% (39-47 mmol/mol)
 
@@ -298,6 +344,7 @@ OR
 For all  three  tests,  risk  is  continuous,  extending  below  the  lower  limit  of  the  range  and  becoming  disproportionately  greater  at  the  higher  end  of  the  range.  FPG,  fasting  plasma  glucose;  IFG,  impaired  fasting  glucose;  IGT,  impaired  glucose  tolerance;  OGTT,  oral  glucose tolerance test; 2-h PG, 2-h plasma glucose.
 
 ## Use of Fasting Plasma Glucose or 2-Hour Plasma Glucose for Screening and Diagnosis of Diabetes
+<!-- rag_metadata source=ADA_2026 section="Use of Fasting Plasma Glucose or 2-Hour Plasma Glucose for Screening and Diagnosis of Diabetes" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 In the clinical scenario where a person has classic  symptoms  of  hyperglycemia  (e.g., polyuria,  polydipsia,  unexplained  weight loss)  or  presents  with  hyperglycemic  crisis, measurement of random plasma glucose is sufficient  to  diagnose  diabetes  (symptoms of hyperglycemia  or  hyperglycemic  crisis plus  random  plasma  glucose ≥ 200  mg/dL [ ≥ 11.1  mmol/L]).  In  these  cases,  knowledge  of  the  plasma  glucose  level  is  critical because,  in  addition  to  confirming  that symptoms are due to diabetes, it will inform management decisions. In this context,  testing  A1C  helps  determine  the chronicity  of  hyperglycemia.  However,  in an  individual  without  symptoms,  FPG  or 2-h PG can be used for screening and diagnosis of diabetes. In  nonpregnant individuals, FPG (or A1C) is typically preferred for  routine  screening  due  to  the  ease  of administration  ( Table  2.3 );  however,  the 2-h  PG  (OGTT)  testing  protocol  is  significantly  more  sensitive  than  the  other  two tests  and  is  preferentially  recommended for  screening  for  some  conditions  (e.g., cystic fibrosis-related diabetes or posttransplantation  diabetes  mellitus).  In  the absence  of  classic  symptoms  of  hyperglycemia,  repeat  testing  is  required  to  confirm  the  diagnosis  regardless  of  the  test used (see CONFIRMING THE  DIAGNOSIS, below).
 
@@ -306,6 +353,7 @@ Major advantages of glucose monitoring are its  low cost and  availability.  Dis
 People  should  follow  a  mixed  eating pattern with at least 150 g of carbohydrates on the 3 days prior to OGTT (12-14). Antecedent  carbohydrate  restriction  in  the  days prior  to  OGTT  can  falsely  elevate  postchallenge  glucose  levels,  potentially  resulting  in a false-positive OGTT (12).
 
 ## Use of A1C for Screening and Diagnosis of Diabetes
+<!-- rag_metadata source=ADA_2026 section="Use of A1C for Screening and Diagnosis of Diabetes" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -325,6 +373,7 @@ People  should  follow  a  mixed  eating pattern with at least 150 g of carbohyd
 | Test interferences | Depends on specific assay: sample handling/ processing time, hemolysis, severe hypertriglyceridemia, severe hyperbilirubinemia | Depends on specific assay: hemoglobin variants, severe hypertriglyceridemia, severe hyperbilirubinemia |
 
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - Standardization  Program  (NGSP)  as traceable  to  the  Diabetes  Control  and Complications Trial (DCCT) reference assay. B 2.2b Point-of-care A1C testing for diabetes  screening  and  diagnosis  should be  restricted  to  devices  approved  for diagnosis  by  the  U.S.  Food  and  Drug Administration at Clinical Laboratory Improvement  Amendments-certified laboratories  that  perform  testing  of moderate  complexity  or  higher  by trained personnel. B 2.3 Evaluate  for  the  possibility  of  a problem or interference  with  either test  when  there  is  consistent  and substantial  discordance  between blood  glucose  values  and  A1C  test results. B 2.4 In  conditions  associated  with  an altered  relationship  between  A1C  and glycemia,  such  as  some  hemoglobin variants,  pregnancy ,  glucose-6-phosphate dehydrogenase  deficiency,  HIV,  and conditions that may alter red blood cell turnover, plasma glucose criteria should be used to diagnose diabetes. B
 
 The A1C test should be performed using a method that is certified by the National Glycohemoglobin Standardization Program (NGSP)  (ngsp.org)  and  standardized  or traceable  to  the  Diabetes  Control  and Complications Trial (DCCT) reference assay. Outside  the  U.S.,  some  assays  are  NGSP certified  but  many more are International Federation of Clinical Chemistry (IFCC) certified (a similarly stringent process) (1).
@@ -338,6 +387,7 @@ A1C reflects glucose bound to hemoglobin  over  the  life  span  of  the  erythr
 There  is  controversy  regarding  racial differences  in  A1C.  Studies  have  found that  Black  individuals  have  slightly higher A1C levels (approximately 0.3%) than  non-Hispanic  White  or  Hispanic people (19-22). A more precise understanding  of  the  genetic  determinants of  A1C  in  diverse  populations  (18)  is the focus of ongoing investigations (23,24).  While  some  genetic  variants might  be  more  common  in  certain  race or  ancestry  groups,  it  is  important  that we do not use race or ancestry as proxies  for  poorly  understood  genetic  differences.  Reassuringly,  studies  have  shown that  the  association  of  A1C  with  risk  for complications  appears  to  be  similar  in Black  and  non-Hispanic  White  populations (25).
 
 ## Confirming the Diagnosis
+<!-- rag_metadata source=ADA_2026 section="Confirming the Diagnosis" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 In the absence of a clear clinical diagnosis (e.g.,  individual  with  classic  symptoms  of hyperglycemia  or  hyperglycemic  crisis and random plasma glucose ≥ 200 mg/dL [ ≥ 11.1 mmol/L]), confirmatory tests are necessary to establish the diagnosis. This can be accomplished by two abnormal screening test results, measured either  at  the  same  time  (26)  or  at  two different  time  points.  If  using  samples at two different time points, it is recommended  that  the  second  test,  which may  be  either  a  repeat  of  the  initial  test or  a  different  test,  be  performed  in  a timely manner. For example, if the A1C is 7.0%  (53  mmol/mol)  and  a  repeat  result is  6.8%  (51  mmol/mol),  the  diagnosis  of diabetes  is  confirmed. Two  different  tests (such as A1C and FPG) both having results above  the  diagnostic  threshold  when  collected  at  the  same  time  or  at  two  different  time  points  would  also  confirm  the diagnosis.  On  the  other  hand,  if  an  individual  has  discordant  results  from  two different tests, then the test result that is above the diagnostic cut point should be repeated,  with  careful  consideration  of factors that may affect measured A1C or glucose levels. The diagnosis is made based on  the  confirmatory  screening  test.  For example,  if  an  individual  meets  the  diagnostic  criterion  for  A1C  (two  results ≥ 6.5%  [ ≥ 48  mmol/mol])  but  not  FPG ( < 126 mg/dL [ < 7.0 mmol/L]), that person  should  nevertheless  be  considered to have diabetes.
 
@@ -346,6 +396,7 @@ Test  results  close  to  the  diagnostic threshold should prompt the health car
 Consistent and substantial discordance between glucose values and A1C test results  should elicit additional follow-up to determine the underlying reason for the discrepancy (including  evaluation  for  the possibility of an analytical problem or interference  with  either  test)  and  its  clinical  implications,  if  any,  for  the  individual ( Table  2.3 ).  In  this  context,  alternative validated biomarkers of chronic hyperglycemia such as fructosamine and glycated albumin  should  be  considered  for  monitoring  glycemic  management  in  people with diabetes.
 
 ## CLASSIFICATION
+<!-- rag_metadata source=ADA_2026 section="CLASSIFICATION" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -363,6 +414,7 @@ clearly  overt  diabetes  prior  to  gestation or other types of diabetes occurr
 Type  1  diabetes  and  type  2  diabetes are heterogeneous diseases in which clinical  presentation  and  disease  progression may vary considerably. Classification is important  for  determining  personalized therapy,  but  some  individuals  cannot  be clearly classified as having type 1 or type 2 diabetes at the time of diagnosis. The traditional paradigms  of  type  2 diabetes having onset only in adults and type 1 diabetes  having  onset  only  in  children  are not  accurate,  as  both  diseases  occur  in all  age  groups.  Children  with  type  1  diabetes  are  often  diagnosed  in  the  setting of  hallmark  symptoms  of  polyuria/polydipsia,  and  approximately  half present with DKA (27-29). The onset of type 1 diabetes  may  be  more  variable  in  adults, who  may  not  present  with  the  classic symptoms seen in children and may progress  to  insulin  replacement  more  slowly (30,31). The features most useful in determination  of  type  1  diabetes  include younger  age  at  diagnosis  ( < 35  years), lower  BMI  ( < 25  kg/m 2 ),  unintentional weight  loss,  ketoacidosis,  and  plasma glucose > 360  mg/dL  ( > 20  mmol/L)  at presentation  (32)  ( Fig.  2.1 ).  Occasionally,  people  with  type  2  diabetes  may present with DKA (33) in the context of ketosis-prone diabetes, particularly members  of  certain  racial,  ethnic,  and  ancestral groups (e.g., Black and Hispanic/ Latino adults) (27).  The initial  requirement  for  insulin  replacement  therapy  in individuals  presenting  with  ketosis-prone diabetes  is  generally  transient.  It  is  important  for  health  care  professionals  to realize that classification of diabetes type is not always straightforward at presentation  and  that  misdiagnosis  can  occur  in up to 40% of adults with new type 1 diabetes  (e.g.,  adults  with  type  1  diabetes misdiagnosed as having type 2 diabetes). In  comparison,  individuals  with  maturityonset diabetes of the young (MODY) may be misdiagnosed as having type 1 diabetes (32).  Although  difficulties  in  distinguishing diabetes type may occur in all age  groups at  onset,  the  diagnosis  generally  becomes more obvious  in  people  with  marked  loss of β -cell  function  as  they  rapidly  require insulin  therapy  ( Fig.  2.1 ).  Although  not prospectively validated, the AABBCC approach is a useful tool to help distinguish
 
 ## Nlowchørt.for.investigøtion.of.suspected.type./.diøñetes.in.newly. diøgnosed.ødultsO.ñøsed.on.døtø.from.öhite.;uropeøn.populøtions
+<!-- rag_metadata source=ADA_2026 section="Nlowchørt.for.investigøtion.of.suspected.type./.diøñetes.in.newly. diøgnosed.ødultsO.ñøsed.on.døtø.from.öhite.;uropeøn.populøtions" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Figure 2.1 -Flowchart for investigation of suspected type 1 diabetes in newly diagnosed adults, based on data from White European populations. 1 No single clinical feature confirms type 1 diabetes in isolation. 2 Glutamic acid decarboxylase (GAD) should be the primary antibody measured and, if negative, should be followed by islet tyrosine phosphatase 2 (IA-2) and/or zinc transporter 8 (ZnT8) where these tests are available. In individuals who have not been treated with insulin, antibodies against insulin may also be useful. In those diagnosed at < 35 years of age who have no clinical features of type 2 diabetes or monogenic diabetes,  a  negative  result  does  not  change  the  diagnosis  of  type  1  diabetes,  since  5-10%  of  people  with  type  1  diabetes  do  not  have  antibodies. 3 Monogenic diabetes is suggested by the presence of one or more of the following features: A1C < 58 mmol/mol ( < 7.5%) at diagnosis, one parent with diabetes, features of a specific monogenic cause (e.g., renal cysts, partial lipodystrophy, maternally inherited deafness, and severe insulin resistance in the absence of obesity), and monogenic diabetes prediction model probability > 5% (diabetesgenes.org/exeter-diabetes-app/ModyCalculator). 4 A C-peptide test is only indicated in people receiving insulin treatment. A random sample (with concurrent glucose) within 5 h of eating can replace a formal C-peptide stimulation test in the context of classification. If the result is ≥ 600 pmol/L ( ≥ 1.8 ng/mL), the circumstances of testing do not matter . If the result is < 600 pmol/L ( < 1.8 ng/mL) and the concurrent glucose is < 4 mmol/L ( < 70 mg/dL) or the person may have been fasting, consider repeating the test. Results showing very low levels (e.g., < 80 pmol/L [ < 0.24 ng/mL]) do not need to be repeated. Where a person is insulin treated, C-peptide must be measured prior to insulin discontinuation to exclude severe insulin deficiency. Do not test C-peptide within 2 weeks of a hyperglycemic emergency. 5 Features of type 2 diabetes include increased BMI ( ≥ 25 kg/m 2 ), absence of weight loss, absence of ketoacidosis, and less marked hyperglycemia. Less discriminatory features include non-White ethnicity, family history, longer duration and milder severity of symptoms prior to presentation, features of metabolic syndrome, and absence of a family history of autoimmunity. 6 If genetic testing does not confirm monogenic diabetes, the classification is unclear and a clinical decision should be made about treatment. 7 Type 2 diabetes should be strongly considered in older individuals. In some cases, investigation for pancreatic or other types of diabetes may be appropriate. 8 A person with possible type 1 diabetes who is not treated with insulin will require careful monitoring and education so that insulin can be rapidly initiated in the event of glycemic deterioration. 9 C-peptide values 200-600 pmol/L (0.6-1.8 ng/mL) are usually consistent with type 1 diabetes or maturity-onset diabetes of the young but may occur in insulintreated type 2 diabetes, particularly in people with normal or low BMI or after long duration. Reprinted and adapted from Holt et al. (32).
 
@@ -387,6 +439,7 @@ The paths to β -cell  demise and dysfunction are more heterogeneous in type 2 d
 Adapted from Skyler et al. (35). FPG, fasting plasma glucose; IFG, impaired fasting glucose; IGT, impaired glucose tolerance; 2-h PG, 2-h plasma glucose.  Alternative  additional  stage  2  diagnostic  criteria  of  30-,  60-,  or  90-min  plasma  glucose  on  oral  glucose  tolerance  test ≥ 200  mg/dL ( ≥ 11.1  mmol/L)  and  confirmatory  testing  in  those  aged ≥ 18  years  have  been  used  in  clinical  trials  (82).  Dysglycemia  can  be  defined  by  one or more criteria as outlined in the table.
 
 ## TYPE 1 DIABETES
+<!-- rag_metadata source=ADA_2026 section="TYPE 1 DIABETES" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -395,10 +448,13 @@ Adapted from Skyler et al. (35). FPG, fasting plasma glucose; IFG, impaired fast
 2.8a Individuals  with  screening  results  positive  for  one  or  more  islet autoantibodies  should  be  evaluated for  stage  3  (overt)  type  1  diabetes (using A1C, urinalysis, and/or plasma glucose),  which  would  require  prompt clinical management and education. B 2.8b Individuals  with  multiple  confirmed islet autoantibodies and without  overt  type  1  diabetes  have  a  high risk  for  progression  to  stage  3  type  1 diabetes  and  should  be  referred  to  a specialized center for metabolic staging ( Table 2.4 ), education, and consideration  of  prevention  trials  or  approved
 
 - treatments (e.g., teplizumab). B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 2.9 Individuals  with  a  single  confirmed  IA-2  autoantibody  should  be monitored  similarly  to  individuals  with multiple islet autoantibodies, as IA-2 autoantibody  positivity  is  an  independent  risk  factor  for  progression. B Individuals with a single confirmed  islet autoantibody should undergo repeat antibody  testing  every  6  months  to  3 years  (depending  on  age)  to  assess  for persistence or seroconversion. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 2.10 Standardized  islet  autoantibody tests  are  recommended  for  classification  of  diabetes  in  adults  who  have phenotypic risk factors that overlap with those  for  type  1  diabetes  (e.g.,  younger age at diagnosis, unintentional weight loss,  ketoacidosis,  or  short  time  to  insulin treatment). E
 
 ## Immune-Mediated Diabetes
+<!-- rag_metadata source=ADA_2026 section="Immune-Mediated Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Autoimmune  type  1  diabetes  accounts for  5-10% of diabetes and is caused by autoimmune destruction of the pancreatic β -cells.  Autoimmune markers include  islet cell  autoantibodies  and  autoantibodies  to glutamic  acid  decarboxylase  (GAD)  (e.g., GAD65), insulin, the tyrosine phosphatases islet  antigen  2  (IA-2)  and  IA-2b,  and  zinc transporter  8  (ZnT8).  Clinical  studies  are being  conducted  to  test  various  methods of  preventing  or  delaying  type  1  diabetes in those with evidence of islet autoimmunity (trialnet.org/our-research/preventionstudies)  (36-38,43,46,47).  The  disease  has strong HLA associations, with linkage to the DQB1 and DRB1 haplotypes,  and  genetic screening  has  been  used  in  some  research studies to  identify  high-risk  populations. Specific alleles in these genes can be either predisposing (e.g.,  DRB1*0301-DQB1*0201 [DR3-DQ2]  and  DRB1*0401-DQB1*0302 [DR4-DQ8]) or protective (e.g.,  DRB1*1501 and DQA1*0102-DQB1*0602).
 
@@ -413,14 +469,17 @@ The rate of β -cell  destruction is  quite variable, being rapid in some indivi
 Certain  viruses  have  been  associated with type 1 diabetes, including enteroviruses (e.g., Coxsackievirus B). During the early coronavirus disease 2019 (COVID-19) pandemic,  several  reports  noted  an  increased  incidence  of  hyperglycemia,  DKA, and new-onset type 1 diabetes, raising the possibility that severe acute respiratory syndrome  coronavirus  2  (SARS-CoV-2)  is  a trigger or accelerator of disease in susceptible  individuals  (60).  More  recent  large  cohort and registry studies from multiple countries report mixed findings, with some showing a modest increased risk of type 1 diabetes  following  COVID-19  infection  and others reporting that the association is largely  due  to  challenges  with  health  care access and diagnostic delays (61,62). These data suggest that both viral effects and indirect  pandemic-related  factors  may  have contributed to the initial  observed spike of type  1  diabetes.  Research  is  ongoing  to clarify  the  long-term  relationship  between SARS-CoV-2  infection  and  type  1  diabetes risk,  including  the  development of a global registry, the CoviDIAB Registry (63).
 
 ## Immune Checkpoint Inhibitor-Induced Autoimmune Diabetes
+<!-- rag_metadata source=ADA_2026 section="Immune Checkpoint Inhibitor-Induced Autoimmune Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 The introduction of immunotherapy, specifically  immune  checkpoint  inhibitors (ICIs),  for  cancer  treatment  has  led to unexpected adverse events, including immune  system  activation  precipitating autoimmune  disease.  Fulminant  onset of  autoimmune  diabetes  can  occur  with DKA  and  low  or  undetectable  levels  of C-peptide as a marker of endogenous β -cell function  (64,65).  Fewer  than  half  of  these individuals have  islet autoantibodies,  and most  do  not  experience  a  phase  of  partial  remission,  which  is  commonly  seen in type  1  diabetes,  supporting  the  emerging view  of  a  partially  distinct  pathophysiology . ICI-induced  diabetes  occurs in  0.6-1.4%  of treated  individuals  and  is  more  frequent with  agents  that  block  the  programmed cell  death  protein  1  (PD-1)/programmed cell death ligand 1 (PDL-1) pathway, alone or in combination with other checkpoint inhibitors (e.g., anticytotoxic T-cell 4-antigen [CTLA-4] antibody) (66). Also, the  majority  of  ICI-related  cases  of  autoimmune  diabetes  occur  in  people  with high-risk  HLA  susceptibility  haplotype  for type 1 diabetes; however, people with either  a  neutral  or  typically  protective  HLA haplotype for type 1 diabetes can also develop  ICI-associated  diabetes  (67). T o  date, risk cannot be predicted by family history or  autoantibodies,  so  all  health  care professionals  administering  these  medications  or  caring  for  people  who  have  a history  of  current  or  past  exposure  to these  agents  should  be  mindful  of  this adverse  effect  and  educate  and  monitor individuals appropriately.
 
 ## Idiopathic Type 1 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Idiopathic Type 1 Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Some  forms  of  type  1  diabetes  have  no known  etiologies.  Individuals  have  permanent  insulinopenia  and  are  prone  to  DKA but have no evidence of β -cell  autoimmunity.  However,  only  a  minority  of  people with type 1 diabetes fall into this category.
 
 ## Screening for Type 1 Diabetes Risk
+<!-- rag_metadata source=ADA_2026 section="Screening for Type 1 Diabetes Risk" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 The incidence and prevalence of type 1 diabetes are increasing (68).  People with type 1 diabetes often present with acute symptoms of diabetes and markedly elevated  blood  glucose  levels,  and  25-50% are  diagnosed  with life-threatening  DKA (27-29).  Family  history  of  type  1  diabetes increases the risk of developing type 1 diabetes compared with the general population,  but  the  majority, ∼ 90%,  of  individuals  who  develop  type  1  diabetes  do not  have  a  known  relative  with  the  disease.  Multiple  studies  indicate  that  measuring  islet  autoantibodies  in  relatives  of those  with  type  1  diabetes  (41),  in  children from the general population (69,70), or in children from the general population with  high  genetic  risk  (71)  can  identify many individuals who will develop type 1 diabetes. A study reported the risk of progression to type 1 diabetes from the time of  seroconversion  to  autoantibody  positivity  in  three  pediatric  cohorts  from Finland,  Germany,  and  the  U.S.  Of  the  585 children  who  developed  more  than  two autoantibodies, nearly 70% developed type 1 diabetes within 10 years and 84% within  15  years  (36).  These  findings  are highly significant, because while the German  group  was  recruited  from  offspring of parents with type 1 diabetes, the Finnish  and  American  groups  were  recruited from the general population. Remarkably, the  findings  in  all  three  groups  were  the same,  suggesting  that  the  same  sequence of  events  led  to  clinical  disease  in  both 'sporadic' and familial cases of type 1 diabetes. Indeed, the risk of type 1 diabetes increases as the number of relevant autoantibodies  detected  increases  (46,72,73). In The Environmental Determinants of Diabetes in the Young (TEDDY) study, type 1 diabetes  developed  in  21%  of  363  subjects  with  at  least  one  autoantibody  at  3 years  of  age  (74).  Such  testing,  coupled with education about diabetes symptoms and  close  follow-up,  has  been  shown  to enable  earlier  diagnosis  and  to  prevent DKA (75,76). In several cohort studies, up to 50% of children with only a single autoantibody revert to being islet autoantibody  negative  during  follow-up  (77,78). Therefore, it is recommended that the first autoantibody-positive  test  be  confirmed with a second test within 3 months, preferably  in  a  laboratory  that  meets  the performance  standards  set  by  the  Islet Autoantibody  Standardization  Program (IASP) (51).
 
@@ -429,16 +488,22 @@ Type  1  diabetes  genetic  risk  scores have  been  used  in  newborn  screenin
 Screening  programs  are  available  in Europe (e.g., Fr1da and gppad.org), Australia (e.g.,  type1screen.org),  and  the U.S. (e.g.,  trialnet.org,  askhealth.org,  and cascadekids.org).  General  population-based screening programs may offer broader testing where high-quality, validated assays and  resources  for  appropriate  follow-up  of results  are available, with several countries considering  making  such  testing  part  of standard  care. In 2023,  Italy introduced nationwide screening for type 1 diabetes and celiac disease in the general  population  aged  1-17  years  (81). Individuals  who  test  autoantibody positive should be provided with or referred  for  counseling  about  the  risk  of developing diabetes, diabetes symptoms, and  DKA  prevention  and  should  be given  consideration  for  referral  to  a specialized  center  for  further  evaluation  and/or  consideration  of  a  clinical trial  or  approved  therapy  to  potentially  delay development of clinical  diabetes (82).
 
 ## PREDIABETES AND TYPE 2 DIABETES
+<!-- rag_metadata source=ADA_2026 section="PREDIABETES AND TYPE 2 DIABETES" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.11 Screening for risk of prediabetes and  type  2  diabetes  with  an  assessment of risk factors or validated risk calculator  should  be  done  in  asymptomatic adults. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.12a Testing for prediabetes or type 2 diabetes  in  asymptomatic  people should  be  considered  in  adults  of any  age  with  overweight  or  obesity who  have  one  or  more  risk  factors ( Table 2.5 ). B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.12b For all other people, screening should begin at age 35 years. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 2.12c In  people  without  prediabetes or diabetes after screening, repeat screening recommended at a minimum of 3-year intervals is reasonable, sooner with  symptoms  or  change  in  risk  (e.g., weight gain). C
 - 2.13 To  screen  for  prediabetes  and type  2  diabetes,  FPG,  2-h  PG  during
 
 ## Table 2.5-Criteria for screening for diabetes or prediabetes in asymptomatic adults
+<!-- rag_metadata source=ADA_2026 section="Table 2.5-Criteria for screening for diabetes or prediabetes in asymptomatic adults" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 1. Testing should be considered in adults with overweight or obesity (BMI ≥ 25 kg/m 2 or ≥ 23 kg/m 2 in  individuals of Asian ancestry) who have one or more of the following risk factors:
 - First-degree relative with diabetes
@@ -458,14 +523,21 @@ Screening  programs  are  available  in Europe (e.g., Fr1da and gppad.org), Aust
 
 75-g  OGTT,  and  A1C  are  each  appropriate ( Table 2.1 and Table 2.2 ). B
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 2.14 When using  OGTT  as  a  screening  tool  for  prediabetes  or  diabetes, adequate carbohydrate intake (at least 150  g/day)  should  be  assured  for 3 days prior to testing. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.15 Risk-based screening for prediabetes  or  type  2  diabetes  should  be considered  after  the  onset  of  puberty or after 10 years of age, whichever  occurs  earlier,  in  children  and adolescents  with  overweight  (BMI ≥ 85th  percentile)  or  obesity  (BMI ≥ 95th  percentile)  and  who  have  one or more  risk factors for diabetes. (See Table  2.6 for  evidence  grading of risk factors.) B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 2.16a Consider  screening  people  for prediabetes  or  diabetes  if  they  are on  certain  medications,  such  as  statins,  thiazide  diuretics,  and  some HIV  medications,  as  these  agents are  known  to  increase  the  risk  of these conditions. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.16b In  people  who  are  prescribed second-generation  antipsychotic  medications,  screen  for  prediabetes  and  diabetes  at  baseline  and  repeat  12-16  weeks after medication initiation or sooner, if  clinically  indicated,  and  annually thereafter. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 2.17 People  with  HIV  should  be screened  for  diabetes  and  prediabetes with an FPG test before starting antiretroviral therapy, at the time of switching antiretroviral  therapy ,  and  3-6  months after  starting  or  switching  antiretroviral therapy.  If  initial  screening  results  are normal,  FPG  should  be  checked  annually . E
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 2.18 Monitor  postprandial  or random glucose levels with recurrent or long-term use of glucocorticoids. B
 
 ## Prediabetes
+<!-- rag_metadata source=ADA_2026 section="Prediabetes" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 Prediabetes is the term used to identify glucose  or  A1C  levels  that  do  not  meet the  criteria  for  diabetes  yet  fall  in  an intermediate  range  between  normoglycemia and diabetes (25,83). People with prediabetes are defined by the presence  of  IFG  and/or  IGT  and/or  A1C 5.7-6.4%  (39-47  mmol/mol)  ( Table  2.2 ). Prediabetes is  a  significant  risk  factor  for progression to diabetes as well as cardiovascular  disease  and  several  other  cardiometabolic  outcomes.  Criteria  for  screening
 
@@ -557,8 +629,10 @@ diagnosing gestational diabetes mellitus. NIH Consens State Sci Statements 2013;
 <!-- source: ADA_2026 | file: ADA_2026_S03.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S03
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S03" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 3. Prevention or Delay of Diabetes and Associated Comorbidities: Standards of Care in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="3. Prevention or Delay of Diabetes and Associated Comorbidities: Standards of Care in  Diabetes-2026" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S50-S60 | https://doi.org/10.2337/dc26-S003
 
@@ -589,12 +663,14 @@ in  cost,  and  early  detection  of  hyperglycemia  affords  substantial  time 
 Three stages of type 1 diabetes have been defined, with symptomatic type 1 diabetes  classified  as  stage  3  ( Table  2.4 ). In individuals at risk for developing clinical type  1  diabetes,  younger  age  of  seroconversion  (particularly  under  age  3  years), the total number of diabetes-related autoantibodies  (1),  and  the  development  of autoantibodies  against  islet  antigen 2 (IA-2) have all been associated with a more rapid  progression  to  stage  3  type  1  diabetes.  While  continuous  glucose  monitoring can predict progression to stage 3 type 1 diabetes  in  children  and  adolescents  with autoantibodies (2), OGTT-based metrics are  more  predictive  of  progression  compared  with  continuous  glucose  monitoring  (3). The  decision  to  perform  an  OGTT may depend on such  factors  as  eligibility and interest for stage-specific treatments, interest in participation in clinical research,  OGTT  availability,  and  the  burden of testing. Consensus guidance provides expert  recommendations on what should be monitored  and  how  often  in  people  with presymptomatic  type  1  diabetes  (4).  Costeffectiveness  of  population-based  screening  programs  for  type  1  diabetes  has  not been established  (5,6),  but  such  screening is being implemented outside the U.S. (7).
 
 ## LIFESTYLE BEHAVIOR CHANGE FOR TYPE 2 DIABETES PREVENTION
+<!-- rag_metadata source=ADA_2026 section="LIFESTYLE BEHAVIOR CHANGE FOR TYPE 2 DIABETES PREVENTION" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 3.3 Refer  adults  with  overweight or  obesity  at  high  risk  of  type  2 diabetes  to  a  diabetes  prevention program  to  achieve  and  maintain a  weight  reduction  of  at  least  5-7% of  initial  body  weight  through  a healthy reduced-calorie eating pattern  and ≥ 150  min/week  of  moderate-intensity physical activity. A 3.4 Prescribe an evidence-based eating pattern (e.g., Mediterranean, low carbohydrate) to individuals with prediabetes to prevent type 2 diabetes. B 3.5 Offer  diabetes  prevention  programs to adults at high risk for type 2 diabetes. A Diabetes prevention programs  should  be  covered  by  thirdparty  payors,  and  inconsistencies  in access should be addressed. E 3.6 Based  on  individual  preference, certified  technology-assisted  diabetes prevention  programs  through  smartphones,  web-based  applications,  and telehealth  can  be  effective  in  preventing type 2 diabetes and should be considered. B
 
 ## The Diabetes Prevention Program
+<!-- rag_metadata source=ADA_2026 section="The Diabetes Prevention Program" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 Several major randomized controlled trials,  including  the  Diabetes  Prevention Program (DPP) (8), the Finnish Diabetes Prevention Study (DPS) (9), and the Da Qing  Diabetes  Prevention  Study  (Da Qing  study)  (10),  demonstrated  that lifestyle/behavioral  intervention  with an individualized reduced-calorie meal plan  is  highly  effective  in  preventing or  delaying  type  2  diabetes  and  improving other cardiometabolic risk factors  such  as blood  pressure,  lipids, and markers of inflammation (11). The strongest  evidence  for  diabetes  prevention in the U.S. comes from the DPP trial  (8). The  DPP demonstrated that intensive  lifestyle  intervention  could  reduce the risk of incident type 2 diabetes by 58% over 3 years. Follow-up of three large  trials  of  lifestyle  intervention  for diabetes  prevention  showed  sustained reduction  in  the  risk  of  progression  to type 2 diabetes: 39% reduction at 30 years in  the  Da  Qing  study  (12),  43%  reduction at  7  years  in  the  Finnish  DPS  (9),  and 34% reduction at 10 years (13), 27% reduction  at  15  years  (14),  and  24%  reduction at 21 years in the U.S. Diabetes Prevention  Program  Outcomes  Study (DPPOS) (15,16).
 
@@ -609,14 +685,17 @@ The 7% weight loss goal was selected because  it  was  feasible  to  achieve  an
 While  the  DPP  interventions  were  successful  in  preventing  or  delaying  the  onset of type 2 diabetes, major cardiovascular events were not significantly different 21 years after the DPP concluded, which  may  be  due  to  the  widespread use of statin, antihypertensive,  and metformin  therapy  among  all  participants  well  after  the  conclusion  of  the study  (19).  However,  the  incidence  of diabetes  continued  to  be  significantly lower at 21 years of follow-up in both intensive  lifestyle  therapy  and  metformin groups,  when  compared  with  placebo, corresponding  to  increases  in  median diabetes-free survival of 3.5 years and 2.5 years, respectively (15). Importantly, the  overall  treatment  effect  was  driven almost  entirely  by  benefit  seen  during the initial  DPP  phase (15),  underscoring the  importance  of  early  intervention  and continued implementation of diabetes prevention  efforts.  Still,  individuals  can  derive benefit  from  lifestyle  interventions  to  prevent progression of prediabetes to diabetes irrespective of the duration of prediabetes prior  to  initiation  of  lifestyle  intervention (20). Thus, there is clear potential benefit in diabetes prevention and minimal to no risk of harm with these interventions.
 
 ## Nutrition
+<!-- rag_metadata source=ADA_2026 section="Nutrition" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Nutrition  counseling  for  weight  loss  in the  DPP  lifestyle  intervention  arm  focused on reduction of total fat and calories (8,17,18). However, current evidence suggests  there  is  no  ideal  percentage  of calories  from  carbohydrate,  protein,  and fat  to  prevent  diabetes;  therefore,  macronutrient  distribution  should  be  based on  an  individualized  assessment  of  current  eating patterns,  preferences,  and metabolic  goals.  A  variety  of  eating  patterns (21) can be appropriate for individuals with prediabetes or diabetes, including Mediterranean-style, plant-based (which may  or  may  not  be  omnivorous),  Dietary  Approaches  to  Stop  Hypertension (DASH),  and  low-carbohydrate  (22-25). The  overall  quality  of  food  consumed (as  measured  by  the  Healthy  Eating  Index,  Alternative  Healthy  Eating  Index, and  DASH  score),  with  an  emphasis  on whole grains,  legumes,  nuts,  fruits,  and vegetables  and  minimal  refined  and processed foods, is also associated with a  lower risk of type 2 diabetes (26-28). For people at risk for or living with diabetes,  individualized  medical  nutrition therapy (see section 5, 'Facilitating Positive Health  Behaviors  and  Well-being  to Improve Health Outcomes,' for more detailed information) is effective in lowering A1C (29,30).
 
 ## Physical Activity
+<!-- rag_metadata source=ADA_2026 section="Physical Activity" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Moderate-intensity physical activity, such as  brisk  walking  for  150  min/week,  has shown  beneficial  effects  in  those  with prediabetes  (8).  Similarly,  moderate- intensity physical activity has been shown to  improve  insulin  sensitivity  and  reduce abdominal  fat  in  children,  adolescents, and  young  adults  (31,32).  Health  care professionals are  encouraged  to  promote a DPP-style program to all individuals  who  have  been  identified  to  be  at an  increased  risk  of  type  2  diabetes.  In addition  to  aerobic  activity,  a  physical activity plan designed to prevent diabetes can  include  resistance  training (17,33). Breaking  up  prolonged  sedentary  time may  also  be  encouraged,  as  it  lowers postprandial  glucose  levels  (34).  The  effects of regular physical activity participation  appear  to  extend  to  the  prevention of gestational diabetes mellitus (GDM) as well (35,36).
 
 ## Delivery and Dissemination of Lifestyle Behavior Change for Diabetes Prevention
+<!-- rag_metadata source=ADA_2026 section="Delivery and Dissemination of Lifestyle Behavior Change for Diabetes Prevention" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Because the intensive lifestyle intervention in the DPP was effective in preventing type 2 diabetes among those at high risk,  and  both  DPP  and  adapted  lifestyle behavior change programs for diabetes prevention were shown to be cost-effective across multiple applications, broader efforts to disseminate scalable DPP-like lifestyle behavior  change  programs  for  diabetes prevention with  coverage  by  third-party payors ensued (37-42). Group delivery of DPP  content  in  community  or  primary care  settings  has  demonstrated  the  potential  to  reduce  overall  program  costs while still  producing  weight  loss  and  diabetes risk reduction (43,44). Interventions to prevent type 2 diabetes can also be delivered  through  workplace  programming, with  interventions  that  most  closely  adhere  to  DPP  content  shown  to  be  most effective (45).
 
@@ -629,16 +708,20 @@ Technology-assisted  programs  may effectively deliver a  DPP-like  intervention
 The  CDC's  Division  of  Diabetes  Translation  National  DPP  toolkit  (coveragetoolkit .org/recruitment-referral-for-the-national -dpp-lifestyle-change-program) provides diabetes care team members resources for how to increase referral and uptake of the DPP. Some ways to increase DPP utilization include direct mailings, phone scripts, and text-based outreach. Using multiple  methods  of  outreach  to  increase awareness among those at risk, and among health care professionals, in addition offering the DPP virtually can improve  participation  and  uptake  (65,66). However,  more  work  is  needed  to  improve  uptake  among  high-risk  populations (67,68).
 
 ## Sleep Characteristics Associated With Increased Risk of Type 2 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Sleep Characteristics Associated With Increased Risk of Type 2 Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Sleep  occupies  approximately  one-third of  the  day  for  most  people  and  modulates  important  metabolic,  endocrine, and cardiovascular processes (69). Sleep can  be  characterized  using  three  key constructs:  quantity,  quality,  and  timing (i.e.,  chronotype).  There  is  now  established  evidence  for  a  U-shaped  association between sleep duration and type 2 diabetes  incidence,  with  the  nadir  typically occurring at 7 h per day, with short (typically  defined  as < 6  h)  and  long (typically  defined  as > 9  h)  sleep  duration having up to a 50% increase in the risk  of  type  2  diabetes,  including  progression  from  prediabetes  (70).  Sleep quality is defined as 'an individual's self-satisfaction  with  all  aspects  of  the sleep experience' (71,72). A meta-analysis reported  that  poor  overall  sleep  quality was  associated  with  a  40%  increased risk of developing type 2 diabetes (73). Chronotype preference has  been  linked with  many  chronic  diseases,  including type 2 diabetes. For example, for those with a preference for evenings (i.e., going to  bed  late  and  getting  up  late),  there was a 2.5-fold higher odds ratio for type 2 diabetes than for those with a preference for  mornings  (i.e.,  going  to  bed  early  and getting  up  early),  independent  of  sleep duration  and  sleep  sufficiency  (74).  More detailed  information  concerning  sleep  and the impact of sleep on prediabetes and diabetes risk and management can be found in  section  5,  'Facilitating  Positive  Health Behaviors  and  Well-being  to  Improve Health Outcomes.'
 
 ## PHARMACOLOGIC INTERVENTIONS TO DELAY TYPE 2 DIABETES
+<!-- rag_metadata source=ADA_2026 section="PHARMACOLOGIC INTERVENTIONS TO DELAY TYPE 2 DIABETES" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 3.7 Metformin for the prevention of type  2  diabetes  should  be  considered in adults at high risk of type 2 diabetes, as  typified  by  the  Diabetes  Prevention  Program,  especially  those  aged 25-59  years  with  BMI ≥ 35  kg/m 2 , higher  fasting  plasma  glucose  (e.g., ≥ 110 mg/dL [ ≥ 6 mmol/L]), and higher A1C  (e.g., ≥ 6.0%  [ ≥ 42  mmol/mol]), and  in  individuals  with  prior  gestational diabetes mellitus. A
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 3.8 Consider  using  metformin  to prevent  hyperglycemia  in  high-risk  individuals treated with a phosphatidylinositol  3-kinase α (PI3K α )  inhibitor (e.g., alpelisib and inavolisib). B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 3.9 Consider  using  metformin  to prevent hyperglycemia in high-risk individuals  treated  with  high-dose glucocorticoids. B
 
 3.10 Consider  periodic  assessment of  vitamin  B12  levels  in  individuals receiving long-term metformin therapy, especially in those with anemia or peripheral neuropathy. B
@@ -652,6 +735,7 @@ There has been significant interest in understanding the potential of vitamin D 
 Thus, the expected benefit, harm, treatment burden, and cost of using any medication  to  prevent  type  2  diabetes  must be  considered  for  each  individual  as part of informed shared decision-making. This is particularly important because any pharmacologic intervention is likely to be needed to be used long-term because of waning  effects  after  stopping  the  medication. At the present time, there are no pharmacologic  agents  approved  by  the U.S.  Food  and  Drug  Administration  specifically  for  the  prevention  of  type  2 diabetes.
 
 ## Metformin
+<!-- rag_metadata source=ADA_2026 section="Metformin" topic_tags="first_line_therapy, metformin" population="T2DM T1DM global" year=2026 -->
 
 Metformin has the most robust efficacy and  safety  data  as  a  pharmacologic therapy  for  diabetes  prevention  among people with prediabetes (82). Importantly, metformin was overall less effective than lifestyle modification in the DPP , although group differences attenuated over time in the DPPOS (14) and metformin was as effective as lifestyle modification in participants  with  BMI ≥ 35  kg/m 2 and  in younger  participants aged 25-44  years (8).  In  individuals  with  a  history  of  GDM, metformin and intensive lifestyle modification  led  to  an  equivalent  50%  reduction in  diabetes  risk  (97).  Both  interventions remained effective during a 10-year follow-up  period  (98),  with  lifestyle  therapy being highly cost-effective  ($12,878 per quality-adjusted life-year [QALY]) and metformin marginally cost-saving  compared  with  placebo  (37).  By  the  time  of the  15-year  follow-up  (DPPOS),  exploratory  analyses  demonstrated  that  participants  with  a  higher  baseline  fasting glucose ( ≥ 110 mg/dL [ ≥ 6 mmol/L] vs. 95-109  mg/dL  [5.3-5.9  mmol/L]),  those with  a  higher  A1C  (6.0-6.4%  [42-46 mmol/mol] vs. < 6.0% [ < 42 mmol/mol]), and  individuals  with  a  history  of  GDM (vs.  individuals  without  a  history  of GDM)  experienced  higher  risk  reductions  with  metformin,  identifying  subgroups  of  participants  that  may  benefit the  most  from  metformin  (83).  In  the Indian  Diabetes  Prevention  Program (IDPP-1),  metformin  and  lifestyle  intervention reduced diabetes risk similarly at 30  months;  however,  the  lifestyle  intervention in IDPP-1 was less intensive than that  in  the  DPP  (99).  Based  on  findings from  the  DPP,  metformin  should  be recommended  as  an  option  for  highrisk  individuals  (e.g.,  younger individuals,  those  with  history  of  GDM,  or those with BMI ≥ 35 kg/m 2 ).
 
@@ -662,11 +746,15 @@ Proactive  use  of  metformin  may  also be beneficial in preventing hyperglycem
 Decreased  vitamin  B12  levels  are  a known consequence of long-term treatment with metformin (109). Periodic assessment of vitamin B12 level in those taking  metformin  chronically  should  be considered  to  check  for  possible  deficiency, especially in those  receiving  a higher dose (e.g., ≥ 1,500 mg/day) (110), with longer treatment duration (4-5 years) (111), with other risk factors for vitamin B12 deficiency, and if a deficiency is suspected,  such  as  in  people  with  anemia, peripheral  neuropathy,  or  chronic  kidney  disease  (109,112,113)  (see  section  9,  'Pharmacologic  Approaches  to Glycemic  Treatment,'  for  more  details). A person who has been taking metformin  for  more  than  4  years  or  is  at risk for vitamin B12 deficiency for other reasons  (e.g., vegan  dietary  pattern, previous  gastric/small  bowel  surgery) should  be  monitored  for  vitamin  B12 deficiency annually (114,115).
 
 ## PREVENTION OF VASCULAR DISEASE AND MORTALITY
+<!-- rag_metadata source=ADA_2026 section="PREVENTION OF VASCULAR DISEASE AND MORTALITY" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 3.11 Prediabetes  is  associated  with heightened cardiovascular risk; therefore,  screening  for  and  treatment  of modifiable  risk  factors  for  cardiovascular disease are suggested. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 3.12 Statin  therapy  may  increase  the risk  of  type  2  diabetes  in  people  at high risk of developing type 2 diabetes.  In  such  individuals,  glucose  status  should  be  monitored  regularly and  diabetes  prevention  approaches reinforced.  It  is  not  recommended that  statins  be  avoided  or  discontinued for this adverse effect. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 3.13 In people  with  a  history  of stroke  and  evidence  of  insulin  resistance  and  prediabetes,  pioglitazone may be considered to lower the risk of stroke or myocardial infarction. However,  this  benefit  needs  to  be  balanced with the increased risk of weight gain,  edema,  and  fractures. A Lower doses  may  mitigate  the  risk of  adverse effects but may be less effective. C
 
 People  with  prediabetes  often  have other  cardiovascular  risk  factors,  including  hypertension and dyslipidemia (116), and are at increased risk for cardiovascular disease  (117,118).  Evaluation  for  tobacco use  and  referral  for  tobacco  cessation should be part of routine care for those at  risk  for  diabetes.  Of  note,  the  years immediately  following  smoking  cessation  may  represent  a  time  of  increased risk  for  diabetes  (119,120),  and  individuals  should be monitored for diabetes development  and  receive  evidence-based lifestyle  behavior  change  for  diabetes prevention as described in this section. See section 5, 'Facilitating Positive Health Behaviors  and  Well-being  to  Improve Health  Outcomes,'  for  more  detailed  information.  The  lifestyle  interventions  for weight loss in study populations at risk for type  2  diabetes  have  shown  a  reduction in cardiovascular risk factors and the need for  medications  used  to  treat  these  cardiovascular risk factors (121,122). The lifestyle  intervention  in  the  Da  Qing  study was associated with lowering cardiovascular  disease  and  mortality  at  23  and 30 years of observational follow-up (10,12). Treatment  goals  and  therapies  for  hypertension  and  dyslipidemia  in  the  primary and secondary prevention  of cardiovascular disease for people  with prediabetes should be based on their level of cardiovascular  risk.  Increased  vigilance  is  warranted to  identify  and  treat  these  and  other  cardiovascular disease risk factors (123).
@@ -676,6 +764,7 @@ Statin  use  increases  risk  of  diabetes (124,125).  In  the  DPP ,  statin  u
 Results of cardiovascular outcome trials in  people  without  diabetes  also  provide important evidence for cardiovascular risk reduction in people with increased cardiometabolic risk, though not specifically prediabetes  (see  section  10,  'Cardiovascular Disease and Risk Management,' for more details). The  IRIS  (Insulin  Resistance  Intervention  after  Stroke)  trial  of  people  with a  recent  ( < 6  months)  stroke  or  transient ischemic  attack,  without  diabetes  but with  insulin  resistance  (as  defined  by  a HOMA  of  insulin  resistance  index  of ≥ 3.0),  evaluated  pioglitazone  (goal  dose of  45  mg  daily)  compared  with  placebo. At 4.8 years, the risk of stroke or myocardial infarction, as well as the risk of diabetes,  was  lower  in  the  pioglitazone  group than  in  the  placebo  group;  weight  gain, edema,  and  fractures  were  higher  in  the pioglitazone  treatment  group  (128-130). Lower doses may mitigate the adverse effects but may also be less effective (131).
 
 ## PERSON-CENTERED CARE GOALS
+<!-- rag_metadata source=ADA_2026 section="PERSON-CENTERED CARE GOALS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -692,10 +781,12 @@ Thus,  it  is  important  to  individualize the  risk-to-benefit  ratio  of  int
 Pharmacotherapy  for  weight  management  and  cardiovascular  risk  reduction  (see  section  8,  'Obesity  and Weight Management for the Prevention and Treatment of Diabetes,' and section  10,  'Cardiovascular  Disease and  Risk  Management,'  for  more  details) can be considered to support individualized  person-centered  goals,  with more  intensive  preventive  approaches considered  in  individuals  at  high  risk  of progression.
 
 ## PREVENTION OR DELAY OF SYMPTOMATIC TYPE 1 DIABETES Lifestyle and Type 1 Diabetes Progression
+<!-- rag_metadata source=ADA_2026 section="PREVENTION OR DELAY OF SYMPTOMATIC TYPE 1 DIABETES Lifestyle and Type 1 Diabetes Progression" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Observational  studies  have  identified several factors that increase β -cell demand and risk of progression to clinical type 1 diabetes among individuals with islet autoantibodies, including lower  levels  of  physical  activity  (138), higher  glycemic  index  eating  patterns (139), and total sugar intake (140). Similar  associations  have  not  been  observed for  the  development  of  autoantibodies. In  The  Environmental  Determinants  of Diabetes in the Young (TEDDY) longitudinal  study,  daily  minutes spent  in  moderate to vigorous  physical activity  were associated  with  a  reduced  risk  of  progression  to  type  1  diabetes  in  children 5-15  years  of  age  with  multiple  islet autoantibodies  (HR  0.92  [95%  CI  0.860.99]  per  10-min  increase; P =  0.02) (138). In  the  Diabetes  Autoimmunity Study  in  the  Young  (DAISY),  also  in  children with islet autoantibodies, consumption  of  higher  glycemic  index  foods  (HR 2.20  [95%  CI  1.17-4.15])  and  total  sugar intake (HR 1.75 [95% CI 1.07-2.85]) (139,140) were both associated with progression to type 1 diabetes. In nonobese diabetic  mice,  an  animal  model  for  the development  of  type  1  diabetes,  sustained high-glucose drinking significantly aggravated islet inflammation and accelerated  the  onset  of  type  1  diabetes (141).  However,  efficacy  of  lifestyle  interventions that modify these factors in individuals with stage 1 or stage 2 type 1 diabetes has not yet been reported.
 
 ## Pharmacologic Interventions to Delay Symptomatic Type 1 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Pharmacologic Interventions to Delay Symptomatic Type 1 Diabetes" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -750,18 +841,23 @@ Numerous  clinical  studies  are  being conducted to test methods for preventing
 <!-- source: ADA_2026 | file: ADA_2026_S04.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S04
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S04" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 4. Comprehensive Medical Evaluation and Assessment of Comorbidities: Standards of Care in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="4. Comprehensive Medical Evaluation and Assessment of Comorbidities: Standards of Care in  Diabetes-2026" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S61-S88 | https://doi.org/10.2337/dc26-S004
 
 The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'  includes the  ADA's  current clinical  practice  recommendations  and  is  intended  to provide  the  components  of  diabetes  care,  general  treatment  goals  and  guidelines,  and  tools  to  evaluate  quality  of  care.  Members  of  the  ADA  Professional Practice Committee for Diabetes, an interprofessional expert committee, are responsible for updating the Standards of Care annually, or more frequently as warranted. For a detailed description of ADA standards, statements, and reports, as well as the evidence-grading system for ADA's clinical practice recommendations and  a  full  list  of  Professional  Practice  Committee  members,  please  refer  to Introduction and Methodology. Readers who wish to comment on the Standards of Care are invited to do so at professional.diabetes.org/SOC.
 
 ## PERSON-CENTERED COLLABORATIVE CARE
+<!-- rag_metadata source=ADA_2026 section="PERSON-CENTERED COLLABORATIVE CARE" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 4.1 A communication style that uses person-centered, culturally sensitive, and strength-based language and active listening; elicits individual preferences and beliefs;  and  assesses  literacy,  numeracy,  and  potential  barriers  to  care  should  be used to optimize health outcomes and health-related quality of life. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 4.2 People  with  diabetes  can  benefit  from  a  coordinated  interprofessional team that may include but is not limited  to diabetes care and  education  specialists,  primary care and subspecialty clinicians, nurses,  registered dietitian nutritionists,  exercise  specialists,  pharmacists,  dentists,  podiatrists,  and  behavioral  health professionals. C
 
 A  successful  medical  evaluation  and  care  plan  depends  on  the  beneficial  interactions and care coordination between the person with diabetes and the care team. The  Chronic  Care  Model  (1)  and  other  evidence-based  care  delivery  models  (see section  1,  'Improving  Care  and  Promoting  Health  in  Populations')  can  support  a person-centered  approach  to  care  that  requires  a  close  working  relationship  between the person with diabetes, their clinicians, and the broader health care team involved  in  treatment  planning  and  implementation.  People  with  diabetes  should receive  health  care  from  a  coordinated  interprofessional  team  that  may  include but is not limited to diabetes care and education specialists, primary care and subspecialty  clinicians,  nurses,  registered  dietitian  nutritionists,  exercise  specialists, pharmacists,  dentists,  podiatrists,  behavioral  health  professionals,  and  community American Diabetes Association Professional Practice Committee for Diabetes *
@@ -787,8 +883,10 @@ The  goals  of  treatment  for  diabetes are  to  prevent  or  delay  complicati
 Communication  between  health  care professionals  and  people  with  diabetes and  their  families  should  acknowledge that multiple factors  impact  diabetes management  but  also  emphasize  that collaboratively  developed  treatment plans and a healthy lifestyle can significantly improve  disease  outcomes  and  well-being (2).  Thus,  the  goal  of  communication between health care professionals and people  with  diabetes  is  to  establish  a collaborative  relationship  and  to  assess and  address  self-management  barriers without  blaming  people  with  diabetes for  'noncompliance' or 'nonadherence'
 
 ## Decision cycle for person-centered glycemic management in type 2 diabetes
+<!-- rag_metadata source=ADA_2026 section="Decision cycle for person-centered glycemic management in type 2 diabetes" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## REVIEW AND AGREE ON MANAGEMENT PLAN
+<!-- rag_metadata source=ADA_2026 section="REVIEW AND AGREE ON MANAGEMENT PLAN" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Review management plan
 - Mutually agree on changes
@@ -797,6 +895,7 @@ Communication  between  health  care professionals  and  people  with  diabetes 
 - Operate in an integrated system of care
 
 ## PROVIDE ONGOING SUPPORT AND MONITORING OF:
+<!-- rag_metadata source=ADA_2026 section="PROVIDE ONGOING SUPPORT AND MONITORING OF:" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Emotional well-being
 - Lifestyle and health behaviors
@@ -804,10 +903,12 @@ Communication  between  health  care professionals  and  people  with  diabetes 
 - Surrogate measures of treatment, including BGM and CGM, weight, step count, A1C, BP, and lipids
 
 ## IMPLEMENT MANAGEMENT PLAN
+<!-- rag_metadata source=ADA_2026 section="IMPLEMENT MANAGEMENT PLAN" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Ensure there is regular review; more frequent contact initially is often desirable for DSMES
 
 ## AGREE ON MANAGEMENT PLAN
+<!-- rag_metadata source=ADA_2026 section="AGREE ON MANAGEMENT PLAN" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Specify SMART goals:
 - -S pecific
@@ -817,6 +918,7 @@ Communication  between  health  care professionals  and  people  with  diabetes 
 - -T ime limited
 
 ## ASSESS KEY PERSON CHARACTERISTICS
+<!-- rag_metadata source=ADA_2026 section="ASSESS KEY PERSON CHARACTERISTICS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - The individual's preferences, values, and goals
 - Current lifestyle and health behaviors
@@ -826,8 +928,10 @@ Communication  between  health  care professionals  and  people  with  diabetes 
 - Social determinants of health
 
 ## CONSIDER SPECIFIC FACTORS THAT IMPACT CHOICE OF TREATMENT
+<!-- rag_metadata source=ADA_2026 section="CONSIDER SPECIFIC FACTORS THAT IMPACT CHOICE OF TREATMENT" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## GOALS OF CARE
+<!-- rag_metadata source=ADA_2026 section="GOALS OF CARE" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - s · Optimize quality of life
 -  Individualized glycemic and weight goals
@@ -841,6 +945,7 @@ Communication  between  health  care professionals  and  people  with  diabetes 
 <!-- image -->
 
 ## USE SHARED DECISION-MAKING TO CO-CREATE A MANAGEMENT PLAN
+<!-- rag_metadata source=ADA_2026 section="USE SHARED DECISION-MAKING TO CO-CREATE A MANAGEMENT PLAN" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Ensure access to DSMES
 - Involve an educated and informed person (and the individual's family or caregiver)
@@ -861,18 +966,27 @@ Language has a strong impact on perceptions and behavior. Empowering language ca
 - Use  language  that  is  person  centered (e.g., 'person with diabetes' is preferred over 'diabetic').
 
 ## COMPREHENSIVE MEDICAL EVALUATION
+<!-- rag_metadata source=ADA_2026 section="COMPREHENSIVE MEDICAL EVALUATION" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 - 4.3 A  complete  medical  evaluation should be performed at the initial visit and follow-up, as appropriate, to:
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Confirm the diagnosis and classify diabetes. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Assess  glycemic  status  and  previous and current treatment. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Evaluate for diabetes complications, potential comorbid conditions, and overall health status. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - Identify  care  partners,  support  systems, and available resources. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Assess social determinants of health and structural barriers to optimal health and health care. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Review risk factor management in the person with diabetes. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - Begin  engagement  with  the  person with  diabetes  in  the  formulation  of a  care  management  plan  including goals of care. A
 - Develop a plan for continuing care. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 4.4 Ongoing  management  should  be guided  by  the  assessment  of  overall health  and  functional  status,  diabetes complications,  cardiovascular  risk,  hypoglycemia  risk,  and  shared  decision making to set therapeutic goals. B
 
 The  comprehensive  medical  evaluation includes the initial and follow-up evaluations, which comprise assessment of complications, psychosocial assessment, management  of  comorbid  conditions, overall  health,  functional  and  cognitive status,  and  engagement  of  the  person with  diabetes  throughout  the  process. While  a  comprehensive  list  is  provided in Table 4.1 , in clinical practice the health care  professional  may  need  to  prioritize select components of the medical evaluation  given  the  available  resources  and time.  Engaging  other  members  of  the health care team can also support comprehensive  diabetes  care.  The  goal  of these  recommendations  is  to  provide the  health  care  team  with  guidance and information so it can optimally support people  with  diabetes  and  their care  partners.  In  addition  to  the  medical history, physical examination,  and laboratory tests, health care professionals should  assess  diabetes  self-management behaviors,  nutrition,  social  determinants of  health,  and  psychosocial  health  (see section 5, 'Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes') and give guidance on routine  immunizations.  The  assessment of sleep pattern and duration, bone health, and sexual health should also be considered  as  an  important  part  of  the comprehensive  evaluation  of  a  person with diabetes. Follow-up visits should occur at least every 3-6 months individualized  to  the  person  and  then  at  least annually.
@@ -929,6 +1043,7 @@ Table 4.1-Components of the comprehensive diabetes medical evaluation at initial
 Continued on p. S65
 
 ## IMMUNIZATIONS
+<!-- rag_metadata source=ADA_2026 section="IMMUNIZATIONS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -937,14 +1052,17 @@ Table 4.3 ). A 4.5 Provide routinely recommended vaccinations  for  children,  a
 Children, adolescents, and adults with diabetes  should  receive vaccinations according to age-appropriate recommendations (6,7). The  Centers  for  Disease  Control  and Prevention (CDC) provides vaccination schedules specifically for children, adolescents,  and  adults  with  diabetes  (cdc .gov/vaccines/).  The  CDC  Advisory  Committee  on  Immunization  Practices  (ACIP) makes recommendations based on its own review and rating of the evidence, provided in Table  4.3 for  selected  vaccinations. The ACIP  evidence  review  has  evolved  over time with the adoption of Grading of Recommendations Assessment, Development, and Evaluation (GRADE) in 2010 and then the Evidence to Decision  or  Evidence to Recommendation frameworks in 2020 (8).  Here, we discuss the particular importance of specific vaccines.
 
 ## COVID-19
+<!-- rag_metadata source=ADA_2026 section="COVID-19" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 People with underlying medical conditions, including diabetes, are more likely to become severely ill with coronavirus disease 2019 (COVID-19). COVID-19 vaccination using  an  appropriate  number  of  doses  of updated  vaccines  is  recommended  for everyone  aged  6  months  and  older  in the U.S. (6,7).
 
 ## Hepatitis B
+<!-- rag_metadata source=ADA_2026 section="Hepatitis B" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Compared  with  the  general  population, people  with  type  1  or  type  2  diabetes have higher rates of hepatitis. Because of the  higher  likelihood  of  transmission  of the disease, hepatitis B vaccine is recommended  for  adults  with  diabetes  aged < 60  years.  For  adults  aged ≥ 60  years, hepatitis  B  vaccine  may  be  administered at  the  discretion  of  the  treating  clinician based  on  the  person's  likelihood  of  acquiring hepatitis B infection (6,7).
 
 ## Influenza
+<!-- rag_metadata source=ADA_2026 section="Influenza" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Influenza is a common, preventable infectious disease associated with high mortality and morbidity in vulnerable populations, including youth, older adults, and people with chronic diseases. Influenza vaccination ABI,  ankle  brachial  index;  ARBs,  angiotensin  receptor  blockers; CBC,  complete blood  count;  CGM, continuous  glucose  monitor;  FIB-4,  fibrosis-4  index;  MASLD,  metabolic-associated  steatotic  liver disease;  MDI,  multiple  daily  injections;  OSA,  obstructive  sleep  apnea;  PAD,  peripheral  arterial  disease. *Should  be  performed  at  every  visit  in  people  with  diabetes  with  sensory  loss,  previous foot ulcers, or amputations. †At 65 years of age or older. ‡May also need to be checked after initiation  or  dose  changes  of  medications  that  affect  these  laboratory  values  (i.e.,  diabetes medications,  blood  pressure  medications,  cholesterol  medications,  or  thyroid  medications). § May be  needed  more  frequently  in  people  with  diabetes  with  known  chronic  kidney  disease  or with  changes  in  medications  that  affect  kidney  function  and  serum  potassium  (see Table  11.2 ). jj In  people  with  presence  of  gastrointestinal  symptoms,  signs,  laboratory  manifestations,  or clinical suspicion suggestive of celiac disease.
 
@@ -982,18 +1100,22 @@ Influenza is a common, preventable infectious disease associated with high morta
 in people with diabetes has been found to significantly reduce influenza and diabetesrelated  hospital  admissions  (9).  In  people with  diabetes,  the  influenza  vaccine  has been associated with lower risk of all-cause mortality, cardiovascular mortality, and cardiovascular events (10). Given the benefits  of  the  annual influenza vaccination, it is recommended for all individuals ≥ 6 months of age who do not have a contraindication. The  live  attenuated influenza vaccine, which is delivered by nasal spray,  is  an  option  for  people  who  are 2-49 years of age and are not pregnant, but people with chronic conditions such as diabetes are cautioned against taking the  live  attenuated  influenza  vaccine and  are  instead  recommended  to  receive the inactive or recombinant influenza  vaccination.  For  the  2025-2026 season, all influenza vaccines offered in the U.S. are trivalent (6,7).
 
 ## Pneumococcal Pneumonia
+<!-- rag_metadata source=ADA_2026 section="Pneumococcal Pneumonia" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Like influenza, pneumococcal pneumonia is a common, preventable disease. People with  diabetes are  at  increased risk  for  pneumococcal  infection  and have  been  reported  to  have  a  high risk of hospitalization and death, with a  mortality  rate  as  high  as  50%  (11).  All people with diabetes should receive one of the  CDC-recommended  pneumococcal vaccines (12).
 
 ## Respiratory Syncytial Virus
+<!-- rag_metadata source=ADA_2026 section="Respiratory Syncytial Virus" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Respiratory syncytial virus (RSV) is a cause of  respiratory  illness  in  some  individuals, including older adults. People with chronic conditions  such  as  diabetes  have  a higher  risk  of  severe  illness.  The  U.S. Food and Drug Administration (FDA) approved  the  first  vaccines  for  prevention of  RSV-associated lower respiratory tract disease  in  adults  aged ≥ 60  years.  The ACIP  recommends  that  all  adults  aged ≥ 75  years  and  adults  aged  60-74  years who are at increased risk for severe RSV should receive a single dose of RSV vaccine (13).
 
 ## ASSESSMENT OF COMORBIDITIES
+<!-- rag_metadata source=ADA_2026 section="ASSESSMENT OF COMORBIDITIES" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Besides  assessing  diabetes-related  complications, clinicians and people with diabetes need to be aware of common comorbidities that  affect  people  with  diabetes  and  that may complicate  its  management  (14-16). Diabetes  comorbidities  are  conditions that  affect  people  with  diabetes  more often  than  age-matched  people  without diabetes.  This  section  discusses  the  common comorbidities observed in people with diabetes  but  is  not  necessarily  inclusive  of all the conditions that have been reported.
 
 ## Table 4.2-Essential components for assessment, planning, and referral
+<!-- rag_metadata source=ADA_2026 section="Table 4.2-Essential components for assessment, planning, and referral" topic_tags="referral, escalation" population="T2DM T1DM global" year=2026 -->
 
 Assessing risk of diabetes complications
 
@@ -1006,6 +1128,7 @@ Assessing risk of diabetes complications
 - Assessment for MASLD and MASH
 
 ## Goal setting
+<!-- rag_metadata source=ADA_2026 section="Goal setting" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Set A1C, blood glucose, and time-in-range goals
 - Set lipid goal
@@ -1014,6 +1137,7 @@ Assessing risk of diabetes complications
 - Diabetes self-management goals
 
 ## Therapeutic treatment plans
+<!-- rag_metadata source=ADA_2026 section="Therapeutic treatment plans" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 - Lifestyle management (e.g., registered dietitian nutritionist)
 - Pharmacologic therapy: glucose lowering
@@ -1023,6 +1147,7 @@ Assessing risk of diabetes complications
 - Referral to diabetes education and medical specialists (as needed)
 
 ## Referrals for initial care management
+<!-- rag_metadata source=ADA_2026 section="Referrals for initial care management" topic_tags="first_line_therapy, metformin" population="T2DM T1DM global" year=2026 -->
 
 - Eye care professional for annual dilated eye exam
 - Family planning for individuals of childbearing potential
@@ -1038,6 +1163,7 @@ Assessing risk of diabetes complications
 Assessment and treatment planning are essential components of initial and all follow-up visits.  ASCVD,  atherosclerotic  cardiovascular  disease;  MASH,  metabolic  dysfunction-associated steatohepatitis; MASLD, metabolic dysfunction-associated steatotic liver disease.
 
 ## Autoimmune Diseases
+<!-- rag_metadata source=ADA_2026 section="Autoimmune Diseases" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1048,6 +1174,7 @@ Assessment and treatment planning are essential components of initial and all fo
 People with type 1 diabetes are at increased  risk  for  other  autoimmune diseases, with thyroid disease, celiac disease, and pernicious anemia (vitamin B12  deficiency)  being  among  the  most common  (17).  Other  autoimmune  conditions  associated  with  type  1  diabetes include autoimmune liver disease, primary adrenal  insufficiency  (Addison  disease), vitiligo,  collagen  vascular  diseases,  and myasthenia  gravis  (18,19). Type  1  diabetes  may  also  occur  with  other  autoimmune  diseases  in  the  context  of  specific genetic disorders  such as polyglandular autoimmune  syndromes  (20).  Given  the high  prevalence,  nonspecific  symptoms, and  insidious  onset  of  primary  hypothyroidism, routine screening for thyroid dysfunction is recommended for all people  with  type  1  diabetes.  Screening  for celiac  disease  should  be  considered  in adults with diabetes with suggestive symptoms  (e.g., diarrhea,  malabsorption,  and abdominal  pain)  or  signs  (e.g.,  osteoporosis,  vitamin  deficiencies,  and  iron deficiency  anemia)  (21).  Measurement  of vitamin B12 levels  (and  reflex  methylmalonic  acid)  should  be  considered  for people  with  type  1  diabetes  and  peripheral neuropathy or unexplained anemia.
 
 ## Bone Health
+<!-- rag_metadata source=ADA_2026 section="Bone Health" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1057,7 +1184,9 @@ to risk factors and comorbidities.
 
 A
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 4.9 Monitor  bone  mineral  density using  dual-energy  X-ray  absorptiometry in older adults with diabetes (aged ≥ 65 years) and  younger  individuals with diabetes and multiple risk factors every 2-3 years ( Table 4.4 ). A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 4.10 Consider  the  potential  adverse impact on skeletal health when selecting  pharmacological  options  to  lower glucose levels in  people with  diabetes. Avoiding  medications  with  a  known association  with  higher  fracture  risk (e.g., thiazolidinediones and sulfonylureas) is recommended, particularly for  those  at  elevated  risk  for  fractures. B
 
 4.11 To  reduce  the  risk  of  falls  and fractures, glycemic management goals should  be  individualized  for  people  with diabetes at a higher risk of fracture.
@@ -1154,8 +1283,10 @@ A  low-trauma  fracture  (defined  as  a fracture  occurring  from  minimal  tra
 <!-- source: ADA_2026 | file: ADA_2026_S05.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S05
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S05" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes -2026
+<!-- rag_metadata source=ADA_2026 section="5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes -2026" topic_tags="mental_health, psychosocial" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S89 -S131 | https://doi.org/10.2337/dc26-S005
 
@@ -1164,10 +1295,13 @@ The American Diabetes Association (ADA) ' Standards of Care in Diabetes ' includ
 Building positive health behaviors and maintaining psychological well-being are foundational for achieving diabetes management goals and maximizing quality of life (1,2). Essential to achieving these goals diabetes self-management education and support (DSMES), medical nutrition therapy (MNT), routine physical activity, adequate quality sleep, support for cessation of tobacco products and vaping, health behavior counseling, and psychosocial care. Following an initial comprehensive health evaluation (see section 4, ' Comprehensive Medical Evaluation and Assessment of Comorbidities ' ), health care professionals should engage in person-centered collaborative care with people with diabetes (3 -7). Person-centered collaborative care is guided by shared decision-making in treatment plan selection; facilitating access to medical, behavioral, psychosocial, educational, and technological resources and support; and shared monitoring of agreed-upon diabetes care plans and behavioral goals (8,9). Routine care evaluations should include assessments of medical and behavioral health outcomes, particularly during periods of changes in health and well-being.
 
 ## DIABETES SELF-MANAGEMENT EDUCATION AND SUPPORT
+<!-- rag_metadata source=ADA_2026 section="DIABETES SELF-MANAGEMENT EDUCATION AND SUPPORT" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.1 Advise all people with diabetes to participate in developmentally and culturally appropriate diabetes self-management education and support (DSMES) to facilitate informed decision-making, self-care behaviors, problem-solving, and active collaboration with the health care team. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.2 Provide DSMES at diagnosis, annually and/or when not meeting treatment goals, when complicating factors develop (e.g., medical, functional, and psychosocial), and when transitions in life and care occur. E
 
 <!-- image -->
@@ -1182,11 +1316,17 @@ Suggested citation: American Diabetes Association Professional Practice Committe
 
 - © 2025 by the American Diabetes Association. Readers may use this work for educational, noncommercial purposes if properly cited and unaltered. The version of record may be linked at https://diabetesjournals.org/care, but ADA permission is required to post this work on any third-party site or platform. This publication and its contents may not be reproduced, distributed, or used for text or data mining, machine learning, or similar technologies without prior written permission. Requests to reuse, adapt, or distribute this work may be sent to permissions@diabetes .org. More information is available at https:// diabetesjournals.org/journals/pages/license.
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 5.3 Assess clinical outcomes, health status, and well-being as key goals of DSMES on an individualized timeframe. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.4 Use behavioral strategies (e.g., motivational interviewing, goal setting, problem-solving) to support DSMES and engagement in behaviors known to optimize health-related quality of life and outcomes. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.5 Provide culturally and socially appropriate DSMES responsive to personal preferences and needs in group or individual settings. A Communicate DSMES participation with the diabetes care team. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.6 Offer DSMES via telehealth and/or digital interventions to meet individual preferences, reduce access barriers, and improve satisfaction. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.7 DSMES can improve outcomes and reduce costs, so reimbursement by third-party payors is recommended. B 5.8 Identify and address barriers to DSMES that exist at the payor, health system, clinic, health care professional, and individual levels. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 5.9 Assess the social determinants of health to guide and design delivery of DSMES to maximize health equity across populations. C
 
 The overall objectives of DSMES are to support informed decision-making, selfcare behaviors, problem-solving, and active collaboration with the health care team to improve clinical outcomes, health status, and well-being in a cost-effective manner (2). DSMES facilitates the knowledge, decision-making, and skills mastery necessary for optimal diabetes self-care and incorporates the needs, goals, and life experiences of the person with diabetes (10). When providing DSMES, health care professionals should consider a person ' s burden of treatment, level of selfef fi cacy for self-care behaviors, and degree of social and family support. Engagement in self-management behaviors and subsequent clinical outcomes, health status, and quality of life, in addition to psychosocial factors affecting the person ' s ability to self-manage, should be monitored on an individualized timeframe (e.g., the four critical times listed in Recommendation 5.2). A randomized controlled trial (RCT) that evaluated a decision-making education and skillbuilding program (11) improved health outcomes and quality of care (12).
@@ -1213,6 +1353,7 @@ In addition to providing DSMES upon diagnosis, there are additional critical tim
 DSMES empowers individuals with diabetes and their families by providing tools to make informed self-management decisions (10,13). DSMES should be personcentered -placing the person with diabetes and their family and/or support system at the center of the care model as they work in collaboration with health care professionals. Person-centered care is respectful of and responsive to individual and cultural preferences, needs, and values and ensures the personal values of those living with diabetes guide decision-making (17).
 
 ## Evidence for the Benefits
+<!-- rag_metadata source=ADA_2026 section="Evidence for the Benefits" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 DSMES is associated with improved diabetes knowledge and self-care behaviors (18,19), lower A1C (19 -22), lower selfreported weight (23), improved quality of life (24,25), reduced all-cause mortality risk (26), positive coping behaviors (6,27), and lower health care costs (28 -30). DSMES is also associated with an increased use of primary care and preventive services (28,31) and less frequent use of acute care and inpatient hospital services (23). People with diabetes who participate in DSMES are more likely to follow best practice treatment recommendations, particularly those with Medicare, and have lower Medicare and insurance claim costs (31,32). DSMES interventions have better outcomes when they are > 10 h over the course of 6 -12 months (20) and provide ongoing culturally (31,33,34) and age-appropriate (35,36) support (14,15,37). Additionally, DSMES is also more effective when it is tailored to individual needs and preferences, addresses psychosocial issues, and incorporates behavioral strategies (13,27,38,39). Individual and group approaches are effective (23,40), with a slight bene fi t realized by those who engage in both (20).
 
@@ -1225,12 +1366,14 @@ Social determinants of health (SDOH) are an important aspect of diabetes care an
 Despite the recognized benefi ts of DSMES, fewer than 10% of individuals referred for DSMES through their health insurance or Medicare receive it, while about half the participants in an analysis of Behavioral Risk Factors Surveillance System (BRFSS) data report getting diabetes education (22,52). Barriers to DSMES exist at multiple levels, including the health system, payor, clinic, health care professional, and individual, for a myriad of reasons from lack of administrative leadership support to ineffective DSMES referral processes and transportation challenges. Low participation can be due to lack of referrals, logistical issues (e.g., accessibility, timing), cost, and lack of a perceived benefi t (53). Thus, in addition to educating referring health care professionals about the bene fi ts of DSMES and the critical times to refer, efforts to identify and address potential barriers at all levels need to be made (2). This was illustrated in a multilevel diabetes care intervention that combined clinical outreach, standardized protocols, and DSMES, with SDOH screening and referrals to social needs support. A 15% increase in receipt of DSMES, including among people on Medicaid, was documented (54). Support from institutional leadership is foundational for DSMES success. Expert stakeholders, including those external to an organization, should also support DSMES by advocating for it and for people with diabetes (10).
 
 ## Diabetes Technologies
+<!-- rag_metadata source=ADA_2026 section="Diabetes Technologies" topic_tags="diabetes_technology, insulin_pump, CGM" population="T2DM T1DM global" year=2026 -->
 
 Technology-enabled diabetes selfmanagement solutions (e.g., continuous glucose monitors [CGM], automated insulin delivery [AID] systems, and connected glucose meters) improve A1C most effectively when there is two-way communication between the person with diabetes and the health care team, individualized (e.g., tailored to suit a particular person for their needs) feedback, use of person-generated health data, and education (55). Technology can facilitate self-management decisions and improve access to DSMES (55). Use of diabetes technologies warrants broader adoption because they can reduce therapeutic inertia and should be explored as part of continuous improvement (55,56). One potential model is virtual environments, which allow people with diabetes to self-represent as avatars and interact in a world with embedded informational resources accessed using principles of gamifi cation. An example of this is from an RCT that tested DSMES in a virtual environment that demonstrated greater weight loss and similar decreases in A1C, blood pressure, cholesterol, and triglycerides compared with DSMES via a standard website (57). These nontraditional versions of DSMES may not always be reimbursed; however, adopting reimbursement policies that increase DSMES access and use will positively affect bene fi ciaries ' clinical outcomes, quality of life, health care use, and costs (10,58).
 
 Of all the newer diabetes technologies, CGM might be the most widely adopted. When combined with individualized DSMES or behavioral interventions, CGM demonstrated greater improvement of glycemic and psychosocial outcomes than CGM alone (59,60). Similarly, DSMES plus intermittently scanned CGM (isCGM) demonstrated increased time in range (70 -180 mg/dL [3.9 -10.0 mmol/L]), less time above range, and greater reduction in A1C compared with DSMES alone (61). Incorporating a systematic approach for technology assessment, adoption, and integration into the diabetes care plan could help ensure equity in access and standardized application of technologyenabled solutions (9,47,62 -64).
 
 ## Reimbursement
+<!-- rag_metadata source=ADA_2026 section="Reimbursement" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Medicare reimburses DSMES (known as diabetes self-management training [DSMT] by Medicare) when the services are provided in accordance with the National Standards for DSMES (2,10) and is recognized by the American Diabetes Association (ADA) through the Education Recognition Program (professional.diabetes.org/ diabetes-education) or by the Association of Diabetes Care & Education Specialists (ADCES) (https://www.adces.org/ diabetes-education-dsmes/diabeteseducation-accreditation-program).
 
@@ -1241,6 +1384,7 @@ Programs recognized by the ADA and accredited by the ADCES were included on the 
 DSMES uses an evidence-based curriculum designed to educate people with diabetes about all elements from the National Standards for DSMES, as described above, that can be delivered and billed by a variety of health care professionals on the diabetes care team. While the overarching healthy eating concepts used in DSMES can be taught by all members of the team, MNT, which is more in-depth and individualized (e.g., tailored to suit a particular person for their sociocultural preferences and needs) and derived from the evidence-based Nutrition Care Process, can only be delivered and billed by RDNs. For Medicare Part B, the MNT bene fi t includes individual encounters billed 3 h i n t he fi rst year of the bene fi t. Each subsequent y ear c an be billed up to 2 h. However, additional hours are available if a subsequent referral identi fi es a change in treatment. For further information on Medicare coverage of MNT, readers are encouraged to review www.cdc.gov/diabetestoolkit/php/reimbursement/medical-nutritiontherapy.html.
 
 ## MEDICAL NUTRITION THERAPY
+<!-- rag_metadata source=ADA_2026 section="MEDICAL NUTRITION THERAPY" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 When the fi rst ADA Standards of Care guidelines were published in 1989, nutrition was mentioned in only two sentences of the entire 4-page document (68). Even today, the science of nutrition for diabetes continues to evolve. There has also been a change in how we talk about nutrition. We continue to encourage health care professionals to shift away from emphasizing macronutrients (i.e., carbohydrates, proteins, and fats) and micronutrients (i.e., vitamins and minerals) and to instead focus on foods. More broadly, we encourage people to think in terms of eating patterns, also known as dietary patterns or food patterns, or the totality of the foods and beverages a person consumes. Additionally, encourage nutrient-dense food choices. Nutrient dense is defi ned as foods high in micronutrients while being relatively low in calories (e.g., vegetables, fruits, and legumes). This integrative food-based approach aligns with numerous guidelines from multiple professional health societies (69 -71) and the Dietary Guidelines for Americans, 2020 -2025 (72). Simply put, people eat food, not nutrients, and nutrition recommendations need to be applicable to what people actually eat. Additionally, macronutrients are not interchangeable entities and vary by nutrient type and quality. For example, carbohydrates include legumes, whole grains, and fruits, which are in the same category as re fi ned grains, but their health effects are quite different (73).
 
@@ -1251,6 +1395,7 @@ For more detailed information on nutrition therapy for people with diabetes, ple
 All people with diabetes should be referred for individualized MNT provided by an RDN who is experienced and skilled in providing diabetes-speci fi c MNT ( 76 -78), at diagnosis and as needed throughout the life span, like DSMES. R eferrals t o RDNs are particularly warranted when a person with diabetes is dealing with additional health conditions such as hypertension, dyslipidemia, heart failure, gastrointestinal disorders, chronic kidney disease (CKD), pregnancy-related nutrition concerns, pediatric growth issues, or obesity (79). See Table 5.1 for nutrition recommendations and Table 5.2 for nutrition behaviors that should be encouraged.
 
 ## Eating Patterns and Meal Planning
+<!-- rag_metadata source=ADA_2026 section="Eating Patterns and Meal Planning" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 To better understand the role of nutrition in diabetes, it is important to clarify terminology. Food patterns, eating plans, and approaches are terms that are often used interchangeably, but they are different and relevant in individualizing nutrition care plans (80).
 
@@ -1258,30 +1403,52 @@ To better understand the role of nutrition in diabetes, it is important to clari
 - Eating/meal plan (historically referred to as a diet). An individualized guide to plan when, what, and how much to eat on a daily basis, completed by the person with diabetes and the RDN. The eating plan could incorporate an eating pattern combined with a strategy to direct some of the choices. Eating plans are based on an individual ' s usual
 
 ## Table 5.1 -Nutrition recommendations
+<!-- rag_metadata source=ADA_2026 section="Table 5.1 -Nutrition recommendations" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.10 Provide individualized medical nutrition therapy by referring people with prediabetes or diabetes to a registered dietitian nutritionist, preferably one who has comprehensive experience in diabetes care. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.11 Diabetes medical nutrition therapy can result in cost savings B and improved cardiometabolic outcomes A and should be reimbursed by insurance. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.12 Provide an overweight or obesity treatment plan based on their nutrition, physical activity, and behavioral health status for all people with overweight or obesity, aiming for at least 5 -7% weight loss. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.13 For diabetes prevention and management of people with prediabetes or diabetes, recommend individualized meal plans that keep nutrient quality, total calories, and metabolic goals in mind. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.14 Eating patterns should emphasize key nutrition principles (inclusion of nonstarchy vegetables, whole fruits, legumes, lean proteins, whole grains, nuts and seeds, and low-fat dairy or nondairy alternatives) and minimize consumption of red meat, sugar-sweetened beverages, sweets, re fi ned grains, processed and ultraprocessed foods in people with prediabetes and diabetes. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.15 Consider reducing carbohydrate intake for some adults with diabetes to improve glycemia. An effective way to achieve this is by limiting consumption of processed foods. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 5.16 Assess intake of supplements, as supplementation with micronutrients (e.g., vitamins and minerals, such as magnesium or chromium) or herbs or spices (e.g., cinnamon and aloe vera) is not recommended for glycemic benefi ts. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.17 Counsel against β -carotene supplementation, as there is evidence of harm for certain individuals and it confers no benefi t. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.18 Advise adults with diabetes and those at risk for diabetes who consume alcohol to not exceed the recommended daily limits. B Advise abstainers to not start drinking alcohol, even in moderation. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.19 Counsel people with diabetes about the signs, symptoms, and self-management of delayed hypoglycemia and the importance of monitoring glucose after drinking alcohol to reduce hypoglycemia risk, especially when using insulin or insulin secretagogues. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.20 Counsel people with diabetes to limit sodium consumption to < 2,300 mg/day, as clinically appropriate, and the best way to achieve this is through limiting consumption of processed foods. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.21 Encourage people with diabetes and those at risk for diabetes to consume water over other beverages. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.22 Counsel people with diabetes and those at risk for diabetes that nonnutritive sweeteners can be used in place of sugar-sweetened products if consumed in moderation and for the short term to reduce overall calorie and carbohydrate intake. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.23 Counsel and regularly monitor individuals pursuing intentional weight loss to ensure adequate nutritional intake, with particular attention to preventing protein insuf fi ciency and micronutrient defi ciencies. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.24 Emphasize minimally processed, nutrient-dense, high- fi ber sources of carbohydrate (at least 14 g fi ber per 1,000 kcal). B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.25 Advise people with diabetes and those at risk for diabetes to replace sugar-sweetened beverages (including any juices) with water or low-calorie or no-calorie beverages and minimize foods with added sugar to manage glycemia and reduce risk for cardiometabolic disease. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 5.26 Educate individuals with diabetes who are at risk for developing diabetic ketoacidosis and who are treated with sodium -glucose cotransporter inhibition on the risks and signs of ketoacidosis and methods of risk mitigation management, provide them with appropriate tools for ketone measurement (i.e., serum β -hydroxybutyrate), and discourage a ketogenic eating pattern. E
 - 5.27 Provide education on the glycemic impact of carbohydrate, A fat, and protein B tailored to an individual ' s needs, insulin plan, and preferences for care to optimize mealtime insulin dosing.
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.28 Counsel people using fi xed insulin doses about consistent patterns of carbohydrate intake with respect to time and amount while considering the insulin action time, as it can result in improved glycemia and reduce the risk for hypoglycemia. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.29 Counsel people with diabetes and those at risk for diabetes to incorporate more plant-based protein sources (e.g., nuts, seeds, and legumes) as part of an overall diverse eating pattern to reduce cardiovascular disease risk. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.30 Counsel people with diabetes and those at risk for diabetes to consider an eating plan emphasizing elements of a Mediterranean eating pattern, which is rich in fatty fi sh, nuts, and seeds, to reduce cardiovascular disease risk A and improve glucose metabolism. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 5.31 Counsel people with diabetes and those at risk for diabetes to limit intake of foods high in saturated fat to help reduce cardiovascular disease risk. B
 
 eating style, cultural background, SDOH, and food preferences.
@@ -1291,10 +1458,12 @@ eating style, cultural background, SDOH, and food preferences.
 carbohydrate counting, and highly individualized behavioral approaches (81).
 
 ## Meal Planning
+<!-- rag_metadata source=ADA_2026 section="Meal Planning" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 There is no ideal percentage of calories from carbohydrate, protein, or fat for people with diabetes. Therefore, macronutrient distribution should be based on an individualized assessment of current eating patterns, preferences, and metabolic goals. Members of the health care team should complement and reinforce MNT by providing evidence-based guidance to help
 
 ## Table 5.2 -Nutrition behaviors to encourage
+<!-- rag_metadata source=ADA_2026 section="Table 5.2 -Nutrition behaviors to encourage" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 - Vegetables -especially nonstarchy vegetables that are dark green, red, and orange in color; fresh, frozen, or low-sodium canned are all acceptable vegetable options.
 - Legumes -dried beans, peas, and lentils.
@@ -1318,6 +1487,7 @@ Research con fi rms a variety of eating patterns are acceptable for diabetes man
 Referral to and ongoing support from an RDN is essential to assess the overall nutrition status of the person with diabetes. RDNs work collaboratively with people to create a personalized meal plan aligned with the overall lifestyle treatment plan, including physical activity, work and life schedules, and medication use. Using shared decision-making to execute the plan is also often part of the nutrition care process.
 
 ## Eating/Meal Plan Approaches and Methods
+<!-- rag_metadata source=ADA_2026 section="Eating/Meal Plan Approaches and Methods" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Few head-to-head studies have compared different eating approaches. The diabetes plate method (87) is a commonly used visual approach for providing basic meal planning guidance for individuals with type 1 and type 2 diabetes. One RCT found that both the diabetes plate method and carbohydrate counting were effective in helping achieve improved A1C (88). The diabetes plate method uses a simple graphic (featuring a 9-in plate) to portion foods (one-half of the plate for nonstarchy vegetables, one-quarter of the plate for protein, and one-quarter of the plate for carbohydrates).
 
@@ -1326,6 +1496,7 @@ Carbohydrate counting is a more advanced skill that helps plan for and track how
 Meal planning approaches should be customized to the individual, including their numeracy and food literacy level (88). Health numeracy refers to understanding and using numbers and numerical concepts in relation to health and self-management. Food literacy generally describes pro fi ciency in food-related knowledge and skills that ultimately affect health, although speci fi c defi nitions vary across initiatives (94,95).
 
 ## Nutrition Therapy Goals for All People With Diabetes
+<!-- rag_metadata source=ADA_2026 section="Nutrition Therapy Goals for All People With Diabetes" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 1. To promote and support healthful eating patterns, emphasizing a variety of nutrient-dense foods in appropriate portion sizes, contributing to improved overall health, and to:
 - achieve and maintain body weight goals
@@ -1336,6 +1507,7 @@ Meal planning approaches should be customized to the individual, including their
 4. To provide an individual with diabetes the practical tools for developing healthy eating patterns rather than focusing on individual macronutrients, micronutrients, or single foods
 
 ## Carbohydrates
+<!-- rag_metadata source=ADA_2026 section="Carbohydrates" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Studies examining the optimal amount of carbohydrate intake for people with diabetes are inconclusive, although monitoring carbohydrate intake is a key strategy in reaching glucose goals in people with type 1 and type 2 diabetes (96,97).
 
@@ -1358,6 +1530,7 @@ Insulin dosing decisions should be confi rmed with a structured approach to bloo
 Most commercially available AID systems still require basic diabetes management skills, including carbohydrate counting and understanding of the effect of protein and fat on postprandial glucose response, but the algorithms included in the systems work with less accurate carbohydrate entry (122,123). The most advanced AID system provides adaptive closed-loop algorithms enabling fully autonomous insulin delivery automatically titrating all therapeutic insulins, including basal, correction, and prandial insulins. For more on AID and carbohydrates, see section 7, ' Diabetes Technology. '
 
 ## Protein
+<!-- rag_metadata source=ADA_2026 section="Protein" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 There is no evidence that adjusting the daily protein intake above or below the recommended amount for the general public (typically 0.8 -1.5 g/kg body weight/day or 15 -20% of total calories) will improve health, and research is inconclusive regarding the ideal amount of dietary protein to optimize either glycemic management or CVD risk (72,124). Therefore, protein intake goals should be individualized based on current eating patterns. Some research has found successful management of type 2 diabetes with meal plans including slightly higher levels of protein (20 -30%), which may contribute to increased satiety (125).
 
@@ -1366,16 +1539,20 @@ Historically, low-protein eating plans were advised for individuals with diabete
 Growing evidence suggests higher plant protein intake and replacement of animal protein with plant protein is associated with lower risk of all-cause and cardiovascular mortality. A meta-analysis of 13 RCTs showed that replacing animal proteins with plant proteins leads to small improvements in A1C and fasting glucose in adults with type 2 diabetes (127). A 2023 systematic review and meta-analysis of 13 RCTs and 7 cohort studies concluded that there is limited suggestive evidence to support replacing animal protein with plant-based protein based on a moderate degree of bias in cohort studies (128). However, a prospective observational study of more than 11,000 community-dwelling adults over 22 years of follow-up reported that those with higher intakes of plant foods and lower intakes of animal foods had lower diabetes risk (129). Plant proteins are lower in saturated fat, higher in fi ber, and also support planetary health (130).
 
 ## Fats
+<!-- rag_metadata source=ADA_2026 section="Fats" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 There is no optimal percentage of calories from fat for people with or at risk for diabetes, and macronutrient distribution should be individualized according to the individual ' s eating patterns, cultural and personal preferences, and metabolic goals (46). The type of fat consumed is more important than total amount of fat when looking at metabolic goals and CVD risk, and the percentage of total calories from saturated fats should be limited (72,131 -133). Multiple RCTs including people with type 2 diabetes have reported that a Mediterranean eating pattern can improve both glycemic management and blood lipids (134 -136). The Mediterranean eating pattern is based on traditional eating patterns in the countries bordering the Mediterranean Sea. Although eating styles vary by country and culture (i.e., customs and behaviors of a particular group of people or other social group), they share a number of common features, including consumption of fresh fruits and vegetables, whole grains, beans, and nuts/seeds; olive oil as the primary fat source; low to moderate amounts of fi sh, eggs, and poultry; and limited added sugars, sugary beverages, sodium, highly processed foods, re fi ned carbohydrates, saturated fats, and fatty or processed meats.
 
 People with diabetes should be advised to follow the same guidelines as the general population for the recommended intakes of saturated fat, cholesterol, and trans fat (72). In a 12-week double-blinded randomized controlled feeding study among 61 adults with overweight and obesity, without diabetes, higher intakes of saturated fat, compared with polyunsaturated fat, were found to increase liver fat deposition (137). A 2021 systematic review and meta-analysis including over 22,500 prospective study participants followed for 9.8 years reported that replacing saturated fats with other macronutrients, such as polyunsaturated fats, was associated with reduced CVD occurrence (138). Trans fats should be avoided. Importantly, it should be noted that as foods high in saturated fats are progressively decreased, they should be replaced with foods high in unsaturated fats and not with re fi ned carbohydrate foods (139).
 
 ## PSYCHOSOCIAL CARE
+<!-- rag_metadata source=ADA_2026 section="PSYCHOSOCIAL CARE" topic_tags="mental_health, psychosocial" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 5.42 Provide psychosocial care to all people with diabetes as part of routine medical care delivered by trained health care professionals using a collaborative, person-centered, culturally informed approach. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 5.43 Implement screening protocols for psychosocial concerns, preferably using age-appropriate standardized and validated tools. Screen at least annually or when there is a change in health status, treatment, or life circumstances. C
 
 5.44 Refer to behavioral health professionals or other trained health care professionals, ideally those with experience in diabetes, for further assessment and treatment of psychosocial concerns as indicated. B
@@ -1389,6 +1566,7 @@ Diabetes health care professionals should routinely monitor and screen for psych
 When psychosocial concerns cannot be addressed adequately in routine diabetes care, referral to a behavioral health professional is necessary. Ideally, quali fi ed behavioral health professionals with specialized training and experience in diabetes should be integrated with or provide collaborative care as part of diabetes care teams (394,395). A behavioral health professional should conduct a comprehensive assessment and deliver evidence-based treatment (396,397).
 
 ## Screening
+<!-- rag_metadata source=ADA_2026 section="Screening" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Health care teams and clinical practices should develop and implement psychosocial screening protocols to ensure routine monitoring of psychosocial well-being and to identify potential concerns among people with diabetes, following published guidance and recommendations (398,399). Topics to screen for may include, but are not limited to, attitudes about diabetes, expectations for treatment and outcomes
 
@@ -1404,22 +1582,28 @@ Standardized, validated, age-appropriate tools for psychosocial monitoring and s
 <!-- source: ADA_2026 | file: ADA_2026_S06.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S06
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S06" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 6.  Glycemic  Goals,  Hypoglycemia, and Hyperglycemic Crises: Standards of  Care  in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="6.  Glycemic  Goals,  Hypoglycemia, and Hyperglycemic Crises: Standards of  Care  in  Diabetes-2026" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S132-S149 | https://doi.org/10.2337/dc26-S006
 
 The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'  includes the ADA's current clinical  practice  recommendations and  is intended to provide  the  components  of  diabetes  care,  general  treatment  goals  and  guidelines,  and  tools  to  evaluate  quality  of  care.  Members  of  the  ADA  Professional Practice Committee for Diabetes, an interprofessional expert committee, are responsible for updating the Standards of Care annually, or more frequently as warranted. For a detailed description of ADA standards, statements, and reports, as well as the evidence-grading system for ADA's clinical practice recommendations and  a  full  list  of  Professional  Practice  Committee  members,  please  refer  to Introduction and Methodology. Readers who wish to comment on the Standards of Care are invited to do so at professional.diabetes.org/SOC.
 
 ## ASSESSMENT OF GLYCEMIC STATUS
+<!-- rag_metadata source=ADA_2026 section="ASSESSMENT OF GLYCEMIC STATUS" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Glycemic status is assessed by A1C measurement, blood glucose monitoring (BGM) by capillary (finger-stick) devices, and different continuous glucose monitoring (CGM) metrics  such as time in range (TIR), time below range (TBR), time above range (TAR), glucose management indicator (GMI), coefficient of variation, and mean glucose. Clinical trials of interventions that lower A1C have demonstrated the benefits of improved glycemia with respect to long-term diabetes complications. Glucose monitoring via CGM or BGM (discussed in detail in section 7, 'Diabetes Technology') is useful for diabetes self-management,  can  provide  nuanced  information  on  glucose  responses  to  meals, physical activity, and medication changes, and is particularly useful for optimal medication  management and safety  in  individuals  taking  insulin.  CGM  serves  an  increasingly important role in optimizing the effectiveness and safety of treatment in many people with type 1 diabetes, type 2 diabetes, diabetes in pregnancy, and other forms of diabetes  (e.g.,  cystic  fibrosis-related  diabetes).  Individuals  on  a  variety  of  insulin  treatment plans  benefit  from  CGM  with  improved  glucose  levels,  decreased  hypoglycemia,  and enhanced self-efficacy (section 7, 'Diabetes Technology') (1).
 
 ## Glycemic Assessment
+<!-- rag_metadata source=ADA_2026 section="Glycemic Assessment" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.1 Assess  glycemic  status  by  A1C A and/or  continuous  glucose  monitoring (CGM) metrics such as time in range, time above range, and time below range. B Fructosamine or CGM can be used for glycemic monitoring when an alternative to A1C is required. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 6.2 Assess  glycemic  status  at  least  two  times  a  year,  and  more  frequently  (e.g., every 3 months) for individuals not meeting glycemic goals or with recent treatment changes, frequent or severe hypoglycemia or hyperglycemia, or changes in health  status,  or  during  periods  of  rapid  growth  and  development  in  children and adolescents. E
 
 <!-- image -->
@@ -1435,6 +1619,7 @@ Suggested  citation:  American  Diabetes  Association Professional  Practice  Co
 ©  2025  by  the  American  Diabetes  Association. Readers may use this work for educational, noncommercial  purposes  if properly cited  and unaltered.  The  version  of  record  may  be  linked at  https://diabetesjournals.org/care,  but  ADA permission  is  required  to  post  this  work  on  any third-party  site  or  platform. This  publication  and  its contents  may  not  be  reproduced,  distributed,  or used  for  text  or  data  mining,  machine  learning, or  similar  technologies  without  prior  written permission.  Requests  to  reuse,  adapt,  or  distribute this  work  may  be  sent  to  permissions@diabetes .org.  More  information  is  available  at  https:// diabetesjournals.org/journals/pages/license.
 
 ## Glycemic Assessment by A1C
+<!-- rag_metadata source=ADA_2026 section="Glycemic Assessment by A1C" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 The A1C test is the primary tool for assessing glycemic status in both clinical practice and clinical trials, and it is strongly linked to diabetes complications (2-4). A1C reflects  average  glycemia  over  approximately 2-3 months. The performance of laboratory tests for A1C is generally excellent for  National  Glycohemoglobin Standardization  Program  (NGSP)-certified  assays (ngsp.org).  Thus,  A1C  testing  should  be performed routinely in all people with diabetes  at  initial  assessment  and  as  part of  continuing  care.  Measurement  approximately every 3 months determines whether glycemic goals have  been  reached  and maintained. Adults with type 1 or type 2 diabetes  who  have  achieved  and  are  maintaining glucose levels within their goal range may only need A1C testing twice a year . Individuals with  less stable glucose  levels, those  with  intensive  care  plans,  or  those not meeting their treatment goals may require more frequent testing, typically every 3  months,  with  additional  assessments  as needed. Point-of-care A1C testing can offer timely  opportunities  for  treatment  adjustments  during  appointments  with  health care  professionals,  although  point-of-care tests  may be less accurate than laboratory A1C assays (5).
 
@@ -1443,10 +1628,12 @@ The  A1C  test  is  an  indirect  measure of  average  glycemia.  Factors  that 
 As discussed in section 2, 'Diagnosis and Classification of Diabetes,' there is controversy  regarding  the  clinical  significance  of differences  in  A1C  by  self-reported  race and ethnicity (9-12). There is an emerging understanding of genetic determinants that may modify  the  association  between  A1C and glucose levels (13). However, race and ethnicity are not good proxies for these genetic differences that are likely present in a small  fraction  of  individuals  of  all  racial groups. Therefore, race and ethnicity should not  be  considerations  for  how  A1C  is used  clinically  for  glycemic  monitoring. Limitations of laboratory tests and within-person variability  in  glucose  and  A1C underscore the importance of using multiple approaches to glycemic monitoring and further evaluation of discordant results in all racial or ethnic groups.
 
 ## Serum Glycated Protein Assays as Alternatives to A1C
+<!-- rag_metadata source=ADA_2026 section="Serum Glycated Protein Assays as Alternatives to A1C" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Fructosamine  and  glycated  albumin  are alternative measures of glycemia that are approved  for  clinical  use  for  monitoring glycemic  status  in  people  with  diabetes. Fructosamine reflects total glycated serum proteins  (mostly  albumin).  Glycated  albumin assays reflect the proportion of total albumin that is glycated. Due to the turnover  rate  of  serum  protein,  fructosamine and glycated albumin reflect glycemia over  the  past  2-4  weeks,  a  shorter-term time frame than that of A1C. Fructosamine and glycated albumin are highly correlated in  people  with  diabetes,  and  the  performance of modern assays is typically excellent.  Fructosamine  and  glycated  albumin have been linked to long-term complications in epidemiologic cohort studies (14-18).  However,  there  have  been  few clinical  trials,  and  the  evidence  base  supporting  the  use  of  these  biomarkers  to monitor  glycemic  status  is  much  weaker than that for A1C. In people with diabetes who have conditions where the interpretation of A1C may be problematic or when A1C  cannot  be  measured  (e.g.,  homozygous  hemoglobin  variants),  fructosamine or glycated albumin may be useful alternatives to monitor glycemic status (8).
 
 ## Correlation Between A1C and Blood Glucose Monitoring and Continuous Glucose Monitoring
+<!-- rag_metadata source=ADA_2026 section="Correlation Between A1C and Blood Glucose Monitoring and Continuous Glucose Monitoring" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Table  6.1 provides  rough  equivalents  of A1C  and  mean  glucose  levels  based  on data  from  the  international  A1C-Derived Average Glucose (ADAG) study. The ADAG study  assessed  the  correlation  between A1C and frequent BGM and CGM in 507 adults (83%  non-Hispanic White) with type  1,  type  2,  and  no  diabetes  (19,20). The American Diabetes Association (ADA) and the American Association for Clinical
 
@@ -1471,10 +1658,12 @@ Chemistry  have  determined  that  the correlation ( r = 0.92) in the ADAG trial
 Caveats  in  interpretation  of Table  6.1 include that these data are from a single study published in 2008. Mean glucose in the  ADAG  study  was  calculated  from  a combination  of  measurements  from  an early  CGM  system  and  capillary  glucose, intermittently,  during  a  3-month  period. This older system required calibration several  times  a  day  using  a  self-monitoring glucose meter. It is unclear how generalizable these estimates are to mean glucose measurements obtained using modern and generally more accurate CGM systems.  The  comparability  of  A1C  and mean  glucose  from  CGM  systems  will depend on the number of days of CGM wear, timing of the A1C measurement relative to the CGM wear period, calibration  and  accuracy  of  both  the  glucose  meter and  the  CGM  system, the  lag time  between  interstitial  glucose  and  venous glucose (which varies among individuals and within individuals based on physical activity and health status), and any factors that affect A1C or red blood cell turnover (see section 2, 'Diagnosis and Classification of Diabetes').
 
 ## Glycemic Assessment by Blood Glucose Monitoring
+<!-- rag_metadata source=ADA_2026 section="Glycemic Assessment by Blood Glucose Monitoring" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 For  many  people  with  diabetes,  glucose monitoring, either using BGM by capillary (finger-stick) devices and/or CGM in addition  to  regular  A1C  testing,  is  key  for achieving  glycemic  goals.  Major  clinical trials  of  insulin-treated  individuals  have included BGM as part of multifactorial interventions  to  demonstrate  the  benefit of intensive glycemic management on diabetes  complications  (21).  BGM  is  thus an  integral  component  of  effective  therapy  for  individuals  taking  insulin.  In  recent  years, CGM has become a standard method  for  glucose  monitoring  for  most people  with  type  1  diabetes  and  people with type 2 diabetes treated with insulin. Both  approaches  to  glucose  monitoring allow  people  with  diabetes  to  evaluate individual  responses  to  therapy  and  assess  whether  glycemic  goals  are  being safely  achieved.  The  specific  needs  and goals  of  individuals  with  diabetes  should dictate BGM frequency and timing. Please refer to section 7, 'Diabetes Technology,' for a more complete discussion of the use of BGM and CGM.
 
 ## Glycemic Assessment by Continuous Glucose Monitoring
+<!-- rag_metadata source=ADA_2026 section="Glycemic Assessment by Continuous Glucose Monitoring" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 CGM is particularly useful in people with diabetes who are at risk for hypoglycemia and in  people  with  type  1  diabetes  (21). Use of CGM in type 2 diabetes (as well as in several other  forms  of  diabetes)  is growing,  especially  in  people  who  are taking insulin. TIR is a useful metric of glycemic status.  A  10-  to  14-day  CGM assessment  of  TIR,  with  CGM  wear  of 70% or higher, and other CGM metrics can  be  used  to  assess  glycemic  status and are useful in clinical management (22-26). TIR, and especially mean CGM glucose,  correlates  with  A1C  (27-31). TBR  ( < 70  and < 54  mg/dL  [ < 3.9  and < 3.0  mmol/L])  and  TAR  ( > 180  mg/dL [ > 10.0 mmol/L]) are useful parameters for  insulin  dose  adjustments,  reevaluation of the treatment plan, and real-time detection,  prevention,  and  treatment  of  hypoglycemia and significant hyperglycemia. High  coefficient  of  variation ( > 36%) has also been related to occurrence of hypoglycemia  (32).  The  international consensus on CGM provides guidance on  CGM  metrics  ( Table  6.2 )  and  their clinical interpretation (33). To make these metrics  actionable,  standardized  reports with visual  summaries have been implemented (33) and help individuals with diabetes and health care professionals interpret the data to guide treatment decisions  (27,30).  Glucose  data  can  be analyzed remotely to guide adjustment to diabetes therapy (34-36).
 
@@ -1502,6 +1691,7 @@ CGM, continuous glucose monitoring; TAR, time above range; TBR, time below range
 serve  as  values  to  guide  changes  in therapy. For older adults with complex or intermediate health using CGM, the recommended  percent  time  spent  in goal  range  of  70-180  mg/dL  is  50%  (or 12 h per day) and the recommended time spent in hypoglycemia of less than 70 mg/dL should not be more than 1%, or 15 min per day, to minimize hypoglycemia risk (33,37-40).  In  this  population,  more permissive hyperglycemia is allowed (up to 50% of the time in 24 h) if required to prevent hypoglycemia.
 
 ## GLYCEMIC GOALS
+<!-- rag_metadata source=ADA_2026 section="GLYCEMIC GOALS" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1509,13 +1699,18 @@ serve  as  values  to  guide  changes  in therapy. For older adults with complex
 
 6.3b A goal time in range of > 70% in people  using  CGM  is  appropriate  for many nonpregnant adults. B
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.3c A  goal  percent  time < 70  mg/dL ( < 3.9  mmol/L)  of < 4%  (or < 1%  for older adults) and a goal percent time < 54 mg/dL ( < 3.0 mmol/L) of < 1% are recommended  in  people  using  CGM to  prevent  hypoglycemia.  Deintensify or  modify  therapy  if  these  goals  are not met. B
 
 6.4 Lower  A1C  goals (e.g., < 6.5% [ < 48 mmol/mol]) may be appropriate for individuals with diabetes with good health and function and low treatment risks (e.g., hypoglycemia) and burdens (see Fig. 6.1 ). B
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.5 Less stringent glycemic goals may be  appropriate  for individuals with significant cognitive and/or functional limitations, frailty, or severe comorbidities or where the harms of treatment, including  hypoglycemia,  are  greater than the benefits. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.6 Deintensify  hypoglycemia-causing medications (insulin, sulfonylureas, or meglitinides),  or  switch  to  a  medication  class  with  lower  hypoglycemia risk,  for  individuals  who  are  at  high risk for hypoglycemia, within individualized glycemic goals. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.7 Deintensify diabetes medications for individuals for whom the harms and/or burdens  of  treatment  may  be  greater than  the  benefits,  within  individualized glycemic goals. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 6.8 Reassess glycemic goals based on the individualized criteria shown in Fig. 6.1 . E
 
 6.9 Set a glycemic goal during consultations to improve outcomes. A
@@ -1525,6 +1720,7 @@ For  all populations,  it is critical that glycemic goals be woven into an indiv
 Health  care  professionals  should  engage in shared decision-making with the  individual  (as  well  as  with  family members and care partners) to establish treatment goals and should adjust goals to improve safety and medication-taking behavior  particularly  in  the  setting  of changing  health  status.  Setting  specific glycemic (and other) treatment goals during clinical consultations  has  been demonstrated  to  improve  glycemic  outcomes for individuals with diabetes (42).
 
 ## Glucose Lowering and Microvascular Complications
+<!-- rag_metadata source=ADA_2026 section="Glucose Lowering and Microvascular Complications" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 The Diabetes Control and Complications Trial (DCCT) (43), a prospective randomized  controlled  trial  of  intensive  (mean A1C ∼ 7% [ ∼ 53 mmol/mol]) versus standard  (mean  A1C ∼ 9%  [ ∼ 75  mmol/ mol])  glycemic  management  in  people with type 1 diabetes, showed definitively that  better  glycemic  status  is  associated with  50-76%  reductions  in  rates  of  development and progression of microvascular complications (retinopathy, neuropathy, and  chronic  kidney  disease).  Follow-up  of the  DCCT  cohorts  in  the  Epidemiology  of Diabetes  Interventions  and  Complications (EDIC)  study  (44,45)  demonstrated  persistence of these microvascular benefits over two decades despite the fact that the glycemic  separation  between  the  treatment groups diminished and disappeared during follow-up.
 
@@ -1552,6 +1748,7 @@ Table 6.3-Summary of glycemic goals for many nonpregnant adults with diabetes
 
 
 ## Modifying Factors
+<!-- rag_metadata source=ADA_2026 section="Modifying Factors" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Figure 6.1 -Individualized A1C and CGM goals for nonpregnant adults. Select the glycemic goal based on individual health and function as described at the top of the figure. Consider modifying to a more or less stringent goal according to the factors listed in the table. Older adults are classified as healthy (few coexisting chronic illnesses, intact cognitive and functional status), as having complex/intermediate health (multiple coexisting chronic illnesses, two or more instrumental impairments to activities of daily living, or mild to moderate cognitive impairment), or as having very complex/poor health (long-term care or end-stage chronic illnesses, moderate to severe cognitive impairment, or two or more impairments to activities of daily living). Select glycemic goals that avoid symptomatic hypoglycemia and hyperglycemia in all individuals. Consider individuals' resources and support systems to safely achieve glycemic goals. Incorporate  the  preferences  and  goals  of  people  with  diabetes through  shared decision-making.  CGM,  continuous  glucose  monitoring;  TAR, time  above range; TBR, time below range; TIR, time in range.
 
@@ -1574,6 +1771,7 @@ Among individuals with type 2 diabetes, three  landmark  trials  (Action  to  Co
 Preterax  and  Diamicron  MR  Controlled Evaluation  [ADVANCE],  and  Veterans  Affairs Diabetes Trial [VADT]) were conducted to examine the effects of near normalization  of  blood  glucose  on  cardiovascular outcomes. The ADVANCE and VADT trials found  modest  reduction  in  nephropathy with intensive glycemic management; ACCORD was stopped after a  median  of 3.5 years due to higher mortality in the intervention arm (51-55). Importantly, these landmark studies were conducted prior to the  approval  of  GLP-1  RAs,  dual  GIP  and GLP-1 RA, and SGLT2 inhibitors, and intensive  glucose  lowering  was  achieved  predominantly  through  greater  use  of  insulin and other medications. Findings from these studies, including the concerning increase in mortality in the intensive treatment arm of ACCORD,  suggest  caution  is  needed  in treating  diabetes  to  near-normal  A1C goals in people with long-standing type 2 diabetes  using  medications  with  a  high risk  for  hypoglycemia  and  with  other adverse effects and no additional cardiokidney-metabolic benefits.
 
 ## Glucose Lowering and Cardiovascular Disease Outcomes
+<!-- rag_metadata source=ADA_2026 section="Glucose Lowering and Cardiovascular Disease Outcomes" topic_tags="cardiovascular, CVD_risk" population="T2DM T1DM global" year=2026 -->
 
 The DCCT in individuals with type 1 diabetes  and  the  UKPDS,  ACCORD,  ADVANCE, and  VADT studies  in  type  2  diabetes  all sought to  address whether intensive  glycemic management reduced cardiovascular  disease  (CVD)  events  (43,51,52,54). ACCORD, ADVANCE, and VADT were conducted in relatively older participants with a longer duration of diabetes (mean duration 8-11 years) and either CVD or multiple  cardiovascular  risk  factors.  Details  of these  studies  are  reviewed  extensively  in the joint ADA position statement 'Intensive Glycemic  Control  and  the  Prevention  of Cardiovascular Events: Implications of the ACCORD, ADVANCE, and VA Diabetes Trials' (56). No significant reduction in composite  CVD  events  was  demonstrated  at the  end  of  the  intervention  in  any  of these studies, and ACCORD was stopped prematurely at 3.5 years because of an increase  in  total  mortality,  particularly  sudden  CVD  deaths.  Serious  concerns  with the intensive glycemic treatment plan used in ACCORD included the rapid escalation of therapies, the early use of large doses of insulin, substantial weight gain, and frequent hypoglycemia.  Blood  glucose  has  subsequently been shown to be a weaker independent  CVD  risk  factor  compared  with other  CVD  risk  factors,  such  as  hypertension or hypercholesterolemia.
 
@@ -1591,6 +1789,7 @@ As  discussed  further  below,  severe hypoglycemia is strongly associated with 
 2.  Introduce SGLT2 inhibitors or GLP-1 RAs  or  a  dual  GIP  and  GLP-1  RA  in people  with  CVD  at  A1C  goal  (independent  of  metformin)  for  cardiovascular benefit, independent of baseline A1C or individualized A1C goal.
 
 ## Setting and Modifying Glycemic Goals
+<!-- rag_metadata source=ADA_2026 section="Setting and Modifying Glycemic Goals" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Glycemic  goals  and  management  should be  individualized,  with  focus  on  avoiding therapeutic inertia to reduce risks of acute and chronic diabetes complications as  well  as  undue  treatment  burden  and adverse  effects  of  therapy.  Multiple  factors  must  be  considered  when  setting a  glycemic  goal,  using  shared  decisionmaking to integrate individual needs, goals, and preferences and considering characteristics  that  influence  risks  and  benefits of  therapy. In addition to supporting the establishment  of  individualized  glycemic goals,  this  approach  may  optimize  engagement and self-efficacy.
 
@@ -1601,6 +1800,7 @@ Diabetes  is  a  progressive  chronic  disease;  thus,  glycemic  goals  are  li
 Hypoglycemia is the major risk to individuals  treated  with  insulin,  sulfonylureas, or meglitinides, and it is appropriate to  deintensify  these  medications  where there is a high risk for hypoglycemia (see HYPOGLYCEMIA  RISK  ASSESSMENT ,  below).  Switching  a  high-hypoglycemia-risk  medication to  lower-hypoglycemia-risk  therapy  (see section 9, 'Pharmacologic Approaches to Glycemic  Treatment')  should  be  considered  if  needed  to  achieve  individualized glycemic goals  or  where individuals  have evidence-based indications for alternative medications (e.g., use of SGLT2 inhibitors in  the  setting  of  heart  failure  or  chronic kidney  disease  and  use  of  GLP-1  RAs  in the  setting  of  CVD  or  obesity).  Clinicians should also consider medication burdens other than hypoglycemia, including tolerability, difficulties of administration, impact on education or employment, and financial cost.  These  factors  should  be  balanced against  benefits  from  glycemic  lowering and  disease-specific  benefits  that  may  be independent of glycemic lowering (section 9, 'Pharmacologic  Approaches  to  Glycemic Treatment').  Multiple  trials  have  shown that  deintensification  of  diabetes  treatment  can  be  achieved  successfully  and safely  (66-69).  It  is  important  to  partner with people with diabetes during the deintensification process to understand their goals  of  diabetes  treatment  and  agree upon  appropriate  glycemic monitoring, glucose levels, and goals of care (70).
 
 ## HYPOGLYCEMIA ASSESSMENT, PREVENTION, AND TREATMENT
+<!-- rag_metadata source=ADA_2026 section="HYPOGLYCEMIA ASSESSMENT, PREVENTION, AND TREATMENT" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1608,10 +1808,15 @@ Hypoglycemia is the major risk to individuals  treated  with  insulin,  sulfonyl
 
 6.11 Screen individuals at risk for hypoglycemia  for  impaired  hypoglycemia awareness at least annually and when  clinically  appropriate. E Refer to  a  trained  health  care  professional for  evidence-based  intervention to improve hypoglycemia awareness. A 6.12 Screen individuals at high risk for hypoglycemia  or  with  severe  and/or frequent  hypoglycemia  for  fear  of hypoglycemia  at  least  annually  and when  clinically  appropriate. E Refer to a trained health care professional  for  evidence-based  intervention. A
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.13 Consider an individual's risk for hypoglycemia  (see Table  6.5 )  when selecting  diabetes  medications  and glycemic goals. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 6.14 Use  of  CGM  is  beneficial  and recommended  for  individuals  at  high risk for hypoglycemia. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.15 Glucose  is  the  preferred  treatment for the conscious individual with glucose < 70 mg/dL ( < 3.9 mmol/L), although any form of carbohydrate that contains  glucose  may  be  used.  Avoid using  foods  or  beverages  high  in  fat and/or protein for initial treatment of hypoglycemia.  Fifteen  minutes  after initial treatment, repeat the treatment if hypoglycemia persists. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 6.16 Glucagon should be prescribed for all  individuals  taking  insulin  or  at  high risk  for  hypoglycemia. A Family,  caregivers,  school  personnel,  and  others providing  support  to  these  individuals should  know  its  location  and  be  educated on how to administer it. Glucagon preparations that do not have to be reconstituted are preferred. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 6.17 First  aid  kits  should  include  oral glucose for use in treating hypoglycemia. C
 
 6.18 All  individuals  taking  insulin A or at  risk  for  hypoglycemia C should  receive  structured  education  for  hypoglycemia prevention and treatment, with ongoing education for those who experience hypoglycemic events.
@@ -1619,6 +1824,7 @@ Hypoglycemia is the major risk to individuals  treated  with  insulin,  sulfonyl
 6.19 One or more episodes of level 2 or 3 hypoglycemia should prompt reevaluation  of  the  treatment  plan, including  deintensifying  or  switching diabetes medications if appropriate. B 6.20 Regularly  assess  cognitive  function; if impaired or declining cognition is  found, the clinician,  person with diabetes,  and  caregiver  should  increase vigilance for hypoglycemia. B
 
 ## Hypoglycemia Definitions and Event Rates
+<!-- rag_metadata source=ADA_2026 section="Hypoglycemia Definitions and Event Rates" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Hypoglycemia is often the major limiting factor  in  the  glycemic  management  of type 1 and type 2 diabetes. Recommendations  regarding  the  classification  of hypoglycemia  are  outlined  in Table  6.4 (71).  Level  1  hypoglycemia  is  defined as  a  measurable  glucose  concentration < 70  mg/dL  ( < 3.9  mmol/L)  and ≥ 54 mg/dL  ( ≥ 3.0  mmol/L).  A  blood  glucose concentration of 70 mg/dL (3.9 mmol/L) has  been  recognized  as  a  threshold  for adrenergic  responses  to  falling  glucose in  people  without  diabetes.  Symptoms of  hypoglycemia  include,  but  are  not limited  to,  shakiness,  irritability,  confusion,  tachycardia,  sweating,  and  hunger (72).  Because  many  people  with  diabetes  demonstrate  impaired  counterregulatory  responses  to  hypoglycemia  and/or experience impaired hypoglycemia awareness,  a  measured  glucose  level < 70  mg/dL  ( < 3.9  mmol/L)  is  considered clinically  important,  regardless  of  symptoms.  Level  2  hypoglycemia  (defined  as  a blood  glucose  concentration < 54  mg/dL [ < 3.0  mmol/L])  is  the  threshold  at  which neuroglycopenic symptoms begin to occur and  requires  immediate  action  to  resolve the  hypoglycemic  event.  If  an  individual has level 2 hypoglycemia without adrenergic  or  neuroglycopenic  symptoms,  they likely  have  impaired  hypoglycemia  awareness  (discussed  further  in  HYPOGLYCEMIA  RISK
 
@@ -1640,6 +1846,7 @@ Adapted from Agiostratidou et al. (71).
 Nevertheless, they reveal a substantial burden  of  hypoglycemia-related  hospital utilization in the community (87-90). Level 1 and level 2 hypoglycemia can be ascertained from individual self-report (93) and are strong risk factors for subsequent level 3 hypoglycemia.
 
 ## Hypoglycemia Risk Assessment
+<!-- rag_metadata source=ADA_2026 section="Hypoglycemia Risk Assessment" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Assessment of an individual's risk for hypoglycemia  includes  evaluating  clinical  risk factors as well as relevant social, cultural, and economic factors ( Table 6.5 ). Recommendations  6.10-6.20  group  individuals with  diabetes  into  two  hypoglycemia  risk categories  with  clinical  significance.  Individuals at risk for hypoglycemia are those treated with insulin, sulfonylureas, or meglitinides;  clinically  significant  hypoglycemia is rare among individuals taking other diabetes  medication  classes  (94,95).  Individuals  at  high  risk  for  hypoglycemia are the subset of individuals at risk for hypoglycemia who either have a major hypoglycemia risk factor or have multiple other  risk  factors  (determined  by  the health care professional incorporating clinical judgment) ( Table 6.5 ). This risk stratification is based on epidemiologic studies of hypoglycemia  risk  (88,89,94,96-100). Validated  tools  have  been  developed to  estimate  hypoglycemia  risk  using predominantly electronic health record data  (101-103).  However,  these  tools do not include all of the important hypoglycemia  risk  factors,  and  more  research  is  needed  to  determine  how they can best be incorporated into clinical care.
 
@@ -1651,8 +1858,10 @@ Among  individuals  at  risk  for  hypoglycemia,  prior  hypoglycemic  events, e
 <!-- source: ADA_2026 | file: ADA_2026_S07.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S07
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S07" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 7. Diabetes Technology: Standards of  Care  in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="7. Diabetes Technology: Standards of  Care  in  Diabetes-2026" topic_tags="diabetes_technology, insulin_pump, CGM" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S150-S165 | https://doi.org/10.2337/dc26-S007
 
@@ -1661,9 +1870,11 @@ The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'
 Diabetes  technology  is  the  term  used  to  describe  the  hardware  and  software  that people with diabetes use to assist with self-management, ranging from lifestyle modifications to glucose monitoring and automated therapy adjustments. Historically, diabetes  technology  has  been  divided  into  two  main  categories:  insulin  administration (insulin given by syringe, pen, inhalation, patch devices, or pump [also called continuous subcutaneous insulin infusion])  and  glucose  measurement (assessment  by blood glucose  monitoring  [BGM]  or  continuous  glucose  monitoring  [CGM]).  Diabetes  technology  now  also  includes  automated  insulin  delivery  (AID)  systems  that  use  CGMinformed  algorithms  to  modulate  insulin  delivery.  Furthermore,  diabetes  technology encompasses connected insulin pens and diabetes self-management support software that  serve  as  medical  devices.  Diabetes  technology,  coupled  with  education,  followup,  pharmacotherapy  as  needed,  and  support,  can  improve  the  lives  and  health  of people  with  diabetes;  however,  the  complexity  and  rapid  evolution  of  the  diabetes technology landscape can also be a barrier to implementation for people with diabetes, their care partners, and the health care team.
 
 ## GENERAL DEVICE PRINCIPLES
+<!-- rag_metadata source=ADA_2026 section="GENERAL DEVICE PRINCIPLES" topic_tags="diabetes_technology, insulin_pump, CGM" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 7.1 Diabetes devices should be offered to people with diabetes. A
 
 7.2 The type(s) and selection of devices should be individualized based on a person's  specific  needs,  circumstances,  preferences,  and  skill  level.  In  the  setting  of an  individual  whose  diabetes  is  partially  or  wholly  managed  by  someone  else (e.g., a young child or a person with cognitive impairment or dexterity, psychosocial  issues,  and/or  physical  limitations),  the  caregiver's  skills  and  preferences  are integral to the decision-making process. E
@@ -1682,13 +1893,20 @@ Suggested citation: American Diabetes Association Professional  Practice  Commit
 
 include  utilization  of  data,  including uploading  or  sharing  data  to  monitor and adjust therapy. C
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 7.3b When prescribing an automated insulin  delivery  (AID)  system,  people with  diabetes  and  their  caregivers must  receive  education  on  how  to use and troubleshoot the system. This education  should  occur  at  regular  intervals  as  needed.  Education  should include utilization of the  integrated system and its data, including uploading  or  sharing  data  to  monitor  and adjust therapy. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.4 Health  care  professionals  working with people with diabetes should be  aware  of  available  technologies and  seek  additional  support  when needed. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.5 People with diabetes using CGM, continuous subcutaneous insulin infusion (CSII), and/or AID for diabetes management should have continued  access to devices across third-party payors, regardless of age or A1C levels. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.6 Children and adolescents should be  supported  at  school  in  the  use of  diabetes  technology,  such  as  CGM systems,  CSII,  connected  insulin  pens, and AID systems. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.7 For  adults  with  diabetes  using diabetes  technology,  reasonable  accommodations  in  educational  and work settings should  include  having sufficient  time  to  manage  their  devices  and  respond  to  high  and  low glucose levels. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 7.8 Consider  early  initiation,  including  at  diagnosis,  of  CGM,  CSII,  and AID  depending  on  a  person's  or  caregiver's needs and preferences. C
 - 7.8a There should be no requirement of  C-peptide  level, B the  presence  of islet  autoantibodies, B or  duration  of insulin  treatment C before  initiation of CSII or AID.
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.9 Standardized  reports  for  all  CGM, CSII,  AID,  and  connected  insulin  devices  with  a  minimum  of  a  single-page report, such as the standardized CGM report  and  weekly  summary,  should be  available  and  utilized.  Options  for daily and weekly reports and raw data should be available. E
 
 Technology is rapidly changing, and there  is  no  one-size-fits-all  approach  to technology  use  in  people  with  diabetes.
@@ -1696,6 +1914,7 @@ Technology is rapidly changing, and there  is  no  one-size-fits-all  approach  
 Insurance coverage can lag behind device availability, people's  interest in  devices and  willingness  for  adoption  can  vary, and  health  care  teams  may  have  challenges in keeping up with newly released technology. An American Diabetes Association resource, which can be accessed at diabetes.org/living-with-diabetes/treatmentcare/diabetes-technology-guide, can help health care professionals and people with diabetes  make  decisions  on  the  initial choice of device(s). Other sources, including  device  manufacturers,  can  help  people  troubleshoot  when  difficulties  arise (1-7).
 
 ## Education and Training
+<!-- rag_metadata source=ADA_2026 section="Education and Training" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 In  general,  no  device  used  in  diabetes management  works  optimally  without education,  training,  and  ongoing  support. There are multiple resources, including online  tutorials  and  training  videos  as  well  as written  material,  on  the  use  of  devices. People  with  diabetes  and  their  caregivers vary  in  comfort  level  with  technology,  and some  prefer  in-person  training  and  support.  Those  with  more  education  regarding device use have better outcomes (1,2);  therefore,  the  need  for  additional education should be periodically assessed, particularly if treatment goals are not being met.
 
@@ -1706,30 +1925,37 @@ Insulin  pumps  and  AID  systems,  on the  other  hand,  generally  require  tr
 Health care professionals should be aware of the availability of diabetes devices  and  their  recommended  uses  and how  to  access  the  resources  needed  to use  them.  Given  the  rapidly  changing landscape  of  technology,  it  is  expected that software and/or hardware are being constantly updated; hence, periodic education is helpful to keep health care professionals informed and updated. For those  interested  in  more  advanced  involvement  with  device  use,  there  are defined  competencies  described  as  basic, fundamental, intermediate, and advanced that are specific to the role of each  health  care  team  member  (12). The health care team's knowledge and competency are even more  critical when people with diabetes are started on advanced diabetes technologies, such  as  AID  systems.  In  such  situations, training  of the team is vital and should include a discussion about realistic expectations for the ability of the initiated system to achieve glucose goals,  fundamental  differences  from the  previous  treatment  tools,  the  system's  features  and  limitations,  and  the best  way  to  use  the  new  system  to maximize the benefits it can offer (13).
 
 ## Use in Schools for Children and Adolescents
+<!-- rag_metadata source=ADA_2026 section="Use in Schools for Children and Adolescents" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 Technology  use  should  be  supported  in school settings, and instructions for device use  should  be  outlined  in  the  student's diabetes medical management  plan (DMMP). A backup treatment plan should  be  included  in  the  DMMP  for potential device failure. School nurses and designees should complete training to stay up to date on diabetes technologies  prescribed  for  use  in  the  school setting.  Updated  resources  to  support diabetes  care  at  school,  including  training  materials  and  a  DMMP  template, can be found online at (https://diabetes. org/advocacy/safe-at-school-state-laws/ diabetes-medical-management-plan).
 
 ## Use for Adults
+<!-- rag_metadata source=ADA_2026 section="Use for Adults" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 For  adults  using  devices  in  educational and employment settings, reasonable accommodations should be provided to allow  time  and  space  necessary  for  safe device use (14). This  includes time to  respond appropriately to high and low glucose levels and  deal with any  device notifications and issues.
 
 ## Initiation of Device Use
+<!-- rag_metadata source=ADA_2026 section="Initiation of Device Use" topic_tags="diabetes_technology, insulin_pump, CGM" population="T2DM T1DM global" year=2026 -->
 
 Diabetes technology  should  be  initiated soon  after  the  time  of  diagnosis  and anytime  thereafter,  as  indicated  by  the user's  needs  and  wishes.  The  use  of CGM and BGM devices should be started from  the  outset  of  the  diagnosis  of  diabetes,  particularly  in  people  who  require insulin for management (3,4,15,16). CGM use  allows  for  close  tracking  of  glucose levels  with  adjustment  of  insulin  dosing and  lifestyle  modifications  and  removes the burden of frequent BGM. In addition, early  CGM  initiation  after  diagnosis  of type  1  diabetes  in  children  and  adolescents  has  been  shown  to  decrease  A1C levels  and  is  associated  with  high  parental  satisfaction  and  reliance  on  this  technology  for  diabetes  management  (5,7). Training on alarm and alert settings when  initiating  CGM  is  crucial  to  avoid alarm  fatigue  or  overload.  Interruption of  access  to  CGM  is  associated  with  a worsening  of  outcomes  (6,17);  therefore,  it  is  important  for  individuals  on CGM  to  have  consistent  access  to  devices. A recent systematic review with meta-analysis  also  supports  the  use  of CGM in people with type 2 diabetes not using  insulin,  with  observations  of  improved  glycemic  outcomes  and  individual  experience,  reduced  health  care resource utilization, and acceptable costeffectiveness (18).
 
 AID systems are the preferred insulin delivery system in individuals with type 1 diabetes and  type 2  diabetes on  multiple  daily  injections  (MDI)  and  people with other forms of insulin-deficient diabetes. They can be considered for use in  people  on  basal  insulin  who  are  not reaching their targets. Early initiation of AID therapy has been shown to be beneficial. In an  open-label, multicenter, randomized, parallel clinical trial enrolling  youth with  newly diagnosed  type  1 diabetes, initiation of an AID system within 21  days  from  diagnosis  showed  10% higher time in range (TIR) (70-180 mg/dL [3.9-10.0  mmol/L])  and  lower  A1C  at 12  months versus usual  care (15).  In  addition, use of diabetes technology overall improves A1C and increases the number of  people  achieving  an  A1C < 7%  (19). There  are  no  data  that  the  presence  or absence  of  C-peptide  or  islet  autoantibodies  is  associated  with  responsiveness to  continuous  subcutaneous  insulin  infusion or AID therapy. People with type 2 diabetes  who  continue  to  produce  insulin have  been  shown  to  benefit  from  AID therapy  (20-23).  Similarly,  the  duration  of diabetes  is  not  related  to  outcomes  with the  use  of  technology.  Therefore,  none of  these  measures  should  be  used  when determining suitability for continuous subcutaneous insulin infusion or AID therapy.
 
 ## Standardized Reporting
+<!-- rag_metadata source=ADA_2026 section="Standardized Reporting" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Use  of  a  standardized  CGM  tracing  is helpful  for  people  with  diabetes  and clinicians  (24)  and  in  multiple  settings, from  connected  insulin pens (25) to CGM  (26)  to  AID  systems  (27).  Ideally, both  people  with  diabetes  and  their health  care  teams  can  access  and  analyze  the  data,  both  between  and  at clinic  visits  to  inform  self-management and medication dose titration.
 
 ## BLOOD GLUCOSE MONITORING
+<!-- rag_metadata source=ADA_2026 section="BLOOD GLUCOSE MONITORING" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 7.10 People  with  diabetes  should  be provided with blood glucose monitoring (BGM)  devices  as indicated by their  circumstances,  preferences,  and treatment. People using CGM devices must  also  have  access  to  BGM  at  all times. A
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 7.11 People  who  are  taking  insulin and  using  BGM  should  be  encouraged  to  check  their  blood  glucose levels  when  appropriate  based  on their  insulin  therapy.  This  may  include  checking  when  fasting,  prior to meals and snacks, after meals, at bedtime, in the middle of the night, prior  to,  during,  and  after  exercise, when  hypoglycemia  is  suspected,  after  treating  low  blood  glucose  levels until  achieving  normoglycemia,  when hyperglycemia is  suspected, and  prior to  and  while  performing  critical  tasks such as driving. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 7.12 Health  care  professionals  should be aware of the differences in accuracy among blood glucose meters. Only meters  approved  by  the  U.S.  Food  and Drug  Administration  (FDA)  (or  comparable  regulatory  agencies  for  other geographical  locations)  with  proven accuracy  should  be  used,  with  unexpired  test  strips  purchased  from  a pharmacy or licensed distributor and properly stored. E
 - 7.13 Although  BGM  in  people  on noninsulin therapies has not consistently shown clinically significant reductions  in  A1C  levels,  it  may  be
 
@@ -1740,6 +1966,7 @@ helpful  when  modifying  meal  plans, physical activity plans, and/or medicatio
 Major  clinical trials of insulin-treated people with diabetes have included BGM as  part  of  multifactorial  interventions  to demonstrate the benefit of intensive glycemic  management  on  diabetes  complications  (28).  BGM  is  thus  an  integral component  of  effective  therapy  for  individuals  using  insulin.  In  recent  years, CGM has emerged as a method for the assessment  of  glucose  levels  that  improves  outcomes  compared  with  BGM in  many  settings  (discussed  below).  Glucose  monitoring  (BGM  or  CGM)  allows people with diabetes to evaluate their individual  responses to  therapy  and  assess whether  glycemic  goals  are  being  safely achieved.  Integrating  glucose  testing  results  into  diabetes  management can  be a  useful  tool  for  guiding  medical  nutrition  therapy  and  physical  activity, preventing  hypoglycemia,  or  adjusting medications  (particularly  prandial  insulin  doses  or correction bolus  doses). The specific  needs  and  goals  of  the  person with  diabetes  should  dictate  BGM  and CGM  frequency  and  timing.  As  recommended  by  the  device  manufacturers and the U.S. Food  and Drug Administration  (FDA),  people  with  diabetes  using CGM must also have access to BGM for multiple  reasons,  including  whenever there is suspicion that the CGM is inaccurate, while waiting for the CGM   device to warm up, when there is a disruption in  CGM  transmission,  for  calibration  (if needed)  or  if  a  warning  message  appears, when CGM supplies are delayed, and in any clinical setting where glucose levels are changing rapidly ( > 2 mg/dL/min), which could cause a discrepancy between CGM and blood glucose values.
 
 ## Meter Standards
+<!-- rag_metadata source=ADA_2026 section="Meter Standards" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Glucose  meters  meeting  FDA  guidance for meter accuracy provide the most reliable  data  for  diabetes  management. There  are  several  current  standards  for the  accuracy  of  blood  glucose  meters, but the two most used are those of the International Organization for Standardization  (ISO)  (ISO  15197:2013)  and  the FDA  ( Table  7.1 ).  In  the  U.S.,  currently marketed  meters  must  meet  the  standard  under  which  they  were  approved, which may not be the current standard. Moreover, the monitoring of current accuracy postmarketing is left to the manufacturer  and  not  routinely  checked  by an independent source.
 
@@ -1748,14 +1975,17 @@ People  with  diabetes  assume  their glucose  meter  is  accurate  because  it 
 Certain  meter  system  characteristics, such  as  the  use  of  lancing  devices  that are  less  painful  (30)  and  the  ability  to reapply blood to a strip with an insufficient  initial  sample,  or  meters  with integrated speech that can read aloud glucose  levels  for  visually  impaired individuals  (31),  may  also  be  beneficial  to  people  with  diabetes (32) and may  make  BGM  less  burdensome  to perform.
 
 ## Use of Strips From Unlicensed Entities
+<!-- rag_metadata source=ADA_2026 section="Use of Strips From Unlicensed Entities" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 People with diabetes should be advised against purchasing or reselling preowned or  secondhand  test  strips,  as  these  may give incorrect results. Only unopened and unexpired vials  of glucose  test  strips should be used to ensure BGM accuracy.
 
 ## Optimizing Blood Glucose Meter Use
+<!-- rag_metadata source=ADA_2026 section="Optimizing Blood Glucose Meter Use" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Optimal  use  of  BGM  devices  requires proper review and interpretation of data by  both  the  person  with  diabetes  and the  health  care  professional  to  ensure that  data  are  used  in  an  effective  and timely  manner.  In  a  large  cohort  analysis of  over  24,000  adults  with  both  type  1 and  type  2  diabetes,  more  frequent  use of  BGM  was  associated  with  lower  A1C levels, with greater BGM frequency associated  with  lower  A1C  in  people  with type 1 diabetes across the lifespan (33,34).  In  young  adults  with  type  1  diabetes,  there  was  also  a  correlation  between greater BGM frequency and lower A1C levels (34). Among those who check their  blood  glucose  at  least  once  daily, many reported taking no action when results were high or low (35). Some meters now  provide  advice  to  the  user  in  real time when  monitoring glucose levels (36),  whereas  others  can  be  used  as  a part of integrated health platforms (37). People  with  diabetes  should  be  taught how to use BGM data to adjust food intake,  physical  activity,  or  pharmacologic therapy to achieve their treatment goals.  The  ongoing  need  for  and  frequency  of  BGM  should  be  reevaluated at  each  routine  visit  to  ensure  its  effective use (34,38).
 
 ## People With Diabetes Treated With Intensive Insulin Therapies
+<!-- rag_metadata source=ADA_2026 section="People With Diabetes Treated With Intensive Insulin Therapies" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Glucose  monitoring  is  particularly  important for people with diabetes treated with  insulin  therapy  to  detect  and  prevent  hypoglycemia  and  hyperglycemia. Most individuals on intensive insulin therapies (MDI or insulin pump therapy) should be encouraged to assess glucose levels  using  BGM  (and  preferably  CGM with  BGM  backup)  prior  to  meals  and snacks,  at  bedtime,  occasionally  postprandially, prior  to,  during,  and  after physical  activity,  when  they  suspect hypoglycemia  or  hyperglycemia,  after treating  hypoglycemia  until  they  are normoglycemic, and prior to and while performing  critical  tasks  such  as  driving.  For  many  individuals  using  BGM alone, this  requires doing finger sticks 6-10  times  daily,  although  individual needs  may  vary.  A  database  study  of almost 27,000 children and adolescents with  type  1  diabetes  showed  that,  after adjusting for multiple confounders, increased  daily  frequency  of  BGM  was significantly  associated  with  lower  A1C levels  ( -0.2%  per  additional  check  per day)  and  with  fewer  acute  complications (39).
 
@@ -1775,6 +2005,7 @@ BG, blood glucose; FDA, U.S. Food and Drug Administration; ISO, International Or
 result may not be reliable in specific individuals  (for  more  details,  see  section  2, 'Diagnosis  and  Classification  of  Diabetes'). A  key  consideration  is  that  performing BGM  alone  does  not  lower  blood  glucose  levels.  To  be  useful,  the  information  must  be  integrated  into  clinical  and self-management treatment plans.  Further, as noted above, a recent systematic review with meta-analysis did support use of CGM in  people  with  type  2  diabetes  with  benefits to glycemic management, individual experience,  health  care  resource  utilization, and cost-effectiveness (18,43).
 
 ## Glucose Meter Inaccuracy
+<!-- rag_metadata source=ADA_2026 section="Glucose Meter Inaccuracy" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Although many meters function well under  various  circumstances,  health  care professionals  and  people  with  diabetes must be aware of factors that impair meter (and  CGM) accuracy. A meter reading that seems  discordant  with  the  clinical  picture needs to be retested or tested in a laboratory.  Health  care  professionals  in  intensive care  unit  settings  need  to  be  particularly aware of the potential for incorrect meter  readings  during  critical  illness,  and laboratory-based values should be used if there is any doubt. Some meters give error  messages  if  meter  readings  are  likely to be false (44).
 
@@ -1785,6 +2016,7 @@ Temperature. Because the reaction is sensitive  to  temperature,  all  monitors 
 Interfering  Substances. There are several physiologic  and  pharmacologic  factors that interfere  with  glucose  readings  measured with  either  personal  blood  glucose  meters or  professional  blood  glucose  meters  used in  various  inpatient  settings  (neonatal intensive care units, hospital wards, and intensive  care  units) (45).  Meters  vary  in terms of their sensitivity to interfering substances,  and  this  information  should  be available  in  the  prescribing  information  for the meter. Some of the possible interfering substances are listed in Table 7.2 .
 
 ## CONTINUOUS GLUCOSE MONITORING DEVICES
+<!-- rag_metadata source=ADA_2026 section="CONTINUOUS GLUCOSE MONITORING DEVICES" topic_tags="glucose_monitoring, CGM, SMBG" population="T2DM T1DM global" year=2026 -->
 
 See Table 7.3 for definitions of types of currently available CGM devices.
 
@@ -1840,8 +2072,10 @@ Most CGM systems are designated as integrated  CGM  (iCGM)  and  cleared  as a c
 varies,  and  available  options  should  be explored with individuals when choosing an integrated system.
 
 ## Benefits of Continuous Glucose Monitoring
+<!-- rag_metadata source=ADA_2026 section="Benefits of Continuous Glucose Monitoring" topic_tags="glucose_monitoring, CGM, SMBG" population="T2DM T1DM global" year=2026 -->
 
 ## Data From Randomized Controlled Trials
+<!-- rag_metadata source=ADA_2026 section="Data From Randomized Controlled Trials" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Multiple  randomized  controlled  trials (RCTs)  have  been  performed  using  CGM devices, and the results have largely been positive  in  terms  of  reducing  A1C  levels and/or episodes of hypoglycemia if participants  regularly  wore  the  devices  (46-53). The benefits of CGM have been shown regardless  of  age,  sex,  education  or  income levels, or baseline diabetes characteristics.
 
@@ -1852,6 +2086,7 @@ RCT  data  on  CGM  use  in  individuals with type 2 diabetes on MDI (61) or ins
 Although  short-term  use  of  CGM  in youth  with  type  2  diabetes  did  not  impact short-term glucose changes or A1C improvement, users reported behavioral changes  with  increased  blood  glucose measurements, increased insulin administration,  and  overall improved diabetes management and quality of life (68,69). The  improvements  in  type  2  diabetes have  largely  occurred  without  changes in insulin doses or other diabetes medications. CGM discontinuation in individuals with type 2 diabetes on basal insulin caused  partial  reversal  of  A1C  reduction and  TIR  improvements,  suggesting  that continued CGM use achieves the greatest benefits (17).
 
 ## Observational and Real-world Studies
+<!-- rag_metadata source=ADA_2026 section="Observational and Real-world Studies" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 CGM  systems  are  widely  available  in many  countries  for  people  with  diabetes, and this allows for the collection of large  amounts  of data  across  groups  of people with diabetes.
 
@@ -1864,10 +2099,12 @@ Retrospective  data  from rtCGM  use  in adults (78) with type 1 or type 2 diabe
 Recent data have emerged from a realworld  observational  analysis  of  rtCGM  use in  adults  with  type  2  diabetes  not  treated with  insulin.  In  this  study ,  rtCGM  benefits were observed at 6 months and 12 months versus baseline, with reduction of mean glucose  levels,  reduction  of  glucose  management  indicator  (GMI),  increase  in  TIR, increase in time in tight target range (70-140 mg/dL [3.9-7.8 mmol/L]), and reduction in TAR > 180 mg/dL ( > 10 mmol/L) and > 250 mg/dL ( > 13.9 mmol/L) (79).
 
 ## Real-time  Continuous  Glucose  Monitoring Device Use in Pregnancy
+<!-- rag_metadata source=ADA_2026 section="Real-time  Continuous  Glucose  Monitoring Device Use in Pregnancy" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 CGM indication has expanded to include pregnancy for  Dexcom  G7,  FreeStyle  Libre  2,  and  FreeStyle  Libre  3,  which  enhances  care  in  this  population  (80,81). A  discussion  of  CGM  use  in  pregnancy can be found in section 15, 'Management of Diabetes in Pregnancy.'
 
 ## Use of Professional Continuous Glucose Monitoring and Intermittent Use
+<!-- rag_metadata source=ADA_2026 section="Use of Professional Continuous Glucose Monitoring and Intermittent Use" topic_tags="glucose_monitoring, CGM, SMBG" population="T2DM T1DM global" year=2026 -->
 
 of Personal Continuous Glucose Monitoring Professional  CGM  devices,  which  provide  retrospective  data,  either  blinded or  unblinded,  for  analysis  can  be  used to  identify  patterns  of  hypoglycemia  and
 
@@ -1880,10 +2117,12 @@ Some data have shown the benefit of intermittent use of CGM (rtCGM or isCGM) in 
 Furthermore,  in  a  real-world  study, the use of professional CGM in individuals  with  type  2  diabetes  not  on  insulin at  baseline  and  at  6  months  of  followup  resulted  in  lower  A1C  at  6  months  as well as a shift toward greater use of glucoselowering medications with cardiometabolic benefits,  such  as  sodium-glucose  transporter  2  inhibitors  and  glucagon-like  peptide 1 receptor agonists (87). Use of professional or intermittent CGM should always be coupled with analysis and interpretation  for  people  with  diabetes  along  with education, as needed, to adjust medication and change lifestyle behaviors (88-90).
 
 ## Side Effects of Continuous Glucose Monitoring Devices
+<!-- rag_metadata source=ADA_2026 section="Side Effects of Continuous Glucose Monitoring Devices" topic_tags="glucose_monitoring, CGM, SMBG" population="T2DM T1DM global" year=2026 -->
 
 Contact  dermatitis  (both  irritant  and allergic)  has  been  reported  with  all devices that attach to  the  skin  (91-93). In  some  cases,  this  has  been  linked  to the  presence  of  isobornyl  acrylate,  a skin  sensitizer  that  can  cause  an  additional spreading allergic reaction (94). It is  important  to  ask  CGM  users  periodically  about  adhesive  reactions,  as  tape formulations may  change over time. Patch testing can sometimes identify the cause of contact dermatitis (95). Identifying and eliminating tape allergens is important to ensure the comfortable use of devices  and  promote  self-care  (96-99). The  PANTHER  Program  offers  resources in  English  and  Spanish  at  www.pantherprogram.org/skin-solutions.  In  some  instances,  using  an  implanted  sensor  can help avoid skin reactions in those sensitive to tape (100,101).
 
 ## Substances and Factors Affecting Continuous Glucose Monitoring Accuracy
+<!-- rag_metadata source=ADA_2026 section="Substances and Factors Affecting Continuous Glucose Monitoring Accuracy" topic_tags="glucose_monitoring, CGM, SMBG" population="T2DM T1DM global" year=2026 -->
 
 Sensor interference due to several medications/substances is a known potential source of CGM sensor measurement errors  ( Table  7.4 ).  While  several  of  these substances  have  been  reported  in  the various  CGM  brands' user  manuals,  additional interferences have been discovered  after  the  market  release  of  these products.  Hydroxyurea,  used  for  myeloproliferative  disorders  and  hematologic conditions,  is  one  of  the  most  recently identified  interfering  substances that cause a temporary increase in sensor glucose values  discrepant  from  actual  glucose  values (102,103).  Similarly,  substances  such  as mannitol  and  sorbitol,  when  administered intravenously or as a component of peritoneal  dialysis  solution,  may  increase  blood mannitol or sorbitol concentrations and cause  falsely  elevated  readings  of  sensor glucose (104). Therefore, it is crucial to routinely  review  the  medications  and  supplements used by the person with diabetes to identify possible interfering substances and advise  them  accordingly  on  the  need  to use additional BGM if sensor values are unreliable due to these substances.
 
@@ -1900,6 +2139,7 @@ Sensor interference due to several medications/substances is a known potential s
 
 
 ## INSULIN DELIVERY Insulin Syringes and Pens
+<!-- rag_metadata source=ADA_2026 section="INSULIN DELIVERY Insulin Syringes and Pens" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1925,8 +2165,10 @@ Bolus  calculators  have  been  developed to aid dosing decisions (120-125). The
 <!-- source: ADA_2026 | file: ADA_2026_S08.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S08
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S08" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 8. Obesity and Weight Management for the Prevention and Treatment of Diabetes: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="8. Obesity and Weight Management for the Prevention and Treatment of Diabetes: Standards of Care in Diabetes-2026" topic_tags="obesity, weight_management" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S166-S182 | https://doi.org/10.2337/dc26-S008
 
@@ -1935,6 +2177,7 @@ The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'
 Obesity  is  a  chronic,  often  relapsing  disease  with  numerous  metabolic,  physical,  and psychosocial complications, including a substantially increased risk for the development and progression of type 2 diabetes (1). There is strong and consistent evidence that obesity management can delay the progression from prediabetes to type 2 diabetes (2-6) and is highly beneficial in treating type 2 diabetes (7-15). In people with type 2 diabetes and  overweight  or  obesity,  modest  weight  loss  improves  glycemia  and  reduces  the need for glucose-lowering medications, particularly insulin (7,16,17), and greater weight loss substantially reduces A1C and fasting glucose and may promote sustained diabetes remission (9,18-21). Metabolic surgery, which results in an average > 20% body weight loss, greatly improving glycemia and often leading to remission of diabetes, improved quality of life, improved cardiovascular outcomes, and reduced mortality (22,23). Several therapeutic modalities, including intensive behavioral and lifestyle counseling, obesity  pharmacotherapy,  and  metabolic  surgery,  may  aid  in  achieving  and  maintaining meaningful weight loss and reducing obesity-associated health risks. This section aims to provide evidence-based recommendations for obesity and weight management, including behavioral, pharmacologic, and surgical interventions, in people with, or at high risk of, diabetes. Additional considerations regarding weight management in older individuals and children and adolescents can be found in section 13, 'Older Adults,' and section 14, 'Children and Adolescents.'
 
 ## ASSESSMENT AND MONITORING OF THE INDIVIDUAL WITH OVERWEIGHT OR OBESITY
+<!-- rag_metadata source=ADA_2026 section="ASSESSMENT AND MONITORING OF THE INDIVIDUAL WITH OVERWEIGHT OR OBESITY" topic_tags="obesity, weight_management" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -1954,10 +2197,14 @@ Suggested citation: American Diabetes Association Professional Practice Committe
 
 (e.g., 'person with obesity' rather than 'obese  person'  and  'person  with  diabetes' rather than 'diabetic person'). E 8.2a Screen  for  overweight  and  obesity using BMI annually. To confirm excess  adiposity,  additional  assessments of  body  fat  using  anthropometric  assessments (e.g., waist-to-hip ratio) or direct  measurements  (e.g.,  dual-energy X-ray  absorptiometry,  bioelectrical  impedance analysis)  could  be  considered where available/feasible. E
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 8.2b Monitor obesity-related anthropometric  measurements  at  least  annually to inform treatment considerations. During  active  weight  management  treatment,  increase  monitoring  to  at  least every 3 months. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 8.3 Accommodations should be made to  provide  privacy  during  anthropometric measurements. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 8.4 In people with type 2 diabetes and overweight or obesity, weight management should represent a primary goal of treatment along with glycemic management. A
 - 8.5 Provide weight management treatment,  aiming  for  any  magnitude  of weight  loss.  Weight  loss  of  5-7%  of baseline weight improves glycemia and other  intermediate  cardiovascular  risk factors. A Sustained  loss  of > 10%  of body weight usually confers greater benefits, including disease-modifying effects and possible remission of type 2 diabetes A and  may improve long-term  cardiovascular outcomes and mortality. B proaches  for  obesity  (i.e.,  lifestyle  and based on the person's medical history, life circumConsider
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 8.6 Individualize  initial  treatment  apnutritional therapy, pharmacologic therapy,  or  metabolic  surgery) A stances,  and  preferences. C combining treatment approaches if appropriate. C
 
 Obesity is defined by the World Health Organization as an abnormal or excessive fat accumulation  that  presents  a  risk  to  health  (24). BMI (calculated as weight in kilograms divided by the square of height in meters [kg/m 2 ]) has been used widely to diagnose and stage obesity  (overweight:  BMI  25-29.9  kg/m 2 ; obesity class 1: BMI 30-34.9 kg/m 2 ; obesity class 2: BMI 35-39.9 kg/m 2 ; obesity class 3: BMI ≥ 40 kg/m 2 ). Despite its ease of measurement, BMI is  not a  perfect  measure of  adipose  tissue  mass  and  does  not measure  adipose  tissue  distribution or function, and it does not factor in the presence of weight-related health or well-being consequences  (25,26).  BMI  is especially prone to misclassification in individuals who  are  very  muscular  (athletes)  or  in those with low muscle mass and in populations  with different body composition and cardiometabolic risk (27). It is recommended that excess adiposity be confirmed by either direct measurement of body fat, where available, or at least one anthropometric  criterion  (e.g.,  waist  circumference, waist-to-hip  ratio,  or  waist-to-height  ratio) in addition to BMI, using validated methods and  cutoff  points  appropriate  to  age,  sex, and ethnicity and particularly in individuals with  BMI  25-34.9  kg/m 2 and  in  certain populations  (South  Asian  individuals),  as these  measurements  better  reflect  metabolic disease (28). However, confirming excess  adiposity  in  routine  clinical  practice may be both challenging and unnecessary in  the  U.S.  adult  population  aged  20-59 years,  in  whom  the  prevalence  of  obesity by  BMI  is  nearly  identical  to  the  obesity prevalence after confirmation of excess adiposity  in  the  vast  majority  (29).  Thus,  although  BMI  is  not  a  perfect  measure  of adiposity, it remains an acceptable measure for use by clinicians who may not have the resources to obtain additional measures of adiposity on all individuals.
@@ -1975,12 +2222,15 @@ Among  people  with  type  2  diabetes and overweight or obesity who have inadeq
 With the increasing availability of more effective treatments, individuals with diabetes  and  overweight  or  obesity  should be  informed  of  the  potential  benefits  of both modest and more substantial weight loss  and  guided in  the  range  of  available treatment  options,  as  discussed  in  the sections  below.  Shared  decision-making should be used when counseling on behavioral  changes,  intervention  choices, and weight management goals.
 
 ## NUTRITION, PHYSICAL ACTIVITY, AND BEHAVIORAL THERAPY INTERVENTIONS
+<!-- rag_metadata source=ADA_2026 section="NUTRITION, PHYSICAL ACTIVITY, AND BEHAVIORAL THERAPY INTERVENTIONS" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 8.7 Nutrition,  physical  activity,  and behavioral therapy are recommended for  people  with  type  2  diabetes  and overweight or obesity to achieve both weight and health outcome goals. B 8.8a Interventions including high frequency  of  counseling  ( ≥ 16  sessions  in  6  months)  with  focus  on nutrition  changes,  physical  activity, and behavioral strategies to achieve a  500-750  kcal/day  energy  deficit (irrespective  of  macronutrient  composition)  should  be  recommended for weight loss when available. A 8.8b If  access  to  such  interventions is  limited,  consider  alternative  structured programs  delivering nutrition changes,  physical  activity,  and  behavioral counseling  (e.g.,  remote,  telehealth, mobile app). E
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 8.9 Nutrition  recommendations  should be individualized to the person's preferences  and  nutritional  needs.  Use  nutritional plans that create an energy deficit, while  still  following  general  nutritional guidance, to achieve weight loss. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 8.10 When  developing  a  plan  of care,  consider  systemic,  structural, cultural,  and  socioeconomic  factors that  may  impact  nutrition  patterns and food choices, such as food insecurity  and  hunger, access to  healthful  food  options,  and  other  social determinants of health. C
 
 8.11 For those who achieve weight loss goals,  continue  to  monitor  progress, provide  ongoing  support,  and  recommend continuing interventions to maintain weight goals long term. E Effective long-term ( ≥ 1 year) weight maintenance  programs  provide  monthly contact and support, include frequent self-monitoring of body weight (weekly or  more  frequently)  and  other  selfmonitoring strategies (e.g., food diaries or wearables), and encourage regular physical activity (200-300 min/week). A 8.12 Short-term  nutrition  intervention using structured, very-low-calorie meals (800-1,000  kcal/day)  should  be  prescribed only to carefully selected individuals by trained practitioners in medical  settings  with  close  monitoring. Long-term, comprehensive weight maintenance  strategies  and  counseling  should  be  integrated  to  maintain weight loss. B
@@ -1992,6 +2242,7 @@ With the increasing availability of more effective treatments, individuals with 
 For a more detailed discussion of lifestyle management  approaches  and  recommendations, see section 5, 'Facilitating Positive Health Behaviors and Well-being to  Improve  Health  Outcomes.'  For  a detailed  discussion  of  nutrition-specific interventions,  please  refer  to  'Nutrition Therapy for Adults With Diabetes or Prediabetes: A Consensus Report' (60).
 
 ## Behavioral Interventions
+<!-- rag_metadata source=ADA_2026 section="Behavioral Interventions" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Numerous  behavioral  interventions  have demonstrated  positive  effects  from  reducing  energy  intake,  increasing  physical activity,  or  some  combination  of  these key lifestyle behaviors (61).  The Look AHEAD  (Action  for  Health  in  Diabetes) randomized controlled trial (RCT) demonstrated that people with obesity and type 2 diabetes could achieve and maintain  long-term  (up  to  8  years  after  trial conclusion)  weight  loss  by  participating in  a  prospective  intensive  lifestyle  intervention  (ILI).  Approximately  half  of ILI participants  lost  and  maintained ≥ 5% of their initial body weight (46). Additionally, compared with the diabetes support and education group, ILI participants who lost ≥ 10% at 1 year  had  a  21%  reduced  risk of  mortality  (hazard  ratio  0.79  [95%  CI 0.67, 0.94]; P = 0.007) (62). Culturally tailoring  behavioral  interventions  could  be an  additional  useful  tool  for  improving the impact of interventions (63-65).
 
@@ -2022,6 +2273,7 @@ Health disparities adversely affect people  who  have  systematically  experienc
 Maintaining weight loss is of paramount importance, and people with type 2 diabetes  and  overweight  or  obesity  who  have lost  weight  should  be  offered  longterm ( ≥ 1  year)  comprehensive  weight loss maintenance programs.  Weight loss  maintenance  programs  should  be delivered by an interprofessional team with appropriate training and experience in  implementing long-term weight maintenance  programs.  While  we  acknowledge  that  most  insurers,  Medicare,  and Medicaid are not currently covering many long-term weight maintenance programs, there  is  evidence  to  support  their  effectiveness and benefits (46,66,98) on both personal  and  population  levels.  Weight maintenance programs should include at least  monthly  contact  with  trained  individuals and focus on ongoing monitoring of  body  weight  (weekly  or  more  frequently)  and/or  other  self-monitoring strategies  such  as  tracking  food  and beverage intake and steps, continued focus on nutrition and behavioral changes, and participation in high volume of physical  activity  (200-300  min/week)  (99, 100). Some commercial and proprietary weight loss programs have shown promising weight loss results; however, results vary  across  programs,  most  lack  evidence  of  effectiveness,  many  do  not satisfy  guideline  recommendations,  and some promote unscientific and possibly dangerous  practices  (101,102).  Along with routine medical management visits, people with obesity and diabetes or prediabetes should be screened during diabetes self-management  education  and  support and medical nutrition therapy encounters for a history of dieting and past or current disordered eating behaviors. See section 5, 'Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes,' for more information on disordered eating and the role of behavioral health counseling in obesity management.
 
 ## PHARMACOTHERAPY
+<!-- rag_metadata source=ADA_2026 section="PHARMACOTHERAPY" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2029,7 +2281,9 @@ Maintaining weight loss is of paramount importance, and people with type 2 diabe
 
 8.16 When choosing glucose-lowering medications for people with type 2 diabetes and overweight or obesity, prioritize  medications  with  beneficial  effect on weight. B
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 8.17 Obesity pharmacotherapy should be considered for people with diabetes and overweight or obesity along with lifestyle changes. Potential benefits and risks must be considered. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 8.18 In people with diabetes and overweight or obesity, the preferred pharmacotherapy  should  be  a  glucagonlike peptide 1 receptor agonist or dual glucose-dependent insulinotropic polypeptide and glucagon-like peptide 1 receptor agonist with greater weight loss efficacy  (i.e.,  semaglutide  or  tirzepatide), especially considering their added weight-independent benefits. A
 - 8.19 Obesity  pharmacotherapy  indicated  for  chronic  therapy  should  be continued beyond  reaching weight loss goals to maintain the health benefits,  as  discontinuation  often results in recurrence of weight gain and worsening
 
@@ -2038,14 +2292,17 @@ or  reemergence  of cardiometabolic  risk factors. B
 8.20 Individualize  the  dose  and  the dose  titration  approach  of  obesity pharmacotherapy to balance effectiveness,  health  benefits,  and  tolerability; the  optimal  treatment  dose  may  not be the maximum approved dose. B 8.21 In people with diabetes not reaching weight treatment goals, modify  or  intensify  treatment  with  additional approaches, including structured lifestyle management programs, metabolic surgery, A and additional or alternative pharmacologic agents. B
 
 ## Glucose-Lowering Therapy
+<!-- rag_metadata source=ADA_2026 section="Glucose-Lowering Therapy" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Numerous effective glucose-lowering medications  are  currently  available.  However , to achieve both glycemic and weight management goals for diabetes treatment, health care professionals should prioritize the  use  of  glucose-lowering  medications with a beneficial effect on weight. Agents associated with clinically meaningful weight loss include glucagon-like peptide 1  (GLP-1)  receptor  agonists  (RAs)  and a  dual  glucose-dependent  insulinotropic polypeptide (GIP) and GLP-1 RA (tirzepatide),  and  they  are the  preferred agents in  individuals  with  stable  insurance  coverage.  Sodium-glucose  cotransporter  2 inhibitors,  metformin,  and  amylin  mimetics are also associated with weight loss, although the magnitude of weight loss is much smaller ( < 5% body weight loss). Dipeptidyl  peptidase  4  inhibitors,  centrally acting  dopamine  agonist  (bromocriptine), α -glucosidase  inhibitors,  and  bile  acid  sequestrants  (colesevelam)  are  considered weight neutral. In contrast, insulin secretagogues  (sulfonylureas and  meglitinides), thiazolidinediones, and insulin are often associated  with  weight  gain  (see  section  9, 'Pharmacologic  Approaches  to  Glycemic Treatment').
 
 ## Concomitant Medications
+<!-- rag_metadata source=ADA_2026 section="Concomitant Medications" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Health  care  professionals  should  carefully review the individual's concomitant medications and, whenever clinically appropriate, engage other care team members to minimize or provide alternatives for  medications  that  promote  weight gain (103-106). Examples of medications associated with weight gain include antipsychotics  (e.g.,  clozapine,  olanzapine, and  risperidone),  some  antidepressants (e.g., tricyclic antidepressants, some selective serotonin  reuptake  inhibitors,  and  monoamine oxidase inhibitors), glucocorticoids, injectable progestins, some  anticonvulsants (e.g., gabapentin and pregabalin), β -blockers  (e.g.,  atenolol,  metoprolol, and  propranolol),  and  possibly  sedating antihistamines and anticholinergics (103).  The  use  of  weight  promoting medication can hinder the effectiveness of  lifestyle  interventions  for  weight  loss in people with diabetes. Notably, a post hoc  analysis  of  the  Look  AHEAD  study showed a negative association between the use of weight-promoting or obesogenic medications  and  weight  loss  outcomes. The association was dose-dependentparticipants using two or more obesogenic medications were less likely to achieve the 5% and 10% weight loss benchmarks than those using one medication (106).
 
 ## Approved Obesity Pharmacotherapy
+<!-- rag_metadata source=ADA_2026 section="Approved Obesity Pharmacotherapy" topic_tags="obesity, weight_management" population="T2DM T1DM global" year=2026 -->
 
 The  U.S.  Food  and  Drug  Administration (FDA)  has  approved  several  medications for obesity as adjuncts to a reduced-calorie eating pattern and increased physical activity  in  individuals  with  BMI ≥ 30  kg/m 2 or ≥ 27  kg/m 2 with  one  or  more  obesityassociated comorbid conditions (e.g., type 2 diabetes, hypertension, and/or dyslipidemia).  Nearly  all  FDA-approved  obesity pharmacotherapies have been shown  to  improve  glycemia  in  people with type 2 diabetes and delay progression to type 2 diabetes in at-risk individuals (4,5,11-14,54,107-111) and some of these  agents  (e.g.,  liraglutide,  semaglutide, and tirzepatide) have a dual indication for  glucose lowering  as well as weight  management.  Phentermine  and other  older  adrenergic  agents  are  approved  for  short-term  treatment  (112), while  all  others  are  approved  for  longterm treatment ( Tables 8.1 and 8.2 ). Refer to section 14, 'Children and Adolescents,' for medications approved for adolescents with obesity. In addition, setmelanotide, a melanocortin  4  receptor  agonist,  is  approved for use in cases of rare genetic mutations  resulting  in  severe  hyperphagia and extreme obesity, such as leptin receptor  deficiency  and  proopiomelanocortin deficiency.
 
@@ -2070,14 +2327,17 @@ Nutrition deficiencies might be more of a  concern in people receiving pharmacot
 <!-- source: ADA_2026 | file: ADA_2026_S09.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S09
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S09" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 9. Pharmacologic Approaches to Glycemic Treatment: Standards of  Care  in  Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="9. Pharmacologic Approaches to Glycemic Treatment: Standards of  Care  in  Diabetes-2026" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S183-S215 | https://doi.org/10.2337/dc26-S009
 
 The American Diabetes Association (ADA) 'Standards of Care in Diabetes' includes the ADA's current clinical practice recommendations and is intended to provide the components of diabetes care, general treatment goals and guidelines, and tools to evaluate quality of care. Members of the ADA Professional Practice Committee for Diabetes, an  interprofessional  expert committee, are responsible  for  updating  the Standards of Care annually, or more frequently as warranted. For a detailed description of ADA standards, statements, and reports, as well as the evidence-grading system  for  ADA's  clinical  practice  recommendations  and  a  full  list  of  Professional Practice Committee members, please refer to Introduction and Methodology. Readers  who  wish  to  comment  on  the  Standards  of  Care  are  invited  to  do  so  at professional.diabetes.org/SOC.
 
 ## PHARMACOLOGIC THERAPY FOR ADULTS WITH TYPE 1 DIABETES
+<!-- rag_metadata source=ADA_2026 section="PHARMACOLOGIC THERAPY FOR ADULTS WITH TYPE 1 DIABETES" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2086,6 +2346,7 @@ The American Diabetes Association (ADA) 'Standards of Care in Diabetes' includes
 9.4 Insulin treatment plans and insulin-taking behaviors should be reevaluated at regular intervals (e.g., every 3-6 months) and adjusted to incorporate specific  factors  that  affect  choice  of  treatment  and  ensure  achievement  of  individualized glycemic goals. E
 
 ## Insulin Therapy
+<!-- rag_metadata source=ADA_2026 section="Insulin Therapy" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Insulin treatment is essential for individuals with type 1 diabetes because the hallmark of type 1 diabetes is absent or near-absent β -cell function. In addition to hyperglycemia,  insulinopenia  can  contribute  to  other  metabolic  disturbances  like hypertriglyceridemia and ketoacidosis as well as tissue catabolism that can be life threatening. Severe metabolic decompensation can be, and was, mostly prevented American Diabetes Association Professional Practice Committee for Diabetes *
 
@@ -2110,6 +2371,7 @@ compared  with  injectable  human  insulins (5-7).  Two  injectable ultra-rapid-
 Despite the advantages of insulin analogs  in  individuals  with  type  1  diabetes, the  expense  and/or  complexity  of  treatment required for their use may be prohibitive  ( Table  9.1 ).  There  are  multiple approaches to insulin treatment.  The
 
 ## Qïprïsïnt=tævïgrïl=tævïg=ttræöutïsgoágænsulængíïlævïryg =ppro=&\_ïsgængpïoplïgwæt\_gtypïg0gíæ=öïtïs
+<!-- rag_metadata source=ADA_2026 section="Qïprïsïnt=tævïgrïl=tævïg=ttræöutïsgoágænsulængíïlævïryg =ppro=&\_ïsgængpïoplïgwæt\_gtypïg0gíæ=öïtïs" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 | Insulin plans | Greater flexibility | Lower risk of hypoglycemia | Higher costs |
 | --- | --- | --- | --- |
@@ -2160,12 +2422,14 @@ Typical multidose insulin treatment plans for adults with type 1 diabetes combin
 The  2021  ADA/European  Association for the Study of Diabetes (EASD) consensus report on the management of type 1 diabetes  in  adults  summarizes  different insulin plans and glucose monitoring strategies  in  individuals  with  type  1  diabetes ( Fig. 9.1 and Table 9.1 ) (4). An individual's treatment  plan  and  insulin-taking  behaviors should be frequently reassessed to attain  individualized  treatment  goals  and assess risk or progression of complications and comorbidities. The timing of reassessment may vary based on time since diagnosis, ability to attain/maintain treatment goals, health status, comorbidities, and individual needs (4,45,59).
 
 ## Initiationyandyadjustmentyofyinsulinyusingymultipleydailyydosingyinyindividualsywithytypeygydiabetes
+<!-- rag_metadata source=ADA_2026 section="Initiationyandyadjustmentyofyinsulinyusingymultipleydailyydosingyinyindividualsywithytypeygydiabetes" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 <!-- image -->
 
 Figure 9.2 -Insulin initiation and adjustment for people with type 1 diabetes using multiple daily dosing. AID, automated insulin delivery; CGM, continuous glucose monitoring; DKA, diabetic ketoacidosis; MDI, multiple daily injections; SMBG, self-monitoring of blood glucose.
 
 ## Insulin Administration Technique
+<!-- rag_metadata source=ADA_2026 section="Insulin Administration Technique" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Ensuring that individuals and/or caregivers understand  correct  insulin  administration technique is  important to  optimize  glycemic  management  and  insulin  use  safety. Advanced  insulin  injection  technique  and education with FITTER Forward expert recommendations have been published elsewhere  outlining  best  practices  for  insulin administration (60). Proper insulin administration technique includes the following: injection,  insertion  of  patch  (for  bolus patch or fixed-rate patch pump) or infusion set (for CSII or AID systems) into appropriate  body  areas,  or  oral  inhalation (inhaled human insulin); injection or infusion  site  rotation;  appropriate  care  of injection  or  infusion  sites  to  avoid  infection or other complications; avoidance of intramuscular  (IM)  insulin  delivery;  and filling  of  the  reservoir  (for  bolus  patch, CSII,  or  AID  systems)  or  inhaler  (for  inhaled  human  insulin)  depending  on  the method  of  administration.  Selection  of method of administration (vial and syringe, insulin pen, insulin patch, inhaled insulin, connected insulin pens/devices, or insulin pumps) will depend on a variety of individual-specific factors  and  needs,  cost and  coverage,  and  individual  preferences.  Reassessment  of  the  appropriate administration technique should be completed during routine follow-up.
 
@@ -2174,6 +2438,7 @@ Exogenously  delivered  insulin  should be injected or infused into subcutaneous
 Injection  or  infusion  site  rotation  is necessary  to  avoid  lipohypertrophy,  an accumulation  of  subcutaneous  fat  in  response to the adipogenic actions of insulin at a site of multiple injections. Lipohypertrophy  appears  as  soft,  smooth  raised areas several centimeters in breadth and can  contribute  to  erratic  insulin  absorption,  increased  glycemic  variability,  and unexplained hypoglycemic episodes. People treated with insulin and/or caregivers should receive education about proper injection or infusion site rotation and how to recognize and avoid injecting in areas of lipohypertrophy (60). As noted in Table 4.1 , examination of insulin administration sites for  the  presence  of  lipohypertrophy,  as well  as  assessment  of  administration  device  use  and  injection  technique,  are  key components of a comprehensive diabetes evaluation and treatment plan. Proper insulin injection, infusion, or inhalation technique may lead to more effective use of this  therapy  and,  as  such,  holds  the  potential for improved clinical outcomes.
 
 ## Noninsulin Treatments for Type 1 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Noninsulin Treatments for Type 1 Diabetes" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Injectable  and  oral  noninsulin  glucoselowering medications have been studied for  their  efficacy  as  adjuncts  to  insulin treatment of type 1 diabetes. Pramlintide is  based on the naturally occurring β -cell peptide amylin and is approved for use in adults with type 1 diabetes. Clinical trials have  demonstrated  a  modest  reduction in A1C (0.3-0.4%) and modest weight loss ( ∼ 1-2  kg)  with  pramlintide  (62).  Similar results  have  been  reported  for  several agents  currently  approved  for  the  treatment of type 2  diabetes. The  addition  of metformin in adults with type 1 diabetes was  associated  with  small  reductions  in body weight, insulin dose, and lipid levels but did not sustainably improve A1C (63,64). The largest clinical trials of glucagonlike peptide 1 receptor agonists (GLP-1 RAs) in  type  1  diabetes have  been conducted with  liraglutide  1.8  mg  daily,  and  results showed modest A1C reductions ( ∼ 0.4%), decreases  in  weight  ( ∼ 5  kg),  and  reductions in insulin doses (65,66). Higher rates of DKA and gastrointestinal side effects have limited their use in type 1 diabetes. Liraglutide  was  also  assessed  for  impact on  C-peptide  in  individuals  with  type  1 diabetes and residual β -cell function. During  treatment  there  was  no  impact  on preservation of β -cell function, but with liraglutide  discontinuation  there  was  worsening  of  C-peptide  loss  compared  with placebo (67). Small retrospective case series and pilot studies have revealed potential benefits on body weight and glycemic metrics  with  addition  of  semaglutide  or tirzepatide for individuals with type 1 diabetes  and  obesity  (68-72).  Prospective studies on use of incretin medications (i.e., GLP-1 RAs or a dual glucose-dependent insulinotropic polypeptide [GIP] and GLP-1 RA) for individuals with type 1 diabetes are ongoing and  include  evaluation  of cardiovascular  and  kidney  outcomes  and  other aspects of care (73-76).
 
@@ -2182,14 +2447,17 @@ Sodium-glucose cotransporter 2 (SGLT2) inhibitors have been studied in clinical 
 There  are  currently  no  approved  therapies for preservation of C-peptide or prolongation of the partial remission (honeymoon) phase in individuals with established stage 3 type 1 diabetes. Teplizumab was approved by the U.S. Food and Drug Administration. (FDA)  in  2022  for  delay  of  the  progression from stage 2 to stage 3 type 1 diabetes (for additional guidance for use in early stage type  1  diabetes,  refer  to  section  3, 'Prevention  or  Delay  of  Diabetes  and Associated  Comorbidities'),  but  it  is  not indicated for those with established stage 3 type 1 diabetes (84). Higher C-peptide levels have been associated with better A1C, lower risk of retinopathy, lower risk of nephropathy, and lower risk of severe hypoglycemia (85). Various therapies, including verapamil, menin inhibitors, Janus kinase inhibitors, antithymocyte globulin, several  monoclonal  antibodies  including teplizumab,  and  cell  therapies,  are  currently under active investigation (86).
 
 ## SURGICAL TREATMENT OF TYPE 1 DIABETES
+<!-- rag_metadata source=ADA_2026 section="SURGICAL TREATMENT OF TYPE 1 DIABETES" topic_tags="inpatient, perioperative" population="T2DM T1DM global" year=2026 -->
 
 ## Pancreas and Islet Transplantation
+<!-- rag_metadata source=ADA_2026 section="Pancreas and Islet Transplantation" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Successful  pancreas  and  islet  transplantation can normalize glucose levels and mitigate microvascular complications of type 1 diabetes. However, people receiving these treatments  require  lifelong  immunosuppression to prevent graft rejection and/or recurrence  of  autoimmune  islet  destruction.  Given  the  potential  adverse  effects of immunosuppressive therapy, pancreas transplantation  should  be  reserved  for people  with  type  1  diabetes  undergoing simultaneous  kidney  transplantation,  following kidney transplantation, or for those with recurrent ketoacidosis or severe hypoglycemia  despite  optimized  glycemic management (87). In much of the world, allogenic  islet  transplantation  is  regulated as an organ transplant. However, in the  U.S.,  allogenic  islet  transplantation  is regulated  as  a  cell  therapy,  and  the  first such allogeneic islet cell therapy , donisleceljujn, was approved in 2023. Donislecel is indicated  for  the  treatment  of  adults  with type  1  diabetes  who  are  unable  to  reach their  A1C  goals  because  of  repeated  episodes of severe hypoglycemia despite intensive  diabetes  management  and  education (88).  Alternative  islet  sources  are  currently under active investigation.
 
 The 2021 ADA/EASD consensus report on the management of type 1 diabetes in adults offers a simplified overview of indications for β -cell  replacement therapy in people with type 1 diabetes ( Fig. 9.3 ) (4).
 
 ## PHARMACOLOGIC THERAPY FOR ADULTS WITH TYPE 2 DIABETES
+<!-- rag_metadata source=ADA_2026 section="PHARMACOLOGIC THERAPY FOR ADULTS WITH TYPE 2 DIABETES" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2284,8 +2552,10 @@ patients. Diabetes Obes Metab 2017;19:216-227 127. Giorgino F, Benroubi M, Sun J
 <!-- source: ADA_2026 | file: ADA_2026_S10.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S10
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S10" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes-2026" topic_tags="cardiovascular, CVD_risk" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S216-S245 | https://doi.org/10.2337/dc26-S010
 
@@ -2316,10 +2586,12 @@ CVD also includes heart failure, and diabetes  is  a  risk  factor  for  inciden
 There  is  an  increasing  appreciation  of the common pathophysiology and interrelationship  of  cardiometabolic  risk  factors leading to both adverse cardiovascular and adverse kidney outcomes in people with diabetes, including ASCVD, heart failure, and chronic kidney disease (CKD) (17,18). These three  comorbidities  are  frequently  caused by metabolic risk, which is frequently driven by  obesity  and  its  associated  risk  factors, and  the  incidence  of  all  three  conditions rises with increasing A1C levels (19). Collectively,  this  combination  of  comorbidities has  been  termed  cardiorenal  metabolic disease or cardiovascular-kidney-metabolic health  (20-22).  Reasons  to  concurrently consider cardiovascular and kidney comorbidities in the management of people with diabetes  include  not  only  the  common metabolic  risk  but  also  the  major  benefit observed  across  the  spectrum  of  CVD, heart  failure,  and  kidney  outcomes  in people with type 2 diabetes treated with sodium-glucose cotransporter (SGLT) inhibitors or glucagon-like peptide 1 receptor  agonists  (GLP-1  RAs).  Therefore,  in addition  to  the  management  of  hyperglycemia,  hypertension,  and  hyperlipidemia,  treatment  with  SGLT  inhibitors and/or  GLP-1  RAs  that  have  demonstrated cardiovascular and kidney benefit is considered a fundamental element of  risk  reduction  and  a  core  pharmacological  strategy  to  improve  cardiovascular and kidney outcomes in people with type 2 diabetes ( Fig. 10.1 ). In addition to the standards of care for the prevention and  treatment  of  CVD  outlined  below, the  reader  is  referred  to  section  9, 'Pharmacologic  Approaches  to  Glycemic Treatment,' and section 11, 'Chronic Kidney Disease and Risk Management,' for a comprehensive review of pharmacological management of hyperglycemia and kidney benefit from SGLT2 inhibitors, SGLT1/2 inhibitors, and GLP-1 RAs.
 
 ## HYPERTENSION AND BLOOD PRESSURE MANAGEMENT
+<!-- rag_metadata source=ADA_2026 section="HYPERTENSION AND BLOOD PRESSURE MANAGEMENT" topic_tags="hypertension, blood_pressure" population="T2DM T1DM global" year=2026 -->
 
 An elevated blood pressure is defined as a systolic  blood  pressure  120-129  mmHg with a diastolic blood pressure < 80 mmHg (23).  Hypertension  is  defined  as  a  systolic blood pressure ≥ 130 mmHg or a diastolic blood pressure ≥ 80 mmHg (23). This is in agreement with the definition of hypertension by the American College of Cardiology and  American  Heart  Association  (23).  Hypertension is common among people with type 1 and type 2 diabetes. Hypertension is a major risk factor for ASCVD, heart failure, and microvascular complications.  Moreover,  numerous  studies  have  shown  that antihypertensive  therapy  reduces  ASCVD events,  heart  failure,  and  microvascular complications.  Please  refer  to  the  ADA position statement 'Diabetes and Hypertension' for a detailed review of the epidemiology, diagnosis, and treatment of  hypertension  (24)  and  hypertension guideline recommendations (25-28). For blood  pressure  goals  and  management in individuals  with  diabetes  who  are pregnant, see section 15, 'Management of Diabetes in Pregnancy' for details.
 
 ## Screening and Diagnosis
+<!-- rag_metadata source=ADA_2026 section="Screening and Diagnosis" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2336,6 +2608,7 @@ Figure 10.1 -Multifactorial approach to reduction in risk of diabetes complicati
 <!-- image -->
 
 ## Treatment Goals
+<!-- rag_metadata source=ADA_2026 section="Treatment Goals" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2368,6 +2641,7 @@ Figure 10.2 -Recommendations for the treatment of confirmed hypertension in nonp
 Absolute  benefit  from  blood  pressure reduction correlated with absolute baseline cardiovascular risk in SPRINT and in earlier clinical  trials  conducted  at  higher  baseline blood pressure levels (50,51). The results of BPROAD and ESPRIT highlight that targeting an on-treatment systolic blood pressure goal  of < 120  mmHg  in  people  with  high cardiovascular risk is associated with reduction  in  cardiovascular  events  compared with systolic blood pressure < 140 mmHg. These benefits should be weighed against treatment-related  adverse  events  such  as hypotension  and  syncope,  which  may  be particularly relevant in older individuals with  orthostatic  hypotension,  substantial comorbidity, functional limitations, or polypharmacy and some individuals who may prefer  higher  blood  pressure  goals  to  enhance quality of life.
 
 ## Treatment Strategies
+<!-- rag_metadata source=ADA_2026 section="Treatment Strategies" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Lifestyle Intervention
 
@@ -2380,6 +2654,7 @@ Lifestyle management is an important component of hypertension treatment because
 These lifestyle interventions are reasonable for  individuals  with  diabetes  and mildly  elevated  blood  pressure  (systolic > 120  mmHg  and  diastolic < 80  mmHg) and  should  be  initiated  along  with  pharmacologic  therapy  when  hypertension  is diagnosed ( Fig. 10.2 ) (53). A lifestyle therapy plan should be developed in collaboration with the person with diabetes and discussed  as  part  of  diabetes  management.  Use  of  internet  or  mobile-based digital  platforms  to  reinforce  healthy  behaviors  may  be  considered  as  a  component of care, as these interventions have been  found  to  enhance  the  efficacy  of medical therapy for hypertension (55,56).
 
 ## PHARMACOLOGIC INTERVENTIONS
+<!-- rag_metadata source=ADA_2026 section="PHARMACOLOGIC INTERVENTIONS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2407,10 +2682,12 @@ Classes  of  Antihypertensive  Medications. Initial  treatment  for  hypertensio
 <!-- source: ADA_2026 | file: ADA_2026_S11.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S11
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S11" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 S246
 
 ## 11.  Chronic  Kidney Disease and Risk Management: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="11.  Chronic  Kidney Disease and Risk Management: Standards of Care in Diabetes-2026" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S246-S260 | https://doi.org/10.2337/dc26-S011
 
@@ -2419,10 +2696,12 @@ The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'
 For prevention and management of diabetes complications in children and adolescents, please refer to section 14, 'Children and Adolescents.'
 
 ## EPIDEMIOLOGY OF DIABETES AND CHRONIC KIDNEY DISEASE
+<!-- rag_metadata source=ADA_2026 section="EPIDEMIOLOGY OF DIABETES AND CHRONIC KIDNEY DISEASE" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 Chronic kidney disease (CKD) is diagnosed by the persistent elevation of urinary albumin excretion (albuminuria), estimated glomerular filtration rate (eGFR) < 60 mL/min/1.73 m 2 , or other manifestations of kidney damage (1). In this section, the focus is on CKD attributed to diabetes in adults, which occurs in 20-40% of people with diabetes (1-4). CKD in people with diabetes typically develops after a duration of 10 years in type 1 diabetes (the most common presentation is 5-15 years after the diagnosis of type 1 diabetes) but may be present at diagnosis of type 2 diabetes. CKD can progress to kidney failure requiring dialysis or kidney transplantation and is the leading cause of kidney failure in the U.S. (5). In addition, among people with type 1 or type 2 diabetes, the presence of CKD markedly increases cardiovascular risk and health care costs (6). The incidence of CKD in people with diabetes has decreased over the last decade but remains high in the U.S. (3) and around the world (7). For details on the management of CKD in children and adolescents with diabetes, please see section 14, 'Children and Adolescents.'
 
 ## ASSESSMENT OF ALBUMINURIA AND ESTIMATED GLOMERULAR FILTRATION RATE
+<!-- rag_metadata source=ADA_2026 section="ASSESSMENT OF ALBUMINURIA AND ESTIMATED GLOMERULAR FILTRATION RATE" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2455,14 +2734,17 @@ Normal  to  mildly  increased  level  of urine  albumin  excretion  is  defined 
 Traditionally, eGFR is calculated from serum creatinine in steady state using a validated formula.  eGFR is  routinely  reported by  laboratories  along  with  serum  creatinine,  and  eGFR  calculators  are  available online at www.kidney.org/professionals/gfr \_calculator .  The  2021  Chronic  Kidney  Disease Epidemiology Collaboration (CKD-EPI) creatinine equation should be used to estimate  GFR  for  everyone  (16,17).  An  eGFR persistently < 60 mL/min/1.73 m 2 and/or a urinary albumin value of > 30 mg/g creatinine is considered abnormal, though optimal  thresholds  for  clinical  diagnosis  are debated  in  older  adults  over  the  age  of 70 years (1,18). Cystatin C, a low-molecular-weight protein produced by all nucleated  cells,  can  be  used  to  calculate  the eGFR particularly in individuals with alterations in  the  generation  of  creatinine such  as  amputation,  frailty,  low  muscle mass, and liver disease. However, cystatin C may also be confounded by non-kidney function factors such as inflammation, age, sex, body  size, thyroid function,  and diabetes. The combination of both filtration  markers  (creatinine  and  cystatin  C) is more accurate and would support better  clinical  decisions  than  either  marker alone (16,19).
 
 ## DIAGNOSIS OF CHRONIC KIDNEY DISEASE IN PEOPLE WITH DIABETES
+<!-- rag_metadata source=ADA_2026 section="DIAGNOSIS OF CHRONIC KIDNEY DISEASE IN PEOPLE WITH DIABETES" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 CKD  in  people  with  diabetes  is  usually  a clinical diagnosis made based on the presence of albuminuria and/or reduced eGFR in  the  absence  of  signs  or  symptoms  of other  primary  causes  of  kidney  damage. The typical presentation of CKD in people with  diabetes  is  considered  to  include long-standing  duration  of  diabetes,  retinopathy,  albuminuria  without  gross  hematuria, and gradually progressive loss of eGFR. However, signs of CKD may be present  at  diagnosis  or  without  retinopathy in type 2 diabetes. Reduced eGFR without albuminuria has been frequently reported in  type  1  and  type  2  diabetes  and  is  becoming  more  common  over  time  as  the prevalence  of  diabetes  increases  in  the U.S. (2,3,18,20,21). An active urinary sediment (containing red or white blood cells or  cellular  casts),  rapidly  increasing  albuminuria or total proteinuria, the presence of nephrotic syndrome, rapidly decreasing eGFR, or the absence of retinopathy (particularly in type 1 diabetes) suggests alternative or additional causes of kidney disease. For individuals with these features, referral to  a  nephrologist  for  further  diagnosis,  including the  possibility of kidney  biopsy, should be considered. It is rare for people with  type  1  diabetes  to  develop  kidney disease  without  retinopathy.  In  type  2 diabetes,  retinopathy  is  only  moderately sensitive  and  specific  for  CKD  caused  by diabetes,  as  confirmed  by  kidney  biopsy (22). It cannot be definitively stated that a person with diabetes and CKD has CKD related to diabetes unless the person has a kidney  biopsy,  as  there  may  be  another cause or multiple causes. Hence, without a biopsy, it is recommended to state that the individual has CKD in a person with diabetes or presumed diabetic nephropathy. Refer to a  nephrologist  if  there  are  any  reasons  to consider another cause of CKD in a person with diabetes with atypical features or multiple comorbidities ( Table 11.1 ).
 
 ## STAGING OF CHRONIC KIDNEY DISEASE
+<!-- rag_metadata source=ADA_2026 section="STAGING OF CHRONIC KIDNEY DISEASE" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 CKD is defined in stages by level of eGFR and albuminuria, with stage G1 and stage G2 CKD defined by evidence of high albuminuria with eGFR ≥ 90 mL/min/1.73 m 2 and eGFR ≥ 60 but < 90 mL/min/1.73 m 2 , respectively.  Stages  G3-G5  CKD  are  defined  by  progressively  lower  ranges  of eGFR  (23). Stage G5  is kidney failure ( Fig.  11.1 ).  At  any  eGFR,  the  degree  of albuminuria  is  associated  with  risk  of cardiovascular  disease  (CVD),  CKD  progression,  and  mortality  (6).  Therefore, there  is  an  additional  subclassification by level of urine albumin ( Fig. 11.1 )  (1). Thus, based on the current classification system,  both  eGFR  and  albuminuria must be quantified to guide treatment decisions.  Quantification  of  eGFR  levels is essential for  modifications  of medication  dosages  or  restrictions  of use ( Fig. 11.1 ) (23,24), and the degree of albuminuria should influence the choice  of  antihypertensive  medications (see section 10, 'Cardiovascular Disease and  Risk  Management')  or  glucoselowering medications (see below). Observed  history  of  eGFR  loss  (which  is also  associated  with  risk  of  CKD  progression and other adverse health outcomes)  and  cause  of  kidney  damage (including  possible  causes  other  than diabetes)  may  also  affect  these  decisions (25).
 
 ## Table 11.1-Reasons to consider nondiabetic kidney diseases in a person with chronic kidney disease and diabetes
+<!-- rag_metadata source=ADA_2026 section="Table 11.1-Reasons to consider nondiabetic kidney diseases in a person with chronic kidney disease and diabetes" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 - Type 1 diabetes duration < 5 years or no retinopathy
 - Active urine sediment (e.g., containing red blood cells or cellular casts)
@@ -2473,6 +2755,7 @@ CKD is defined in stages by level of eGFR and albuminuria, with stage G1 and sta
 Information  adapted  from  Liang  et  al.  (133).  eGFR,  estimated  glomerular  filtration  rate; UACR, urine albumin-to-creatinine ratio.
 
 ## ACUTE KIDNEY INJURY
+<!-- rag_metadata source=ADA_2026 section="ACUTE KIDNEY INJURY" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 Acute  kidney  injury  (AKI)  is  defined  as  a rapid  decline  in  kidney  function,  typically within a short period (hours to days), characterized  by  increase  in  serum  creatinine and/or decrease in urine output (26). People with diabetes are at higher risk of AKI than those without diabetes (27). The rates of hospitalizations for AKI requiring dialysis are five times higher in adults with diabetes compared with adults without diabetes (risk ratio 5.0; 95% CI 4.8-5.1) (28). Other risk factors for AKI include preexisting CKD, the  use  of  medications  that  cause  kidney injury (e.g., nonsteroidal anti-inflammatory drugs),  certain  intravenous  dyes  (e.g.,  iodinated radiocontrast agents), and the use of  medications  that  alter  kidney  blood flow  and  intrakidney  hemodynamics.  In particular,  many  antihypertensive  medications (e.g., diuretics, ACE inhibitors, and angiotensin receptor  blockers [ARBs])  can reduce intravascular volume, kidney blood flow,  and/or  glomerular  filtration.  There was concern that sodium-glucose cotransporter  2  (SGLT2)  inhibitors  may  promote AKI through volume depletion, particularly when  combined  with  diuretics  or  other medications that reduce glomerular filtration; however, this has not been found to be true in  randomized controlled  trials  of advanced kidney disease (29) or high CVD risk  with  normal  kidney  function  (30-32). Nonsteroidal mineralocorticoid receptor antagonists (nsMRAs) do not increase the risk of  AKI  when used to slow kidney disease progression (33). Timely identification and treatment of AKI is important because AKI  is  associated  with  increased  risks  of progressive  CKD  and  other  poor  health outcomes (34).
 
@@ -2481,6 +2764,7 @@ Elevations  in  serum  creatinine  (up  to 30% from baseline) with renin-angiote
 Accordingly,  ACE  inhibitors  and  ARBs should not  be  discontinued  for  increases in  serum  creatinine  ( < 30%)  in  the  absence  of  volume  depletion.  Similar  rises in  creatinine  are seen  at  the  initiation  of SGLT2  inhibitors  and  glucagon-like  peptide  1  receptor  agonists  (GLP-1  RA)  due to  hemodynamic  changes  in  the  tubuloglomerular feedback, and the medication should not be discontinued.
 
 ## SURVEILLANCE
+<!-- rag_metadata source=ADA_2026 section="SURVEILLANCE" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -2508,10 +2792,12 @@ at submaximal of RAS blockade (44). Remission of albuminuria may occur spontaneo
 The  prevalence  of  CKD  complications correlates  with  eGFR  (40).  When  eGFR is < 60 mL/min/1.73 m 2 , screening for complications  of  CKD  is  indicated  ( Table 11.2 ). Early vaccination against hepatitis B virus is  indicated in  individuals  likely  to  progress  to  kidney  failure  (see  section  4, 'Comprehensive Medical Evaluation and Assessment  of  Comorbidities,'  for  further information on immunization).
 
 ## Prevention
+<!-- rag_metadata source=ADA_2026 section="Prevention" topic_tags="prevention, prediabetes" population="T2DM T1DM global" year=2026 -->
 
 Real-world data demonstrate less benefit  on  cardiovascular and kidney outcomes The only proven primary prevention interventions for CKD in people with diabetes  are  blood  glucose  (A1C  goal  of 7%)  and  blood  pressure  management ( < 130/80 mmHg). There is no evidence that RAS inhibitors or any other interventions  prevent  the  development  of CKD in the absence of hypertension or albuminuria. Thus,  the  American  Diabetes
 
 ## Table 11.3-Interventions that lower albuminuria
+<!-- rag_metadata source=ADA_2026 section="Table 11.3-Interventions that lower albuminuria" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 - Blood glucose management
 - Blood pressure management
@@ -2527,8 +2813,10 @@ ARB,  angiotensin  receptor  blocker;  GLP-1  RA,  glucagon-like  peptide  1  re
 Association does not recommend routine use  of  these  medications  solely  for  the purpose  of  prevention  of  the  development of CKD. In 2023, the Glycemia Reduction Approaches in Diabetes: A Comparative  Effectiveness  Study  (GRADE) was published (47). This large prospective study compared liraglutide,  sitagliptin,  glimeperide, and insulin glargine with respect to achieving and maintaining A1C goals in people  with  type  2  diabetes  treated  with metformin  monotherapy;  kidney  and  cardiovascular  end  points  were  examined  as secondary outcomes. A total of 5,047 participants  were  enrolled  from  July  2013  to August 2017 and were followed for an average  of  5  years.  Almost  all  participants  did not have signs of kidney disease at the time of enrollment. No differences between the examined medications were observed for kidney-protective effects  among  these medications for prevention. Of note, SGLT2 inhibitors  were  not  included  in  the  study, as  these  medications  were  not  routinely available at the time the study started.
 
 ## INTERVENTIONS
+<!-- rag_metadata source=ADA_2026 section="INTERVENTIONS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Nutrition
+<!-- rag_metadata source=ADA_2026 section="Nutrition" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -2539,6 +2827,7 @@ For  people  with  stage  G3-G5  nondialysis-dependent CKD, protein intake shoul
 Restriction  of  dietary  sodium  (to < 2,300  mg/day)  may  be  useful  to  manage blood pressure and reduce cardiovascular risk (51,52), and individualization of potassium  intake  may  be  necessary  to manage serum potassium concentrations (27,38,39).  These  interventions  may  be most  important  for  individuals  with  reduced eGFR, for whom urinary excretion of  sodium  and  potassium  may  be  impaired. For individuals on dialysis, higher levels  of  protein  intake  should  be  considered  since protein-energy  wasting  is  a major problem for some individuals on dialysis  (53).  Recommendations  for  sodium and potassium intake should be individualized based on comorbid conditions, medication use, blood pressure, and laboratory data. Medical nutrition therapy by a registered dietitian nutritionist is highly successful  in  achieving  the  sodium  and  protein intake goals in individuals with CKD.
 
 ## Glycemic Goals
+<!-- rag_metadata source=ADA_2026 section="Glycemic Goals" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -2549,6 +2838,7 @@ Intensive lowering of blood glucose with the goal of achieving near-normoglycemi
 The presence of CKD affects the risks and  benefits  of  intensive  lowering  of blood  glucose  and  a  number  of  specific glucose-lowering medications. Adverse effects  of  intensive  management  of  blood glucose  levels  (hypoglycemia  and  mortality)  were  increased  among  people  with kidney disease at baseline (58). Moreover, there  is  a  lag  time  of  at  least  2  years  in type 2 diabetes to over 10 years in type 1 diabetes for the effects of intensive glucose control  to  manifest  as  improved  eGFR outcomes  (59-61).  Therefore,  in  some people with prevalent CKD and substantial  comorbidity,  treatment  may  be  less intensive (i.e., A1C goals may be higher) to  decrease  the  risk  of  hypoglycemia (1,62). A1C levels are also less reliable at advanced  CKD  stages  (63,64).  Therefore, glycated albumin and fructosamine, which reflect  average  glycemia  over  a  shorter time  (15-30  days),  are  helpful  in  clinical management (65,66).
 
 ## Blood Pressure and Use of ACE Inhibitors and Angiotensin Receptor Blockers
+<!-- rag_metadata source=ADA_2026 section="Blood Pressure and Use of ACE Inhibitors and Angiotensin Receptor Blockers" topic_tags="hypertension, blood_pressure" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2589,9 +2879,11 @@ diabetes and normal urinary albumin excretion, an ARB reduced or suppressed the 
 Two clinical trials studied the combinations  of  ACE  inhibitors  and  ARBs  and found  no  benefits  on  CVD  or  CKD,  and the  medication  combination  had  higher adverse event rates (hyperkalemia and/or AKI) (95,96). Therefore, the combined use of  ACE  inhibitors  and  ARBs  should  be avoided.
 
 ## Direct Kidney Effects of Glucose-Lowering Medications
+<!-- rag_metadata source=ADA_2026 section="Direct Kidney Effects of Glucose-Lowering Medications" topic_tags="CKD, renal_dosing, eGFR" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 11.7a For people with type 2 diabetes and CKD, use of a sodium-glucose cotransporter  2  (SGLT2)  inhibitor  with demonstrated  benefit  to  reduce  CKD progression and cardiovascular events is recommended. SGLT2 inhibitors should be  initiated  in  individuals  with  eGFR ≥ 20  mL/min/1.73  m 2 but  can  safely continue until kidney failure. A 11.7b To  reduce  kidney  disease  progression and cardiovascular risk in people with type 2 diabetes and CKD, a glucagon-like peptide 1 agonist with demonstrated  benefit  in  this  population is recommended. A
 
 Some glucose-lowering medications also have effects on the kidney that are direct, i.e.,  not mediated through glycemia. For example, SGLT2 inhibitors reduce kidney tubular  glucose  reabsorption,  weight, systemic blood pressure, intraglomerular pressure, and albuminuria and slow GFR loss through mechanisms that appear independent of glycemia (31,97-101). Moreover, recent data support the notion that SGLT2  inhibitors reduce  oxidative stress  in  the  kidney  by > 50%  and  blunt increases  in  angiotensinogen  as  well  as reduce NLRP3 inflammasome activity (100,102,103). GLP-1 RAs have also been shown  to  improve  kidney  outcomes (104-109).  Nonmetabolic  mechanisms by which GLP-1 RAs are believed to protect the kidney include anti-inflammatory,
@@ -2611,8 +2903,10 @@ Figure 11.2 -Holistic approach for improving outcomes in people with diabetes an
 <!-- source: ADA_2026 | file: ADA_2026_S12.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S12
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S12" topic_tags="elderly, geriatric" population="T2DM T1DM global" year=2026 -->
 
 ## 12.  Retinopathy,  Neuropathy, and Foot Care: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="12.  Retinopathy,  Neuropathy, and Foot Care: Standards of Care in Diabetes-2026" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S261-S276 | https://doi.org/10.2337/dc26-S012
 
@@ -2621,6 +2915,7 @@ The American Diabetes Association (ADA) 'Standards of Care in Diabetes' includes
 Diabetes is defined by hyperglycemia (1). Chronic hyperglycemia is the best-established concomitant risk factor associated with microvascular complications (e.g., diabetic retinopathy and neuropathy). Optimizing glycemic management has the beneficial impact of preventing or delaying microvascular disease in diabetes. For example, the Diabetes Control and Complications Trial/Epidemiology of Diabetes Interventions and Complications (DCCT/EDIC) study in people with type 1 diabetes showed that the early beneficial  effects  of  intensive  (A1C ∼ 7% [ ∼ 53 mmol/mol]) versus conventional (A1C ∼ 9% [ ∼ 75 mmol/mol]) therapy on microvascular complications persisted for ∼ 10 years after the  convergence  of  A1C  levels  in  the  two  groups  during  the  EDIC  follow-up-a  novel concept, termed metabolic memory, in which a period of near-normal glycemia produces  long-term  beneficial  effects  on  complications,  with  such  effects  persisting  even though subsequent levels of glycemia may have risen (2,3). Many mechanisms may  mediate  the  effects  of  chronic  hyperglycemia  on  complications,  including glycation, lipoxidation, inflammation, apoptosis, and epigenetic and other intracellular processes (4).
 
 ## DIABETIC RETINOPATHY
+<!-- rag_metadata source=ADA_2026 section="DIABETIC RETINOPATHY" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2647,6 +2942,7 @@ There  are  conflicting  data  on  the  impact  of  glucagon-like  peptide  1  r
 In  contrast,  GLP-1  RAs  may  have  ocular benefits. For example, several studies have shown an association with GLP-1 RAs and lower intraocular pressure (23) as well as a reduced risk of glaucoma (24,25).
 
 ## Screening
+<!-- rag_metadata source=ADA_2026 section="Screening" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2669,20 +2965,24 @@ Diabetic  retinopathy  screening  should be performed using validated approaches
 Retinal photography with remote reading by experts has great potential to provide  screening  services  in  areas  where qualified  eye  care  professionals  are  not readily  available  (31,32).  High-quality  fundus photographs can detect most clinically significant diabetic retinopathy. Interpretation of the images should be performed by a  trained  eye care professional or reading center technician or by artificial intelligence (AI) programs that are U.S. Food and Drug Administration (FDA) approved for this purpose.  Retinal  photography  may  also  enhance  efficiency  and  reduce  costs  when the  expertise  of  ophthalmologists  can  be used for  more  complex examinations  and for  treatment (31,33,34). In-person exams are still necessary when the retinal photographs are of unacceptable quality and for  follow-up  if  abnormalities  are  detected.  Retinal  photographs  are  not  a substitute for dilated comprehensive eye exams,  which  should  be  performed  at least initially and at yearly intervals thereafter or more frequently as recommended by  an  eye  care  professional.  AI  systems that detect  more than mild diabetic retinopathy and DME that have been authorized  for  use  by  the  FDA  represent  an alternative to traditional screening  approaches  (35).  Three  AI  platforms  have been  approved  by  the  FDA  for  diabetic retinopathy  screening  and  examination: AEYE  diagnostic  screening  technology,  or AEYE-DS (AEYE Health); EyeArt AI screening system (Eyenuk); and LumineticsCore, formerly  IDx-DR  (Digital  Diagnostics). These services  are  covered  by  most  insurance plans. Prospective multicenter clinical trials on diagnostic accuracy have been published  for  each  platform  (36).  However, the benefits and optimal utilization of this type of screening have yet to be fully determined.  Results  of  all  screening  eye examinations should be documented and transmitted  to  the  referring  health  care professional.
 
 ## Type 1 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Type 1 Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Because retinopathy is estimated to take at least 5 years to develop after the onset of hyperglycemia, people with type 1 diabetes  should  have  an  initial  dilated  and comprehensive  eye  examination  5  years after the diagnosis of diabetes (30).
 
 ## Type 2 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Type 2 Diabetes" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 People  with  type  2  diabetes  who  may have had undiagnosed hyperglycemia for years and have a significant risk of prevalent  diabetic  retinopathy  at  the  time  of diabetes diagnosis should have an initial dilated and comprehensive eye examination at the time of diagnosis.
 
 ## Pregnancy
+<!-- rag_metadata source=ADA_2026 section="Pregnancy" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 Individuals who develop gestational diabetes  mellitus  do  not  require  eye  examinations during pregnancy, since they do not appear to be at increased risk of developing diabetic retinopathy during pregnancy (37).  However,  individuals  of  childbearing potential with preexisting type 1 or type 2 diabetes  who  are  planning  pregnancy or who have become pregnant should be  counseled  on  the  baseline  prevalence  and  risk  of  development  and/or progression  of diabetic  retinopathy.  In  a systematic  review  and  meta-analysis  of 18 observational studies of pregnant individuals with preexisting type 1 or type 2 diabetes,  the  prevalence  of  any  diabetic retinopathy  and  PDR  in  early  pregnancy was  52.3%  and  6.1%,  respectively.  The pooled progression rate per 100 pregnancies for new diabetic retinopathy development was 15.0 (95% CI 9.9-20.8), worsened  nonproliferative  diabetic  retinopathy  was  31.0  (95%  CI  23.2-39.2), pooled sight-threatening progression rate from  nonproliferative  diabetic  retinopathy to PDR was 6.3 (95% CI 3.3-10.0), and worsened  PDR  was  37.0  (95%  CI  21.254.0), demonstrating that close follow-up should  be  maintained  during  pregnancy to  prevent  vision  loss  (38).  In  addition, rapid  implementation  of  intensive  glycemic  management  in  the  setting  of  retinopathy  may  be  associated  with  early worsening of retinopathy (similar to what has been seen with GLP-1 RA therapy in nonpregnancy  settings),  and  these  individuals  may  also  benefit  from  more  frequent follow-up initially (39).
 
 A systematic review and meta-analysis and a randomized controlled trial demonstrate  that  pregnancy  in  individuals  with type 1 diabetes may aggravate retinopathy  and  threaten vision,  especially  when glycemic  management  is  suboptimal  or retinopathy  severity  is  advanced  at  the time of conception (38,39). Laser photocoagulation  can  minimize  the  risk  of  vision loss during pregnancy for individuals with  high-risk  PDR  or  center-involved DME (39). The use of anti-vascular endothelial growth factor (anti-VEGF) injections in  pregnant individuals may be justified if the potential benefit outweighs the potential risk to the fetus and only if clearly indicated (40). Current anti-VEGF medications have been assigned to pregnancy category C by the FDA (animal studies have revealed evidence of embryo-fetal toxicity, but there are  no  controlled  data  in  human  pregnancy),  and  caution  should  be  used  in pregnant individuals with diabetes because of  theoretical  risks  to  the  vasculature  of the developing fetus.
 
 ## Treatment
+<!-- rag_metadata source=ADA_2026 section="Treatment" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Two of the main motivations for screening for diabetic retinopathy are to prevent loss of vision and to intervene with treatment when vision loss can be prevented or reversed.
 
@@ -2701,10 +3001,12 @@ Two of the main motivations for screening for diabetic retinopathy are to preven
 12.14 The presence of retinopathy is not a contraindication to aspirin therapy for cardioprotection, as aspirin does not  increase  the  risk  of  retinal  hemorrhage. A
 
 ## Photocoagulation Therapy
+<!-- rag_metadata source=ADA_2026 section="Photocoagulation Therapy" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Two large trials, the Diabetic Retinopathy Study  (DRS)  in  individuals  with  PDR  and the Early Treatment Diabetic Retinopathy Study (ETDRS) in individuals with macular edema, provide the strongest support for the therapeutic benefits of laser photocoagulation  therapy. The  DRS  (41)  showed that panretinal photocoagulation reduced the  risk  of  severe  vision  loss  from  PDR from 15.9% in untreated eyes to 6.4% in treated eyes with the greatest benefit ratio in those with more advanced baseline disease  (disc  neovascularization  or  vitreous  hemorrhage).  Later,  the  ETDRS verified the benefits of panretinal photocoagulation  for  high-risk  PDR  and  in older-onset individuals with severe nonproliferative diabetic retinopathy or lessthan-high-risk  PDR  (42).  Panretinal  laser photocoagulation is still commonly used to  manage  PDR.  A  macular  focal/grid laser  photocoagulation  technique  was shown  in  the  ETDRS  to  be  effective  in treating eyes with clinically significant macular  edema  from diabetes  (42),  but  this  is now largely considered a second-line treatment of DME.
 
 ## Anti-VEGF Treatment
+<!-- rag_metadata source=ADA_2026 section="Anti-VEGF Treatment" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Data from the DRCR Retina Network (formerly  the  Diabetic  Retinopathy  Clinical Research  Network)  and  others  demonstrate  that  intravitreal  injections  of  antiVEGF  agents  are  effective  at  regressing proliferative disease and lead to noninferior  or  superior  visual  acuity  outcomes compared with panretinal laser over 2 years of  follow-up  (43,44).  In  addition,  it  was  observed that individuals treated with ranibizumab  tended  to  have  less peripheral visual field loss, fewer vitrectomy surgeries for secondary complications from their proliferative disease, and a lower risk of developing DME (43). However, a potential drawback  in  using  anti-VEGF  therapy  to manage proliferative disease is that individuals  were  required  to  have  a  greater number  of  visits  and  received  a  greater number of treatments than is typically required for management by panretinal laser,  which  may not  be optimal for some individuals. Additionally, unlike panretinal laser, anti-VEGF therapy requires participation in scheduled follow-up. Individuals with  nonintentional  lapses  in  treatment are at risk for worse visual acuity and anatomic outcomes (45). Subsequently, there is variability in treatment patterns among eye specialists,  with  treatment  plans  tailored to the individual person.
 
@@ -2715,12 +3017,14 @@ While  the  ETDRS  (42)  established  the benefit  of  focal  laser  photocoagul
 Eyes that have persistent DME despite anti-VEGF  treatment  may  benefit  from macular laser photocoagulation or intravitreal therapy with corticosteroids (53). Both of these therapies are also reasonable first-line approaches for individuals who are not candidates for anti-VEGF treatment due to systemic considerations such as pregnancy.
 
 ## Adjunctive Therapy
+<!-- rag_metadata source=ADA_2026 section="Adjunctive Therapy" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Lowering blood pressure has been shown to  decrease  retinopathy  progression,  although strict goals (systolic blood pressure < 120 mmHg) do not impart additional benefit (10). The presence of retinopathy is not a  contraindication  to  aspirin  therapy  for cardioprotection,  as  aspirin  does  not  increase  the  risk  of  retinal  hemorrhage (54). In individuals with dyslipidemia, retinopathy  progression  may  be  slowed  by the  addition  of  fenofibrate,  particularly with early diabetic retinopathy at baseline
 
 (55-57). Statins are widely used to reduce the  risk  of  vascular  disease,  including  diabetic  retinopathy.  Their  beneficial  role  in type  2  diabetes  is  well  established  even in individuals with retinopathy at diagnosis. In particular, the sight-threatening types of retinopathy,  including  DME  and PDR, are reduced with statin use (58). Pioglitazone and rosiglitazone  treatment might be associated with development or worsening of DME, although the evidence is conflicting (59).
 
 ## Visual Rehabilitation
+<!-- rag_metadata source=ADA_2026 section="Visual Rehabilitation" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -2733,6 +3037,7 @@ In the U.S., ∼ 12% of adults with diabetes have  some  level  of  vision  impa
 People with diabetes are at increased risk  of  chronic  vision  loss,  subsequent functional decline, and resulting disability. Vision  impairment  has  physical,  psychological, behavioral, and social consequences that affect people with diabetes, their families,  friends,  and  caregivers.  Health care professionals and stakeholders may not be aware of the overall impact of vision loss on  an  individual's  health  and  well-being. People  with  diabetes-related  vision  loss should be evaluated to determine their potential to benefit from comprehensive vision restoration.  Vision  rehabilitation  can  help people  with  vision  loss  achieve  maximum function, independence, and quality of life.
 
 ## NEUROPATHY
+<!-- rag_metadata source=ADA_2026 section="NEUROPATHY" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Diabetic neuropathies are a heterogeneous group  of  disorders  with  diverse  clinical manifestations  (4). The  early  recognition and appropriate management of neuropathy in people with diabetes is important (62).  Points  to  be  aware  of  include  the following:
 
@@ -2741,19 +3046,23 @@ Diabetic neuropathies are a heterogeneous group  of  disorders  with  diverse  c
 3.  Recognition and treatment of autonomic neuropathy may improve symptoms, reduce  sequelae,  and  improve  quality  of life  (63).  Cardiovascular autonomic  neuropathy (CAN) can be a serious complication, as it can exacerbate cardiovascular disease  and  contribute  to  heart  failure and sudden cardiac death (62).
 
 ## Screening
+<!-- rag_metadata source=ADA_2026 section="Screening" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 12.17 All people with diabetes should be assessed for diabetic peripheral neuropathy  starting  at  diagnosis  of  type  2 diabetes and 5 years after the diagnosis of type 1 diabetes and at least annually thereafter . B
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 12.18 Assessment for distal symmetric polyneuropathy should include a careful history and assessment of either temperature  or  pinprick  sensation  (small-fiber function) and vibration sensation using a  128-Hz  tuning  fork  (large-fiber  function).  All  people  with  diabetes  should have annual 10-g monofilament testing to  identify  feet  at  risk  for  ulceration and amputation. B
 - 12.19 Symptoms  and  signs  of  autonomic neuropathy should be assessed in people with diabetes starting at diagnosis of type 2 diabetes and 5 years after the diagnosis of type 1 diabetes, and  at  least  annually  thereafter,  and
 
 with  evidence  of  other  microvascular complications,  particularly  kidney  disease and diabetic peripheral neuropathy. Screening can include asking about orthostatic dizziness, syncope, early satiety,  erectile  dysfunction,  changes  in sweating patterns, or dry cracked skin in the extremities. Signs of autonomic neuropathy include orthostatic hypotension, a resting tachycardia, or evidence of peripheral dryness or cracking of skin. E
 
 ## Diagnosis
+<!-- rag_metadata source=ADA_2026 section="Diagnosis" topic_tags="diagnosis, classification" population="T2DM T1DM global" year=2026 -->
 
 ## Diabetic Peripheral Neuropathy
+<!-- rag_metadata source=ADA_2026 section="Diabetic Peripheral Neuropathy" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Individuals who have had type 1 diabetes for 5 years and all individuals with type 2 diabetes should be assessed annually for DPN  using  medical  history  and  simple clinical tests (63). Symptoms and signs of DPN  vary  according  to  the  class  of  sensory  fibers  involved.  The  most  common early  symptoms  are  induced  by  the  involvement  of  small  fibers  and  include pain  and  dysesthesia  (unpleasant  sensations of burning and tingling). The involvement  of  large  fibers  may  cause  balance issues  (including  falls),  numbness,  and loss of protective sensation (LOPS). LOPS is a risk factor for DFU due to predisposition  to  unrecognized  minor  trauma. The following clinical tests may be used to assess  small-  and  large-fiber  function  and protective sensation:
 
@@ -2766,48 +3075,61 @@ These  tests  not  only  screen  for  the presence of dysfunction but also predi
 In  all  people  with  diabetes  and  DPN, causes of neuropathy other than diabetes should  be  considered,  including  toxins (e.g., alcohol), neurotoxic medications (e.g., chemotherapy),  vitamin  B12  (especially  in those  treated  chronically  with  metformin) and other nutritional deficiencies  (e.g.,  acquired  copper  deficiency  after  metabolic surgery),  hypothyroidism,  kidney  disease, malignancies (e.g., multiple myeloma, bronchogenic  carcinoma),  infections  (e.g.,  HIV , hepatitis  C),  chronic  inflammatory  demyelinating neuropathy, inherited neuropathies,  and  vasculitis  (67).  See  the American Diabetes Association position statement 'Diabetic Neuropathy' for more details (63).
 
 ## Diabetic Autonomic Neuropathy
+<!-- rag_metadata source=ADA_2026 section="Diabetic Autonomic Neuropathy" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Individuals who have had type 1 diabetes for 5 years and all individuals with type 2 diabetes should be assessed annually for autonomic  neuropathy  (63).  The  symptoms and signs of autonomic neuropathy should be elicited carefully during the history and physical examination. Major clinical manifestations of diabetic autonomic neuropathy  include  resting  tachycardia, orthostatic hypotension, gastroparesis, constipation, diarrhea, fecal incontinence, erectile dysfunction, neurogenic bladder, and  sudomotor  dysfunction  with  either increased or decreased sweating. Screening for symptoms of autonomic neuropathy  includes  asking  about  symptoms  of orthostatic intolerance  (dizziness, lightheadedness, or weakness with standing), syncope,  exercise  intolerance,  constipation,  diarrhea,  urinary  retention,  urinary incontinence,  or  changes  in  sweat  function. Further testing can be considered if symptoms  are  present  and  will  depend on the end organ involved but might include  cardiovascular  autonomic  testing, sweat testing, urodynamic studies, gastric emptying, endoscopy or colonoscopy. Impaired counterregulatory responses to hypoglycemia in type 1 and type 2 diabetes can lead to impaired hypoglycemia awareness  but  are  not  directly  linked  to  autonomic neuropathy.
 
 ## Cardiovascular Autonomic Neuropathy
+<!-- rag_metadata source=ADA_2026 section="Cardiovascular Autonomic Neuropathy" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 CAN is associated with mortality independent  of  other  cardiovascular  risk  factors (68,69).  In  its  early  stages,  CAN  may  be completely  asymptomatic  and  detected only  by  decreased  heart  rate  variability with  deep  breathing.  Advanced  disease may be associated with resting tachycardia ( > 100 bpm) and orthostatic hypotension  (a  fall  in  systolic  or  diastolic  blood pressure  by > 20  mmHg  or > 10  mmHg, respectively,  upon  standing  without  an appropriate increase in heart rate).
 
 ## Gastrointestinal Neuropathies
+<!-- rag_metadata source=ADA_2026 section="Gastrointestinal Neuropathies" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Gastrointestinal neuropathies are a diagnosis of exclusion (including consideration of gastrointestinal adverse effects due to medications  such  as  metformin  and/or GLP-1-based therapy). They may involve any  portion  of  the  gastrointestinal  tract, with manifestations including esophageal dysmotility, gastroparesis, biliary dysfunction,  constipation, diarrhea, and fecal incontinence (70). Gastroparesis should be suspected  in  individuals  with  erratic  glycemic management or with upper gastrointestinal  symptoms  without  another identified cause. Exclusion of reversible/ iatrogenic  causes  such  as  medications (e.g.,  certain  GLP-1-based  therapies, opioids) or organic causes of gastric outlet obstruction  or  peptic  ulcer  disease  (endoscopy and/or imaging) is needed before considering  a  diagnosis  of  or  specialized testing for gastroparesis. The diagnostic gold  standard  for  gastroparesis  is  the measurement of gastric emptying with scintigraphy of digestible solids at 15-min intervals for 4 h after food intake. The use of 13 C  octanoic  acid  breath  test  is  an approved alternative.
 
 ## Genitourinary Disturbances
+<!-- rag_metadata source=ADA_2026 section="Genitourinary Disturbances" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Diabetic  autonomic  neuropathy  may  also cause genitourinary disturbances, including sexual  dysfunction  and  bladder  dysfunction. In men, diabetic autonomic neuropathy may cause erectile dysfunction and/or retrograde ejaculation (63). Female sexual dysfunction  occurs  more  frequently  in those with diabetes and presents as decreased sexual desire, increased pain during  intercourse,  decreased  sexual  arousal, and inadequate lubrication (71). Lower urinary  tract  symptoms  manifest  as  urinary incontinence and bladder dysfunction (nocturia,  frequent  urination,  urinary  urgency, and weak urinary stream). Evaluation of bladder  function  should  be  performed for  individuals  with  diabetes  who  have recurrent urinary tract infections, pyelonephritis,  incontinence,  or  a  palpable bladder.
 
 ## Treatment
+<!-- rag_metadata source=ADA_2026 section="Treatment" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Specific treatment to reverse the underlying nerve damage in diabetes is currently not available.  Optimal  glycemic  management  can  effectively  prevent  DPN  and CAN  in  type  1  diabetes  (72,73)  and  may modestly slow their progression in type 2 diabetes  (74),  but  it  does  not  reverse neuronal loss. Treatments of other modifiable  risk  factors  (including  obesity,  lipids, and blood pressure) can aid in prevention of DPN progression in type 2 diabetes and may reduce disease progression in type 1 diabetes (75-78). Therapeutic strategies (pharmacologic  and  nonpharmacologic) for  the  relief  of  painful  DPN  and  symptoms of  autonomic  neuropathy can  potentially  reduce  pain  (63)  and  improve quality of life. CAN treatment is generally focused on alleviating symptoms.
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 12.20 Optimize  glucose  management to  prevent  or  delay  the  development of neuropathy in people with type 1 diabetes A and to slow the progression  of  neuropathy  in  people  with type 2 diabetes. C Optimize weight, blood pressure, and lipid management to reduce the risk or slow the progression of diabetic neuropathy. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 12.21 Assess and treat pain related to diabetic peripheral neuropathy B and symptoms  of  autonomic  neuropathy to improve quality of life. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 12.22 Gabapentinoids, serotoninnorepinephrine reuptake inhibitors, tricyclic  antidepressants,  and  sodium channel  blockers  are  recommended as  initial  pharmacologic  treatments for  neuropathic  pain  in  diabetes. A Combinations of these medications can provide additional relief of neuropathic pain. A Opioids, including tramadol and tapentadol,  should  not  be  used  for neuropathic pain treatment in diabetes  given  the  potential  for  adverse events except in rare circumstances. B
 
 ## Glycemic Management
+<!-- rag_metadata source=ADA_2026 section="Glycemic Management" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Optimal  glycemic  management,  implemented early in the course of diabetes, has  been  shown  to  effectively  delay  or prevent  the  development  of  DPN  and CAN  in  people  with  type  1  diabetes (6,79-82). Although the evidence for the benefit of optimal glycemic management is  not  as  strong  for  type  2  diabetes, some studies have demonstrated a modest slowing of progression without reversal  of  neuronal  loss  (74,83).  Specific glucose-lowering strategies may have different effects. In a post hoc analysis, participants,  particularly  men, in the  Bypass Angioplasty Revascularization Investigation in  Type  2  Diabetes  (BARI  2D)  trial  treated with  insulin  sensitizers  had  a  lower  incidence of distal symmetric polyneuropathy over 4 years than those treated with insulin or sulfonylurea (84). Additionally, evidence from the Action to Control Cardiovascular Risk  in  Diabetes  (ACCORD)  trial  showed benefit  of  intensive  glucose  and  blood pressure management on the prevention of CAN in type 2 diabetes (85).
 
 ## Weight Management
+<!-- rag_metadata source=ADA_2026 section="Weight Management" topic_tags="obesity, weight_management" population="T2DM T1DM global" year=2026 -->
 
 Obesity  is  consistently  associated  with neuropathy in cross-sectional and longitudinal studies (86). While obesity has been established  as  a  risk  factor  for  neuropathy, including in those with diabetes, the treatment  of  obesity  and  its  impact  on neuropathy outcomes are less well studied. The Look AHEAD (Action for Health in Diabetes)  randomized  trial  found  that  a lifestyle intervention primarily focused on dietary  weight loss led to  improvements in neuropathy symptoms but not neuropathy  examination  scores  (75).  Observational  studies  of  metabolic  surgery  have also  revealed  improvements in neuropathy outcomes, but  randomized  trials  are lacking (77,78). Studies are emerging regarding  weight  loss  medications  and  neuropathy; however, results have been conflicting and further studies are needed (87). Clinical evidence of potential benefits of GLP-1 RA agents on DPN is still controversial and limited  (88).  In  contrast,  altered  skin  sensation,  including  allodynia  (i.e.,  pain  evoked by  contact,  e.g.,  with  socks,  shoes,  and bedclothes), has been described with use of  either  GLP-1  RA  (89)  or  dual  glucosedependent  insulinotropic  polypeptide  and GLP-1  RA  agents  (90).  Exercise  often  leads to a small reduction in weight and may also have positive effects on diabetic neuropathy. Two  systematic  reviews  have  shown that exercise interventions improve diabetic neuropathy outcomes, including symptoms, examination  findings,  balance,  and  functional assessments, but the strength of the evidence is low (91,92).
 
 ## Lipid Management
+<!-- rag_metadata source=ADA_2026 section="Lipid Management" topic_tags="dyslipidemia, lipids, statins" population="T2DM T1DM global" year=2026 -->
 
 Dyslipidemia is a key factor in the development of neuropathy in people with type 2 diabetes  and  may contribute  to  neuropathy  risk  in  people  with  type  1  diabetes (93,94).  Although  the  evidence  for  a  relationship  between  lipids  and  neuropathy development  has  become  increasingly clear in type 2 diabetes (with high triglycerides  showing  the  strongest  relationship), the  optimal  therapeutic  intervention  has not been  identified. Positive effects of physical activity, weight loss, and metabolic surgery  have  been  reported  in  individuals with DPN, but use of conventional lipid-lowering pharmacotherapy (such as statins or fibrates) does not appear to be effective in  treating  or  preventing  DPN  development (95).
 
 ## Blood Pressure Management
+<!-- rag_metadata source=ADA_2026 section="Blood Pressure Management" topic_tags="hypertension, blood_pressure" population="T2DM T1DM global" year=2026 -->
 
 There are multiple reasons for blood pressure management in people with diabetes, and neuropathy progression (especially in type 2 diabetes)  has now been added to this list. Although data from many studies have  supported  the  role  of  hypertension in the risk of neuropathy development, a meta-analysis of data from 14 countries  in  the  International  Prevalence and Treatment of Diabetes and Depression (INTERPRET-DD) study revealed hypertension as an independent risk factor for DPN development  with  an  odds  ratio  of  1.58 (95%  CI  1.18-2.12)  (96).  In  the  ACCORD trial, intensive blood pressure intervention also decreased CAN risk by 25% (85).
 
 ## Neuropathic Pain Management
+<!-- rag_metadata source=ADA_2026 section="Neuropathic Pain Management" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Neuropathic pain can be severe and can impact  quality  of  life,  affect  sleep,  limit mobility,  and  contribute  to  depression and anxiety (97). No compelling evidence exists  in  support  of  glycemic  or  lifestyle management as therapies for neuropathic pain  in  diabetes  or  prediabetes,  which leaves only pharmaceutical interventions (98). A recent guideline by the American Academy  of  Neurology  (AAN)  recommends that the initial treatment of pain should also focus on the concurrent treatment of both sleep and mood disorders because of increased frequency of these problems in individuals with DPN (99).
 
@@ -2830,6 +3152,7 @@ Opioids. Several  randomized  controlled trials (RCT s) have demonstrated that o
 Tapentadol and Tramadol. Tapentadol and tramadol  exert  their  analgesic  effects through  both μ -opioid  receptor  agonism (opioid) and norepinephrine and serotonin reuptake inhibition. Given that opioids and SNRIs are both effective for painful DPN, it is not surprising that these SNRI and opioid agents are effective in the treatment of pain in DPN too (99). However, the effect size is similar  to  that  of  other  effective  therapies, such as SNRIs, and these medications have the same risks as other opioids listed above. In fact, tramadol has been shown to be associated  with  all-cause  mortality  with  an effect size similar to that of codeine (109). Similar  to  other  opioids,  risks  likely  outweigh  benefits,  and  the  AAN  guidelines also recommend against their use for painful DPN except in rare circumstances (99).
 
 ## Orthostatic Hypotension Management
+<!-- rag_metadata source=ADA_2026 section="Orthostatic Hypotension Management" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Treating orthostatic hypotension is challenging. The  therapeutic  goal  is  to  minimize
 
@@ -2839,8 +3162,10 @@ Treating orthostatic hypotension is challenging. The  therapeutic  goal  is  to 
 <!-- source: ADA_2026 | file: ADA_2026_S13.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S13
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S13" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 13. Older Adults: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="13. Older Adults: Standards of Care in Diabetes-2026" topic_tags="elderly, geriatric" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S277-S296 | https://doi.org/10.2337/dc26-S013
 
@@ -2873,6 +3198,7 @@ diabetes complications  in  older  adults should  be  individualized  and  perio
 The  Institute  for  Healthcare  Improvement  has  developed  an  evidence-based '4Ms'  framework  for  age-friendly  health care that is being adopted by many health systems caring for older adults. The key elements  of  this  approach  are  Mentation, Medications,  Mobility,  and  What  Matters Most,  with  each  element  affecting  the others  (12). The  4Ms  framework  provides a  helpful  conceptual  model  to  address person-specific issues that may be interrelated  and  affect  diabetes  management  in older  individuals ( Fig.  13.1 )  and  offers  a framework to  establish  individualized  treatment goals and approaches (13-15), including  delivery  of  diabetes  self-management education  (particularly  when  complicating  factors  arise  or  when  transitions  in care  occur)  and  whether  the  current plan  is  too  complex  for  the  individual's self-management  ability  or  for  the  care partners  providing  care  (16).  Particular attention  should  be  paid  to  complications that can develop over short periods of time and/or would significantly impair functional status, such as visual and lowerextremity  complications. Table  13.1 suggests  a  structured  approach  to  screening for common geriatric syndromes and other causes  of  functional  impairment  using  key screening questions,  followed  by  validated screening tools when specific geriatric syndromes are suspected, as well as resources for  scoring. These  tools  should  be  used when  clinically  indicated  and  can  be performed  by  any  member  of  the  diabetes  care  team.  Importantly,  the  general care principles discussed here apply to all individuals with complex health needs and are not limited to older adults.
 
 ## NEUROCOGNITIVE FUNCTION
+<!-- rag_metadata source=ADA_2026 section="NEUROCOGNITIVE FUNCTION" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendation
 
@@ -2911,9 +3237,11 @@ Older  adults  with  diabetes  should  be carefully screened and monitored for c
 Identifying  cognitive  impairment  early has important  implications for  diabetes care. The presence of cognitive impairment can make it challenging to reach individualized  glycemic,  blood  pressure,  and  lipid goals.  Cognitive  dysfunction  may  make  it difficult for individuals to perform complex self-care tasks (29), such as monitoring glucose,  administering  and  adjusting  insulin doses, and maintaining the timing and nutritional  content  of  meals.  These  factors increase  risk  for  hypoglycemia,  which,  in turn,  can  worsen  cognitive  function  and have multiple other adverse effects in older individuals  with  diabetes. When  cognitive dysfunction is identified, it is therefore essential  to  simplify  care  plans  and  engage the appropriate support structure to assist aging  individuals  with  diabetes  in  all  aspects of their care.
 
 ## HYPOGLYCEMIA
+<!-- rag_metadata source=ADA_2026 section="HYPOGLYCEMIA" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 13.4 Ascertain and address episodes of hypoglycemia at routine visits because  older  adults  with  diabetes have a greater risk of hypoglycemia, especially  when  treated  with  hypoglycemic  agents  (e.g.,  sulfonylureas, meglitinides, and insulin). B
 - 13.5 Recommend  continuous  glucose monitoring (CGM) for older adults with type 1 diabetes A and type 2 diabetes on insulin  therapy B to  improve glycemic  outcomes,  reduce  hypoglycemia, and reduce treatment burden.
 - 13.6 Consider the use of automated insulin delivery systems B and other advanced insulin delivery devices such as  connected  pens E to  reduce  risk  of hypoglycemia  for  older  adults,  based on  individual  ability  and  support system.
@@ -2923,21 +3251,29 @@ Older adults may be at higher risk of hypoglycemia  for  many  reasons,  includi
 People  with  diabetes  and  their  care partners should be routinely  queried about any history of hypoglycemic events, impaired hypoglycemia awareness, and fear  of  hypoglycemia  as  discussed  in section 6, 'Glycemic Goals, Hypoglycemia, and  Hyperglycemic  Crises.'  Symptoms and  signs  of  hypoglycemia  are  also  discussed in section 6 and are of value to care partners  of  individuals  with  cognitive  impairment  who  may not be able  to  report hypoglycemia symptoms. Older adults can also be stratified for future risk for hypoglycemia  with  validated  risk  calculators  (e.g., Kaiser  Hypoglycemia  Model  for  adults with type 2 diabetes) (40) and with consideration  of  hypoglycemia  risk  factors ( Table  6.5 ).  An  important  step  to  mitigate  hypoglycemia  risk  is  to  determine whether  the  person  with  diabetes  is skipping meals or has difficulty correctly taking and dosing their glucose-lowering medications.  Glycemic  goals  and  pharmacologic  treatments  may  need  to  be adjusted  to  minimize  the  occurrence  of hypoglycemic events,  prioritizing  use  of medications at low risk for hypoglycemia and other adverse effects (41). This recommendation is also supported by results from multiple randomized controlled trials (RCTs), such as the Action to Control Cardiovascular  Risk  in  Diabetes  (ACCORD)  study and  the Veterans Affairs Diabetes Trial (VADT), which showed that intensive treatment  protocols  aimed  to  achieve  an  A1C < 6.0%  with  complex  drug  plans  significantly increased the risk for hypoglycemia requiring assistance compared with standard  treatment  (42,43).  However,  these intensive treatment plans included extensive  use  of  insulin  and  minimal  use  of GLP-1 RAs, and they preceded the availability  of  SGLT2  inhibitors.  Hypoglycemia Older Adults may also be precipitated by acute illness and other stressful events such as trauma or  surgery.  During  these  events,  older adults  and their care partners should be provided individualized guidance on glycemic monitoring  and  adjustment  of  glucoselowering medications to prevent hypoglycemia.  See  INTERCURRENT  ILLNESS in  section  6, 'Glycemic  Goals,  Hypoglycemia,  and Hyperglycemic Crises,' for more details.
 
 ## Use of Continuous Glucose Monitoring and Advanced Insulin Delivery Devices
+<!-- rag_metadata source=ADA_2026 section="Use of Continuous Glucose Monitoring and Advanced Insulin Delivery Devices" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Continuous glucose monitoring  (CGM) devices have been shown to be effective at  improving  glycemic  management  and acceptable  to  people  of  all  age-groups, including older individuals with type 1 diabetes  (44-48)  or  insulin-requiring  type  2 diabetes (49,50). Additionally, benefits have been shown with CGM use in older individuals  not  treated  with  insulin,  particularly for  reducing  hypoglycemia  and  improving other  glycemic  outcomes.  Importantly,  it may  take  longer  for  older  adults  to  learn and gain facility with new technology and it may  be  beneficial  to  engage  their  caregivers  in  the  process.  Moreover,  it  is  important to assess a person's cognitive and functional  capacity  for  using  technology and to ensure availability of engagement and support of the care partner, if appropriate  (51).  CGM  may  also  be  useful  for glucose  monitoring  in  older  adults  with physical and/or cognitive limitations  who require monitoring of blood glucose by a surrogate  and  in  those  who  reside  in group  homes,  assisted  living  facilities,  or other post-acute long-term care settings.
 
 Advanced  insulin  delivery  devices  have similarly been shown to improve glycemic outcomes  in  small  studies  conducted among  older  adults.  The  Older  Adult Closed  Loop  (ORACL)  trial  in  30  older adults  (mean age 67 years) with type 1 diabetes found that an automated insulin  delivery  (AID)  strategy  was  associated  with  significant  improvements  in time in range (TIR), as well as modest improvements  in  hypoglycemia,  compared with  sensor-augmented  pump  therapy (52). In a different open-label, crossover design  clinical  trial  in  37  older  adults (aged ≥ 60 years), 16 weeks of treatment with a hybrid closed-loop advanced insulin  delivery  system  improved  TIR  and reduced time above range  compared with  sensor-augmented  pump  therapy; however, in contrast to the ORACL study, no significant differences in hypoglycemia  were  observed  (53).  Both  studies enrolled  older  individuals  whose  blood glucose  was  relatively  well  managed  at baseline (mean A1C ∼ 7.4%). A later RCT of  older  adults  with  type  2  diabetes  using  multiple  daily  injections  who  were unable  to  manage  insulin  therapy  on their  own  demonstrated  an  increase  of TIR of 27% over 12 weeks of AID use in addition  to  tailored  home  health  care services (54). More recently, in the Automated  Insulin  Delivery  in  Elderly  With Type 1 Diabetes (AIDE T1D) study that included 82 adults aged 65 years and older, participants randomized to AID use experienced less hypoglycemia than those randomized to hybrid closed loop, predictive  low  glucose  suspend,  and  sensoraugmented pump therapy in a crossover design  (55).  In  the  extension  phase  of the  study,  91%  of  the  participants  chose the  AID  system  (55).  Finally,  a  real-world evidence  analysis  of  a  Medicare  population  (4,243  individuals,  89%  with  type  1 diabetes,  mean  age  67.4  years)  also  indicated that initiating hybrid closedloop insulin delivery was associated with improvements  in  mean  glucose  and  a 10%  increase  in  TIR  (56).  These  studies provide  evidence  that  older  individuals with type 1 and type 2 diabetes can successfully use advanced insulin delivery technologies to improve glycemic outcomes, as has been  seen in  younger populations.
 
 ## TREATMENT GOALS
+<!-- rag_metadata source=ADA_2026 section="TREATMENT GOALS" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 13.7a Older adults with diabetes with few  and  stable  coexisting  chronic illnesses,  and  intact  cognitive  and functional status, should have lower glycemic goals (such as A1C < 7.0-7.5% [ < 53-58  mmol/mol])  and/or  time in  range  [TIR]  70-180  mg/dL  [3.910.0 mmol/L] of ≥ 70% and time below range ≤ 70 mg/dL [ ≤ 3.9 mmol/L] of ≤ 4%) if CGM is used. C
 - 13.7b Older adults  with diabetes and intermediate  or  complex  health  are clinically  heterogeneous  with variable life  expectancy.  Selection  of  glycemic goals  should  be  individualized  and should  prioritize  avoidance  of  hypoglycemia, with less stringent goals (such as A1C < 8.0% [ < 64 mmol/mol] and/or TIR  70-180  mg/dL  [3.9-10.0  mmol/L] of ≥ 50%  and  time  below  range
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - < 70 mg/dL [3.9 mmol/L] of < 1%) for  those  with  significant  cognitive and/or  functional  limitations,  frailty, severe  comorbidities,  and  a  less  favorable risk-to-benefit ratio of diabetes medications. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 13.7c Older adults with very complex or  poor  health  receive  minimal  benefit from stringent glycemic goals. Clinicians should focus on avoiding hypoglycemia and symptomatic hyperglycemia. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 13.8 Screening  for  diabetes  complications  should  be  individualized  in older adults with diabetes. Prioritize screening for complications that would lead to impairment of functional status or quality of life. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 13.9 The  on-treatment  blood  pressure goal for most older adults with diabetes is < 130/80 mmHg when it can be achieved safely, A and more a  relaxed  blood  pressure  goal  (e.g., < 140/90  mmHg)  may  be  used  for people with poor health, limited life expectancy,  or  high  risk  for  adverse effects of hypertensive therapy. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 13.10 Treatment of other cardiovascular risk factors should be individualized  in  older  adults  with  diabetes, considering the time frame of benefit.  Lipid-lowering  therapy  and  antiplatelet  agents  may  benefit  those with life  expectancies at least equal to  the  time  frame  of  primary  prevention or secondary intervention trials. A
 
 As for all people with diabetes, diabetes self-management  education  and  ongoing  diabetes  self-management  support are  vital  components  of  diabetes  care for older adults and their caregivers. Selfmanagement knowledge and skills should be  reassessed  following  a  significant  clinical  change  or  hospitalization,  when  treatment plan changes are made, or when an individual's  functional  abilities  diminish.  In addition,  declining  or  impaired  ability  to perform  diabetes  self-care  behaviors  may be an indication that an older person with diabetes needs a referral for cognitive and physical  functional  assessment,  using  agenormalized evaluation tools, as well as help establishing a support structure for diabetes care  (5,35).  See Table  13.1 for  screening and evaluation tools for geriatric syndromes and other functional impairments.
@@ -2951,10 +3287,12 @@ A1C results may be inaccurate in those who have received blood transfusions and 
 for additional details on the limitations of A1C) (65). Conditions affecting red blood cell  turnover  that  are  common  in  older adults  include  kidney  failure,  recent  significant  blood  loss,  and  erythropoietin therapy. In these instances, blood glucose monitoring  and/or  CGM  should  be  used for glycemic goal setting ( Table 13.2 ). Serum glycated protein assays such as fructosamine may also be useful for glycemic monitoring  in  conjunction  with  other measures (see section 6, 'Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises') (66-68).
 
 ## Older Adults With Good Functional Status and Without Complications
+<!-- rag_metadata source=ADA_2026 section="Older Adults With Good Functional Status and Without Complications" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 There are few long-term studies in  older adults  demonstrating  the  benefits  of  intensive glycemic, blood pressure, and lipid management. Older adults who can be expected to live long enough to realize the benefits  of  long-term  intensive  diabetes management,  who  have  good  cognitive and  physical  function,  and  who  experience little (or acceptable to them) burden of treatment may be treated using therapeutic  interventions  and  goals  similar  to those  for  younger  adults  with  diabetes ( Table 13.2 ).
 
 ## Older Adults With Complications and Reduced Functionality
+<!-- rag_metadata source=ADA_2026 section="Older Adults With Complications and Reduced Functionality" topic_tags="complication_screening, microvascular" population="T2DM T1DM global" year=2026 -->
 
 Older adults with diabetes categorized as having  complex  or  intermediate  health ( Table 13.2 )  are  still  heterogeneous with respect  to  their  function  and  life  expectancy (69-71). Based on concepts of competing mortality and time to benefit, individuals with shorter life expectancy, advanced diabetes complications, life-limiting comorbid illnesses,  frailty,  or  substantial cognitive  or  functional  impairments  will have less  benefit  from  glucose  lowering and  should  have  less  stringent  glycemic goals (72). These individuals may not only not derive benefit from intensive glucose lowering but are also more likely to experience serious adverse effects of treatment, such as hypoglycemia (73). However, significant  hyperglycemia  should  also  be avoided-even in the setting of complex health status-as elevated glucose levels ( > 180  mg/dL  [ > 10  mmol/L])  increase risks of dehydration, weakness, infection, poor  wound  healing,  and  hyperglycemic crises  (74).  Glycemic  goals  should,  at  a minimum, avoid these consequences. Factors to consider for individualizing glycemic goals are outlined in Fig. 6.1 and Fig. 13.1 .
 
@@ -2963,10 +3301,12 @@ Clinicians should also consider the balance of risks and benefits of an individu
 While Table 13.2 provides overall guidance for identifying individuals with complex and very complex health needs, there is no global consensus on the optimal classification strategy. Empiric research on the classification of older adults with diabetes based on comorbid illness has suggested three  broad  classes  of  individuals:  a healthy,  a  geriatric,  and  a  cardiovascular class  (14,69,75).  The  geriatric  class  has the highest prevalence of obesity, hypertension, arthritis, and incontinence, while the  cardiovascular  class  has  the  highest prevalence of myocardial infarctions, heart failure,  and  stroke.  Compared  with  the healthy  class,  the  cardiovascular  class has the highest risk of frailty and subsequent  mortality.  Additional  research  is needed to develop a reproducible classification  scheme  to  distinguish  the  natural history  of  disease  as  well  as  differential response  to  glucose  management  and specific glucose-lowering agents (76).
 
 ## Older Adults at the End of Life
+<!-- rag_metadata source=ADA_2026 section="Older Adults at the End of Life" topic_tags="elderly, geriatric" population="T2DM T1DM global" year=2026 -->
 
 For people with diabetes receiving palliative  care  and  end-of-life  care,  the  focus should  be  to  avoid  hypoglycemia  and symptomatic hyperglycemia while reducing the burdens of glycemic management. Thus, as organ failure develops, the treatment plan should be deintensified. At the end of life, most agents for type 2 diabetes may be removed (77). There is, however,  no  consensus  for  the  end-of-life management  of  type  1  diabetes  (78). Consultation with a geriatric or palliative care specialist might be warranted to assist with complex medical and functional issues  as  well  as  advance  care  planning. See  END-OF-LIFE  CARE,  below,  for  additional information.
 
 ## Beyond Glycemic Management
+<!-- rag_metadata source=ADA_2026 section="Beyond Glycemic Management" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 Although  minimizing  hyperglycemia  may be  important  in  older  individuals  with
 
@@ -2976,8 +3316,10 @@ Although  minimizing  hyperglycemia  may be  important  in  older  individuals  
 <!-- source: ADA_2026 | file: ADA_2026_S14.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S14
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S14" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 14. Children and Adolescents: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="14. Children and Adolescents: Standards of Care in Diabetes-2026" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S297-S320 | https://doi.org/10.2337/dc26-S014
 
@@ -3004,18 +3346,22 @@ Suggested citation: American Diabetes Association Professional Practice Committe
 may  have  recommendations  that  apply to  children  and  adolescents  with  diabetes  and  are  referenced  in  the  narrative of this section.
 
 ## INTRODUCTION TO TYPE 1 DIABETES IN CHILDREN AND ADOLESCENTS
+<!-- rag_metadata source=ADA_2026 section="INTRODUCTION TO TYPE 1 DIABETES IN CHILDREN AND ADOLESCENTS" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 Type 1 diabetes is the most common form of diabetes in children and adolescents (4), although there are more adults living with and  diagnosed  with  type  1  diabetes  (5). Nearly 4 in every 1,000 children and adolescents in the U.S. were reported to have type  1  diabetes  from  2019  through  2022 (6). The health care professional must consider the unique aspects of care and management of children and adolescents with type 1 diabetes, such as changes in insulin sensitivity  related  to  physical  growth  and sexual maturation, ability to provide selfcare,  supervision  in  the  childcare  and school and athletic environments, emerging  independence in adolescents, neurological  vulnerability  to  hypoglycemia  and hyperglycemia in young children, and adverse neurocognitive effects of diabetic ketoacidosis  (DKA)  (7).  Attention  to  family dynamics,  developmental  stages,  and physiologic differences related to sexual maturity  is  essential  in  developing  and implementing an optimal diabetes treatment plan (8).  Additionally,  more  people (adults, children,  and  adolescents) with type 1 diabetes are living with obesity than in  the  past,  which  adds to  the complexity of living with and managing type 1 diabetes (9).  Information  addressing  issues  specific to children and adolescents with type 1 diabetes  (e.g.,  glycemic  goals,  DKA,  pumps and automated insulin dosing, autoimmunity)  is  provided  in  TYPE  1  DIABETES  IN  CHILDREN AND ADOLESCENTS, below.
 
 ## INTRODUCTION TO TYPE 2 DIABETES IN CHILDREN AND ADOLESCENTS
+<!-- rag_metadata source=ADA_2026 section="INTRODUCTION TO TYPE 2 DIABETES IN CHILDREN AND ADOLESCENTS" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 The prevalence of type 2 diabetes in children and adolescents has continued to increase over the past 20 years (4). The U.S. Centers  for  Disease  Control  and  Prevention published projections for type 2 diabetes  prevalence  using  the  SEARCH  for Diabetes in Youth (SEARCH) study database. Assuming a 2.3% annual increase, the prevalence among those under 20 years of age will quadruple in 40 years (10,11). Information  addressing issues  specific  to  children and  adolescents  with  type  2  diabetes  is provided  in  TYPE  2  DIABETES  IN  CHILDREN  AND ADOLESCENTS, below.
 
 Evidence suggests that type 2 diabetes in  children  and  adolescents  is  different not  only  from  type  1  diabetes  but  also from  type  2  diabetes  in  adults  and  has unique  features,  such  as  a  more  rapidly progressive  decline  in β -cell  function  and accelerated development of diabetes complications (3,12). Long-term follow-up data from the Treatment Options for Type 2 Diabetes  in  Adolescents  and  Youth  (TODAY) study reported most individuals with type 2 diabetes diagnosed as children or adolescents had microvascular complications by young adulthood (13). Type 2 diabetes disproportionately impacts youth from historically  marginalized  communities  and  can occur in complex psychosocial and cultural contexts which may make it difficult to implement and sustain healthy lifestyle changes  and  self-management  behaviors  (9,14,15).  Additional  risk  factors  include  obesity  and  excess  adiposity  (16), family history of diabetes possibly mediated by  shared  genetics,  lifestyle,  and  environmental  factors  (17),  female  sex,  maternal gestational diabetes mellitus (18), and adverse  social  determinants  of  health (12).  Information  addressing issues  specific  to  children  and  adolescents  with type  2  diabetes  (e.g.,  glycemic  goals)  is provided  in  TYPE  2 DIABETES  IN  CHILDREN  AND ADOLESCENTS, below.
 
 ## GUIDELINES FOR ALL CHILDREN AND ADOLESCENTS WITH DIABETES
+<!-- rag_metadata source=ADA_2026 section="GUIDELINES FOR ALL CHILDREN AND ADOLESCENTS WITH DIABETES" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 ## Diabetes Self-Management Education and Support
+<!-- rag_metadata source=ADA_2026 section="Diabetes Self-Management Education and Support" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 An interprofessional team trained in pediatric diabetes management and sensitive to  the  challenges  of  diabetes  management in children and adolescents, as well as their family  members, should provide diabetes-specific care for this population. It  is  essential that DSMES, medical nutrition therapy, and psychosocial and behavioral  support  be  provided  at  diagnosis and routinely (e.g., at each follow-up visit) thereafter in  a  developmentally appropriate format that builds on prior knowledge by a team of health care professionals experienced with the biological, educational, nutritional,  behavioral,  and  emotional needs of the growing child and adolescent along with family members. Children and adolescents  with  diabetes  spend  much of  the  day  in  school.  Therefore,  close communication  with  and  the  cooperation of school personnel are essential for optimal diabetes management and safety and maximal academic and athletic opportunities.  The  diabetes  team  should  ask about  and  discuss  diabetes  management responsibilities with children, adolescents, and  parents  or  caregivers  on  an  ongoing basis,  taking  into  account  developmental and psychosocial needs.
 
@@ -3032,11 +3378,13 @@ As a child or adolescent with diabetes grows,  develops,  and  acquires  the  ne
 For children and adolescents with all types  of  diabetes,  providing  education on healthy lifestyle behaviors is critically important,  and  typically  this  is  done through DSMES. For those with type 1 diabetes, insulin therapy is paramount, alongside DSMES. For treatment of type 2 diabetes  in  children  and  adolescents,  lifestyle  management,  also  taught  through DSMES, is foundational,  and  pharmacologic treatment with or without insulin is necessary.  For  children  and  adolescents with  obesity  and  diabetes,  it  should  be noted that diabetes type is often uncertain in the first few weeks of treatment due to overlap in presentation and that a  substantial  percentage  will  present with  clinically  significant  ketoacidosis (22).  Therefore,  initial  therapy  should address  the  hyperglycemia  and  associated metabolic derangements irrespective  of  ultimate  diabetes  type,  with adjustment  of  therapy  once  metabolic compensation has been established and subsequent  information,  such  as  islet autoantibody  results,  becomes  available. Figure 14.1 provides an approach to  the  initial  treatment  of  new-onset diabetes  in  children  and  adolescents with overweight or obesity with clinical suspicion of type 2 diabetes.
 
 ## Nutrition Therapy
+<!-- rag_metadata source=ADA_2026 section="Nutrition Therapy" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 14.2 Provide individualized  medical nutrition  therapy  for  children  and adolescents with prediabetes or diabetes,  emphasizing  key  nutrition  principles  (i.e.,  more  nonstarchy vegetables, whole  fruits,  legumes,  whole  grains, nuts and seeds, and low-fat dairy products  and  less  sugar-sweetened  beverages, sweets, meat, refined grains, and processed  or  ultraprocessed  foods), B as an essential component of the overall treatment plan.
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 14.3 Monitor  carbohydrate  intake, whether  by  carbohydrate  counting or  experience-based  estimation,  as a  key  component  to  optimizing  glycemic  and  weight  management  for  children and adolescents with diabetes. B 14.4 Educate children and adolescents and  their  caregivers  on  the  potential need  to  adjust  insulin  with  high-fat and high-protein meals. Meal composition  affects  postprandial  glucose excursions. A
 
 14.5 In children and adolescents with diabetes,  provide  comprehensive  nutrition  education  at  diagnosis,  and  at least  annually  and  ideally  more  frequently, by an experienced registered dietitian nutritionist to assess the eating  pattern  in  relation  to  weight  status,  age-appropriate  growth,  risk  for disordered eating  behaviors,  and  cardiovascular disease risk factors. E
@@ -3048,6 +3396,7 @@ Consuming an  evidence-based  eating pattern  is  associated  with  better  glyc
 Given the complex social and environmental context surrounding children and adolescents with prediabetes and diabetes, individual-level lifestyle interventions may  not  be  sufficient  to  address  the multifaceted interplay of family dynamics, behavioral  health,  community  readiness, and  the  broader  environmental  system (3).  In  these  cases,  referrals  to  members of the care team with expertise in behavioral  health  and  social  work  might  be beneficial where available.
 
 ## Physical Activity and Exercise
+<!-- rag_metadata source=ADA_2026 section="Physical Activity and Exercise" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -3066,19 +3415,25 @@ See below for strategies to mitigate hypoglycemia risk and minimize hyperglycemi
 Overall,  it  is  recommended that all  children and adolescents, including those with prediabetes  and  diabetes,  should  participate in 60 min of moderate-intensity (e.g., brisk walking, dancing) to vigorous-intensity (e.g., running, jumping rope, soccer) aerobic  activity  daily,  including  resistance and flexibility training (34). Although uncommon in  the  pediatric  population, they  should  be  evaluated  for  comorbid conditions or diabetes complications that may  restrict  participation  in  an  exercise program.
 
 ## School and Child Care
+<!-- rag_metadata source=ADA_2026 section="School and Child Care" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 As the majority of waking hours for most children and adolescents can be spent in school and/or daycare, training of school or  daycare  personnel  as  well  as  athletic coaches  to  provide  care  in  accordance with  the  individualized  diabetes  medical management plan is essential for optimal diabetes management and safe access to all school- or daycare-sponsored opportunities (38-40). This is of particular importance for those children and adolescents who  require  insulin.  In  addition,  federal and state laws require schools, daycare facilities, and other entities to provide needed diabetes care to enable the child to safely access the school or daycare environment.  Refer  to  the  ADA  position statements 'Diabetes Care in the School Setting' (38) and 'Care of Young Children with Diabetes in the Childcare and Community Setting'  (40)  and  the  ADA's  Safe at School website (diabetes.org/resources/ know-your-rights/safe-at-school-state-laws) for additional details.
 
 ## Psychosocial Care
+<!-- rag_metadata source=ADA_2026 section="Psychosocial Care" topic_tags="mental_health, psychosocial" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
 - 14.9 At  diagnosis  and  during  routine follow-up  care,  screen  children  and adolescents  with  type  1  diabetes, B type  2  diabetes, B and  other  forms of  diabetes E for  psychosocial  concerns (e.g., diabetes distress, depressive  symptoms,  anxiety,  disordered eating  behaviors),  family  factors,  and behavioral  health  concerns  that  could affect diabetes management with ageappropriate standardized and validated tools.  Refer  to  a  qualified  behavioral health  professional,  preferably  experienced  in  childhood  diabetes,  when indicated.
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 14.10 Behavioral health professionals should  be  considered  integral  members  of  the  pediatric  diabetes  interprofessional team. E
 - 14.11 Encourage developmentally appropriate  family  involvement  in  diabetes  management tasks  for  children and adolescents with type 1 diabetes, type  2  diabetes, B and  other  forms of  diabetes, E recognizing  that  premature or unsupportive transfer of diabetes  care  responsibility  to  children  and adolescents can contribute to diabetes distress, lower engagement in diabetes self-management  behaviors,  and  deterioration in glycemia.
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 14.12 Health care professionals should screen for food insecurity, housing stability,  health  literacy ,  financial  barriers, and  social  or  community  support  and apply  that  information  to  treatment decisions. E
 - 14.13 Health care professionals should consider  asking  school-aged  children and adolescents with type 1 diabetes, B type  2  diabetes, E and  other  forms of diabetes, E along with their parents or  caregivers,  about  social  adjustment (peer relationships) and school performance  to  determine  whether  further intervention is needed.
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 14.14 Offer adolescents with diabetes time  by  themselves  with  their  health care professional(s) at a developmentally appropriate age. E
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 14.15 During  adolescence,  generally during  the  stage  of  pubertal  growth and  development,  incorporate  reproductive  health  and  preconception  counseling  into  routine  diabetes clinic  visits  for  all  individuals  of  childbearing  potential  because  of  the  risk of  adverse  pregnancy  outcomes  in this population. A
 
 Rapid and dynamic  cognitive, developmental, and emotional changes occur during  childhood,  adolescence, and emerging adulthood.  Diabetes  management  places substantial  burdens  on  the  child,  adolescent,  and  family,  necessitating  ongoing assessment  of  psychosocial  status  and social determinants of health during routine  diabetes  visits  (41,42).  Consider the impact of diabetes on quality of life as  well  as  the  development  of  behavioral  health  problems  related  to  diabetes  distress,  symptoms  of  depression, symptoms of anxiety,  fear of  hypoglycemia  and  hyperglycemia,  disordered eating behaviors, and eating disorders (41,43).  Further,  consideration  of  the sociocultural context and  efforts to personalize  diabetes  management  are of critical importance to minimize barriers  to  care,  enhance  participation, and  maximize  response  to  treatment. Screening for food insecurity, housing instability ,  and  other  barriers  related  to  the  social  determinants  of  health  should  be  part of routine pediatric diabetes care (44).
@@ -3096,6 +3451,7 @@ Beginning at the onset of puberty or at diagnosis  of  diabetes  for  pubertal  
 The presence of behavioral health professionals  on  pediatric  interprofessional teams emphasizes the importance of psychosocial care. These psychosocial factors are significantly related to self-management difficulties, elevated A1C, reduced quality of  life,  and  higher  rates  of  acute  and chronic diabetes complications. A proactive, team-based approach to psychosocial  screening, referral, and intervention is essential to support the health of children and adolescents with diabetes.
 
 ## Glycemic Monitoring, Insulin Delivery, and Goals
+<!-- rag_metadata source=ADA_2026 section="Glycemic Monitoring, Insulin Delivery, and Goals" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -3120,6 +3476,7 @@ The presence of behavioral health professionals  on  pediatric  interprofessiona
 Current standards for diabetes management  reflect  the  need  to  minimize  hyperglycemia  as  safely  as  possible.  The Diabetes Control and Complications Trial (DCCT) (79), which did not enroll children < 13  years  of  age,  demonstrated  that near normalization of blood glucose levels was more difficult to achieve in adolescents  than  in  adults.  Nevertheless, the increased use of continuous glucose monitoring  (CGM)  and  AID  systems,  goal setting,  and  improved  education  have been associated with more children and adolescents  reaching  the  blood  glucose goals recommended by the ADA (80-82), particularly  in  families  in  which  the parents  or  caregivers  as  well  as  the child  or  adolescent  with  diabetes  participate  jointly  to  perform  the  required diabetes-related tasks.
 
 ## TYPE 1 DIABETES IN CHILDREN AND ADOLESCENTS
+<!-- rag_metadata source=ADA_2026 section="TYPE 1 DIABETES IN CHILDREN AND ADOLESCENTS" topic_tags="paediatric, children, adolescent" population="T2DM T1DM global" year=2026 -->
 
 Lower A1C in adolescence and young adulthood  is  associated  with  a  lower  risk  and rate  of  microvascular  and  macrovascular complications  (83-85)  and  demonstrates the effects of metabolic memory (86-89). While an A1C goal of < 7% ( < 53 mmol/mol) is appropriate for most children and adolescents with type 1 diabetes, as AID algorithms  continue  to  improve  and  access  to these systems expands, children and adolescents who can attain a goal of < 6.5% ( < 48 mmol/mol) without adverse effects should be encouraged to do so. In addition,  achieving  lower  A1C  levels  is likely facilitated by setting  lower  A1C goals (80,90). Lower goals may be possible during  the  honeymoon  phase  of  type  1 diabetes and in those with access to CGM and AID. The honeymoon phase, also referred to as partial remission, refers to a transient  period  of  increased  endogenous insulin secretion shortly after diagnosis when initiation of insulin therapy resolves glucotoxicity and allows for improved  insulin  secretion  from  residual β -cells. Recent data with newer devices indicate that the risk of hypoglycemia at lower  A1C  is  less  than  it  was  before (81,82,91-94). However, special consideration should be given to the risk of hypoglycemia in young children (aged < 6 years) who are often unable to recognize, articulate, and/or manage hypoglycemia. Registry data indicate that lower A1C goals can be  achieved  in  children,  including  those aged < 6 years, without increased risk of severe hypoglycemia (91). Please refer to section 6, 'Glycemic Goals, Hypoglycemia, and Hyperglycemic Crisis,' for more information on glycemic assessment.
 
@@ -3130,11 +3487,13 @@ A  strong  relationship  exists  between the frequency of glucose monitoring and
 In addition, type 1 diabetes and chronic hyperglycemia are associated with adverse effects on cognition during childhood and adolescence  (7,106,107).  Several  factors, including young age, severe hypoglycemia at < 6  years  of  age,  DKA,  and  chronic  hyperglycemia (106,108,109), may contribute to  adverse  effects  on  brain  development and function.  Attaining  higher  CGM  TIR is associated  with  better  structural  brain development and better neurocognitive outcomes (108), further emphasizing the importance  of  achieving  glycemic  goals (7,108).
 
 ## Key Concepts in Setting Glycemic Goals
+<!-- rag_metadata source=ADA_2026 section="Key Concepts in Setting Glycemic Goals" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 - Glycemic goals should be individualized, and  lower  goals  may  be  reasonable based on a benefit-risk assessment.
 - Blood  glucose  goals  should  be  modified in children with frequent hypoglycemia or hypoglycemia unawareness.
 
 ## Exercise Needs Specific to Children and Adolescents With Type 1 Diabetes
+<!-- rag_metadata source=ADA_2026 section="Exercise Needs Specific to Children and Adolescents With Type 1 Diabetes" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 Real-world data from the Type 1 Diabetes Exercise Initiative Pediatric (T1DEXIP) study reported  that  glucose  levels  tended  to drop  during  exercise,  most  particularly  in those  with  lower  A1C,  shorter  diabetes duration,  and  less  fear  of  hypoglycemia (110). Furthermore, glucose levels tended to be lowest at about 8-16 h postexercise in  those  with  similar  characteristics,  and nocturnal  hypoglycemia  was  more  frequent  when  activity  levels  were  higher and longer in duration (111). These data underscore  the  need  for  individualized management  strategies  for  children  and adolescents  using  insulin,  including  common sense precautions and understanding how  to  make  insulin  dose  adjustments when undertaking exercise and physical activity . Accessible rapid-acting carbohydrates and  frequent  blood  glucose  monitoring before, during, and after exercise, with or without CGM maximize safety with exercise. As hyperglycemia can occur before, during, and after physical activity, it is important  to  ensure  the  elevated  glucose level  is  not  related  to  insulin  deficiency, as  that  can  lead  to  worsening  hyperglycemia  with  exercise  and  DKA  risk.  Intense
 
@@ -3144,23 +3503,30 @@ Real-world data from the Type 1 Diabetes Exercise Initiative Pediatric (T1DEXIP)
 <!-- source: ADA_2026 | file: ADA_2026_S15.pdf | citation: Diabetes Care 2026;49(Suppl. 1) -->
 
 # ADA_2026_S15
+<!-- rag_metadata source=ADA_2026 section="ADA_2026_S15" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## 15. Management of Diabetes in Pregnancy: Standards of Care in Diabetes-2026
+<!-- rag_metadata source=ADA_2026 section="15. Management of Diabetes in Pregnancy: Standards of Care in Diabetes-2026" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 Diabetes Care 2026;49(Suppl. 1):S321-S338 | https://doi.org/10.2337/dc26-S015
 
 The  American  Diabetes  Association  (ADA)  'Standards  of  Care  in  Diabetes'  includes the  ADA's  current clinical  practice  recommendations  and  is  intended  to provide  the  components  of  diabetes  care,  general  treatment  goals  and  guidelines,  and  tools  to  evaluate  quality  of  care.  Members  of  the  ADA  Professional Practice Committee for Diabetes, an interprofessional expert committee, are responsible for updating the Standards of Care annually, or more frequently as warranted. For a detailed description of ADA standards, statements, and reports, as well as the evidence-grading system for ADA's clinical practice recommendations and  a  full  list  of  Professional  Practice  Committee  members,  please  refer  to Introduction and Methodology. Readers who wish to comment on the Standards of Care are invited to do so at professional.diabetes.org/SOC.
 
 ## DIABETES IN PREGNANCY
+<!-- rag_metadata source=ADA_2026 section="DIABETES IN PREGNANCY" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 The prevalence of diabetes in pregnancy has been increasing in the U.S. in parallel with the worldwide epidemic of obesity. Not only is the prevalence of type 1 diabetes and type 2 diabetes increasing in individuals of reproductive age but there is also a dramatic increase in the reported rates of gestational diabetes mellitus (GDM). Diabetes confers significantly greater maternal and fetal risk that is largely related to the degree of hyperglycemia but also is related to chronic complications and comorbidities of diabetes. In general, specific risks of diabetes in pregnancy include spontaneous  abortion,  fetal  anomalies,  preeclampsia,  fetal  demise,  macrosomia,  neonatal hypoglycemia,  neonatal  hyperbilirubinemia,  and  neonatal  respiratory  distress  syndrome. In addition, exposure to hyperglycemia in utero increases the risks of obesity, hypertension, and type 2 diabetes in offspring later in life (1,2).
 
 ## Preconception Counseling
+<!-- rag_metadata source=ADA_2026 section="Preconception Counseling" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.1 Starting at puberty and continuing in all people with diabetes and childbearing potential, preconception counseling should be incorporated into routine diabetes care. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.2 Family planning should be discussed, and effective contraception (with consideration of long-acting, reversible contraception) should be prescribed and used until an individual's treatment plan and A1C are optimized for pregnancy. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.3 Preconception counseling should address the importance of achieving glucose levels as close to normal as is safely possible without excessive hypoglycemia, ideally A1C < 6.5% ( < 48 mmol/mol), to reduce the risk of congenital anomalies, preeclampsia, macrosomia, preterm birth, and other complications. A
 
 <!-- image -->
@@ -3192,6 +3558,7 @@ Risks  for  GDM  are  characterized  by  an increased  risk  of  large-for-gesta
 Weight should be assessed at the preconception evaluation. Counseling on the specific risks of obesity in pregnancy and lifestyle interventions to prevent and treat obesity, including referral to a registered dietitian  nutritionist  (RDN), is  recommended regardless of diabetes status (24). In a randomized trial of individuals with overweight or obesity and a history of  GDM,  weight  loss  prior  to  a  subsequent pregnancy was associated with a lower risk of GDM recurrence, especially when weight  loss  was ≥ 5%  (odds  ratio [OR] 0.18, 95% CI 0.04-0.88) (25). Counseling on weight management should include the  known  benefits  and  risks  of  different strategies  for  achieving  and  maintaining weight loss. For strategies that include pharmacotherapy, recommendations should be given  for  when  changes  in  medications should occur prior to pregnancy. The risk for  associated  hypertension  and  other comorbidities  may be as  high or  higher with type 2 diabetes as it is with type 1 diabetes, even if diabetes is better managed  and  of  shorter  apparent  duration, with pregnancy loss appearing to be more prevalent in the third trimester in those with type 2 diabetes compared with the first trimester in those with type 1 diabetes (26,27).
 
 ## Preconception Care
+<!-- rag_metadata source=ADA_2026 section="Preconception Care" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
@@ -3208,6 +3575,7 @@ Due to the complexity of insulin management in pregnancy, referral to a speciali
 The most  important  diabetes-specific component of preconception care is the attainment of glycemic goals prior to conception. Diabetes-specific counseling should include an explanation of the risks to mother  and  fetus  related  to  pregnancies
 
 ## Table 15.1-Checklist for preconception care for people with prediabetes, diabetes, or a history of gestational diabetes mellitus
+<!-- rag_metadata source=ADA_2026 section="Table 15.1-Checklist for preconception care for people with prediabetes, diabetes, or a history of gestational diabetes mellitus" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 Preconception education should include:
 
@@ -3290,22 +3658,27 @@ For individuals with preexisting diabetes, the presence of microvascular complic
 A  referral  for  a  comprehensive  eye exam is recommended. Individuals with preexisting  diabetic  retinopathy  need close monitoring during pregnancy to assess  for  stability  or  progression  of retinopathy  and  provide  treatment  if indicated (37).
 
 ## GLYCEMIC GOALS IN PREGNANCY
+<!-- rag_metadata source=ADA_2026 section="GLYCEMIC GOALS IN PREGNANCY" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 15.8 Fasting, preprandial,  and  postprandial  blood  glucose  monitoring  are recommended  in  individuals  with  diabetes  in  pregnancy  to  achieve  optimal glucose levels. Glucose goals are fasting  plasma  glucose < 95  mg/dL ( < 5.3  mmol/L)  and  either  1-h  postprandial  glucose < 140  mg/dL  ( < 7.8 mmol/L)  or  2-h  postprandial  glucose < 120 mg/dL ( < 6.7 mmol/L). B 15.9 Due to increased red blood cell turnover, A1C is slightly lower during pregnancy in people with and without diabetes. Ideally, the A1C goal in pregnancy is < 6% ( < 42 mmol/mol) if this can be achieved without significant hypoglycemia, but the goal may be relaxed to < 7% ( < 53 mmol/mol) if necessary to prevent hypoglycemia. B 15.10 Continuous  glucose  monitoring (CGM) can help to achieve glycemic  goals  (e.g.,  time  in  range,  time above range) A and A1C goal B in type 1 diabetes  and  pregnancy  and  may  be beneficial for other types of diabetes in pregnancy. E
 
 15.11 Recommend CGM to pregnant individuals with type 1 diabetes. A In conjunction  with  aims  to  achieve  traditional  pre-  and  postprandial  glycemic goals, CGM can reduce the risk for largefor-gestational-age infants and neonatal hypoglycemia in pregnancy complicated by type 1 diabetes. A
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="E" topic_tags="recommendation, grade_E" population="T2DM T1DM global" -->
 - 15.12 CGM metrics may be used in combination with blood glucose monitoring to achieve optimal pre- and postprandial glycemic goals. E
 
 15.13 Commonly used estimated A1C and  glucose  management  indicator calculations should not be used in pregnancy as estimates of A1C. C
 
 ## Insulin Physiology
+<!-- rag_metadata source=ADA_2026 section="Insulin Physiology" topic_tags="insulin, injectable_therapy" population="T2DM T1DM global" year=2026 -->
 
 Pregnancy in people with normal glucose metabolism  is  characterized  by  fasting glucose levels that are lower than those in the nonpregnant state due to insulinindependent glucose uptake by the fetus and  placenta  and  by  mild  postprandial hyperglycemia and carbohydrate intolerance as a result of diabetogenic placental factors. Early pregnancy may be a time of enhanced  insulin  sensitivity  and  lower glucose levels and is followed by progressive insulin resistance in the second and third  trimesters  (38-40).  Insulin  resistance drops rapidly with the delivery of the placenta. In people with normal pancreatic function, insulin production is sufficient  to  meet  the  challenge  of  this physiological  insulin  resistance  and  to maintain  normal  glucose  levels.  However,  in  people  with  diabetes,  hyperglycemia occurs if treatment is not adjusted appropriately.
 
 ## Glucose Monitoring
+<!-- rag_metadata source=ADA_2026 section="Glucose Monitoring" topic_tags="general" population="T2DM T1DM global" year=2026 -->
 
 Reflecting  this  physiology,  fasting  and postprandial blood glucose monitoring (BGM) is  recommended to  achieve  glycemic goals in pregnant people with diabetes. Preprandial  testing  is  also  recommended when  using  insulin  pumps  or  basal-bolus therapy so that the premeal rapid-acting insulin dosage can be adjusted. Postprandial monitoring is associated with better glycemic  outcomes  and  a  lower  risk  of  preeclampsia (41,42). There are no adequately powered randomized trials comparing different fasting and postmeal glycemic goals for preexisting diabetes in pregnancy.
 
@@ -3335,12 +3708,14 @@ Professional  society  guidance  regarding early  pregnancy  treatment  of  hype
 Therefore, the benefits of treatment of early  abnormal  glucose  metabolism  remain  uncertain.  Nutrition  counseling  and periodic  testing  of  fasting  glucose  levels (e.g.,  3-4  times  per  week) are suggested. Testing  frequency  may  proceed  to  daily, and treatment may be intensified, if fasting plasma  glucose  is  predominantly ≥ 110 mg/dL  ( ≥ 6.1  mmol/L)  prior  to  15  weeks of  gestation.  Individualized  discussion  of areas  of  uncertainty  and  the  option  to treat for fasting glucose ≥ 110 mg/dL ( ≥ 6.1 mmol/L) via shared decision-making is reasonable. When treatment for early abnormal glucose metabolism is initiated, fasting and postprandial glucose levels should be monitored and the standard glucose goals recommended  in  pregnancies  associated with diabetes ( Table 15.2 ) should be used.
 
 ## A1C in Pregnancy
+<!-- rag_metadata source=ADA_2026 section="A1C in Pregnancy" topic_tags="glycemic_targets, HbA1c" population="T2DM T1DM global" year=2026 -->
 
 In studies of individuals without preexisting diabetes, increasing A1C levels within the normal range are associated with adverse outcomes (59). In the Hyperglycemia  and  Adverse  Pregnancy  Outcome (HAPO) study, increasing levels of glycemia  were also  associated  with  worsening outcomes  (21).  Observational  studies  in preexisting  diabetes  and  pregnancy  show the lowest rates of adverse fetal outcomes in association with A1C < 6-6.5% ( < 42-48 mmol/mol)  early  in  gestation  (14,15,17, 60).  Clinical  trials  have  not  evaluated  the risks and benefits of achieving these goals, and  treatment  goals  should  account  for the  risk  of  maternal  hypoglycemia  in  setting  an  individualized  goal  of < 6%  ( < 42 mmol/mol) to < 7% ( < 53 mmol/mol). Due to physiological increases in red blood cell turnover,  A1C  levels  fall  during  normal pregnancy  (61,62).  Additionally,  as  A1C represents  an  integrated  measure  of  glucose, it may not fully capture postprandial hyperglycemia,  which  drives  macrosomia. Thus, although A1C may be useful, it should be used as a secondary measure of glycemia in pregnancy, after glucose monitoring.
 
 In  the  second  and  third  trimesters, A1C < 6% ( < 42 mmol/mol) has the lowest  risk  of  large-for-gestational-age  infants  (60,63,64),  preterm  delivery  (65), and preeclampsia (1,66). Taking all of this into account, a goal of < 6% ( < 42 mmol/ mol) is optimal during pregnancy if it can be achieved without significant hypoglycemia,  which,  in  addition  to  the  usual adverse sequelae, may increase the risk of  low  birth  weight  (67,68).  Given  the alteration in red blood cell kinetics during pregnancy and physiological changes in glycemic  parameters,  A1C  levels  may need to be monitored more frequently than usual (e.g., monthly).
 
 ## Continuous Glucose Monitoring in Pregnancy
+<!-- rag_metadata source=ADA_2026 section="Continuous Glucose Monitoring in Pregnancy" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 The  Continuous  Glucose  Monitoring  in Pregnant Women With Type 1 Diabetes Trial (CONCEPTT) was an RCT of real-time CGM in addition to standard care, including optimization of pre- and postprandial glucose  goals,  versus  standard  care  for pregnant people with type 1 diabetes. It demonstrated  the  value  of  using  realtime  CGM  in  pregnant  individuals  with type  1  diabetes  by  showing  a  mild  improvement in A1C and significant improvements in the maternal glucose time in range (TIR)  and  time  above  range  (TAR),  without an increase in hypoglycemia, and reductions in  large-for-gestational-age births, length of infant  hospital  stays,  and  severe  neonatal hypoglycemia (69). An observational cohort study that evaluated the glycemic variables reported  using  CGM  systems  found  that lower mean glucose, lower SD, and higher percentage  of  TIR  were  associated  with lower risks of large-for-gestational-age births and other adverse neonatal outcomes (70). Data from one study suggest that use of the CGM-reported mean glucose is superior to use of estimated A1C, glucose management indicator , and other calculations to estimate A1C, given the changes to A1C that occur in pregnancy (71). One RCT and several observational  studies  have  found  that  a  5%  increase  in  CGM  TIR  was  associated  with improvements in neonatal morbidity, including large-for-gestational-age births and neonatal intensive care unit admissions (69,70, 72,73). CGM TIR can be used for assessment of glycemic outcomes in people with type 1 diabetes, but it does not provide actionable data to address fasting and postprandial hypoglycemia  or  hyperglycemia.  The  cost  of CGM  use  by  pregnant  individuals  with type 1 diabetes is offset by improved maternal and neonatal outcomes (74).
 
@@ -3358,15 +3733,23 @@ Goals  for  sensor  glucose  ranges  in pregnancy are:
 Goals for time spent in each range are specific for pregnant individuals with type 1 diabetes.
 
 ## MANAGEMENT OF DIABETES IN PREGNANCY
+<!-- rag_metadata source=ADA_2026 section="MANAGEMENT OF DIABETES IN PREGNANCY" topic_tags="pregnancy, GDM" population="T2DM T1DM global" year=2026 -->
 
 ## Recommendations
 
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 15.14 Nutrition counseling before and  during  pregnancy  should  promote an eating pattern including fruits, vegetables, legumes, whole grains, nuts, seeds, fish,  and  other  lean  protein,  which  will provide a balance of macronutrients and healthy n-3 fatty acids. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.15 Lifestyle behavior change is an essential  component  of  management of GDM and may suffice as treatment for many individuals. Insulin should be added  if  needed  to  achieve  glycemic goals. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.16 Telehealth visits used in combination with in-person visits for pregnant people  with  GDM  can  improve  outcomes compared with standard in person care alone. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 15.17 Insulin should be used to manage type 1 diabetes in pregnancy A and is the preferred agent for the management of GDM A and type 2 diabetes in pregnancy. B
+<!-- rag_metadata source=ADA_2026 evidence_grade="C" topic_tags="recommendation, grade_C" population="T2DM T1DM global" -->
 - 15.18 Either multiple daily injections or  insulin  pump  technology  can  be used  in  pregnancy  complicated  by type 1 diabetes. C
+<!-- rag_metadata source=ADA_2026 evidence_grade="A" topic_tags="recommendation, grade_A" population="T2DM T1DM global" -->
 - 15.19 Automated insulin delivery (AID) systems with pregnancy-specific glucose targets are recommended for pregnant individuals with type 1 diabetes. A
+<!-- rag_metadata source=ADA_2026 evidence_grade="B" topic_tags="recommendation, grade_B" population="T2DM T1DM global" -->
 - 15.20 AID systems without pregnancyspecific glucose targets or a pregnancyspecific  algorithm  may  be  considered for select pregnant  individuals with type 1 diabetes when used with assistive techniques and working with experienced health care teams. B
 - 15.21 Metformin and glyburide, individually  or  in  combination,  should  not be used as first-line agents for management of diabetes in pregnancy, as both cross  the  placenta  to  the  fetus A and
 
@@ -3377,6 +3760,7 @@ may not be sufficient to achieve glycemic goals. B Other oral and noninsulin inj
 The management of pregnancies associated with diabetes includes appropriate nutrition,  lifestyle  and  behavior  management, physical activity goals, and pharmacotherapy  to  support  the  maternal,  fetal, and  placental  needs  and  reach  glycemic goals regardless of the diabetes type.
 
 ## Medical Nutrition Therapy
+<!-- rag_metadata source=ADA_2026 section="Medical Nutrition Therapy" topic_tags="lifestyle_modification, nutrition, physical_activity" population="T2DM T1DM global" year=2026 -->
 
 In  people with preexisting diabetes, glycemic goals are usually achieved through a  combination  of  insulin  administration and  medical  nutrition  therapy.  Because glycemic  goals  in  pregnant  individuals are stricter than in nonpregnant individuals, it  is  important  that  pregnant  people  with diabetes  consume  consistent  amounts  of carbohydrates to match their prandial insulin  dosages  or  use  insulin-to-carbohydrate ratios to match prandial insulin dosages to the  carbohydrates  being  consumed  in  order  to  minimize  postprandial  hyperglycemia or hypoglycemia. Referral to an RDN is important to establish a food plan and to determine weight gain goals. The quality of the carbohydrates should be evaluated. A subgroup analysis of the CONCEPTT study demonstrated that the food choices of individuals  planning  pregnancy  and  currently pregnant assessed during the run-in phase prior to randomization were characterized by high-fat, low-fiber, and poor-quality carbohydrate  intakes.  Fruit  and  vegetable consumption was inadequate, with one in four participants at risk for micronutrient deficiencies,  highlighting  the  importance of medical nutrition therapy (82).
 

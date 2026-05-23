@@ -111,10 +111,113 @@ modification, and referral to nephrology.
 """
 
 
+# ── Annotation patterns ───────────────────────────────────────────────────────
+
+# KDIGO recommendation grade: (1A), (2B), (1C), (2D) etc.
+_KDIGO_GRADE_RE = re.compile(r"\(([12][ABCD])\)")
+
+# KDIGO chapter headings in raw pdfplumber text
+_CHAPTER_RE = re.compile(r"^(Chapter\s+\d+[:\.]?\s+.+)$", re.M | re.I)
+
+# eGFR decision threshold lines — specific numeric thresholds used as drug stop/start points
+_EGFR_THRESHOLD_RE = re.compile(
+    r"eGFR\s*[<>≥≤]\s*\d+|eGFR\s+of\s+\d+|\beGFR\b.{0,40}\b(20|30|45|60)\b",
+    re.I,
+)
+
+# Chapter-to-topic-tag map
+_CHAPTER_TAG_MAP: list[tuple[re.Pattern, str]] = [
+    (re.compile(r"comprehensive", re.I),
+     "comprehensive_care, CKD_management, T2DM_CKD"),
+    (re.compile(r"glycem", re.I),
+     "glycemic_targets, HbA1c, CGM, glucose_monitoring"),
+    (re.compile(r"lifestyle", re.I),
+     "lifestyle_modification, nutrition, physical_activity, CKD_diet"),
+    (re.compile(r"glucose.lower|pharmacol|drug|therap", re.I),
+     "drug_selection, SGLT2_inhibitors, GLP1_agonists, metformin, drug_dose_adjustment"),
+    (re.compile(r"self.manag|education|team.based|integrated", re.I),
+     "self_management, patient_education, team_care"),
+]
+
+
+def _chapter_tags(chapter_text: str) -> str:
+    for pattern, tags in _CHAPTER_TAG_MAP:
+        if pattern.search(chapter_text):
+            return tags
+    return "CKD, T2DM_CKD, general"
+
+
+def _inject_chapter_metadata(md: str) -> str:
+    """Detect 'Chapter N: ...' lines in raw pdfplumber text and prepend rag_metadata."""
+    def _replacer(match: re.Match) -> str:
+        chapter_line = match.group(1).strip()
+        tags = _chapter_tags(chapter_line)
+        comment = (
+            f"<!-- rag_metadata source={SOURCE_KEY} "
+            f"section=\"{chapter_line}\" "
+            f"topic_tags=\"{tags}\" "
+            f"population=\"T2DM T1DM CKD\" "
+            f"year={YEAR} -->\n"
+        )
+        return comment + chapter_line
+    return _CHAPTER_RE.sub(_replacer, md)
+
+
+def _annotate_recommendation_grades(md: str) -> str:
+    """Prepend rag_metadata before any line carrying a KDIGO grade marker.
+
+    KDIGO recommendations wrap across multiple lines; the closing grade like
+    '(1B).' always appears on the last line of the recommendation, not on the
+    opening 'Recommendation X.Y.Z:' line. So we annotate every line that
+    contains a grade marker — regardless of whether it starts with 'Recommendation'.
+
+    Grade strength: 1 = strong ('We recommend'), 2 = weak ('We suggest').
+    Evidence quality: A=High, B=Moderate, C=Low, D=Very Low.
+    """
+    out_lines: list[str] = []
+    for line in md.splitlines():
+        if len(line.strip()) > 20:
+            grades = _KDIGO_GRADE_RE.findall(line)
+            if grades:
+                primary = grades[0]
+                strength = "strong" if primary.startswith("1") else "conditional"
+                all_grades = ",".join(grades)
+                comment = (
+                    f"<!-- rag_metadata source={SOURCE_KEY} "
+                    f"evidence_grade=\"{primary}\" "
+                    f"all_grades=\"{all_grades}\" "
+                    f"recommendation_strength=\"{strength}\" "
+                    f"topic_tags=\"recommendation, grade_{primary}, CKD\" -->"
+                )
+                out_lines.append(comment)
+        out_lines.append(line)
+    return "\n".join(out_lines)
+
+
+def _annotate_egfr_thresholds(md: str) -> str:
+    """Prepend safety_critical rag_metadata before lines with eGFR drug decision thresholds.
+
+    These are the hard stop/start lines for Metformin (<30/<45) and SGLT2i (≥20)
+    — must be retrieved verbatim without chunk boundary splits.
+    """
+    out_lines: list[str] = []
+    for line in md.splitlines():
+        if len(line.strip()) > 40 and _EGFR_THRESHOLD_RE.search(line):
+            comment = (
+                f"<!-- rag_metadata source={SOURCE_KEY} "
+                f"topic_tags=\"eGFR_threshold, drug_dose_adjustment, CKD, safety\" "
+                f"safety_critical=true "
+                f"chunk_note=\"zero_loss_standalone_node\" -->"
+            )
+            out_lines.append(comment)
+        out_lines.append(line)
+    return "\n".join(out_lines)
+
+
 # ── Core extraction ───────────────────────────────────────────────────────────
 
 def extract_document(pdf_path: Path) -> str:
-    """Extract all pages via pdfplumber, raw text, no content transformation."""
+    """Extract all pages via pdfplumber, with annotation passes applied."""
     import pdfplumber
 
     pages_text: list[str] = []
@@ -134,7 +237,11 @@ def extract_document(pdf_path: Path) -> str:
     if failed:
         print(f"  [WARN] Failed pages: {failed}")
 
-    return "\n\n".join(pages_text)
+    raw = "\n\n".join(pages_text)
+    raw = _inject_chapter_metadata(raw)
+    raw = _annotate_recommendation_grades(raw)
+    raw = _annotate_egfr_thresholds(raw)
+    return raw
 
 
 def main() -> None:
@@ -161,17 +268,23 @@ def main() -> None:
     OUT_FILE.write_text(full_md, encoding="utf-8")
 
     # Quality signals
-    egfr_refs   = len(re.findall(r"\beGFR\b", full_md, re.I))
-    sglt2_refs  = len(re.findall(r"\bSGLT2\b", full_md, re.I))
-    grade_refs  = len(re.findall(r"\b[12][ABCD]\b", full_md))
-    ckd_g_refs  = len(re.findall(r"\bCKD\s+G[1-5]\b", full_md, re.I))
-    page_markers = full_md.count("<!-- page ")
+    egfr_refs        = len(re.findall(r"\beGFR\b", full_md, re.I))
+    sglt2_refs       = len(re.findall(r"\bSGLT2\b", full_md, re.I))
+    grade_refs       = len(re.findall(r"\b[12][ABCD]\b", full_md))
+    ckd_g_refs       = len(re.findall(r"\bCKD\s+G[1-5]\b", full_md, re.I))
+    page_markers     = full_md.count("<!-- page ")
+    rec_annots       = full_md.count("evidence_grade=")
+    egfr_annots      = full_md.count("safety_critical=true")
+    chapter_annots   = full_md.count("rag_metadata source=") - 1  # minus doc header
 
     print(f"  OK  ({len(full_md):,} chars, {page_markers} pages extracted)")
-    print(f"  eGFR refs        : {egfr_refs}")
-    print(f"  SGLT2 refs       : {sglt2_refs}")
-    print(f"  Grade refs (1A/2B/etc): {grade_refs}")
-    print(f"  CKD G-stage refs : {ckd_g_refs}")
+    print(f"  eGFR refs              : {egfr_refs}")
+    print(f"  SGLT2 refs             : {sglt2_refs}")
+    print(f"  Grade refs (1A/2B/etc) : {grade_refs}")
+    print(f"  CKD G-stage refs       : {ckd_g_refs}")
+    print(f"  Chapter annotations    : {chapter_annots}")
+    print(f"  Recommendation grade annotations : {rec_annots}")
+    print(f"  eGFR safety_critical annotations : {egfr_annots}")
     print(f"\n  Saved : {OUT_FILE.resolve()}")
     print(f"  Total chars : {len(full_md):,}")
 

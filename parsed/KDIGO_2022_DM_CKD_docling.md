@@ -37,8 +37,11 @@ modification, and referral to nephrology.
 > C = Low, D = Very Low.  Combined as 1A, 1B, 1C, 1D, 2A, 2B, 2C, 2D.
 >
 > Key eGFR thresholds (verbatim from KDIGO 2022):
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 >   Metformin: continue if eGFR >= 30; use caution / reduce dose eGFR 30-45;
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 >     do not initiate if eGFR < 45; stop if eGFR < 30.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 >   SGLT2 inhibitors: initiate if eGFR >= 20; continue even if eGFR falls below
 >     initiation threshold (kidney-protective benefit preserved).
 >   BP target: < 120 mmHg systolic if tolerated; RAASi (ACEi or ARB) preferred
@@ -644,6 +647,7 @@ corresponding guideline chapters accordingly. diabetes and CKD. This report demo
 UpdatestosectionsonSGLT2iandGLP-1RAincludenew larities across evidence-based recommendations from the 2
 data, additional discussion, modification of the SGLT2i professional societies and emphasizes high-priority in-
 recommendation to reflect new evidence of benefits and terventionstoimprovethehealthofpeoplewithdiabetesand
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 safety with estimated glomerular filtration rate (eGFR) $20 CKD. In addition, the consensus report addresses aspects of
 ml/min per 1.73 m2 (from $30 ml/min per 1.73 m2 previ- CKDprevention,screening,anddiagnosis,whichareimportant
 ously)amongpeoplewithtype2diabetes(T2D),andrevised clinicaltopicsnotexplicitlycoveredintheKDIGOguideline.
@@ -700,6 +704,7 @@ S18 KidneyInternational(2022)102(Suppl5S),S1–S127
 www.kidney-international.org summary of recommendation statements and practice points
 Summary of recommendation statements and practice
 points
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 1: Comprehensive care in patients with diabetes and CKD" topic_tags="comprehensive_care, CKD_management, T2DM_CKD" population="T2DM T1DM CKD" year=2022 -->
 Chapter 1: Comprehensive care in patients with diabetes and CKD
 1.1.Comprehensive diabetes and CKD management
 Practice Point 1.1.1: Patients with diabetes and chronic kidney disease (CKD) should be treated with a comprehensive
@@ -753,6 +758,7 @@ Lifestyle reassessment
 (every 3–6
 Healthydiet Physical activity Smoking cessation Weightmanagement months)
 SGLT2i Metformin RAS inhibitor at maximum Moderate- or
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 First-line (Initiate eGFR ≥20; (if eGFR ≥30) tolerated dose (if HTN*) high-intensity statin
 drug therapy continue until dialysis
 or transplant)
@@ -782,6 +788,7 @@ cotransporter-2inhibitor;T1D,type1diabetes;T2D,type2diabetes.
 Recommendation 1.2.1: We recommend that treatment with an angiotensin-converting enzyme inhibitor
 (ACEi) or an angiotensin II receptor blocker (ARB) be initiated in patients with dia-
 betes, hypertension, and albuminuria, and that these medications be titrated to the
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1B" all_grades="1B" recommendation_strength="strong" topic_tags="recommendation, grade_1B, CKD" -->
 highest approved dose that is tolerated (1B).
 PracticePoint1.2.1:Forpatientswithdiabetes,albuminuria,andnormalbloodpressure,treatmentwithanACEiorARB
 may be considered.
@@ -823,6 +830,7 @@ Practice Point 1.2.7: Use only one agent at a time to block the RAS. The combina
 combination of an ACEi or ARB with a direct renin inhibitor, is potentially harmful.
 1.3. Sodium–glucose cotransporter-2 inhibitors (SGLT2i)
 Recommendation1.3.1:Werecommendtreatingpatientswithtype2diabetes(T2D),CKD,andaneGFR‡20ml/
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1A" all_grades="1A" recommendation_strength="strong" topic_tags="recommendation, grade_1A, CKD" -->
 min per 1.73 m2 with an SGLT2i (1A).
 Practice Point 1.3.1: The recommendation for SGLT2i is for kidney and cardiovascular protection and SGLT2i have been
 shown to have safety and benefit in CKD patients, even for those without T2D. Thus, if patients are
@@ -851,6 +859,7 @@ Practical provider guide to initiating SGLT2 inhibitors
 in patients with type 2 diabetes and CKD
 Assessment Intervention Follow-up
 Eligible patients: SGLT2 inhibitor
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (cid:129) eGFR ≥20 ml/min/1.73 m2 with proven benefits:
 High priority features: (cid:129) Canagliflozin 100 mg (cid:129) Assess adverse effects
 (cid:129) ACR ≥200 mg/g [≥20 mg/mmol] (cid:129) Dapagliflozin 10 mg (cid:129) Review knowledge
@@ -891,6 +900,7 @@ ratio;AKI,acutekidneyinjury;eGFR,estimatedglomerularfiltrationrate;HbA1c,glycate
 Recommendation 1.4.1: We suggest a nonsteroidal mineralocorticoid receptor antagonist with proven kidney
 or cardiovascular benefit for patients with T2D, an eGFR ‡25 ml/min per 1.73 m2,
 normal serum potassium concentration, and albuminuria (‡30 mg/g [‡3 mg/mmol])
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2A" all_grades="2A" recommendation_strength="conditional" topic_tags="recommendation, grade_2A, CKD" -->
 despite maximum tolerated dose of RAS inhibitor (RASi) (2A).
 Practice Point 1.4.1: Nonsteroidal MRA are most appropriate for patients with T2D who are at high risk of CKD pro-
 gression and cardiovascular events, as demonstrated by persistent albuminuria despite other
@@ -905,15 +915,18 @@ hypertension, but may cause hyperkalemia or a reversible decline in glomerular f
 larly among patients with a low GFR.
 1.5. Smoking cessation
 Recommendation 1.5.1: We recommend advising patients with diabetes and CKD who use tobacco to quit
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1D" all_grades="1D" recommendation_strength="strong" topic_tags="recommendation, grade_1D, CKD" -->
 using tobacco products (1D).
 Practice Point 1.5.1: Physicians should counsel patients with diabetes and CKD to reduce secondhand smoke exposure.
 S22 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 24 -->
 www.kidney-international.org summary of recommendation statements and practice points
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 2: Glycemic monitoring and targets in patients with diabetes and CKD" topic_tags="glycemic_targets, HbA1c, CGM, glucose_monitoring" population="T2DM T1DM CKD" year=2022 -->
 Chapter 2: Glycemic monitoring and targets in patients with diabetes and CKD
 2.1. Glycemic monitoring
 Recommendation2.1.1:WerecommendusinghemoglobinA1c(HbA1c)tomonitorglycemiccontrolinpatients
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 with diabetes and CKD (1C).
 PracticePoint2.1.1:Monitoringlong-termglycemiccontrolbyHbA1ctwiceperyearisreasonableforpatientswithdiabetes.
 HbA1cmaybemeasuredasoftenas4timesperyeariftheglycemictargetisnotmetorafterachangein
@@ -934,6 +947,7 @@ scanned CGM). Newer CGM devices may offer advantages for certain patients, depen
 their values, goals, and preferences.
 2.2. Glycemic targets
 Recommendation 2.2.1: We recommend an individualized HbA1c target ranging from <6.5% to <8.0% in
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 patients with diabetes and CKD not treated with dialysis (Figure 14) (1C).
 < 8.0%
 < 6.5% HbA1c
@@ -945,6 +959,7 @@ Present Hypoglycemia awareness Impaired
 Available Resources for hypoglycemia management Scarce
 Low Propensity of treatment to cause hypoglycemia High
 Figure14|Factorsguidingdecisionsonindividualglycatedhemoglobin(HbA1c)targets.CKD,chronickidneydisease;G1,estimated
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 glomerularfiltrationrate(eGFR)$90ml/minper1.73m2;G5,eGFR<15ml/minper1.73m2.
 PracticePoint2.2.1:SafeachievementoflowerHbA1ctargets(e.g.,<6.5%or<7.0%)maybefacilitatedbyCGMorSMBG
 and by selection of glucose-lowering agents that are not associated with hypoglycemia.
@@ -954,16 +969,19 @@ KidneyInternational(2022)102(Suppl5S),S1–S127 S23
 
 <!-- page 25 -->
 summary of recommendation statements and practice points www.kidney-international.org
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 3: Lifestyle interventions in patients with diabetes and CKD" topic_tags="lifestyle_modification, nutrition, physical_activity, CKD_diet" population="T2DM T1DM CKD" year=2022 -->
 Chapter 3: Lifestyle interventions in patients with diabetes and CKD
 3.1.Nutrition intake
 Practice Point 3.1.1: Patients with diabetes and CKD should consume an individualized diet high in vegetables, fruits,
 wholegrains,fiber,legumes,plant-basedproteins,unsaturatedfats,andnuts;andlowerinprocessed
 meats, refined carbohydrates, and sweetened beverages.
 Recommendation3.1.1:Wesuggestmaintainingaproteinintakeof0.8gprotein/kg(weight)/dforthosewith
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2C" all_grades="2C" recommendation_strength="conditional" topic_tags="recommendation, grade_2C, CKD" -->
 diabetes and CKD not treated with dialysis (2C).
 PracticePoint3.1.2:Patientstreatedwithhemodialysis,andparticularlyperitonealdialysis,shouldconsumebetween1.0
 and 1.2 g protein/kg (weight)/d.
 Recommendation3.1.2:Wesuggestthatsodiumintakebe<2gofsodiumperday(or<90mmolofsodiumper
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2C" all_grades="2C" recommendation_strength="conditional" topic_tags="recommendation, grade_2C, CKD" -->
 day, or <5 g of sodium chloride per day) in patients with diabetes and CKD (2C).
 Practice Point 3.1.3: Shared decision-making should be a cornerstone of patient-centered nutrition management in pa-
 tients with diabetes and CKD.
@@ -985,11 +1003,14 @@ Practice Point 3.2.3: For patients at higher risk of falls, healthcare providers
 physical activity (low, moderate, or vigorous) and the type of exercises (aerobic vs. resistance, or
 both).
 Practice Point 3.2.4: Physicians should consider advising/encouraging patients with obesity, diabetes, and CKD to lose
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 weight, particularly patients with eGFR ‡30 ml/min per 1.73 m2.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 4: Glucose-lowering therapies in patients with T2D and CKD" topic_tags="drug_selection, SGLT2_inhibitors, GLP1_agonists, metformin, drug_dose_adjustment" population="T2DM T1DM CKD" year=2022 -->
 Chapter 4: Glucose-lowering therapies in patients with T2D and CKD
 Practice Point 4.1: Glycemic management for patients with T2D and CKD should include lifestyle therapy, first-line
 treatment with both metformin and a sodium-glucose cotransporter-2 inhibitor (SGLT2i), and
 additional drug therapy as needed for glycemic control (Figure 23).
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Practice Point 4.2: Most patients with T2D, CKD, and eGFR ‡30 ml/min per 1.73 m2 would benefit from treatment
 with both metformin and an SGLT2i.
 Practice Point 4.3: Patient preferences, comorbidities, eGFR, and cost should guide selection of additional drugs to
@@ -1010,6 +1031,7 @@ Reduce dose Discontinue Discontinue Do not initiate Discontinue
 GLP-1 receptor agonist
 (preferred) (cid:129) Guided by patient preferences, comorbidities,
 eGFR, and cost
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 DPP-4 inhibitor Insulin (cid:129) Includes patients with eGFR < 30 ml/min per
 1.73 m2 or treated with dialysis
 Additional drug therapy as Sulfonylurea TZD (cid:129) See Figure 25
@@ -1111,11 +1133,14 @@ summary of recommendation statements and practice points www.kidney-internationa
 4.1. Metformin
 Recommendation4.1.1:WerecommendtreatingpatientswithT2D,CKD,andaneGFR‡30ml/minper1.73m2
 with metformin (1B).
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Practice Point 4.1.1: Treat kidney transplant recipients with T2D and an eGFR ‡30 ml/min per 1.73 m2 with metformin
 according to recommendations for patients with T2D and CKD.
 Practice Point 4.1.2: Monitor eGFR in patients treated with metformin. Increase the frequency of monitoring when the
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR is <60 ml/min per 1.73 m2 (Figure 27).
 Yes
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR < 30 Stop metformin; do not initiate metformin
 No
 eGFR ≥ 60 eGFR 45–59 eGFR 30–44
@@ -1139,12 +1164,14 @@ certain conditions (see text)
 Figure27|Suggestedapproachindosingmetforminbasedonthelevelofkidneyfunction.eGFR,estimatedglomerularfiltrationrate(in
 ml/minper1.73m2);GI,gastrointestinal.
 PracticePoint4.1.3:AdjustthedoseofmetforminwhentheeGFRis<45ml/minper1.73m2,andforsomepatientswhen
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 the eGFR is 45–59 ml/min per 1.73 m2 (Figure 27).
 Practice Point 4.1.4: Monitor patients for vitamin B12 deficiency when they are treated with metformin for more than 4
 years.
 4.2. Glucagon-like peptide-1 receptor agonists (GLP-1 RA)
 Recommendation 4.2.1: In patients with T2D and CKD who have not achieved individualized glycemic targets
 despite use of metformin and SGLT2i treatment, or who are unable to use those
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1B" all_grades="1B" recommendation_strength="strong" topic_tags="recommendation, grade_1B, CKD" -->
 medications, we recommend a long-acting GLP-1 RA (1B).
 Practice Point 4.2.1: The choice of GLP-1 RA should prioritize agents with documented cardiovascular benefits.
 S26 KidneyInternational(2022)102(Suppl5S),S1–S127
@@ -1157,6 +1184,7 @@ GLP-1RA Dose CKDadjustment
 Dulaglutide 0.75 mg and 1.5 mg once weekly No dosage adjustment
 Use with eGFR >15 ml/min per 1.73 m2
 Exenatide 10 μg twice daily Use with CrCl >30 ml/min
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Exenatide extended-release 2 mg once weekly Use with eGFR >45 ml/min per 1.73 m2
 Liraglutide 1.2 mg and 1.8 mg once daily No dosage adjustment
 Limited data for severe CKD
@@ -1176,9 +1204,11 @@ GLP-1RAisusedconcomitantlywithothermedicationssuchassulfonylureasorinsulin.Thedo
 sulfonylurea and/or insulin may need to be reduced.
 PracticePoint4.2.5:GLP-1RAmaybepreferentiallyusedinpatientswithobesity,T2D,andCKDtopromoteintentionalweight
 loss.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 5: Approaches to management of patients with diabetes and CKD" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 Chapter 5: Approaches to management of patients with diabetes and CKD
 5.1. Self-management education programs
 Recommendation 5.1.1: We recommend that a structured self-management educational program be imple-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 mented for care of people with diabetes and CKD (Figure 30) (1C).
 Key objectives are to:
 Improve diabetes-related knowledge, beliefs, and skills
@@ -1200,6 +1230,7 @@ withdiabetes and CKD,takingintoconsiderationlocalcontext, cultures,andavailabili
 5.2. Team-based integrated care
 Recommendation 5.2.1: We suggest that policymakers and institutional decision-makers implement team-
 based, integrated care focused on risk evaluation and patient empowerment to pro-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2B" all_grades="2B" recommendation_strength="conditional" topic_tags="recommendation, grade_2B, CKD" -->
 vide comprehensive care in patients with diabetes and CKD (2B).
 Practice Point 5.2.1: Team-based integrated care, supported by decision-makers, should be delivered by physicians and
 nonphysician personnel (e.g., trained nurses and dieticians, pharmacists, healthcare assistants,
@@ -1225,6 +1256,7 @@ S28 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 30 -->
 www.kidney-international.org chapter 1
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 1: Comprehensive care in patients with" topic_tags="comprehensive_care, CKD_management, T2DM_CKD" population="T2DM T1DM CKD" year=2022 -->
 Chapter 1: Comprehensive care in patients with
 diabetes and CKD
 1.1 Comprehensive diabetes and CKD management antithrombotic therapy in diabetes and CKD has not been
@@ -1277,6 +1309,7 @@ and embolic events is high, the optimal antiplatelet and andtitratethesesequenti
 KidneyInternational(2022)102(Suppl5S),S1–S127 S29
 
 <!-- page 31 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 Regular
 risk factor
@@ -1344,6 +1377,7 @@ Lifestyle reassessment
 (every 3–6
 Healthydiet Physical activity Smoking cessation Weightmanagement months)
 SGLT2i Metformin RAS inhibitor at maximum Moderate- or
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 First-line (Initiate eGFR ≥20; (if eGFR ≥30) tolerated dose (if HTN*) high-intensity statin
 drug therapy continue until dialysis
 or transplant)
@@ -1372,6 +1406,7 @@ cotransporter-2inhibitor;T1D,type1diabetes;T2D,type2diabetes.
 transplant, and patients treated with hemodialysis or perito- monitoring, glycemia management, and RAS blockade, as
 neal dialysis. CKD is defined as persistently elevated urine well as lifestyle factors for all CKD severities.
 albumin excretion ($30 mg/g [$3 mg/mmol]), persistently
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 reducedeGFR(eGFR<60ml/minper1.73m2),or both,for Researchrecommendations
 more than 3 months, in accordance with current KDIGO (cid:3) Additionaltrialsto prevent CKD progressionand CVD are
 guidelines. needed. These studies would address how best to combine
@@ -1392,6 +1427,7 @@ relation to the selected topics, particularly diabetes individual CKD/diabetes t
 KidneyInternational(2022)102(Suppl5S),S1–S127 S31
 
 <!-- page 33 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 (cid:3) Implementation science research should evaluate ways to with irbesartan compared with placebo resulted in a 33%
 improve dissemination and implementation of evidence- decrease in the risk of doubling of serum creatinine concen-
@@ -1555,6 +1591,9 @@ PhysicianDeskReferenceand/ortheUSFoodandDrugAdministration,whicharebasedoninform
 countriesandregulatoryauthorities.AUC,areaunderthecurve;Cmax,maximumorpeakconcentration;CrCl,creatinineclearance;GFR,glomerularfiltrationrate;PO,oral.
 S34
 KidneyInternational(2022)102(Suppl5S),S1–S127
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter
+1
+www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter
 1
 www.kidney-international.org
@@ -1612,6 +1651,7 @@ anti-inflammatorydrug.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S35
 
 <!-- page 37 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 CKD, including those with pre-existing kidney disease.37 bornbetween 1985 and2000,67which demonstrated thatthe
 Moreover, there were suggestions in clinical trials that the risks of major congenital malformations, predominantly
@@ -1727,12 +1767,14 @@ normalserumpotassiumlevel.Similareffortsshouldbemade (i) Three large RCTs report
 to discontinue other concurrent blood pressure medication diovascular outcomes and secondary kidney outcomes
 beforeattemptingtoreducetheACEiorARBdoseinpatients among patients with T2D: the Empagliflozin Cardio-
 who experience symptomatic hypotension. vascularOutcomeEventTrialinType2DiabetesMellitus
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 WhenthesedrugsareusedinpatientswitheGFR<30ml/ Patients–Removing Excess Glucose (EMPA-REG) trial,
 min per 1.73 m2, close monitoring of serum potassium level the CANagliflozin cardioVascular Assessment Study
 isrequired.Withholdingthesedrugssolelyonthebasisofthe (CANVAS), and the Dapagliflozin Effect on
 KidneyInternational(2022)102(Suppl5S),S1–S127 S37
 
 <!-- page 39 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 CardiovascuLAR Events [DECLARE-TIMI 58] trial.87–90 fraction (Effect of Sotagliflozin on Cardiovascular Events
 Subsequently, there was an additional RCT of patients in Patients with Type 2 Diabetes Post Worsening Heart
@@ -1763,9 +1805,11 @@ enrolled patients with or without T2D. enrollmentofpatientswithaneGFRaslowas20ml
 enrolled patients with diabetes and CKD (Effect of the effect of the drug based on the population (i.e., with/
 Sotagliflozin on Cardiovascular and Renal Events in Pa- without heart failure and by GFR levels). The EMPA-Kidney
 tients with Type 2 Diabetes and Moderate Renal trial, although not yet published, also enrolled patients with
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Impairment Who Are at Cardiovascular Risk an eGFR as low as 20 ml/min per 1.73 m2 and was stopped
 [SCORED]96). early due to clear evidence of efficacy.95
 (v) A meta-analysis of 4 trials (EMPA-REG, CANVAS, Currently, the safety and efficacy of initiating SGLT2i for
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 CREDENCE, DECLARE-TIMI 58) evaluating kidney people with an eGFR <20 ml/min per 1.73 m2, in kidney
 outcomes97; another later meta-analysis evaluating car- transplantrecipients,oramongindividualswithT1D,arenot
 diovascular and kidney outcomes that also included established and are currently being studied; further studies
@@ -1774,6 +1818,8 @@ ysis99ofcardiovascularoutcomesamongthe3trialsthat these subgroups.
 enrolled an exclusive CKD population (CREDENCE,
 DAPA-CKD, and SCORED). Recommendation 1.3.1: We recommend treating
 (vi) Four RCTs that enrolled patients with heart failure eval- patients with type 2 diabetes (T2D), CKD, and an
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1A" all_grades="1A" recommendation_strength="strong" topic_tags="recommendation, grade_1A, CKD" -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 uatingprimarycardiovascularoutcomes,butalsoreported eGFR ‡20 ml/min per 1.73 m2 with an SGLT2i (1A).
 on secondary kidney outcomes. Two of these trials
 enrolled patients with heart failure and reduced ejection This recommendation places a high value on the kidney and
@@ -1782,6 +1828,7 @@ fraction (HFrEF) among adults with and without T2D heartprotectiveeffectsofusing
 Heart Failure [DAPA-HF]100and Empagliflozin Outcome this class of drug. The recommendation is strong because in the
 TrialinPatientswithChronicHeartFailureandaReduced judgment of the Work Group, all or nearly all well-informed
 Ejection Fraction [EMPEROR-Reduced]101). These trials patients would choose to receive treatment with an SGLT2i.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 also stratified by eGFR (<60 and $60 ml/min per 1.73
 m2) (Figure 5). One trial enrolled patients with heart Keyinformation
 failure and preserved ejection fraction (HFpEF) with and Balance of benefits and harms. Details for cardiovascular,
@@ -1799,15 +1846,19 @@ Drug
 once daily once daily 25 mg once daily 300 mg once daily
 Total of participants 4401 4304 6609 7020 10,142
 % with CVD 50 37.4 27 100 66
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR criteria for enrollment 30–90 25–75 ≥20–<45 or ≥45–<90 ≥30 ≥30
 (ml/min per 1.73 m2)
 Mean eGFR at enrollment 56 43 37.5 74 76
 (ml/min per 1.73 m2)
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 % with eGFR <60 59 88 No information 26 20
 [<45: 5185 (78%); ≥45: 1424 (22%)]
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 ACR Criteria: ACR 200–5000 mg/g eGFR ≥45–<90: ACR ≥200 mg/g No criteria No criteria
 ACR >300–5000 mg/g [20–500 mg/mmol] [≥20 mg/mmol] (or PCR ≥300 mg/g ACR <30 mg/g [<3 mg/mmol] in 60%; Median ACR 12.3 mg/g
 [>30–500 mg/mmol] ACR Median [≥30 mg/mmol]) 30–300 mg/g [3–30 mg/mmol] in 30%; [1.23 mg/mmol]
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Median ACR 927 mg/g DAPA: 965 mg/g [96.5 mg/ No ACR criteria for eGFR ≥40–<45 >300 mg/g [>30 mg/mmol] in 10%
 [92.7 mg/mmol] mmol]; Placebo: 934 mg/g Median ACR 412 mg/g [41.2 mg/mmol]
 [93.4 mg/mmol]
@@ -1815,6 +1866,7 @@ Follow-up (yr) 2.6 2.4 Expected ≥3 3.1 2.4
 Primary outcome(s) Composite of kidney failure, First occurrence of a ≥50% First occurrence of a composite of kidney MACE MACE
 doubling of SCr, or death from decline in eGFR, the onset of disease progression (kidney failure,
 kidney or CV causes kidney failure, or death from sustained decline in eGFR to <10 ml/min/
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 kidney or CV causes 1.73 m2, sustained decline in eGFR ≥40%,
 or renal death) or CV death
 CV outcome results CV death, MI, stroke: HR: 0.80; Secondary composite of CV Not reported MACE: HR: 0.86; 95% CI: 0.74–0.99; MACE: HR: 0.86; 95% CI: 0.75–0.97;
@@ -1823,6 +1875,7 @@ hospitalization for HF: HR: HF: HR: 0.71; 95% CI: 0.55-0.92 CI: 0.50–0.85 CI: 
 0.61; 95% CI: 0.47–0.80
 Kidney outcome Composite of kidney failure, First occurrence of a ≥50% First occurrence of kidney failure, Incident or worsening nephropathy Composite doubling in SCr, kidney
 doubling SCr, or death from decline in eGFR, the onset of sustained decline in eGFR to <10 ml/min/ (progression to severely increased failure, or death from kidney causes
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 kidney or CV causes kidney failure, or death from 1.73 m2, sustained decline in eGFR ≥40%, albuminuria, doubling of SCr, initiation
 kidney or CV causes or renal death of KRT, or renal death) and incident
 albuminuria
@@ -1837,6 +1890,10 @@ T2D, type 2diabetes. (Continued)
 KidneyInternational(2022)102(Suppl5S),S1–S127
 S39
 www.kidney-international.org
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter
+1
+
+<!-- page 41 -->" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter
 1
 
@@ -1847,10 +1904,13 @@ Drug
 once daily 15 mg once daily 400 mg once daily 10 mg once daily once daily 400 mg once daily once daily once daily
 Total of participants 17,160 8246 10,584 4744 3730 1222 5988 6263
 % with CVD 41 100 100 100 100 100 100 100
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR criteria for enrollment CrCl ≥60, No criteria 25–60 ml/min per ≥30 >20 No criteria No criteria ≥25
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (ml/min per 1.73 m2) 45% had eGFR 60–90 1.73 m2
 Mean eGFR at enrollment 85 76 44 66 62 50 61 Not reported
 (ml/min per 1.73 m2)
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 % with eGFR <60 7.4 21.9 100 41 48 69.9 49.9 Not reported
 ACR ACR <30 mg/g [<3 No criteria No criteria No criteria No criteria No criteria Nocriteria No criteria
 mg/mmol] in 69.1%, ACR <30 mg/g [3 mg
@@ -1872,9 +1932,12 @@ Kidney outcome Composite of ≥40% Composite of First occurrence of a Composite 
 decrease in eGFR to kidney death, sustained decrease worsening kidney transplant or kidney outcome
 <60 ml/min per 1.73 m2, kidney in GFR ≥50% for ≥30 kidney function ≥40% sustained
 kidney failure, CV replacement days, long-term (sustained reduction in eGFR or
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 or renal death therapy, or dialysis, kidney decline of eGFR sustained eGFR <15
 doubling of SCr transplantation, or a ≥50%, kidney ml/min per 1.73 m2
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 sustained eGFR <15 failure, or renal in patients with a
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 ml/min per 1.73 m2 death) baseline eGFR ≥30
 for ≥30 days ml/min per 1.73 m2
 or sustained eGFR
@@ -1889,13 +1952,18 @@ HR: 0.76; 95% CI: outcome: HR: 0.81; outcome: HR: 0.71; outcome: HR: 0.71; outco
 Figure5|(Continued)
 S40
 KidneyInternational(2022)102(Suppl5S),S1–S127
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter
+1
+www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter
 1
 www.kidney-international.org
 
 <!-- page 42 -->
 www.kidney-international.org chapter 1
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (25.9%)participantshadaneGFR<60ml/minper1.73m2. TheVERTISCVtrialenrolled8246patientswithT2Dand
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Participantswererandomizedto10or25mgofempagliflozin ASCVD (22% of participants had eGFR <60 ml/min per
 versusplaceboandfollowedforamedianof3.1years.Inthe 1.73 m2) and demonstrated non-inferiority of ertugliflozin
 overall trial, empagliflozin reduced 3-point major adverse versus placebo for the primary outcome of 3-point MACE.91
@@ -1908,6 +1976,7 @@ significant in this subgroup, but there was no evidence for when stratified by C
 heterogeneity of treatment effect across all eGFR subgroups In the CREDENCE trial among patients with T2D with
 (P-interaction¼0.20).InaprespecifiedanalysisfromEMPA- albuminuric CKD (discussed further below for primary kid-
 REG of patients with prevalent kidney disease defined as an neyoutcome),canagliflozinreducedtheriskofthesecondary
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR<60ml/minper1.73m2and/oranalbumin-creatinine cardiovascular outcomes of hospitalization for heart failure
 ratio (ACR) >300 mg/g [>30 mg/mmol], empagliflozin and MACE by 39% (HR: 0.61; 95% CI: 0.47–0.80) and 20%
 compared to placebo was associated with reduction in car- (HR: 0.80; 95% CI: 0.67–0.95), respectively.93
@@ -1919,6 +1988,7 @@ RCTs (CANVAS and CANVAS-R) enrolled over 10,000 from cardiovascular cause or hos
 patients with T2D, HbA1c between 7.0% and 10.5%, and by 29% (HR: 0.71; 95% CI: 0.55–0.92).94
 aneGFRofatleast30ml/minper1.73m2.87Approximately TheSCOREDtrial,which enrolledpatientswith T2Dand
 two-thirds (66%) of participants had established CVD, CKD, was ended early due to loss of funding.96 The primary
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 and2039(20.1%)hadCKDwithaneGFR<60ml/minper cardiovascular endpoint was changed during the trial to a
 1.73 m2. Participants were randomized to canagliflozin composite of cardiovascular death, heart failure hospitaliza-
 100 or 300 mg per day versus placebo and followed for a tions, or urgent visits for heart failure. Sotagliflozin reduced
@@ -1926,6 +1996,7 @@ median of 2.4 years. As in EMPA-REG, the SGLT2i cana- thisprimaryoutcomeby26%(HR
 gliflozin also reduced MACE by 14% (HR: 0.86; 95% CI: of note, sotagliflozin also reduced the original coprimary
 0.75–0.97). endpoint of cardiovascular death and heart failure hospitali-
 In subgroup analyses from the CANVAS trial, those zations by 23% (HR: 0.77; 95% CI: 0.66–0.91).
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 with an eGFR of 30–60 ml/min per 1.73 m2 also ThenumberofparticipantswithT2DandCKD(eGFR30
 experienced cardiovascular benefit for the primary MACE to <60 ml/min per 1.73 m2) and the number of events were
 outcome(HR:0.70;95%CI:0.55–0.90),with noevidenceof relatively small across all these trials. Thus, a 2019 meta-
@@ -1937,6 +2008,7 @@ CVD;theother59%hadmultiplecardiovascularriskfactors, ml/min per 1.73 m2, an SGLT
 so it was largely a primary prevention trial.89 Although hospitalizationforheartfailure(HR:0.60;95%CI:0.47–0.77)
 creatinine clearance of $60 ml/min was an eligibility crite- and MACE (HR: 0.82; 95% CI: 0.70–0.95).
 rion, there were 1265 participants (7.4%) who had an Anothermeta-analysisexaminedthepooledeffectsofthe3
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR<60ml/minper1.73m2.Participantswererandomized trials that enrolled an exclusively CKD population
 to dapagliflozin 10 mg per day versus placebo and followed (CREDENCE,DAPA-CKD,andSCORED)andconfirmedthe
 foramedianof4.2years.Inthemaintrial,dapagliflozinmet benefit of SGLT2i for reducing the composite cardiovascular
@@ -1953,11 +2025,13 @@ cardiovascular death or heart failure hospitalization also confirmed in a real-w
 KidneyInternational(2022)102(Suppl5S),S1–S127 S41
 
 <!-- page 43 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 benefits seen in the RCTs.107 This led to dedicated trials of hospitalizations and urgent visits for heart failure (first and
 SGLT2i specifically among patients with heart failure. subsequent events). The trial was stopped early, but sotagli-
 The DAPA-HF trial enrolled 4744 patients with symp- flozin did reduce the primary outcome by 33% (HR: 0.67;
 tomatic HFrEF defined as ejection fraction #40%, with an 95% CI: 0.52–0.85). There was no significant interaction by
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR $30 ml/min per 1.73 m2 (mean eGFR 66 ml/min per eGFR status for the primary outcome.
 1.73 m2), including 55% of individuals without diabetes.100 The ongoing phase III Dapagliflozin Evaluation to
 Over a median of 18.2 months, the primary outcome of Improve the LIVEs of Patients with PReserved Ejection
@@ -1967,6 +2041,7 @@ group and 21.2% of the placebo group (HR: 0.74; 95% CI: fraction(leftventricular
 0.65–0.85). The primary outcome was similarly reduced for or without T2D to treatment with dapagliflozin 10 mg or
 individuals with or without diabetes, with no effect of het- placebo. On May 5, 2022, it was announced that the results
 erogeneity by diabetes status. The primary outcome was also reached a statistically significant and clinically meaningful
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 similar among those with an eGFR $60 ml/min per 1.73 m2 reduction in the primary composite endpoint of cardiovas-
 (HR: 0.76; 95% CI: 0.63–0.92) or <60 ml/min per 1.73 m2 culardeathorworseningheartfailure.Resultsareexpectedto
 (HR: 0.72; 95% CI: 0.59–0.86). This finding suggests a po- be reported later in 2022.
@@ -1983,6 +2058,7 @@ gliflozin group and 24.7% of the placebo group (HR: 0.75; empagliflozin group—
 outcome was similarly reduced for individuals with and In the CANVAS program (overall cohort including those
 withoutdiabetes.Theprimaryoutcomeamongthosewithan withandwithoutbaselineCKD),canagliflozinalsoconferred
 eGFR$60ml/minper1.73m2wasHR:0.67;95%CI:0.55– kidney benefit, with a 27% lower risk of progression of
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 0.83 and for those with eGFR <60 ml/min per 1.73 m2 was albuminuria(HR:0.73;95%CI:0.67–0.79)anda40%lower
 HR: 0.83; 95% CI: 0.69–1.00. A composite kidney outcome risk of a composite kidney outcome ($40% reduction in
 HR of 0.50 (95% CI: 0.32–0.77) was also reported. eGFR, need for kidney replacement therapy, or death from
@@ -1991,6 +2067,7 @@ EMPEROR-Reduced trials further revealed a composite program further reported add
 outcome on first hospitalization for heart failure or cardio- outcomes.88 The composite kidney outcome of doubling of
 vascular death of HR: 0.72 (95% CI: 0.62–0.82) for an serum creatinine, kidney failure, and death from kidney
 eGFR$60ml/minper1.73m2andHR:0.77(95%CI:0.68– causesoccurredin1.5versus2.8per1000patient-yearsinthe
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 0.88)foreGFR<60ml/minper1.73m2;acompositekidney canagliflozinversusplacebogroups(HR:0.53;95%CI:0.33–
 outcome HR: 0.62; 95% CI: 0.43–0.90 (P ¼ 0.013) was also 0.84). There was also a reduction in albuminuria and an
 reported.108 attenuation of eGFR decline.88
@@ -2001,13 +2078,16 @@ to placebo, reduced the risk of the primary outcome of car- decreaseineGFRto<60m
 diovascular death or hospitalization for heart failure by 21% and cardiovascular death or death from kidney causes: HR:
 (HR:0.79;95%CI:0.69–0.90).Thisbenefitwasagainsimilar 0.76; 95% CI: 0.67–0.87).89 In the DAPA-HF trial, the sec-
 among patients with or without diabetes. Fifty percent of ondary outcome of worsening kidney function (defined as a
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 studyparticipantshadaneGFR<60ml/minper1.73m2,and sustained $50% reduction in eGFR, kidney failure, or death
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 there was no significant interaction by eGFR status ($60 from kidney causes) occurred in 1.2% of the dapagliflozin
 vs. <60 ml/min per 1.73 m2) for the primary cardiovascular arm and 1.6% of the placebo arm (HR: 0.71; 95% CI: 0.44–
 outcome. 1.16), whichwasnotstatisticallysignificant(P ¼0.17).100,109
 The SOLOIST trial enrolled patients with T2D who had However,themediandurationoftheDAPA-HFtrialwasonly
 recentlybeenhospitalizedforworseningheartfailure(withor 18.2 months, which may not have been long enough to
 without reduced ejection fraction), of which 70% of patients accumulate kidney endpoints.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 had an eGFR <60 ml/min per 1.73 m2.103 The primary The aforementioned 2019 meta-analysis pooled data from
 outcome was deaths from cardiovascular causes and theEMPA-REG,CANVASprogram,andDECLARE-TIMI58
 S42 KidneyInternational(2022)102(Suppl5S),S1–S127
@@ -2037,11 +2117,13 @@ whichwasthefirstRCTofanSGLT2ispecificallypoweredfor initiationofSGLT2iwasassocia
 primary kidney outcomes among patients with exclusively composite kidney outcome of 50% eGFR decline or kidney
 albuminuric CKD.93 The CREDENCE trial enrolled patients failure (HR: 0.49; 95% CI: 0.35–0.67). This finding suggests
 with T2D (with an HbA1c level of 6.5%–12.0%) and CKD, thatthekidneybenefitsseeninclinicaltrialsaregeneralizable
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 defined by an eGFR of 30–90 ml/min per 1.73 m2 with to clinical practice.111
 albuminuria (ACR of 300–5000 mg/g [30–500 mg/mmol]), ItshouldbenotedthatthereisanotherRCTthatshouldbe
 who were receiving standard of care including a maximum informative. The Study of the Heart and Kidney Protection
 tolerated dose of an ACEi or an ARB. In the CREDENCE with Empagliflozin (EMPA-KIDNEY) (NCT03594110)
 trial, 50% of patients had established CVD. Patients were enrolledpatientswithandwithoutT2DwithCKDwitheither
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 randomized to canagliflozin 100 mg daily or placebo and an eGFR $20 to <45 ml/min per 1.73 m2 or an eGFR $45
 followed for 2.6 years, with the trial stopping early for su- to<90ml/minper1.73m2withACR$200mg/g[$20mg/
 periorityasrecommendedbytheDataSafetyandMonitoring mmol].95 Compared to the prior CKD trials, this trial
@@ -2073,6 +2155,7 @@ described above, the study primary endpoint was modified time, such infections c
 KidneyInternational(2022)102(Suppl5S),S1–S127 S43
 
 <!-- page 45 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 medications.112Self-carepractices,suchasdailybathing,may fractures, and HbA1c level, due to imprecision or study
 reduce risk of genital mycotic infections. limitations (Supplementary Table
@@ -2143,8 +2226,10 @@ urinary tract infections also may not prefer this class of populations, did allo
 medications. as low as 20 ml/min per 1.73 m2.101,102 EMPA-KIDNEY,
 The Work Group judged that nearly all clinically suitable which enrolled an exclusive CKD population and should
 and well-informed patients would choose to receive SGLT2i report results soon, also enrolled participants with an
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 for the kidney and cardiovascular protective benefits, eGFR $20 ml/min per 1.73 m2.
 compared to other treatments or no treatment. Patients at Therearenowseverallinesofevidencedemonstratingthat
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 high risk of side effects (such as those above) or those for initiating an SGLT2i in the eGFR range of 20–29 ml/min per
 whomcost,lackofinsurance,orlackoflocalavailabilityisan 1.73 m2 is safe and beneficial. Direct evidence is provided by
 issue may choose an alternate medication. the DAPA-CKD, SCORED, EMPEROR-Reduced, and
@@ -2152,12 +2237,14 @@ Resource use and costs. Economic models have found use EMPEROR-Preservedtrials, 
 of SGLT2i to be a cost-effective strategy among patients with by design. In addition, post hoc analyses of CREDENCE and
 T2D based on its cardiovascular benefits.136,137 These medi- DAPA-CKD demonstrated that participants who met eGFR
 cations nevertheless are frequently cost-prohibitive for many eligibility at screening but subsequently had lower baseline
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 patientscomparedtoothercheaperoraldiabetesmedications eGFR prior to randomization (<30 ml/min per 1.73 m2
 (notably sulfonylureas) that do not have the same level of and <25 ml/min per 1.73 m2, respectively) experienced
 evidence for cardiovascular and kidney benefits. However, similar kidney benefits as those with baseline eGFR above
 morerecentanalyseshaveshownthatcost-effectivenessinthe eligibility thresholds.140,141 For eligibility, DAPA-CKD
 cardiovascular outcomes trials was primarily driven by required albuminuria ($200 mg/g), and the EMPEROR tri-
 reducing costs of CKD progression and kidney failure. In an als required a clinical diagnosis of heart failure; evidence for
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 analysis from the DECLARE-TIMI 58 trial, dapagliflozin initiating an SGLT2i in the eGFR range of 20–29 ml/min per
 treatment increased lifetime quality-adjusted life-years 1.73 m2 is therefore strongest for patients with albuminuria
 (QALYs) anddecreasedcostsofhealthcareatalevelthatmet or heart failure. However, within and across SGLT2i trials,
@@ -2167,6 +2254,7 @@ of real-world evidence together with cardiovascular outcome absence of heart fai
 trial data found that SGLT2i use was cost-effective in the geststhatSGLT2iaresafeandofferkidneyandcardiovascular
 United States (US), also primarily attributable to kidney benefits for patients with or without these specific charac-
 benefits, even though costs for SGLT2i were much higher teristics. Therefore, we recommend treating patients with
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 than in the United Kingdom, China, and Canada.139 T2D, CKD, and an eGFR $20 ml/min per 1.73 m2 with an
 Nevertheless, SGLT2i are cost-prohibitive for many pa- SGLT2i.
 tients. In the US, obtaining reimbursement or preauthoriza- In subgroup analysis from the conducted trials, efficacy
@@ -2186,6 +2274,7 @@ initiation of SGLT2i has changed over time as moreevidence efficacy and safety o
 of benefit and safety accruesacrossa broader range of eGFR. tientswhomaybe morevulnerable toinfections due totheir
 Patients with T2D, CKD, and aneGFR $20 ml/min per 1.73 immunosuppressed states; further studies should clarify this
 m2 have now been extensively studied in RCTs of SGLT2i. issue. Therefore, this recommendation does not apply to
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Participants with T2D and an eGFR as lowas 30 ml/min per kidney transplant recipients (see Practice Point 1.3.7).
 1.73 m2 were included in the EMPA-REG, CANVAS, and A summary of SGLT2i agents with proven kidney or car-
 CREDENCE trials,87,90,93 and efficacy and safety in these diovascular benefits, their Food and Drug Administration
@@ -2194,8 +2283,10 @@ down to this threshold. The DAPA-CKD and SCORED trials mended in CKD are describ
 KidneyInternational(2022)102(Suppl5S),S1–S127 S45
 
 <!-- page 47 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 Rationale contrast, the current evidence benefit seen for patients with
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 For patients with CKD with an eGFR $20 ml/min per less albumin excretion comes from cardiovascular outcome
 1.73m2,thecurrentKDIGOguidelinerecommendsusingan trials with secondary kidney outcomes; however, EMPA-
 SGLT2i for the purposes of kidney and cardiovascular pro- KIDNEYalso enrolled patients with CKD without albumin-
@@ -2238,11 +2329,13 @@ withanSGLT2iforpatientswithhighCVDrisk.Thecurrent on the management of hyperglyc
 KDIGO guideline recommends using an SGLT2i for most
 patientswith T2D, CKD, and aneGFR $20 ml/min per 1.73 Practice Point 1.3.2: The choice of an SGLT2i should pri-
 m2andusingmetforminforpatientswithT2D,CKD,andan oritize agents with documented kidney or cardiovascular
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR $30 ml/min per 1.73 m2. Sequencing of interventions benefits and take eGFR into account.
 should be individualized to address most pressing individual Figure 7 shows current FDA-approved doses. As SGLT2i
 clinical needs (Section 1.1). are now indicated for kidney and heart protection, indepen-
 The 2019 ESC guideline provided a Class I recommenda- dent of their glucose-lowering effect, the labels have been
 tion to use SGLT2i for patients with T2D and ASCVD or at changed to reflect the studies that include patients with an
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 high/very high cardiovascular risk (which includes target or- eGFR >20 ml/min per 1.73 m2.
 gan damage such as CKD).144 The difference between the
 ESC/EASD recommendation and the current KDIGO Practice Point 1.3.3: It is reasonable to withhold SGLT2i
@@ -2251,6 +2344,7 @@ the importance of the population studied in the landmark medical illness (when p
 clinicaltrials.Thus,theevidenceisparticularlystrongforthe ketosis).
 population corresponding to the CREDENCE and DAPA- ForpatientswithT2D,thereisasmallbutincreasedriskof
 CKD studies (ACR >200–300 mg/g [>20–30 mg/mmol] euglycemicdiabetic ketoacidosiswithSGLT2i(seetheHarms
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 and eGFR >25–30 and <75–90 ml/min per 1.73 m2. In section of Recommendation 1.3.1 for more details).
 S46 KidneyInternational(2022)102(Suppl5S),S1–S127
 
@@ -2260,6 +2354,7 @@ Practical provider guide to initiating SGLT2 inhibitors
 in patients with type 2 diabetes and CKD
 Assessment Intervention Follow-up
 Eligible patients: SGLT2 inhibitor
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (cid:129) eGFR ≥20 ml/min/1.73 m2 with proven benefits:
 High priority features: (cid:129) Canagliflozin 100 mg (cid:129) Assess adverse effects
 (cid:129) ACR ≥200 mg/g [≥20 mg/mmol] (cid:129) Dapagliflozin 10 mg (cid:129) Review knowledge
@@ -2307,12 +2402,17 @@ ofthesedrugs,namely,theirconsistentreductioninriskfor For such patients, reducin
 heart failure hospitalizations. However, there is theoretical reasonable, and follow-up should be arranged to monitor
 SGLT2 Dose Kidney function eligible for inclusion in pivotal Dosing approved by the US FDA
 inhibitor randomized trials
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 10 mg daily eGFR ≥25 ml/min per 1.73 m2 in DAPA-CKD eGFR ≥25 ml/min per 1.73 m2
 eGFR ≥30 ml/min per 1.73 m2 in DAPA-HF
 and DECLARE
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 10 mg daily eGFR ≥30 ml/min per 1.73 m2 in EMPA-REG eGFR ≥30 ml/min per 1.73 m2 for T2D and ASCVD
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (Can increase to 25 mg daily eGFR ≥20 ml/min per 1.73 m2 in EMPEROR-Reduced for glucose control
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 if needed for glucose control) and EMPEROR-Preserved eGFR ≥20 ml/min per 1.73m2 for HF
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 100 mg daily eGFR ≥30 ml/min per 1.73 m2 in CREDENCE eGFR ≥30 ml/min per 1.73 m2
 (The higher dose of 300 mg
 is not recommended for CKD)
@@ -2323,6 +2423,7 @@ diabetes.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S47
 
 <!-- page 49 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 volumestatus.Inolderadults,adequatehydrationshouldbe Researchrecommendations
 encouraged. (cid:3)
@@ -2339,6 +2440,7 @@ increasedalbuminuria,andreductionofriskfromworsening benefits of SGLT2i for pati
 kidney impairment, kidney replacement therapy, or death transplant recipients at high risk of graft loss, CVD, and
 from kidney causes. Pooled results of the 4 large RCTs that infection.
 publishedresultsonkidneyoutcomesalsodemonstratedthat (cid:3) Studies examining the safety and benefit of SGLT2i for
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 risk of AKI is significantly lower with SGLT2i treatment.97 patients with CKD and eGFR <20 ml/min per 1.73 m2 or
 Therefore, a modest initial drop in eGFR should not neces- receiving dialysis.
 sitate stopping the SGLT2i. (cid:3) Cost-effectiveness analysis of this strategy prioritizing
@@ -2347,10 +2449,13 @@ clinically tolerated is not well-defined. Post hoc analyses of cardiovascular an
 EMPA-REG OUTCOMES and CREDENCE suggested that a medications and potential for adverse effects.
 dropineGFR$10%wasnotassociatedwithincreasedriskor (cid:3) Future work to address how to better implement these
 decreased benefits of empagliflozin and canagliflozin, respec- treatmentalgorithmsinclinicalpracticeandhowtoimprove
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 tively, compared with a drop in eGFR <10%.152,153 In availability and uptake among low-resource settings.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 CREDENCE, a drop in eGFR $30% was uncommon (4% of (cid:3) Studies examining feasibility and barriers for developing
 participants assigned to canagliflozin) but was associated with programs to adopt novel therapies such as SGLT2i in
 modestly increased risks of kidney adverse events. Thus, one clinical practice.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 should tolerate an acute eGFR decrease of #30% with initia- (cid:3) Real-world studies examining outcomes of patients in
 tionoftherapyandnotdiscontinuetherapyprematurelyforan health systems that incorporated SGLT2i in the manage-
 acuteeGFRdropwithinthisrange.Ifthereisa>30%decline ment algorithm of patients with diabetes and kidney
@@ -2365,6 +2470,7 @@ kidney replacement therapy is initiated.
 potassium concentration, and albuminuria (‡30
 Protocols of multiple RCTs, including CREDENCE and
 mg/g [‡3 mg/mmol]) despite maximum tolerated
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2A" all_grades="2A" recommendation_strength="conditional" topic_tags="recommendation, grade_2A, CKD" -->
 DAPA-CKD, specified continuation of study drug (active dose of RAS inhibitor (RASi) (2A).
 or placebo) even when observed eGFR dropped below
 the eligibility threshold specified for initiation. Since
@@ -2401,6 +2507,7 @@ an opportunity to consider additional treatment options to clinical trials have 
 lower residual albuminuria andamelioratekidneyfibrosis.154 effects of finerenone in those with T2D and albuminuria,
 Steroidal MRA, such as spironolactone and eplerenone, have enrolling patients with serum potassium levels less than 4.8
 established cardiovascular benefits in those with heart failure mmol/l at screening. The FIDELIO-DKD trial included par-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 and are useful for treating primary hyperaldosteronism and ticipants with (i) eGFR 25–60 ml/min per 1.73 m2, ACR 30–
 refractory hypertension.155–157 In addition, steroidal MRA <300 mg/g [3–<30 mg/mmol], and diabetic retinopathy or
 reduce albuminuria.50 However, their effects on kidney dis- (ii) ACR 300–5000 mg/g [30–500 mg/mmol] and eGFR
@@ -2412,6 +2519,7 @@ FIDELIO-DKD FIGARO-DKD
 Drug Finerenone Finerenone
 Total number of participants 5734 7437
 % with CVD 45.4 44.7
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR and ACR criteria for 25–<60 ml/min per 1.73 m2 and ACR 30–<300 mg/g 25–90 ml/min per 1.73 m2 and ACR 30–<300 mg/g
 enrollment [3–<30 mg/mmol] OR 25–<75 ml/min per 1.73 m2 and [3–<30 mg/mmol] OR ≥60 ml/min per 1.73 m2 and
 ACR 300–5000 mg/g [30–500 mg/mmol] ACR 300–5000 mg/g [30–500 mg/mmol]
@@ -2438,6 +2546,7 @@ myocardialinfarction.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S49
 
 <!-- page 51 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 kidney failure,sustaineddecreaseof40%declineineGFR,or downgradedduetostudylimitationsandseriousimprecision.
 deathfromkidneycauseswiththeuseoffinerenone.162While The quality of the evidence was rated moderate for hyper-
@@ -2448,6 +2557,7 @@ enone (vs. 0.9% in the placebo group).163 Table S9.161,162,164,166–168,171,175
 In the FIGARO-DKD trial, patients with ACR 30–<300 MRAswithplacebo/standardofcaredidnotreportperipheral
 mg/g [3–<30 mg/mmol] and eGFR 25–90 ml/min per vascular disease, attainment of HbA1c target, or eGFR.
 1.73 m2 or ACR 300–5000 mg/g [30–500 mg/mmol] and (cid:3) Study design: Overall, the updated evidence review identi-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR $60 ml/min per 1.73 m2 were included (Figure 8).164 fied27RCTsonMRA,with5RCTscomparingnonsteroidal
 There was a 13% lower risk of the primary cardiovascular MRA to placebo and/or standard of care.162,164,166,167,175
 composite outcome, which included death from cardiovas- FIDELIO-DKD was a large kidney outcome–based trial
@@ -2561,6 +2671,7 @@ therefore their use mayhavea lower priority in low-resource albuminuriadespiteot
 KidneyInternational(2022)102(Suppl5S),S1–S127 S51
 
 <!-- page 53 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 The FIDELIO-DKD and FIGARO-DKD trials enrolled SGLT2i and meet criteria for finerenone (including residual
 peoplewithT2DandCKDwhoweretreatedwithstandardof albuminuria and normal serum potassium) are appropriate
@@ -2604,6 +2715,7 @@ and finerenone may be additive. Therefore, patients with the FIDELIO-DKD and FIG
 T2D and CKD who are treated with both a RASi and an when applied to clinical practice (Figure 9).
 K+ ≤4.8 mmol/l K+ 4.9–5.5 mmol/l K+ >5.5 mmol/l
 - 10 mg daily if eGFR 25–59 ml/min per 1.73 m2 • Monitor K+ every 4 months • Consider adjustments to diet or concomitant
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 - 20 mg daily if eGFR ≥60 ml/min per 1.73 m2 medications to mitigate hyperkalemia
 • Monitor K+ at 1 month after initiation and then every 4 • Recheck K+
 months • Consider reinitiation if/when K+ ≤5.0 mmol/l
@@ -2630,6 +2742,7 @@ was$60ml/minper1.73m2oratadoseof10mgdailywhen
 eGFR was 25–59 ml/min per 1.73 m2, with uptitration to 20
 Recommendation 1.5.1: We recommend advising
 mg daily if serum potassium remained #4.8 mmol/l. Ste- patients with diabetes and CKD who use tobacco to
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1D" all_grades="1D" recommendation_strength="strong" topic_tags="recommendation, grade_1D, CKD" -->
 roidal MRA do not have documented clinical kidney or car- quit using tobacco products (1D).
 diovascular benefits, except when heart failure is present.
 This recommendation places a high value on the well-
@@ -2691,6 +2804,7 @@ failure). stop smoking were judged to be the most important aspects
 KidneyInternational(2022)102(Suppl5S),S1–S127 S53
 
 <!-- page 55 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 1 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 1 www.kidney-international.org
 to patients. The Work Group also considers it important for prevalence of kidney disease and the development of incident
 patients to address smoking cessation during routine clinical kidneydisease.Althoughuseofe-cigaretteshasincreasedover
@@ -2735,12 +2849,14 @@ S54 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 56 -->
 www.kidney-international.org chapter 2
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 2: Glycemic monitoring and targets in" topic_tags="glycemic_targets, HbA1c, CGM, glucose_monitoring" population="T2DM T1DM CKD" year=2022 -->
 Chapter 2: Glycemic monitoring and targets in
 patients with diabetes and CKD
 2.1 Glycemic monitoring blood.Inobservationalstudies,glycatedalbuminisassociated
 withall-causeandcardiovascularmortalityinpatientstreated
 Recommendation 2.1.1: We recommend using by chronic hemodialysis.196 However, compared with actual
 hemoglobin A1c (HbA1c) to monitor glycemic blood glucose, the glycated albumin assay is biased by
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 control in patients with diabetes and CKD (1C). hypoalbuminemia, a common condition in patients with
 CKD due to protein losses in the urine, malnutrition, or
 peritoneal dialysis.197 Fructosamine may also be biased by
@@ -2757,6 +2873,7 @@ morning blood levels, or the mean of continuous glucose
 HbA1c measurementascomparedwithdirectly measuredblood
 monitoring (CGM), particularly among people with an
 glucose in advanced CKD. This recommendation applies to
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR $30 ml/min per 1.73 m2. Although glycated albumin
 patients with T1D or T2D.
 correlatedwithHbA1c,correlationswithmeasuresofglucose
@@ -2799,6 +2916,7 @@ weeks) than HbA1c due to their shorter survival time in ratedaslow.Therewaslow-q
 KidneyInternational(2022)102(Suppl5S),S1–S127 S55
 
 <!-- page 57 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 2 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 2 www.kidney-international.org
 aimed to determine whether CGM would be more effective Considerations for implementation. Patients with T1D or
 thanHbA1cforglycemicmonitoringinpeoplewithCKD,as T2D and CKD likely benefit from glycemic monitoring by
@@ -2859,6 +2977,7 @@ CKD G4–G5 Yes (cid:129) Twice per year Low Likely useful
 including treatment by (cid:129) Up to 4 times per year if not achieving
 dialysis or kidney transplant target or change in therapy
 Figure11|Frequencyofglycatedhemoglobin(HbA1c)measurementanduseofglucosemanagementindicator(GMI)inchronic
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 kidneydisease(CKD).G1–G3b,estimatedglomerularfiltrationrate(eGFR)$30ml/minper1.73m2;G4–G5,eGFR<30ml/minper1.73m2.
 Practice Point 2.1.1: Monitoring long-term glycemic con- condition among patients with proteinuria, malnutrition, or
 trolbyHbA1ctwiceperyearisreasonableforpatientswith treated by peritoneal dialysis.228
@@ -2965,6 +3084,7 @@ ni
 emiT
 egnar
 tegraT
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 2 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 2 www.kidney-international.org
 95%
 75%
@@ -3033,6 +3153,7 @@ glucose profiles, and integration into closed-loop insulin de-
 ualizedHbA1ctargetrangingfrom<6.5%to<8.0%
 in patients with diabetes and CKD not treated with
 livery systems. Multiple devices allowing for continuous or
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 dialysis (Figure 14) (1C).
 flash glucose monitoring are now available. Consultationwith
 a specialist in diabetes technology (certified diabetes educator
@@ -3041,6 +3162,7 @@ most appropriate for patients with diabetes and CKD. benefits of an individualiz
 KidneyInternational(2022)102(Suppl5S),S1–S127 S59
 
 <!-- page 61 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 2 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 2 www.kidney-international.org
 < 8.0%
 < 6.5% HbA1c
@@ -3052,6 +3174,7 @@ Present Hypoglycemia awareness Impaired
 Available Resources for hypoglycemia management Scarce
 Low Propensity of treatment to cause hypoglycemia High
 Figure14|Factorsguidingdecisionsonindividualglycatedhemoglobin(HbA1c)targets.CKD,chronickidneydisease;G1,estimated
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 glomerularfiltrationrate(eGFR)$90ml/minper1.73m2;G5,eGFR<15ml/minper1.73m2.
 long-termbenefitsof glycemiccontrolwiththeshort-termrisks incidence of moderately increased albuminuria and other
 ofhypoglycemia. The recommendationplacesa lower valueon microvascularoutcomes,suchasretinopathy.HbA1clevelsin
@@ -3167,7 +3290,9 @@ Work Group, the high rate of hypoglycemic events observed
 KidneyInternational(2022)102(Suppl5S),S1–S127 S61
 
 <!-- page 63 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 2 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 2 www.kidney-international.org
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 in the lower HbA1c range may be related to the strategies arereducedamongpatientswithCKDandaneGFR<30ml/
 used to reach these targets rather than to the targets per se. minper1.73m2.Thus,forsomepatients,CGMmaybeused
 to index HbA1c by demonstrating the association between
@@ -3202,6 +3327,7 @@ S62 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 64 -->
 www.kidney-international.org chapter 3
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 3: Lifestyle interventions in patients with" topic_tags="lifestyle_modification, nutrition, physical_activity, CKD_diet" population="T2DM T1DM CKD" year=2022 -->
 Chapter 3: Lifestyle interventions in patients with
 diabetes and CKD
 3.1 Nutrition intake fiber, legumes, plant-based proteins, unsaturated fats, and
@@ -3260,6 +3386,7 @@ healthy foods. A focus on vegetables, fruits, whole grains, not be desirable, an
 KidneyInternational(2022)102(Suppl5S),S1–S127 S63
 
 <!-- page 65 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 Protein: Protein:
 animal animal
@@ -3370,6 +3497,7 @@ Figure16|Proteinguidelineforadultswithdiabetesandchronickidneydisease(CKD)nottre
 KidneyInternational(2022)102(Suppl5S),S1–S127 S65
 
 <!-- page 67 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 Animal proteins Plant proteins
 Legumes, dried beans, nuts, seeds:
@@ -3385,6 +3513,7 @@ in those with diabetes and CKD, and thus the Work Group
 Recommendation 3.1.2: We suggest that sodium
 extrapolated data from recommendations of the WHO for intake be <2 g of sodium per day (or <90 mmol of
 protein intake for the general population.263 sodiumperday,or<5gofsodiumchlorideperday)
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2C" all_grades="2C" recommendation_strength="conditional" topic_tags="recommendation, grade_2C, CKD" -->
 The Work Group also considered the potential harmful in patients with diabetes and CKD (2C).
 impact of very low–protein intake (0.4–0.6 g/kg/d), which
 could lead to malnutrition in those with CKD. In addition,
@@ -3489,6 +3618,7 @@ disease.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S67
 
 <!-- page 69 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 chooseanutritionaltherapythatissuccessfulforthem.Many Rationale
 individuals may willingly trade moderating their oral intake Low sodium intake reduces blood pressure and is associated
@@ -3609,6 +3739,7 @@ caregivers are also highly desirable. Care must be empower patients.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S69
 
 <!-- page 71 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 Practice Point 3.1.5: Healthcare providers should consider ObservationalstudiesinheartfailureandT1DwithCKD310
 cultural differences, food intolerances, variations in food have suggested that salt restriction is not necessarily bene-
@@ -3629,6 +3760,7 @@ nutritional content of the foods they eat. Providers should
 cumulative duration of at least 150 minutes per
 have knowledge of acceptable alternatives, methods of
 week, or to a level compatible with their cardio-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1D" all_grades="1D" recommendation_strength="strong" topic_tags="recommendation, grade_1D, CKD" -->
 preparation, and the costs of alternative recommendations. vascular and physical tolerance (1D).
 With adaptability and flexibility, almost all foods can be
 worked into a diet pattern for individual patients. People
@@ -3730,6 +3862,7 @@ ofNephrology.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S71
 
 <!-- page 73 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 arguing for efforts to address this issue across the world.328 evidence from observational studies suggests numerous
 Patients with diabetes and CKD often have other chronic health benefits of physical activity in those with kidney dis-
@@ -3742,8 +3875,11 @@ thirds of adults with CKD do not meet the minimum rec- to 175 min/wk did not con
 ommended goal of physical activity (450–750 metabolic overweight/obese adults with T2D.335 However, in a second-
 equivalents[METs]/min/wk)(Figure21).312,313Thissituation aryanalysisofthistrial,investigatorsexaminedtheimpactof
 worsens as kidney function declines, which per se leads to intensive lifestyle modification on development of very high-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 reduced functional capacity. To further complicate this, riskCKD,definedaseither(i)eGFR<30ml/minper1.73m2
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 sedentary behavior is common in CKD with over two-thirds regardless of ACR; (ii) eGFR <45 ml/min per 1.73 m2 and
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 of daylight time spent being sedentary (approximately 40 ACR $30 mg/g; or (iii) eGFR <60 ml/min per 1.73 m2 and
 min/h).313 Sedentary behavior is defined as any behavior ACR >300 mg/g. Intervention reduced the incidence of the
 characterizedbyanenergyexpenditure<1.5METswhileina veryhigh-riskcategoryofCKDby31%,suggestingthatthere
@@ -3792,6 +3928,7 @@ quality of life for those on hemodialysis, and can be offered physicalactivitysp
 where it is available.337,338 amountofexercisecanbeconsidered.
 Practice Point 3.2.2: Patients should be advised to avoid Practice Point 3.2.4: Physicians should consider advising/
 sedentary behavior. encouraging patients with obesity, diabetes, and CKD to
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 CKDpatientsareoftensedentary,whichisassociatedwith lose weight, particularly patients with eGFR ‡30 ml/min
 an increased risk of mortality.313 In addition, they have per 1.73 m2.
 limited exercise tolerance and may not able to do longer Obesity(definedbybodymassindex[BMI]>30kg/m2)is
@@ -3809,7 +3946,9 @@ healthcareprovidersshouldprovideadviceontheintensity benefitsin those with mild 
 of physical activity (low, moderate, or vigorous) and the Physiciansshouldassessthepatients’interestinlosingweight
 type of exercises (aerobic vs. resistance, or both). and recommend increasing physical activity and appropriate
 InthosewithCKD,sarcopeniaiscommonandisrelatedto dietary modifications in those who are obese, particularly
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 adverse outcomes. Patients should engage in multicomponent when the eGFR is $30 ml/min per 1.73 m2.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 physical activities, which include aerobic and muscle- WithaneGFR<30ml/minper1.73m2,andkidneyfailure
 strengtheningactivitiesalongwithbalance-trainingactivitiesas treated with dialysis, patients may spontaneously reduce di-
 tolerated (Figure 22).339 Benefits of muscle strengthening are etary intake, and malnutrition and muscle-wasting are po-
@@ -3832,6 +3971,7 @@ Figure22|Suggestedapproachtoaddressphysicalinactivityandsedentarybehaviorinchron
 KidneyInternational(2022)102(Suppl5S),S1–S127 S73
 
 <!-- page 75 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 3 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 3 www.kidney-international.org
 dialysis, and whether intentional weight loss offers health couldimprovemusclemass;however,thereisalackofdata
 benefitsisunclearinthispopulation.345Therefore,depending for resistance training in CKD. Other clinical practice
@@ -3850,9 +3990,11 @@ S74 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 76 -->
 www.kidney-international.org chapter 4
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 4: Glucose-lowering therapies in patients" topic_tags="drug_selection, SGLT2_inhibitors, GLP1_agonists, metformin, drug_dose_adjustment" population="T2DM T1DM CKD" year=2022 -->
 Chapter 4: Glucose-lowering therapies in patients
 with T2D and CKD
 PracticePoint4.1:Glycemicmanagementforpatientswith as 15 ml/min per 1.73 m2, reduce risk of ASCVD events
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 T2D and CKD should include lifestyle therapy, first-line even when eGFR is <60 ml/min per 1.73 m2, lower albu-
 treatment with both metformin and a sodium-glucose minuria, and may slow eGFR decline. These recommenda-
 cotransporter-2 inhibitor (SGLT2i), and additional drug tions are guided in large part by results of recent large RCTs,
@@ -3860,8 +4002,10 @@ therapy as needed for glycemic control (Figure 23). summarized in Figure 24 and 
 Lifestyle therapy is the cornerstone of management for and 4.2.
 patients with T2D and CKD. In addition, metformin and
 SGLT2ishouldbeusedincombinationasfirst-linetreatment Practice Point 4.2: Most patients with T2D, CKD, and
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 for most patients with suitable eGFR (Figures 23 and 25). eGFR ‡30 ml/min per 1.73 m2 would benefit from treat-
 SGLT2i are recommended as part of comprehensive care of ment with both metformin and an SGLT2i.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 patients with T2D and eGFR $20 ml/min per 1.73 m2 Both metformin (see Section 4.1) and SGLT2i agents (see
 because they have been proven to reduce risks of CKD pro- Section 1.3) are preferred glucose-lowering medications for
 gression and major CVD events, especially heart failure (see patients with T2D, CKD, and suitable eGFR. Metformin and
@@ -3870,10 +4014,13 @@ mediated by glycemia. Nonetheless, SGLT2i do also lower cationswithalowriskofhyp
 bloodglucose,withimprovementsinHbA1cthataremodest provento be a safe, effective, and inexpensivefoundation for
 and diminished at low eGFR. Similarly, metformin is an glycemic control in T2D, with modest long-term benefits for
 effective, safe, and inexpensive medication for first-line the prevention of diabetes complications. In comparison,
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 treatment of T2D when eGFR is >30 ml/min per 1.73 m2 SGLT2i have weaker effects on HbA1c, particularly with an
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (seeSection4.1).Therefore,acombinationofmetforminand eGFR<60ml/minper1.73m2,buttheyhavelargeeffectson
 SGLT2iisalogicalfoundationforglycemiccontrolinsuitable reducing CKD progression and CVD events, especially heart
 patients with T2D. Additional glucose-lowering drugs can be failure, which appear to be independent of eGFR.92,97
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 addedtothisbasedrugtherapyasneededtoachieveglycemic In most patients with T2D, CKD, and an eGFR $30 ml/
 targets. GLP-1 RA are generally preferred because they are minper1.73m2,metforminandanSGLT2icanbeusedsafely
 safe and effective glucose-lowering agents with eGFR as low and effectively together. Metformin should not be used for
@@ -3888,6 +4035,7 @@ Reduce dose Discontinue Discontinue Do not initiate Discontinue
 GLP-1 receptor agonist
 (preferred) (cid:129) Guided by patient preferences, comorbidities,
 eGFR, and cost
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 DPP-4 inhibitor Insulin (cid:129) Includes patients with eGFR < 30 ml/min per
 1.73 m2 or treated with dialysis
 Additional drug therapy as Sulfonylurea TZD (cid:129) See Figure 25
@@ -3904,9 +4052,12 @@ Drug Trial Kidney-related
 eligibility criteria primary albuminuria-containing GFR loss*
 outcome composite outcome
 SGLT2 inhibitors
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR ≥30 ml/min per 1.73 m2 MACE Genital mycotic infections, DKA
 EMPEROR-Preserved No criteria CV death or hospitalization for HF NA Genital and urinary tract infections, hypotension
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 EMPEROR-Reduced eGFR >20 ml/min per 1.73 m2 CV death or hospitalization for HF NA Genital tract infections
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR ≥30 ml/min per 1.73 m2 MACE Genital mycotic infections, DKA, amputation
 CREDENCE ACR >300 mg/g [>30 mg/mmol] and Progression of CKD† Genital mycotic infections, DKA
 eGFR 30–90 ml/min per 1.73 m2
@@ -3914,28 +4065,39 @@ CrCl ≥60 ml/min Dual primary outcomes: MACE and the composite of / Genital myc
 hospitalization for heart failure or CV death‡
 DAPA-CKD eGFR 25–75 ml/min per 1.73 m2 First occurrence of a ≥50% decline in eGFR, the onset Volume depletion
 of kidney failure, or death from renal or CV causes
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 DAPA-HF eGFR ≥30 ml/min per 1.73 m2 CV death or worsening HF NA None notable
 NA Genital mycotic infection, urinary tract infections
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR 25–60 ml/min per 1.73 m2 Deaths from CV causes, hospitalizations for HF, and NA DKA, GI, genital mycotic infections, volume
 urgent visits for HF depletion
 SOLOIST No criteria Deaths from CV causes and hospitalizations and NA NA Severe hypoglycemia
 urgent visits for HF
 GLP-1 receptor agonists
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Lixisenatide ELIXA eGFR ≥30 ml/min per 1.73 m2 MACE None notable
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Liraglutide LEADER eGFR ≥15 ml/min per 1.73 m2 MACE GI
 Semaglutide§ SUSTAIN-6 Patients treated with dialysis MACE NA GI
 excluded
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 PIONEER 6 eGFR ≥30 ml/min per 1.73 m2 MACE NA NA GI
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Exenatide EXSCEL eGFR ≥30 ml/min per 1.73 m2 MACE None notable
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Albiglutide HARMONY eGFR ≥30 ml/min per 1.73 m2 MACE NA Injection site reactions
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Dulaglutide REWIND eGFR ≥15 ml/min per 1.73 m2 MACE GI
 Efpeglenatide AMPLITUDE-O eGFR 25–59.9 ml/min per 1.73 m2 MACE GI
 DPP-4 inhibitors
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Saxagliptin SAVOR-TIMI 53 eGFR ≥15 ml/min per 1.73 m2 MACE HF; any hypoglycemic event (minor and major)
 also more common
 Alogliptin EXAMINE Patients treated with dialysis MACE NA NA None notable
 excluded
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Sitagliptin TECOS eGFR ≥30 ml/min per 1.73 m2 MACE NA NA None notable
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Linagliptin CARMELINA eGFR ≥15 ml/min per 1.73 m2 Progression of CKD† None notable
 Figure24|Overviewofselectlarge,placebo-controlledclinicaloutcometrialsassessingthebenefitsandharmsofsodium–glucosecotransporter-2(SGLT2)inhibitors,glucagon-
 likepeptide-1(GLP-1)receptoragonists,anddipeptidylpeptidase-4(DPP-4)inhibitors.ACR,albumin-creatinineratio;CKD,chronickidneydisease;CrCl,creatinineclearance;CV,
@@ -3948,15 +4110,21 @@ CARMELINAas40%declineineGFR,kidneyfailure,orrenaldeath.‡DECLARE-TIMI58dualprim
 §SUSTAIN-6:injectablesemaglutide;PIONEER6:oralsemaglutide.
 S76
 KidneyInternational(2022)102(Suppl5S),S1–S127
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter
+4
+www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter
 4
 www.kidney-international.org
 
 <!-- page 78 -->
 www.kidney-international.org chapter 4
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR <30ml/min per 1.73 m2, whereasSGLT2i canbe used than metformin and SGLT2i will likely be needed in these
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 for patients with eGFR as low as 20 ml/min per 1.73 m2 for situations. GLP-1 RA are generally preferred because of their
 the cardiovascular and kidney benefits as part of compre- demonstrated cardiovascular benefits, particularly among
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 hensive care of patients with CKD. The majority of the par- patients with established ASCVD even with eGFR <60 ml/
 ticipants in the SGLT2i cardiovascular outcome trials were min per 1.73 m2,346 and their benefits of reducing albumin-
 also treated with metformin, and many patients with T2D uria and slowing eGFR decline (see Section 4.3).346,347 Other
@@ -3967,13 +4135,16 @@ action, and neither carries increased risk of hypoglycemia. buthavenotbeenshownt
 Even when glycemic targets are achieved on metformin, an outcomesandshouldnotbeusedincombinationwithGLP-1
 SGLT2i should be added in these patients for the beneficial RA.348 All glucose-lowering medications should be selected
 effect on CKD progression and CVD risk (see Section 1.3). and dosed according to eGFR.349 For example, sulfonylureas
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 For patients with T2D, CKD, and an eGFR $30 ml/min that are long-acting or cleared by the kidney should be
 per1.73m2notcurrentlytreatedwithglucose-loweringdrugs avoided at low eGFRs.349
 (i.e., “drug naïve” patients), there are no high-quality data
 comparing initiation of glucose-lowering therapy with met- 4.1 Metformin
 forminfirstversusanSGLT2ifirst.Giventhehistoricalroleof
 metforminastheinitialdrugtreatmentforT2D,andthefact Recommendation 4.1.1: We recommend treating
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 that most patients in cardiovascular outcome trials treated patients with T2D, CKD, and an eGFR ‡30 ml/min
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1B" all_grades="1B" recommendation_strength="strong" topic_tags="recommendation, grade_1B, CKD" -->
 withSGLT2iwerefirsttreatedwithmetformin,itislogicalto per 1.73 m2 with metformin (1B).
 initiate metformin first for most patients, with the anticipa-
 tion that SGLT2i should be added soon after. When
@@ -3998,9 +4169,11 @@ to control glycemia, or who cannot tolerate metformin, antiglycemic agent and ha
 treatment with an SGLT2i alone is reasonable in order to reducing HbA1c in patients with T2D, with low risks for
 reduce risks of CKD progression and CVD events. hypoglycemia in both the general population and patients
 MetforminshouldbeinitiatedinpatientswithT2Dandan with CKD. The United Kingdom Prospective Diabetes Study
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR $30 ml/min per 1.73 m2 and should be discontinued (UKPDS) showed that metformin monotherapy in obese
 wheneGFRfallsbelow30ml/minper1.73m2toreducerisk individuals achieved similar reductions in HbA1c levels and
 of lactic acidosis (Figure 23; Sections 1.3 and 4.1).143 SGLT2i fasting plasma glucose levels, with lower risk for hypoglyce-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 can be initiated for patients with an eGFR $20 ml/min per mia, when compared to those given sulfonylureas or insu-
 1.73 m2 (see Section 1.3). For patients whose eGFR subse- lin.350 Moreover, a systematic review demonstrated that
 quentlydeclinesbelowtheseinitiationthresholds,theSGLT2i metformin monotherapy was comparable to thiazolidine-
@@ -4020,6 +4193,7 @@ eGFR, or other restrictions. Glucose-lowering agents other in preventing weight 
 KidneyInternational(2022)102(Suppl5S),S1–S127 S77
 
 <!-- page 79 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 Less-suitablemedications
 TZD
@@ -4148,10 +4322,12 @@ excretion may be impaired, thereby increasing the risk of important to patients.
 lacticacidaccumulation.355However,theassociationbetween of weight reduction compared to use of insulin and sulfo-
 metformin and lactic acidosis had been inconsistent, with nylurea to be an important consideration, and patients who
 literature reviews even refuting this concern,356 including in value weight reduction would prefer to be treated with met-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 patients with an eGFR of 30–60 ml/min per 1.73 m2.357 formincomparedtohavingnotreatmentorothertreatments.
 Consequently, the FDA revised its warning regarding met- In addition, being widely available at low cost would make
 formin use in patients with CKD, switching from a metforminarelevantinitialtreatmentoptioninlow-resource
 creatinine-based restriction to include eligible patients with settings.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 moderate CKD and an eGFR $30 ml/min per 1.73 m2.358 Resource use and costs. Metformin is among the least-
 Although the effect of heart protection with metformin expensive antiglycemic medications and is widely available.
 use is studied mainly in the general population, evidence of In resource-limited settings, this drug is affordable and may
@@ -4159,6 +4335,7 @@ this benefit in patients with CKD, especially those with be the only drug availa
 reduced eGFR, is less consistent. A systematic review Considerations for implementation. Dose adjustments of
 considered the association of all-cause mortality and MACE metforminarerequiredwithadeclineintheeGFR,andthere
 with treatment regimens that included metformin in patient arecurrentlynosafetydataformetforminuseinpatientswith
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 populations for which metformin use is traditionally taken an eGFR <30 ml/min per 1.73 m2 or in those who are on
 with precautions.359 There were no RCTs, and only obser- dialysis. Patients will, therefore, need to be switched off
 vational studies were included in the analysis of the CKD metforminwhentheeGFRfallsbelow30ml/minper1.73m2.
@@ -4188,6 +4365,7 @@ Figure26|Differentformulationsofmetformin.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S79
 
 <!-- page 81 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 blind RCTof adults with T2D who were randomly assigned associated with significantly lower all-cause, malignancy-
 to 1 of 3 extended-release metformin treatment regimens related, and infection-related mortality.368 The Transdiab
@@ -4205,17 +4383,21 @@ during the first week (0.6% vs. 4.0%). Another RCTof 532 eGFR, using the same ap
 treatment-naïve Chinese patients with T2D (the Compari-
 son of metfOrmin XR to IR as moNotherapy in the Newly PracticePoint4.1.2:MonitoreGFRinpatientstreatedwith
 diagnoSed Type 2 diabEtes Patients for the gastroiNtestinal metformin.Increasethefrequencyofmonitoringwhenthe
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Tolerability and Efficacy [CONSENT] study), however, eGFR is <60 ml/min per 1.73 m2 (Figure 27).
 showed comparable gastrointestinal adverse events between Giventhatmetforminisexcretedbythekidneysandthere
 patients receiving monotherapy with immediate-release is concern for lactic acid accumulation with a decline in
 versus extended-release metformin (23.8% vs. 22.3%, kidney function,itisimportanttomonitor theeGFRatleast
 respectively).366 annually when a patient is on metformin treatment. The
 Inviewoftheoverallbenefitsofmetformintreatment,and frequency of monitoring should be increased to every 3–6
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 the possibility of improved tolerability of extended-release months as the eGFR drops below 60 ml/min per 1.73 m2,
 metformin, patients who experienced significant gastrointes- with a view to decreasing the dose accordingly.
 tinal side effects from the immediate-release formulation
 could be considered for a switch to extended-release met- Practice Point 4.1.3: Adjust the dose of metformin when
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 formin and monitored for improvement of symptoms. the eGFR is <45 ml/min per 1.73 m2, and for some pa-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 tients when the eGFR is 45–59 ml/min per 1.73 m2
 Rationale (Figure 27).
 This recommendation places a higher value on the many Figure 27 provides a suggested approach in adjusting the
@@ -4252,6 +4434,7 @@ S80 KidneyInternational(2022)102(Suppl5S),S1–S127
 <!-- page 82 -->
 www.kidney-international.org chapter 4
 Yes
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR < 30 Stop metformin; do not initiate metformin
 No
 eGFR ≥ 60 eGFR 45–59 eGFR 30–44
@@ -4291,11 +4474,13 @@ Researchrecommendations RA agents have been shown to have kidney benefits by
 RCTs are needed to: reducing albuminuria and slowing the rate of eGFR
 (cid:3) Evaluate the safety, efficacy, and potential cardiovascular decline.372,374,375
 andkidney protectivebenefitsofmetforminuseinpatients
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 withT2DandCKD,includingthosewithaneGFR<30ml/ Recommendation 4.2.1: In patients with T2D and
 min per 1.73 m2 or on dialysis. CKDwhohavenotachievedindividualizedglycemic
 (cid:3) Evaluate the safety and efficacy of metformin in kidney targets despite use of metformin and SGLT2i treat-
 ment, or who are unable to use those medications,
 transplant recipients.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1B" all_grades="1B" recommendation_strength="strong" topic_tags="recommendation, grade_1B, CKD" -->
 we recommend a long-acting GLP-1 RA (1B).
 4.2 Glucagon-like peptide-1 receptor agonists
 (GLP-1 RA) This recommendation places a high value on the cardiovascular
@@ -4305,6 +4490,7 @@ after ingestion of glucose orother nutrients. In the pancreas, adverse effects a
 KidneyInternational(2022)102(Suppl5S),S1–S127 S81
 
 <!-- page 83 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 Keyinformation CKD and CVD. SUSTAIN-6 found that once-weekly sem-
 Balanceofbenefitsandharms. Data for cardiovascular and aglutide compared to placebo reduced the primary composite
@@ -4312,12 +4498,15 @@ kidney outcomes, and cardiometabolic benefits, are summa- MACE outcome by 26% (H
 rized below. subgroup analysis, there was no evidence of effect heteroge-
 Cardiovascular outcomes. There are currently 8 published neity by CKD subgroup, with similar MACE reduction for
 large RCTs examining cardiovascular outcomes for injectable
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 thosewithaneGFR<30ml/minper 1.73m2versus$30ml/
 GLP-1 RA347,372–382 and 1 trial of an oral GLP-1 RA min per 1.73 m2 (P-interaction ¼ 0.98)and similar reduction
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (Figure 28).383 Of these, 5 studies (Liraglutide Effect and for those with an eGFR <60 ml/min per 1.73 m2 versus $60
 Action in Diabetes: Evaluation of Cardiovascular Outcome ml/min per 1.73 m2 (P-interaction ¼ 0.37).
 Results [LEADER],379 Trial to Evaluate Cardiovascular and The HARMONY trial (evaluating albiglutide) evaluated
 Other Long-term Outcomes with Semaglutide in Subjects 9463participantswithT2Dandhighcardiovascularriskwith
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 with Type 2 Diabetes [SUSTAIN-6],374 Effect of Albiglutide, HbA1c $7%.373 Of note, an eGFR <30 ml/min per 1.73 m2
 WhenAddedtoStandardBloodGlucoseLoweringTherapies, wasanexclusioncriterion.HARMONYfoundthatalbiglutide
 on Major Cardiovascular Events in Subjects With Type 2 (dosed once weekly) compared to placebo reduced the pri-
@@ -4333,6 +4522,7 @@ dulaglutide, and efpeglenatide respectively. The other agents min per 1.73 m2, a
 shown to have cardiovascular safety, but without significant available on the market, so this is not an option for patients.
 effects on cardiovascular risk reduction. TheREWINDtrial(evaluatingdulaglutide)included9901
 The LEADER trial (evaluating liraglutide) included 9340 adults with T2D with HbA1cof #9.5% (with no lower limit
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 individuals with T2D and HbA1c $7% with high cardio- and mean HbA1c of 7.2%).372,377 An eGFR <15 ml/min per
 vascular risk defined as established CVD, CKD G3 or higher, 1.73 m2 was an exclusion criterion. The REWIND trial
 age $60 years, or a major CVD risk factor.379 Of note, the enrolled a low proportion of patients with established CVD
@@ -4345,14 +4535,19 @@ stroke.Therewasa13%reductioninMACE(HR:0.87;95% 12% lower with once-weekly dulagl
 CI: 0.78–0.97) conferred by liraglutide. cebo (HR: 0.88; 95% CI: 0.79–0.99). The reduction in pri-
 In the LEADER trial, the risk reduction for the primary mary cardiovascular outcome was similar among those with
 composite MACE outcome was even greater among in- versus without previous CVD (P-interaction ¼ 0.97).
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 dividuals with CKD G3a or greater severity (eGFR <60 ml/ TheAMPLITUDE-Otrialstudiedthecardiovascularsafety
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 min per 1.73 m2) compared to those with an eGFR $60 ml/ of efpeglenatide in 4076 patients with T2D and high cardio-
 min per 1.73 m2 (HR: 0.69; 95% CI: 0.57–0.85 vs. HR: 0.94; vascularriskorCKD,including89.6%withestablishedCVD.
 95%CI:0.83–1.07,respectively,P-interaction¼0.01).384This EfpeglenatidewassuperiortoplacebofortheprimaryMACE
 benefitwasseenacrosseachseparatecardiovascularoutcome. outcome,withHRfortheprimaryoutcomeof0.73(95%CI:
 Notably, liraglutide (compared to placebo) conferred an 0.58–0.92), and comparable MACE risk reduction in partic-
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 impressive 49% reduction for nonfatal stroke, with HR: 0.51 ipants with eGFR <71 ml/min per 1.73 m2 with HR for
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 (95% CI: 0.33–0.80) for eGFR <60 ml/min per 1.73 m2 primary outcome of 0.67 (95% CI: 0.50–0.91).347
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 versus HR: 1.07 (95% CI: 0.84–1.37) for eGFR $60 ml/min In contrast, the Evaluation of LIXisenatide in Acute Cor-
 per 1.73 m2. Although subgroup analyses should be consid- onary Syndrome (ELIXA; lixisenatide)381 and the EXenatide
 ered cautiously, these findings suggest that efficacy among Study of Cardiovascular Event Lowering (EXSCEL; exena-
@@ -4371,11 +4566,13 @@ Drug Lixisenatide Liraglutide Semaglutide Exenatide Albiglutide Dulaglutide Sema
 (oral)
 Total number of participants 6068 9340 3297 14,752 9463 9901 3183 4076 577
 % with CVD 100 81.3 83 73 100 31.5 84.7 89.6 Not reported
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 eGFR criteria for enrollment ≥30 Most had eGFR ≥30, but Not reported ≥30 ≥30 ≥15 ≥30 25–59.9 Not reported
 (ml/min per 1.73 m²) did include 220 patients (however 0.9%
 with eGFR 15 to 30 had eGFR <30)
 Mean eGFR at enrollment 76 80 ~75 76 79 76.9 74 72.4 38
 (ml/min per 1.73 m2)
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 % with eGFR 23 20.7 with eGFR 30 to 28.5 22.9 Not reported 22.2 26.9 31.6 100 with CKD
 <60 ml/min per 1.73 m2 59 ml/min per 1.73 m2, G3a–G4
 2.4 with eGFR <30
@@ -4394,10 +4591,12 @@ Kidney outcome New-onset severely New-onset persistent Persistent severely Two k
 (secondary end points) increased albuminuria severely increased increased composite outcomes: increased increased albuminuria (ACR >300
 and doubling of albuminuria, albuminuria, 1) 40% eGFR decline, albuminuria mg/g or >33.9 mg/mmol), increase
 SCr persistent doubling of persistent kidney replacement, ACR of >33.9 mg/ in ACR ≥30%, sustained decrease in
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 the SCr level, kidney doubling of SCr, a or renal death, mmol [>339 mg/g], eGFR by ≥40% for ≥30 days, or
 2) 40% eGFR decline,
 failure, or death due to CrCl of <45 ml/min, a sustained fall in kidney replacement therapy for
 kidney replacement,
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 kidney disease or need for KRT renal death, or eGFR of 30% from ≥90 days, or a sustained eGFR of
 severely increased baseline, or use of <15 ml/min per 1.73 m2 for ≥30
 albuminuria KRT days
@@ -4421,10 +4620,15 @@ kidneyreplacementtherapy;MI,myocardialinfarction;NA,notavailable;SCr,serumcreati
 KidneyInternational(2022)102(Suppl5S),S1–S127
 S83
 www.kidney-international.org
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter
+4
+
+<!-- page 85 -->" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter
 4
 
 <!-- page 85 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 patientpopulationsstudied.Forexample,theELIXAtrialhad albuminuria (HR: 0.77; 95% CI: 0.68–0.87). Notably, in post
 a high discontinuation and dropout rate. hocexploratoryanalyses,eGFRdeclinethresholdsof40%and
@@ -4432,13 +4636,16 @@ The Peptide Innovation for Early Diabetes Treatment 50%weresignificantlyreducedb
 (PIONEER) 6 study investigated the cardiovascular safety of Of course, exploratory results must be interpreted cautiously
 an oral GLP-1 RA (oral semaglutide).383 The study evaluated andregardedashypothesis-generating.Therewerenoserious
 3183patientswithT2Dandhighcardiovascularrisk,CKD,or adverse events for kidney disease in the REWIND trial.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 age >50 years with a major CVD risk factor. An eGFR <30 Among the 9901 participants, 22.2% had an eGFR <60 ml/
 ml/min per 1.73 m2 was an exclusion criterion. Oral sem- minper1.73m2atbaseline,and7.9%hadseverely increased
 aglutide was found to not be inferior to placebo for primary albuminuria. The benefit on the composite kidney outcome
 MACEoutcomes.Furthermore,therewasnodifferenceinthe wassimilaramongthosewithaneGFR$60ml/minper1.73
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 primaryoutcomeforparticipantswithaneGFR<60ml/min m2 or <60 ml/min per 1.73 m2 (P-interaction ¼ 0.65), and
 per1.73m2versus$60ml/minper1.73m2(P-interaction¼ amongsubgroupsdefinedbybaselinealbuminuriastatusand
 0.80), with HR for primary outcome of 0.74 (95% CI: 0.41– use of an ACEi or ARB. Of note, the HbA1c-lowering and
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 1.33) for those with an eGFR <60 ml/min per 1.73 m2. blood pressure–lowering effects explained 26% and 15%,
 A 2021 meta-analysis of the 8 trials of GLP-1 RA (ELIXA, respectively, of the kidney benefits conferred by dulaglutide.
 LEADER, SUSTAIN-6, EXSCEL, HARMONY, REWIND, Hence,notallofthebenefitofGLP-1RAcanbeexplainedby
@@ -4498,6 +4705,7 @@ ward benefit (HR: 0.86; 95% CI: 0.72–1.02). AlthoughGLP-1RAandSGLT2ireduceMACE
 A major limitation is that results have not been reported degree, GLP-1 RA may be preferred for ASCVD, whereas
 from a clinical trial enrolling a study population selected for there is currently stronger evidence for SGLT2i for reduction
 CKD or in which kidney outcomes were the primary out- inheartfailureandCKDprogression.ForpatientswithT2D,
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 comes. However, a clinical trial of GLP-1 RAwith a primary CKD, and an eGFR $20 ml/min per 1.73 m2, SGLT2i agents
 kidney disease outcome is forthcoming with the ongoing are preferred over GLP-1 RA as initial kidney and heart
 Effect of Semaglutide Versus Placebo on the Progression of protective agents. However, in light of the aforementioned
@@ -4549,6 +4757,7 @@ with GLP-1 RA may be used for kidney and heart slow progression of CKD in T2D.
 KidneyInternational(2022)102(Suppl5S),S1–S127 S85
 
 <!-- page 87 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 (cid:3) Study design: Therehave now been multiple RCTs, with an albuminuria who need further glycemic management might
 adequatenumberofstudy participants,thathaveevaluated be particularly inclined to choose a GLP-1 RA. In contrast,
@@ -4648,6 +4857,7 @@ GLP-1RA Dose CKDadjustment
 Dulaglutide 0.75 mg and 1.5 mg once weekly No dosage adjustment
 Use with eGFR >15 ml/min per 1.73 m2
 Exenatide 10 μg twice daily Use with CrCl >30 ml/min
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 Exenatide extended-release 2 mg once weekly Use with eGFR >45 ml/min per 1.73 m2
 Liraglutide 1.2 mg and 1.8 mg once daily No dosage adjustment
 Limited data for severe CKD
@@ -4664,6 +4874,7 @@ Figure29|Dosingforavailableglucagon-likepeptide-1receptoragonists(GLP-1RA)anddos
 KidneyInternational(2022)102(Suppl5S),S1–S127 S87
 
 <!-- page 89 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 4 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 4 www.kidney-international.org
 individualsandcanbeavaluabletooltoincreaseratesofpre- population or trial data would be useful to confirm their
 emptiveandoverallkidneytransplants. role,asmoststudies have focused onsecondary prevention.
@@ -4699,6 +4910,7 @@ S88 KidneyInternational(2022)102(Suppl5S),S1–S127
 
 <!-- page 90 -->
 www.kidney-international.org chapter 5
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="Chapter 5: Approaches to management of patients" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 Chapter 5: Approaches to management of patients
 with diabetes and CKD
 5.1 Self-management education programs and macrovascular complications, severe hypoglycemia, and
@@ -4706,6 +4918,7 @@ diabeticketoacidosis.Self-managementprogramsalsoseekto
 Recommendation 5.1.1: We recommend that a optimize patient well-being, improve quality of life, and
 structured self-management educational program achieve treatment satisfaction.403
 be implemented for care of people with diabetes Potential benefits are summarized in a systematic review
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 and CKD (Figure 30403) (1C). of 21 studies (26 publications, 2833 participants), which
 showed that group-based diabetes self-management educa-
 tionprogramsinpeoplewithT2Dresultinimprovementsin
@@ -4752,6 +4965,7 @@ programmes:anarrativereviewandcurrentinnovations,pages130–142,Copyrightª2018,
 KidneyInternational(2022)102(Suppl5S),S1–S127 S89
 
 <!-- page 91 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 5 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 5 www.kidney-international.org
 programs are commissioned and delivered according to A systematic review of RCTs published in 2018 on self-
 evidenced-based guidelines. When self-management pro- management support interventions in people with CKD412
@@ -4900,6 +5114,7 @@ accreditedhealthcarepractitioner,suchasadiabetesspecialist are major gaps in the
 KidneyInternational(2022)102(Suppl5S),S1–S127 S91
 
 <!-- page 93 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 5 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 5 www.kidney-international.org
 a
 Study or subgroup Mean SD Total Mean SD Total Weight IV, Random, 95% CI IV, Random, 95% CI
@@ -5044,6 +5259,7 @@ with diabetes and CKD. RCTs that compared specialist-led
 evaluation and patient empowerment to provide
 multidisciplinary, multicomponent integrated care for treat-
 comprehensive care in patients with diabetes and
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="2B" all_grades="2B" recommendation_strength="conditional" topic_tags="recommendation, grade_2B, CKD" -->
 CKD (2B). ing multiple targets versus standard care exhibited moderate
 qualityoftheevidenceforcriticaloutcomes,includingkidney
 This recommendation places a relatively higher value on the failure, systolic blood pressure level, and HbA1c level
@@ -5056,6 +5272,7 @@ requiring system support and policy change. The stipulated in this guideline.440
 KidneyInternational(2022)102(Suppl5S),S1–S127 S93
 
 <!-- page 95 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 5 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 5 www.kidney-international.org
 Patients with diabetes and CKD
 Multicomponent, integrated
@@ -5155,6 +5372,7 @@ PublishingGroupLtd.436
 KidneyInternational(2022)102(Suppl5S),S1–S127 S95
 
 <!-- page 97 -->
+<!-- rag_metadata source=KDIGO_2022_DM_CKD section="chapter 5 www.kidney-international.org" topic_tags="CKD, T2DM_CKD, general" population="T2DM T1DM CKD" year=2022 -->
 chapter 5 www.kidney-international.org
 Poorly-informed patients Empowered patients
 with suboptimal control 1 Register with optimal control
@@ -6650,6 +6868,7 @@ sodium-glucosecotransporter-2inhibitorsintype2diabetesmellitus:a publication of 
 comprehensiveeconomic evaluationusing clinicaltrialandreal-world Med.2004;351:543–551.
 evidence.DiabetesObesMetab.2020;22:2364–2374. 160. Agarwal R, Kolkhof P, Bakris G, et al. Steroidal and non-steroidal
 140. Bakris G, Oshima M, Mahaffey KW, et al. Effects of canagliflozin in mineralocorticoid receptor antagonists in cardiorenal medicine. Eur
+<!-- rag_metadata source=KDIGO_2022_DM_CKD topic_tags="eGFR_threshold, drug_dose_adjustment, CKD, safety" safety_critical=true chunk_note="zero_loss_standalone_node" -->
 patients with baseline eGFR <30 ml/min per 1.73 m2: subgroup HeartJ.2021;42:152–161.
 analysis of the randomized CREDENCE trial. Clin J Am Soc Nephrol. 161. Ito S, Kashihara N, Shikata K, et al. Esaxerenone (CS-3150) in patients
 2020;15:1705–1714. with type 2 diabetes and microalbuminuria (ESAX-DN): phase 3
@@ -6788,6 +7007,7 @@ includedinsystematicreviews.BMCMedResMethodol.2003;3:25. (UKPDS 33). UK Prospect
 products: a mechanistic perspective. Curr Med Chem. 2007;14:1653– 247. Currie CJ,PetersJR, Tynan A,etal.Survival asafunction of HbA in
 1c
 1671. people with type 2 diabetes: a retrospective cohort study. Lancet.
+<!-- rag_metadata source=KDIGO_2022_DM_CKD evidence_grade="1C" all_grades="1C" recommendation_strength="strong" topic_tags="recommendation, grade_1C, CKD" -->
 224. Little RR, Rohlfing CL, Tennill AL, et al. Measurement of Hba(1C) in 2010;375:481–489.
 patientswithchronicrenalfailure.ClinChimActa.2013;418:73–76. 248. Holman RR, Paul SK, Bethel MA, et al. 10-year follow-up of intensive
 225. Tarim O, Kucukerdogan A, Gunay U, et al. Effects of iron deficiency glucosecontrolintype2diabetes.NEnglJMed.2008;359:1577–1589.

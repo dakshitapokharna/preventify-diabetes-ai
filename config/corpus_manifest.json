@@ -7,7 +7,7 @@
       "retrieval_tier": "core",
       "condition_trigger": null,
       "india_specific": true,
-      "parser": "docling",
+      "parser": "pdfplumber",
       "chunker": "recommendation"
     },
     {
@@ -59,8 +59,8 @@
       "retrieval_tier": "triggered",
       "condition_trigger": "ckd",
       "india_specific": false,
-      "parser": "docling",
-      "chunker": "recommendation"
+      "parser": "pdfplumber",
+      "chunker": "page_window"
     },
     {
       "source": "IDF_DAR",
@@ -69,8 +69,8 @@
       "retrieval_tier": "triggered",
       "condition_trigger": "ramadan",
       "india_specific": true,
-      "parser": "docling",
-      "chunker": "recommendation"
+      "parser": "pdfplumber",
+      "chunker": "page_window"
     },
     {
       "source": "ESC_2023_CV_DM",

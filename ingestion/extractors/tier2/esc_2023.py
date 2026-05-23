@@ -349,16 +349,19 @@ def _extract_page(page) -> str:
     body_text = "\n".join(text_lines)
 
     parts: list[tuple[float, str]] = []
-    for tb_top, (_, rows) in zip([bb[1] for bb, _ in real], real):
+    for bb, rows in real:
+        tb_top = bb[1]
         parts.append((tb_top, _render_markdown_table(rows)))
 
-    body_top = 0.0
+    # body_text is emitted once per page (not once per table).
+    # Previous code appended body_text inside the loop, repeating it N times
+    # on pages with N tables — causing duplicate content in the parsed output.
     chunks: list[str] = []
-    for tb_top, table_md in sorted(parts, key=lambda x: x[0]):
+    if parts:
         chunks.append(body_text)
-        chunks.append(table_md)
-
-    if not chunks:
+        for _, table_md in sorted(parts, key=lambda x: x[0]):
+            chunks.append(table_md)
+    else:
         chunks.append(body_text)
 
     return "\n\n".join(c for c in chunks if c.strip())

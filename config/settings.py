@@ -11,18 +11,18 @@ class Settings(BaseSettings):
     llm_api_key: str = ""
 
     # Embedding
-    embedding_model: str = "BAAI/bge-m3"
+    embedding_model: str = "BAAI/bge-large-en-v1.5"
 
     # Reranker
-    reranker_model: str = "BAAI/bge-reranker-v2-m3"
+    reranker_model: str = "BAAI/bge-reranker-large"
     reranker_top_k: int = 20
 
-    # Qdrant
-    qdrant_url: str = "http://localhost:6333"
-    qdrant_collection: str = "preventify_corpus"
-
-    # Postgres (ICMR-NIN food table)
+    # Postgres / pgvector (Neon) — vector store + user memory + lead data
+    # Field name `postgres_url` maps to env var POSTGRES_URL (pydantic-settings uppercases field names)
+    # .env file must contain:  POSTGRES_URL=postgresql://user:pass@host/preventify?sslmode=require
+    # Do NOT use DATABASE_URL — that key is not read by this field.
     postgres_url: str = "postgresql://postgres:postgres@localhost:5432/preventify"
+    pgvector_collection: str = "preventify_corpus"
 
     # Ingestion
     corpus_manifest: Path = BASE_DIR / "config" / "corpus_manifest.json"

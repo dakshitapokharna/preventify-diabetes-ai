@@ -32,10 +32,18 @@ from pgvector.psycopg2 import register_vector
 
 def get_connection(postgres_url: str):
     """
-    Open a psycopg2 connection and register the pgvector type adapter.
-    register_vector() allows passing numpy arrays directly as vector columns.
+    Open a psycopg2 connection, enable the pgvector extension, then register
+    the vector type adapter so numpy arrays can be passed as vector columns.
+
+    register_vector() must run AFTER the extension exists — it looks up the
+    vector OID in pg_type at call time. On a fresh Neon DB the extension is
+    not pre-installed, so we CREATE EXTENSION first, then register.
     """
     conn = psycopg2.connect(postgres_url)
+    # Enable extension before registering the type — safe to re-run (IF NOT EXISTS)
+    with conn.cursor() as cur:
+        cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
+        conn.commit()
     register_vector(conn)
     return conn
 
@@ -48,9 +56,6 @@ def ensure_table(conn) -> None:
     Safe to re-run — uses CREATE TABLE IF NOT EXISTS and CREATE INDEX IF NOT EXISTS.
     """
     with conn.cursor() as cur:
-        # Enable pgvector extension
-        cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
-
         # Main corpus table
         cur.execute("""
             CREATE TABLE IF NOT EXISTS preventify_corpus (

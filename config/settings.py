@@ -6,7 +6,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    # LLM
+    # Cerebras — all LLM calls (Phase 1, Phase 2, memory compressor) for testing.
+    # Single model for everything: qwen-3-235b-a22b-instruct-2507 (free tier)
+    # Runners read CEREBRAS_API_KEY directly from os.environ.
+    # Switch back to OpenRouter (Gemini) after base model clinical sign-off.
+    cerebras_api_key: str = ""
+
+    # Cerebras base URL (OpenAI-compatible)
+    cerebras_base_url: str = "https://api.cerebras.ai/v1"
+
+    # LLM model — single model for all phases during testing
+    cerebras_model: str = "qwen-3-235b-a22b-instruct-2507"
+
+    # LLM (legacy Anthropic fields — not used in current pipeline)
     llm_model: str = "claude-sonnet-4-6"
     llm_api_key: str = ""
 
@@ -16,6 +28,12 @@ class Settings(BaseSettings):
     # Reranker
     reranker_model: str = "BAAI/bge-reranker-large"
     reranker_top_k: int = 20
+
+    # HuggingFace model cache — must point to D: drive (C: is almost full).
+    # Set HF_HOME=D:\hf_cache in .env; run.py applies this before loading any model.
+    # All ML model downloads (bge-large-en-v1.5 ~1.3 GB, bge-reranker-large ~1.1 GB)
+    # land here, never on C:.
+    hf_home: str = r"D:\hf_cache"
 
     # Postgres / pgvector (Neon) — vector store + user memory + lead data
     # Field name `postgres_url` maps to env var POSTGRES_URL (pydantic-settings uppercases field names)

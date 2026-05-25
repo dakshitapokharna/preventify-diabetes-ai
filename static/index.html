@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preventify Diabetes Educator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="app-header">
+    <span class="header-icon">🩺</span>
+    <span class="header-title">Preventify Diabetes Educator</span>
+    <span class="header-sub">Base model testing — English</span>
+  </header>
+
+  <!-- ── Chat area ──────────────────────────────────────────────────────── -->
+  <main class="chat-area" id="chatArea">
+    <!-- Welcome bubble -->
+    <div class="bubble bot-bubble" id="welcomeBubble">
+      Hello! I'm your diabetes education assistant. I can answer questions about
+      managing diabetes — nutrition, monitoring, lifestyle, medications, and more.
+      <br/><br/>
+      How can I help you today?
+    </div>
+  </main>
+
+  <!-- ── Debug panel ────────────────────────────────────────────────────── -->
+  <section class="debug-panel" id="debugPanel">
+    <button class="debug-toggle" id="debugToggle" onclick="toggleDebug()">
+      ▼ Debug panel
+    </button>
+    <div class="debug-content" id="debugContent" style="display:none">
+      <div class="debug-row">
+        <span class="debug-label">QDS / Intent</span>
+        <span class="debug-value" id="dbgQds">—</span>
+      </div>
+      <div class="debug-row">
+        <span class="debug-label">Sources</span>
+        <span class="debug-value" id="dbgSources">—</span>
+      </div>
+      <div class="debug-row">
+        <span class="debug-label">Risk tier</span>
+        <span class="debug-value" id="dbgRisk">—</span>
+      </div>
+      <div class="debug-row">
+        <span class="debug-label">Fallback</span>
+        <span class="debug-value" id="dbgFallback">none</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Input bar ──────────────────────────────────────────────────────── -->
+  <footer class="input-bar">
+    <textarea
+      id="messageInput"
+      class="message-input"
+      placeholder="Type your question..."
+      rows="1"
+      maxlength="2000"
+      onkeydown="handleKey(event)"
+      oninput="autoResize(this)"
+    ></textarea>
+    <button id="sendBtn" class="send-btn" onclick="sendMessage()">
+      Send ▶
+    </button>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

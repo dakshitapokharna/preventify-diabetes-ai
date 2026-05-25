@@ -1,0 +1,107 @@
+{
+  "$comment": "profile_signals sub-schema — the signals Phase 1 extracts from every patient message. This is a subset of the full Phase 1 output schema (phase1_output_schema.json). Used by: (1) validate_phase1_output() in phase1_schema.py, (2) signal_writer.py to write to Neon DB users table, (3) Phase 2 build_enriched_query() to read stored signals.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "diabetes_type",
+    "medications_mentioned",
+    "insulin_user",
+    "condition_flags",
+    "complications_mentioned",
+    "location_hint",
+    "session_context"
+  ],
+  "propertyOrdering": [
+    "diabetes_type",
+    "medications_mentioned",
+    "insulin_user",
+    "condition_flags",
+    "complications_mentioned",
+    "location_hint",
+    "session_context"
+  ],
+  "properties": {
+    "diabetes_type": {
+      "type": "string",
+      "enum": ["T1DM", "T2DM", "GDM", "prediabetes", "suspected", ""],
+      "description": "Diabetes type inferred from this message. Empty string if not mentioned in this message. The signal_writer applies a one-way upgrade: null → suspected → prediabetes → T1DM / T2DM / GDM. It never downgrades a stored value.",
+      "$db_column": "users.diabetes_type",
+      "$db_type": "TEXT",
+      "$merge_rule": "one-way upgrade only — see DIABETES_TYPE_UPGRADE_ORDER in signal_writer.py"
+    },
+    "medications_mentioned": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "oral_antidiabetic_unspecified",
+          "metformin",
+          "sulfonylurea",
+          "dpp4_inhibitor",
+          "sglt2_inhibitor",
+          "glp1_ra",
+          "insulin_basal",
+          "insulin_premixed",
+          "insulin_unspecified",
+          "bp_tablet_unspecified",
+          "statin_unspecified"
+        ]
+      },
+      "description": "Medications mentioned or implied in this message, mapped to controlled vocabulary. Empty array if none. Patient language: 'white tablet' → oral_antidiabetic_unspecified; 'night injection' → insulin_basal; 'cholesterol tablet' → statin_unspecified.",
+      "$db_column": "users.medications_mentioned",
+      "$db_type": "TEXT[]",
+      "$merge_rule": "append only — new terms added, existing never removed, no duplicates"
+    },
+    "insulin_user": {
+      "type": "boolean",
+      "description": "True if patient mentions injection or insulin in this message. False if not mentioned this message. The signal_writer stores True permanently — once True is stored, it is never reset to False regardless of future messages.",
+      "$db_column": "users.insulin_user",
+      "$db_type": "BOOLEAN",
+      "$merge_rule": "latch True only — DB value is OR of stored and incoming: new_value = stored OR incoming"
+    },
+    "condition_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["ckd", "cardio", "ramadan", "hypertension"]
+      },
+      "description": "Condition flags detected in this message. These trigger Tier 2 RAG sources. Permanent once stored — medical conditions do not disappear. If patient later denies a flag, bot asks a re-confirmation question rather than clearing the flag (see BOT_CONVERSATION_ARCHITECTURE.md Section 9.2).",
+      "$db_column": "users.condition_flags",
+      "$db_type": "TEXT[]",
+      "$merge_rule": "append only — permanent, never removed"
+    },
+    "complications_mentioned": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "neuropathy_suspected",
+          "retinopathy_suspected",
+          "nephropathy_suspected",
+          "foot_wound_present",
+          "autonomic_suspected",
+          "erectile_dysfunction_mentioned"
+        ]
+      },
+      "description": "Complications mentioned or implied in this message. Controlled vocabulary only. Note: erectile_dysfunction_mentioned is stored but NEVER surfaced in patient-facing responses — it is for clinical profile completeness and lead scoring only.",
+      "$db_column": "users.complications_mentioned",
+      "$db_type": "TEXT[]",
+      "$merge_rule": "append only, no duplicates — complications are not removed once detected"
+    },
+    "location_hint": {
+      "type": "string",
+      "description": "City or district in Kerala mentioned in this message. Empty string if not mentioned. The signal_writer overwrites the stored value only if the new value is more specific (city > district > state). If the patient says 'Thrissur district' and later says 'Chalakudy', the more specific value wins.",
+      "$db_column": "users.location_hint",
+      "$db_type": "TEXT",
+      "$merge_rule": "overwrite if new value is more specific — specificity heuristic: len(new) >= len(stored) OR stored is empty. Same-length names overwrite (e.g. 'Thrissur' → 'Chalakudy') to prefer the most recently stated specific location."
+    },
+    "session_context": {
+      "type": "string",
+      "enum": ["self", "family_member_inquiry"],
+      "description": "Who is asking. self = patient asking about their own condition. family_member_inquiry = asking about a relative's diabetes. SESSION-ONLY — NOT written to the users table. Used within the current session to frame Phase 2's response (answer as if the relative is the patient).",
+      "$db_column": null,
+      "$db_type": null,
+      "$merge_rule": "not persisted — session memory only, cleared at session end"
+    }
+  }
+}

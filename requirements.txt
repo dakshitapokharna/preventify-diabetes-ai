@@ -10,7 +10,9 @@ FlagEmbedding
 qdrant-client
 
 # Database
-psycopg2-binary
+asyncpg           # async Postgres driver — used by phase2_runner.py and signal_writer.py
+psycopg2-binary   # sync Postgres driver — used by signal_writer_sync and ingestion scripts
+pgvector          # pgvector Python adapter for asyncpg vector type registration
 sqlalchemy
 
 # API
@@ -19,8 +21,14 @@ uvicorn[standard]
 pydantic
 pydantic-settings
 
-# LLM
+# LLM — all model calls via OpenRouter (OpenAI-compatible)
+openai>=1.30.0
+
+# Legacy Anthropic — kept in case needed, not used in current pipeline
 anthropic
+
+# HTTP client (memory_compressor.py async calls to OpenRouter)
+httpx
 
 # Utilities
 python-dotenv

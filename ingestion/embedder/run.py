@@ -33,6 +33,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from config.settings import settings
+
+# Apply HF_HOME before any HuggingFace import touches the cache path.
+# C: drive is nearly full (~300 MB free); all model downloads must go to D:.
+# Value comes from HF_HOME in .env (default: D:\hf_cache via settings.hf_home).
+import os as _os
+_os.environ.setdefault("HF_HOME", settings.hf_home)
+_os.environ.setdefault("TRANSFORMERS_CACHE", settings.hf_home)
 from ingestion.embedder.db import get_connection, ensure_table, delete_source, upsert_chunk
 from ingestion.embedder.embed import load_model, embed_texts
 

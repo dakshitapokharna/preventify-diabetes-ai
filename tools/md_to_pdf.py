@@ -1,483 +1,379 @@
 """
-md_to_pdf.py — Convert Markdown files to PDF using fpdf2.
-Handles: headings (H1–H3), bold, inline code, fenced code blocks,
-         bullet lists, numbered lists, tables, horizontal rules, blockquotes.
-
-Usage:
-    python tools/md_to_pdf.py CHUNKING_LOGIC.md
-    python tools/md_to_pdf.py CHUNKING_DISCUSSION.md
-    python tools/md_to_pdf.py CHUNKING_LOGIC.md CHUNKING_DISCUSSION.md
+Convert BOT_CONVERSATION_ARCHITECTURE.md to PDF using fpdf2.
+Run: python tools/md_to_pdf.py
 """
 
 import re
-import sys
 from pathlib import Path
 from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 
-# ── Colours ────────────────────────────────────────────────────────────────
-C_H1        = (15,  78, 137)   # dark blue
-C_H2        = (30, 100, 160)
-C_H3        = (50, 120, 180)
-C_CODE_BG   = (240, 243, 246)  # light grey background for code blocks
-C_TABLE_HD  = (220, 230, 242)  # table header fill
-C_TABLE_ALT = (248, 250, 252)  # alternating row fill
-C_RULE      = (180, 190, 200)
-C_QUOTE_BAR = (100, 140, 190)
-C_BODY      = (30,  30,  30)
+INPUT_MD  = Path(__file__).parent.parent / "BOT_CONVERSATION_ARCHITECTURE.md"
+OUTPUT_PDF = Path(__file__).parent.parent / "BOT_CONVERSATION_ARCHITECTURE.pdf"
 
-# ── Layout constants ────────────────────────────────────────────────────────
-MARGIN      = 18   # mm
-LINE_H      = 5.5  # mm  normal body line height
-CODE_LINE_H = 4.8  # mm  code block line height
-TABLE_ROW_H = 6    # mm
+# Unicode → latin-1 safe substitution table
+_UNICODE_SUBS = str.maketrans({
+    "—": "--",   # em dash
+    "–": "-",    # en dash
+    "’": "'",    # right single quote
+    "‘": "'",    # left single quote
+    "“": '"',    # left double quote
+    "”": '"',    # right double quote
+    "…": "...",  # ellipsis
+    " ": " ",    # non-breaking space
+    "→": "->",   # right arrow
+    "←": "<-",   # left arrow
+    "•": "*",    # bullet
+    "►": ">",    # filled right arrow
+    "✓": "v",    # check mark
+    "✗": "x",    # cross mark
+    "×": "x",    # multiplication sign
+    "±": "+/-",  # plus-minus
+    "≤": "<=",   # less than or equal
+    "≥": ">=",   # greater than or equal
+    "α": "alpha",
+    "β": "beta",
+})
 
-# ── Segment helpers ─────────────────────────────────────────────────────────
+def _safe(text: str) -> str:
+    """Replace non-latin-1 characters with safe ASCII equivalents."""
+    text = text.translate(_UNICODE_SUBS)
+    return text.encode("latin-1", errors="replace").decode("latin-1")
 
-def strip_inline(text: str) -> str:
-    """Remove all inline markup, return plain text."""
-    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
-    text = re.sub(r"`([^`]+)`",      r"\1", text)
-    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
-    return text
-
-
-def segments(text: str):
-    """
-    Yield (style, content) segments from an inline-marked-up string.
-    style ∈ {"normal", "bold", "code"}
-    """
-    pattern = re.compile(r"\*\*(.+?)\*\*|`([^`]+)`")
-    cursor = 0
-    for m in pattern.finditer(text):
-        if m.start() > cursor:
-            yield ("normal", text[cursor:m.start()])
-        if m.group(1) is not None:
-            yield ("bold",   m.group(1))
-        else:
-            yield ("code",   m.group(2))
-        cursor = m.end()
-    if cursor < len(text):
-        yield ("normal", text[cursor:])
+C_BLACK   = (30,  30,  30)
+C_HEADING = (20,  60, 100)
+C_H3      = (40,  90, 140)
+C_CODE_BG = (240, 243, 246)
+C_CODE_FG = (30,  30,  30)
+C_TABLE_H = (20,  60, 100)
+C_TABLE_R = (248, 250, 252)
+C_LINE    = (180, 190, 200)
+C_WHITE   = (255, 255, 255)
 
 
-# ── PDF class ───────────────────────────────────────────────────────────────
-
-FONTS_DIR = Path("C:/Windows/Fonts")
-
-class MdPDF(FPDF):
-
-    def __init__(self):
-        super().__init__(orientation="P", unit="mm", format="A4")
-        self.set_margins(MARGIN, MARGIN, MARGIN)
-        self.set_auto_page_break(auto=True, margin=16)
-
-        # Load Unicode TTF fonts (always present on Windows)
-        self.add_font("Arial",    style="",   fname=str(FONTS_DIR / "arial.ttf"))
-        self.add_font("Arial",    style="B",  fname=str(FONTS_DIR / "arialbd.ttf"))
-        self.add_font("Arial",    style="I",  fname=str(FONTS_DIR / "ariali.ttf"))
-        self.add_font("Arial",    style="BI", fname=str(FONTS_DIR / "arialbi.ttf"))
-        self.add_font("CourierN", style="",   fname=str(FONTS_DIR / "cour.ttf"))
-        self.add_font("CourierN", style="B",  fname=str(FONTS_DIR / "courbd.ttf"))
-
-        self.add_page()
-        self._body_font   = "Arial"
-        self._mono_font   = "CourierN"
-        self._eff_w       = self.w - 2 * MARGIN   # effective text width
-
-    # ── low-level helpers ───────────────────────────────────────────────────
-
-    def _set_body(self, size=10, style=""):
-        self.set_font(self._body_font, style, size)
-        self.set_text_color(*C_BODY)
-
-    def _set_mono(self, size=8.5, style=""):
-        self.set_font(self._mono_font, style, size)
-        self.set_text_color(*C_BODY)
-
-    def _vspace(self, mm=2):
-        self.ln(mm)
-
-    # ── block renderers ─────────────────────────────────────────────────────
-
-    def render_h1(self, text: str):
-        self._vspace(4)
-        self.set_font(self._body_font, "B", 16)
-        self.set_text_color(*C_H1)
-        self.multi_cell(self._eff_w, 9, strip_inline(text), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        # underline rule
-        self.set_draw_color(*C_H1)
-        self.set_line_width(0.6)
-        self.line(MARGIN, self.get_y(), self.w - MARGIN, self.get_y())
-        self.set_line_width(0.2)
-        self._vspace(3)
-
-    def render_h2(self, text: str):
-        self._vspace(4)
-        self.set_font(self._body_font, "B", 13)
-        self.set_text_color(*C_H2)
-        self.multi_cell(self._eff_w, 7.5, strip_inline(text), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        self.set_draw_color(*C_H2)
-        self.set_line_width(0.3)
-        self.line(MARGIN, self.get_y(), self.w - MARGIN, self.get_y())
-        self.set_line_width(0.2)
-        self._vspace(2)
-
-    def render_h3(self, text: str):
-        self._vspace(3)
-        self.set_font(self._body_font, "B", 11)
-        self.set_text_color(*C_H3)
-        self.multi_cell(self._eff_w, 6.5, strip_inline(text), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        self._vspace(1.5)
-
-    def render_h4(self, text: str):
-        self._vspace(2)
-        self.set_font(self._body_font, "BI", 10)
-        self.set_text_color(*C_H3)
-        self.multi_cell(self._eff_w, LINE_H, strip_inline(text), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        self._vspace(1)
-
-    def render_rule(self):
-        self._vspace(2)
-        self.set_draw_color(*C_RULE)
-        self.set_line_width(0.4)
-        self.line(MARGIN, self.get_y(), self.w - MARGIN, self.get_y())
-        self.set_line_width(0.2)
-        self._vspace(2)
-
-    def render_paragraph(self, text: str):
-        """Render a paragraph with inline bold/code segments."""
-        self._set_body()
-        # We'll write segment-by-segment using write()
-        for style, content in segments(text):
-            if style == "bold":
-                self.set_font(self._body_font, "B", 10)
-            elif style == "code":
-                self._set_mono(9)
-                self.set_text_color(140, 40, 40)
-            else:
-                self._set_body()
-            self.write(LINE_H, content)
-        self.ln(LINE_H)
-        self._vspace(1)
-
-    def render_bullet(self, text: str, level: int = 0, ordered_n: int | None = None):
-        indent = MARGIN + 5 + level * 5
-        bullet_w = 8
-        text_w   = self._eff_w - (indent - MARGIN) - bullet_w
-
-        self._set_body()
-        # bullet character
-        bullet = f"{ordered_n}." if ordered_n is not None else "•"
-        self.set_x(indent)
-        self.cell(bullet_w, LINE_H, bullet)
-
-        # text with inline markup — write() starting from current x
-        for style, content in segments(strip_inline(text) if False else text):
-            # actually render with markup
-            if style == "bold":
-                self.set_font(self._body_font, "B", 10)
-            elif style == "code":
-                self._set_mono(9)
-                self.set_text_color(140, 40, 40)
-            else:
-                self._set_body()
-            # Use multi_cell for wrapping, but only for the last segment? tricky.
-            # Simpler: collect all plain text, render at once.
-
-        # Simpler approach: strip inline markup and render plain
-        self._set_body()
-        self.set_x(indent + bullet_w)
-        self.multi_cell(text_w, LINE_H, strip_inline(text),
-                        new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-
-    def render_code_block(self, lines: list[str]):
-        self._vspace(2)
-        # background rect — height estimated
-        line_count = len(lines)
-        block_h    = line_count * CODE_LINE_H + 4
-        x0, y0     = MARGIN, self.get_y()
-
-        # check page break
-        if y0 + block_h > self.h - self.b_margin:
-            self.add_page()
-            y0 = self.get_y()
-
-        self.set_fill_color(*C_CODE_BG)
-        self.rect(x0, y0, self._eff_w, block_h, style="F")
-
-        self._set_mono(8.5)
-        self.set_y(y0 + 2)
-        for line in lines:
-            self.set_x(MARGIN + 3)
-            self.cell(self._eff_w - 6, CODE_LINE_H, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        self._vspace(3)
-
-    def render_table(self, header: list[str], rows: list[list[str]]):
-        self._vspace(2)
-        n_cols = len(header)
-        if n_cols == 0:
-            return
-
-        # Compute column widths proportionally based on max content length
-        col_lens = [max(len(h), max((len(r[i]) if i < len(r) else 0) for r in rows) if rows else 0)
-                    for i, h in enumerate(header)]
-        total_len = sum(col_lens) or 1
-        col_widths = [max(18, self._eff_w * cl / total_len) for cl in col_lens]
-        # normalise so sum == eff_w
-        scale = self._eff_w / sum(col_widths)
-        col_widths = [w * scale for w in col_widths]
-
-        def draw_row(cells, fill_color, is_header=False):
-            # Clamp to n_cols — data rows may have fewer/more cells than header
-            style = "B" if is_header else ""
-            self.set_font(self._body_font, style, 9)
-            cell_lines = []
-            for i in range(n_cols):
-                text = strip_inline(cells[i] if i < len(cells) else "")
-                char_w = self.get_string_width("W")
-                chars_per_line = max(1, int(col_widths[i] / char_w)) if char_w else 20
-                n_lines = max(1, (len(text) + chars_per_line - 1) // chars_per_line)
-                cell_lines.append(n_lines)
-            row_h = max(TABLE_ROW_H, max(cell_lines) * TABLE_ROW_H)
-
-            # page break check
-            if self.get_y() + row_h > self.h - self.b_margin:
-                self.add_page()
-
-            self.set_fill_color(*fill_color)
-            self.set_draw_color(190, 200, 210)
-            x_start = self.get_x()
-            y_start = self.get_y()
-
-            for i in range(n_cols):
-                text = strip_inline(cells[i] if i < len(cells) else "")
-                self.set_xy(x_start + sum(col_widths[:i]), y_start)
-                self.set_font(self._body_font, style, 9)
-                self.set_text_color(*C_BODY)
-                self.multi_cell(col_widths[i], row_h, text,
-                                border=1, fill=True,
-                                new_x=XPos.RIGHT, new_y=YPos.TOP)
-            self.set_y(y_start + row_h)
-
-        draw_row(header, C_TABLE_HD, is_header=True)
-        for idx, row in enumerate(rows):
-            fill = C_TABLE_ALT if idx % 2 == 0 else (255, 255, 255)
-            draw_row(row, fill)
-
-        self._vspace(3)
-
-    def render_blockquote(self, text: str):
-        self._vspace(1)
-        x0, y0 = MARGIN, self.get_y()
-        self.set_fill_color(*C_CODE_BG)
-        self.set_draw_color(*C_QUOTE_BAR)
-        self.set_line_width(1.2)
-        self.set_font(self._body_font, "I", 9.5)
-        self.set_text_color(70, 70, 70)
-        self.set_x(MARGIN + 5)
-        self.multi_cell(self._eff_w - 5, LINE_H, strip_inline(text),
-                        new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        y1 = self.get_y()
-        self.line(MARGIN + 1, y0, MARGIN + 1, y1)
-        self.set_line_width(0.2)
-        self._vspace(1)
+class MarkdownPDF(FPDF):
 
     def header(self):
-        pass   # no running header
+        if self.page_no() <= 1:
+            return
+        self.set_font("Helvetica", "I", 8)
+        self.set_text_color(*C_LINE)
+        self.cell(0, 8, _safe("Preventify Bot -- Conversation & API Architecture"), align="L")
+        self.cell(0, 8, f"Page {self.page_no()}", align="R",
+                  new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.set_draw_color(*C_LINE)
+        self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
+        self.ln(2)
 
     def footer(self):
         self.set_y(-12)
-        self.set_font(self._body_font, "I", 8)
-        self.set_text_color(140, 140, 140)
-        self.cell(0, 10, f"Page {self.page_no()}", align="C")
+        self.set_font("Helvetica", "I", 7)
+        self.set_text_color(*C_LINE)
+        self.cell(0, 6,
+                  _safe("Preventify -- Internal Engineering Reference -- v1.0 -- 2026-05-23"),
+                  align="C")
+
+    def _add_heading(self, text, level):
+        text = _safe(text)
+        self.ln(4 if level > 1 else 8)
+        if level == 1:
+            self.set_font("Helvetica", "B", 18)
+            self.set_text_color(*C_HEADING)
+            self.multi_cell(0, 10, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            self.set_draw_color(*C_HEADING)
+            self.set_line_width(0.6)
+            self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
+            self.ln(3)
+        elif level == 2:
+            self.set_font("Helvetica", "B", 13)
+            self.set_text_color(*C_HEADING)
+            self.multi_cell(0, 8, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            self.set_draw_color(*C_LINE)
+            self.set_line_width(0.3)
+            self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
+            self.ln(2)
+        elif level == 3:
+            self.set_font("Helvetica", "B", 11)
+            self.set_text_color(*C_H3)
+            self.multi_cell(0, 7, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            self.ln(1)
+        else:
+            self.set_font("Helvetica", "B", 10)
+            self.set_text_color(*C_BLACK)
+            self.multi_cell(0, 6, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.set_line_width(0.2)
+        self.set_text_color(*C_BLACK)
+
+    def _add_paragraph(self, text):
+        text = text.strip()
+        if not text:
+            return
+        # strip inline code and links to plain text
+        text = re.sub(r'`([^`]+)`', r'\1', text)
+        text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+        # handle bold inline
+        parts = re.split(r'(\*\*[^*]+\*\*)', text)
+        self.set_font("Helvetica", "", 10)
+        self.set_text_color(*C_BLACK)
+        for part in parts:
+            if part.startswith("**") and part.endswith("**"):
+                self.set_font("Helvetica", "B", 10)
+                self.write(6, _safe(part[2:-2]))
+            else:
+                self.set_font("Helvetica", "", 10)
+                self.write(6, _safe(part))
+        self.ln(6)
+        self.ln(1)
+
+    def _add_bullet(self, text, indent=0):
+        text = text.strip()
+        if not text:
+            return
+        text = re.sub(r'`([^`]+)`', r'\1', text)
+        text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+        text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+        bullet_x = self.l_margin + indent * 5
+        text_x   = bullet_x + 5
+        self.set_x(bullet_x)
+        self.set_font("Helvetica", "", 9)
+        self.set_text_color(*C_BLACK)
+        self.cell(5, 5, chr(149), new_x=XPos.RIGHT, new_y=YPos.TOP)
+        avail = self.w - self.r_margin - text_x
+        self.set_x(text_x)
+        self.multi_cell(avail, 5, _safe(text), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+    def _add_code_block(self, lines):
+        self.ln(2)
+        self.set_fill_color(*C_CODE_BG)
+        self.set_text_color(*C_CODE_FG)
+        self.set_font("Courier", "", 7.5)
+        pad = 4
+        content = _safe("\n".join(lines))
+        line_count = len(lines)
+        block_h = line_count * 4.2 + pad * 2
+        x = self.l_margin
+        w = self.w - self.l_margin - self.r_margin
+        if self.get_y() + block_h > self.h - self.b_margin - 10:
+            self.add_page()
+        y_start = self.get_y()
+        self.rect(x, y_start, w, block_h, style="F")
+        self.set_xy(x + pad, y_start + pad)
+        self.multi_cell(w - pad * 2, 4.2, content,
+                        new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.ln(2)
+        self.set_text_color(*C_BLACK)
+
+    def _add_table(self, headers, rows):
+        self.ln(2)
+        col_count = len(headers)
+        if col_count == 0:
+            return
+        avail = self.w - self.l_margin - self.r_margin
+        col_w = avail / col_count
+
+        self.set_fill_color(*C_TABLE_H)
+        self.set_text_color(*C_WHITE)
+        self.set_font("Helvetica", "B", 8)
+        for h in headers:
+            self.cell(col_w, 6, _safe(h[:45]), border=0, fill=True,
+                      new_x=XPos.RIGHT, new_y=YPos.TOP)
+        self.ln(6)
+
+        self.set_font("Helvetica", "", 8)
+        for idx, row in enumerate(rows):
+            fill = (idx % 2 == 0)
+            self.set_fill_color(*(C_TABLE_R if fill else C_WHITE))
+            self.set_text_color(*C_BLACK)
+            for j in range(col_count):
+                val = row[j] if j < len(row) else ""
+                val = re.sub(r'\*\*([^*]+)\*\*', r'\1', val)
+                val = re.sub(r'`([^`]+)`', r'\1', val)
+                val = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', val)
+                self.cell(col_w, 5.5, _safe(val[:55]), border=0, fill=fill,
+                          new_x=XPos.RIGHT, new_y=YPos.TOP)
+            self.ln(5.5)
+
+        self.set_draw_color(*C_LINE)
+        self.line(self.l_margin, self.get_y(),
+                  self.w - self.r_margin, self.get_y())
+        self.ln(3)
 
 
-# ── Markdown parser / dispatcher ─────────────────────────────────────────────
+def is_table_row(line):
+    s = line.strip()
+    return s.startswith("|") and s.endswith("|")
 
-def parse_table_row(line: str) -> list[str]:
-    cells = [c.strip() for c in line.strip().strip("|").split("|")]
-    return cells
+def is_separator_row(line):
+    return bool(re.match(r'^\s*\|[-| :]+\|\s*$', line))
+
+def parse_table_row(line):
+    return [c.strip() for c in line.strip().strip("|").split("|")]
 
 
-def is_separator_row(cells: list[str]) -> bool:
-    return all(re.match(r"^[-:]+$", c) for c in cells if c)
-
-
-def convert(md_path: Path, pdf_path: Path):
-    text = md_path.read_text(encoding="utf-8")
-    lines = text.splitlines()
-
-    pdf = MdPDF()
-
+def parse_and_render(pdf: MarkdownPDF, md_text: str):
+    lines = md_text.splitlines()
     i = 0
-    n = len(lines)
-
-    # table state
-    in_table     = False
-    table_header: list[str] = []
-    table_rows:   list[list[str]] = []
-
-    # code block state
-    in_code  = False
-    code_buf: list[str] = []
-
-    # bullet / list state
-    list_buf: list[tuple[int, str | None, str]] = []  # (level, order_n, text)
-
-    def flush_list():
-        nonlocal list_buf
-        for level, order_n, txt in list_buf:
-            pdf.render_bullet(txt, level=level, ordered_n=order_n)
-        list_buf = []
-        pdf._vspace(1)
+    in_code = False
+    code_buf = []
+    table_headers = []
+    table_buf = []
 
     def flush_table():
-        nonlocal in_table, table_header, table_rows
-        if table_header:
-            pdf.render_table(table_header, table_rows)
-        in_table     = False
-        table_header = []
-        table_rows   = []
+        nonlocal table_headers, table_buf
+        if table_headers:
+            pdf._add_table(table_headers, table_buf)
+        table_headers.clear()
+        table_buf.clear()
 
-    while i < n:
-        raw   = lines[i]
-        strip = raw.strip()
+    while i < len(lines):
+        line = lines[i]
 
-        # ── fenced code block ──────────────────────────────────────────────
-        if strip.startswith("```"):
-            if in_table:  flush_table()
-            if list_buf:  flush_list()
-            if not in_code:
-                in_code  = True
-                code_buf = []
-                i += 1
-                continue
+        # fenced code
+        if line.strip().startswith("```"):
+            if in_code:
+                pdf._add_code_block(code_buf)
+                code_buf.clear()
+                in_code = False
             else:
-                pdf.render_code_block(code_buf)
-                in_code  = False
-                code_buf = []
-                i += 1
-                continue
+                flush_table()
+                in_code = True
+            i += 1
+            continue
 
         if in_code:
-            code_buf.append(raw)
+            code_buf.append(line)
             i += 1
             continue
 
-        # ── horizontal rule ────────────────────────────────────────────────
-        if re.match(r"^[-*_]{3,}\s*$", strip):
-            if in_table:  flush_table()
-            if list_buf:  flush_list()
-            pdf.render_rule()
-            i += 1
-            continue
-
-        # ── headings ───────────────────────────────────────────────────────
-        if strip.startswith("#"):
-            if in_table:  flush_table()
-            if list_buf:  flush_list()
-            m = re.match(r"^(#{1,4})\s+(.*)", strip)
-            if m:
-                level = len(m.group(1))
-                title = m.group(2)
-                if   level == 1: pdf.render_h1(title)
-                elif level == 2: pdf.render_h2(title)
-                elif level == 3: pdf.render_h3(title)
-                else:            pdf.render_h4(title)
-            i += 1
-            continue
-
-        # ── table rows ─────────────────────────────────────────────────────
-        if strip.startswith("|"):
-            if list_buf: flush_list()
-            cells = parse_table_row(strip)
-            if not in_table:
-                # peek next line for separator
-                if i + 1 < n and parse_table_row(lines[i + 1].strip()):
-                    if is_separator_row(parse_table_row(lines[i + 1].strip())):
-                        table_header = cells
-                        in_table     = True
-                        i += 2   # skip separator
-                        continue
-                # lone pipe line — treat as paragraph
-            else:
-                if not is_separator_row(cells):
-                    table_rows.append(cells)
+        # table
+        if is_table_row(line):
+            if is_separator_row(line):
                 i += 1
                 continue
-
-        elif in_table:
+            row = parse_table_row(line)
+            if not table_headers:
+                table_headers = row
+            else:
+                table_buf.append(row)
+            i += 1
+            continue
+        else:
             flush_table()
 
-        # ── bullet list ────────────────────────────────────────────────────
-        bullet_m = re.match(r"^(\s*)[-*+]\s+(.*)", raw)
-        ordered_m = re.match(r"^(\s*)(\d+)\.\s+(.*)", raw)
+        stripped = line.strip()
 
-        if bullet_m:
-            level = len(bullet_m.group(1)) // 2
-            list_buf.append((level, None, bullet_m.group(2)))
+        if not stripped:
+            pdf.ln(2)
             i += 1
             continue
 
-        if ordered_m:
-            level = len(ordered_m.group(1)) // 2
-            list_buf.append((level, int(ordered_m.group(2)), ordered_m.group(3)))
+        # horizontal rule
+        if re.match(r'^[-_]{3,}$', stripped):
+            pdf.set_draw_color(*C_LINE)
+            pdf.line(pdf.l_margin, pdf.get_y(),
+                     pdf.w - pdf.r_margin, pdf.get_y())
+            pdf.ln(3)
             i += 1
             continue
 
-        if list_buf and strip == "":
-            flush_list()
-
-        # ── blockquote ─────────────────────────────────────────────────────
-        if strip.startswith("> "):
-            if list_buf: flush_list()
-            pdf.render_blockquote(strip[2:])
+        # headings
+        m = re.match(r'^(#{1,4})\s+(.*)', stripped)
+        if m:
+            level = len(m.group(1))
+            text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', m.group(2))
+            text = re.sub(r'`([^`]+)`', r'\1', text)
+            pdf._add_heading(text, level)
             i += 1
             continue
 
-        # ── blank line ─────────────────────────────────────────────────────
-        if strip == "":
-            if list_buf: flush_list()
-            pdf._vspace(1.5)
+        # bullets
+        m = re.match(r'^(\s*)[-*]\s+(.*)', line)
+        if m:
+            indent = len(m.group(1)) // 2
+            text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', m.group(2))
+            text = re.sub(r'`([^`]+)`', r'\1', text)
+            pdf._add_bullet(text, indent)
             i += 1
             continue
 
-        # ── paragraph / normal line ────────────────────────────────────────
-        if list_buf: flush_list()
-        pdf.render_paragraph(strip)
+        # numbered list
+        m = re.match(r'^\s*\d+\.\s+(.*)', stripped)
+        if m:
+            text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', m.group(1))
+            text = re.sub(r'`([^`]+)`', r'\1', text)
+            pdf._add_bullet(text)
+            i += 1
+            continue
+
+        # blockquote
+        if stripped.startswith(">"):
+            text = stripped.lstrip("> ").strip()
+            text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+            text = re.sub(r'`([^`]+)`', r'\1', text)
+            pdf.set_font("Helvetica", "I", 9)
+            pdf.set_text_color(100, 100, 100)
+            pdf.set_fill_color(245, 245, 245)
+            pdf.multi_cell(0, 5, _safe(text), fill=True,
+                           new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            pdf.set_text_color(*C_BLACK)
+            pdf.ln(1)
+            i += 1
+            continue
+
+        # paragraph
+        pdf._add_paragraph(stripped)
         i += 1
 
-    # flush anything remaining
-    if in_code  and code_buf: pdf.render_code_block(code_buf)
-    if in_table:              flush_table()
-    if list_buf:              flush_list()
-
-    pdf.output(str(pdf_path))
-    print(f"  ✓  {pdf_path.name}  ({pdf.page_no()} pages)")
+    flush_table()
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+def build_pdf():
+    md_text = INPUT_MD.read_text(encoding="utf-8")
+    pdf = MarkdownPDF()
+    pdf.set_margins(left=18, top=20, right=18)
+    pdf.set_auto_page_break(auto=True, margin=18)
+
+    # cover page
+    pdf.add_page()
+    pdf.set_fill_color(20, 60, 100)
+    pdf.rect(0, 0, pdf.w, 75, style="F")
+    pdf.set_y(18)
+    pdf.set_font("Helvetica", "B", 22)
+    pdf.set_text_color(255, 255, 255)
+    pdf.multi_cell(0, 12, "Preventify Bot", align="C",
+                   new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.set_font("Helvetica", "", 13)
+    pdf.multi_cell(0, 8, "Conversation & API Architecture", align="C",
+                   new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.set_y(85)
+    pdf.set_text_color(*C_BLACK)
+    for label, val in [
+        ("Version",  "1.0"),
+        ("Date",     "2026-05-23"),
+        ("Status",   "Approved for Engineering Build"),
+        ("Project",  "Preventify Diabetes Educator AI -- Kerala"),
+    ]:
+        pdf.set_font("Helvetica", "B", 10)
+        pdf.cell(50, 7, _safe(label + ":"), new_x=XPos.RIGHT, new_y=YPos.TOP)
+        pdf.set_font("Helvetica", "", 10)
+        pdf.cell(0, 7, _safe(val), new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.ln(8)
+    pdf.set_draw_color(*C_LINE)
+    pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+    pdf.ln(5)
+    pdf.set_font("Helvetica", "I", 9)
+    pdf.set_text_color(120, 120, 120)
+    pdf.multi_cell(0, 5,
+        "Internal engineering reference. "
+        "Do not share outside the Preventify engineering and clinical team.",
+        new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+    # content
+    pdf.add_page()
+    parse_and_render(pdf, md_text)
+    pdf.output(str(OUTPUT_PDF))
+    print(f"PDF written: {OUTPUT_PDF}")
+
 
 if __name__ == "__main__":
-    sys.stdout.reconfigure(encoding="utf-8")
-
-    root = Path(__file__).parent.parent   # repo root
-
-    targets = sys.argv[1:] if len(sys.argv) > 1 else [
-        "CHUNKING_LOGIC.md",
-        "CHUNKING_DISCUSSION.md",
-    ]
-
-    for name in targets:
-        md  = root / name
-        pdf = md.with_suffix(".pdf")
-        if not md.exists():
-            print(f"  SKIP  {name} not found")
-            continue
-        print(f"Converting {md.name} ...")
-        try:
-            convert(md, pdf)
-        except Exception as e:
-            print(f"  ERROR: {e}")
-            raise
+    build_pdf()

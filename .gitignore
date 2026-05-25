@@ -1,20 +1,10 @@
-# Claude settings
-.claude/settings.local.json
-
-# Environment — keep secrets out even on private repos
+# .env contains live API keys (CEREBRAS_API_KEY, POSTGRES_URL) — NEVER commit
 .env
 
-# Python
+# Claude Code internal worktrees — nested git repos, not project code
+.claude/worktrees/
+
+# Python compiled bytecode — not source code, regenerated automatically
 __pycache__/
 *.pyc
 *.pyo
-.venv/
-venv/
-*.egg-info/
-
-# Logs — embed failure logs contain chunk text, not patient data, but keep out of git
-logs/
-
-# OS
-.DS_Store
-Thumbs.db

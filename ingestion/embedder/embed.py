@@ -30,6 +30,8 @@ def load_model(model_name: str) -> SentenceTransformer:
     after potentially many minutes of embedding work.
     """
     print(f"Loading embedding model: {model_name}")
+    # HF_HOME is set to D:\hf_cache in run.py (via .env) before this is called —
+    # all downloads land on D:, never C:. See SETUP.md § Step 3.
     model = SentenceTransformer(model_name)
     dim = model.get_sentence_embedding_dimension()
     assert dim == EXPECTED_DIM, (

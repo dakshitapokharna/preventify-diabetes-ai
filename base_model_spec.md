@@ -1,5 +1,21 @@
 # Base Model Specification — Preventify Diabetes Educator AI
 
+> ⚠️ **SUPERSEDED — 2026-05-23**  
+> This document (v0.2) reflects earlier architectural decisions. Several core choices have changed:  
+> - Vector DB: ~~Qdrant (self-hosted)~~ → **pgvector on Neon (PostgreSQL)**  
+> - LLM: ~~`claude-sonnet-4-6`~~ → **Gemini 2.0 Flash (Phase 1) + Gemini 2.5 Pro (Phase 2)**  
+> - Architecture: ~~single-phase~~ → **two-phase Context Engine + RAG**  
+> - Reranker output: ~~top-3 to 5~~ → **top-5 locked**  
+>
+> **Authoritative documents:**  
+> - Full architecture: `BOT_CONVERSATION_ARCHITECTURE.md`  
+> - Phase 1 build spec: `PHASE1_CONTEXT_ENGINE_SPEC.md`  
+> - Stack decisions: `CLAUDE.md` → B1  
+>
+> This file is kept for its **Design Principles** section and component-level reasoning, which remain valid. Do not use it as a build reference.
+
+---
+
 **Version:** 0.2  
 **Date:** 2026-05-13  
 **Scope:** English-only query/response pipeline — the foundation layer before Malayalam/voice features are added.

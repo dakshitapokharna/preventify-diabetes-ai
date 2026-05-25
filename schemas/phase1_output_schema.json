@@ -1,0 +1,160 @@
+{
+  "$comment": "Phase 1 Context Engine output schema. propertyOrdering required for Gemini 2.0 Flash.",
+  "type": "object",
+  "required": [
+    "intent",
+    "qds_score",
+    "context_sufficient",
+    "clarifying_questions",
+    "profile_signals",
+    "mid_clarification_resolved"
+  ],
+  "propertyOrdering": [
+    "intent",
+    "qds_score",
+    "context_sufficient",
+    "clarifying_questions",
+    "profile_signals",
+    "mid_clarification_resolved"
+  ],
+  "properties": {
+    "intent": {
+      "type": "string",
+      "enum": [
+        "healthy_eating",
+        "being_active",
+        "taking_medication",
+        "monitoring",
+        "problem_solving",
+        "reducing_risks",
+        "healthy_coping",
+        "escalation_only",
+        "general_dsmes"
+      ],
+      "description": "ADCES7-mapped intent. escalation_only for dose-change, diagnosis, Tier3/4. general_dsmes as catch-all."
+    },
+    "qds_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "1=awareness 2=personal 3=management 4=complication 5=distressed"
+    },
+    "context_sufficient": {
+      "type": "boolean",
+      "description": "True=proceed to Phase 2. False=ask clarifying question first. Always true for QDS1,2,5 and escalation_only."
+    },
+    "clarifying_questions": {
+      "type": "array",
+      "description": "Empty [] when context_sufficient=true. Max 2 items.",
+      "items": {
+        "type": "object",
+        "required": ["text", "format", "options"],
+        "propertyOrdering": ["text", "format", "options"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Question shown to patient."
+          },
+          "format": {
+            "type": "string",
+            "enum": ["buttons", "list", "open"],
+            "description": "buttons=2-3 options. list=4-10 options. open=free text."
+          },
+          "options": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Empty [] for open. Max 3 for buttons (WhatsApp limit). Max 10 for list."
+          }
+        }
+      }
+    },
+    "profile_signals": {
+      "type": "object",
+      "required": [
+        "diabetes_type",
+        "medications_mentioned",
+        "insulin_user",
+        "condition_flags",
+        "complications_mentioned",
+        "location_hint",
+        "session_context"
+      ],
+      "propertyOrdering": [
+        "diabetes_type",
+        "medications_mentioned",
+        "insulin_user",
+        "condition_flags",
+        "complications_mentioned",
+        "location_hint",
+        "session_context"
+      ],
+      "properties": {
+        "diabetes_type": {
+          "type": "string",
+          "enum": ["T1DM", "T2DM", "GDM", "prediabetes", "suspected", ""],
+          "description": "Empty string if not mentioned. suspected = sugar is high but no formal diagnosis."
+        },
+        "medications_mentioned": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "oral_antidiabetic_unspecified",
+              "metformin",
+              "sulfonylurea",
+              "dpp4_inhibitor",
+              "sglt2_inhibitor",
+              "glp1_ra",
+              "insulin_basal",
+              "insulin_premixed",
+              "insulin_unspecified",
+              "bp_tablet_unspecified",
+              "statin_unspecified"
+            ]
+          },
+          "description": "Controlled vocab only. oral_antidiabetic_unspecified for unknown tablet. insulin_basal for night/long-acting injection. statin_unspecified for cholesterol tablet."
+        },
+        "insulin_user": {
+          "type": "boolean",
+          "description": "True if patient mentions injection or insulin. Once true, never reset to false."
+        },
+        "condition_flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["ckd", "cardio", "ramadan", "hypertension"]
+          },
+          "description": "Permanent flags. Trigger Tier 2 sources. Never removed once set."
+        },
+        "complications_mentioned": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "neuropathy_suspected",
+              "retinopathy_suspected",
+              "nephropathy_suspected",
+              "foot_wound_present",
+              "autonomic_suspected",
+              "erectile_dysfunction_mentioned"
+            ]
+          },
+          "description": "Controlled vocab only. foot_wound_present also triggers Tier 3 in Risk Engine. erectile_dysfunction_mentioned is stored but NEVER surfaced in patient responses."
+        },
+        "location_hint": {
+          "type": "string",
+          "description": "City or district in Kerala if mentioned. Empty string if not."
+        },
+        "session_context": {
+          "type": "string",
+          "enum": ["self", "family_member_inquiry"],
+          "description": "self=patient asking about themselves. family_member_inquiry=asking about a relative."
+        }
+      }
+    },
+    "mid_clarification_resolved": {
+      "type": "boolean",
+      "description": "True if this message answers a clarifying question from the previous bot turn. When true, context_sufficient must also be true."
+    }
+  }
+}

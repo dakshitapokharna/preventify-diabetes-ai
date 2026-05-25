@@ -96,12 +96,12 @@ log = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL_ID         = "llama3.1-8b"    # free-tier testing; switch to qwen-3-235b-a22b-instruct-2507 when rate limits allow
+MODEL_ID         = "qwen-3-235b-a22b-instruct-2507"   # Cerebras — matches phase1_runner and settings.py
 CEREBRAS_URL     = "https://api.cerebras.ai/v1"
 REQUEST_TIMEOUT  = 30.0           # Phase 2 is slower than Phase 1 — 2.5 Pro takes longer
 RETRY_SLEEP      = 2.0
-TOP_K_ANN       = 20              # pgvector returns this many candidates
-TOP_K_FINAL     = 5               # reranker output sent to Gemini
+TOP_K_ANN       = 5               # reduced from 20 → CPU reranker was taking 73–204s; 5 candidates ~10s on CPU
+TOP_K_FINAL     = 5               # reranker output sent to LLM (keep same — all 5 ANN candidates go to LLM)
 CACHE_TTL_HOURS = 24              # query_cache table TTL (hours)
 
 PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "phase2_system_prompt.txt"

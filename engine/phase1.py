@@ -166,6 +166,33 @@ async def handle_phase1(
         phase1_output.get("_fallback"),
     )
 
+    # ── Step 1b: Deterministic mid-clarification loop guard ───────────────────
+    # If the last bot turn was a clarifying question (ends with "?") and Phase 1
+    # returned context_sufficient=False again, force-resolve it.
+    # This prevents infinite clarification loops when the model (qwen-3-235b) fails
+    # to detect mid_clarification_resolved on its own — e.g. patient selects
+    # "Not sure of the name" and the model incorrectly asks the same question again.
+    # Rule: NEVER ask a second round of clarifying questions — prompt spec §edge_cases.
+    if (
+        not phase1_output.get("context_sufficient", True)
+        and not phase1_output.get("mid_clarification_resolved", False)
+        and not phase1_output.get("_fallback", False)
+    ):
+        last_bot_msgs = [t for t in session_turns if t.get("role") == "bot"]
+        if last_bot_msgs:
+            last_bot_text = last_bot_msgs[-1].get("content", "").strip()
+            if last_bot_text.endswith("?"):
+                # Last bot turn was a clarifying question — patient has already answered it.
+                # Force resolution so Phase 2 runs with whatever context we have.
+                phase1_output["context_sufficient"] = True
+                phase1_output["mid_clarification_resolved"] = True
+                phase1_output["clarifying_questions"] = []
+                log.info(
+                    "phase1_orchestrator: loop guard fired — forced mid-clarification "
+                    "resolution for user=%s (last bot msg ended with '?')",
+                    user_id,
+                )
+
     # ── Step 2: Write profile signals (sequential, same connection) ───────────
     # Run sequentially — asyncpg does not allow concurrent queries on one
     # connection, and Phase 2 also uses db_conn. signal_writer never raises.

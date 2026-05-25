@@ -1,10 +1,2 @@
 # .env contains live API keys (CEREBRAS_API_KEY, POSTGRES_URL) — NEVER commit
 .env
-
-# Claude Code internal worktrees — nested git repos, not project code
-.claude/worktrees/
-
-# Python compiled bytecode — not source code, regenerated automatically
-__pycache__/
-*.pyc
-*.pyo

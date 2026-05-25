@@ -180,7 +180,10 @@
       "Bash(taskkill //F //PID 10048)",
       "Bash(HF_HOME=\"D:/hf_cache\" python -m uvicorn api.app:app --host 0.0.0.0 --port 8000)",
       "Bash(awk '{print $5}')",
-      "Bash(xargs -I{} taskkill //F //PID {})"
+      "Bash(xargs -I{} taskkill //F //PID {})",
+      "PowerShell(cd D:\\\\intern\\\\BaseModel; $env:PYTHONPATH = \"D:\\\\intern\\\\BaseModel\"; python ingestion/embedder/run.py RSSDI_2022)",
+      "PowerShell(cd D:\\\\intern\\\\BaseModel; $env:PYTHONPATH = \"D:\\\\intern\\\\BaseModel\"; python ingestion/embedder/run.py ADA_2026)",
+      "PowerShell(uvicorn api.app:app *)"
     ]
   }
 }

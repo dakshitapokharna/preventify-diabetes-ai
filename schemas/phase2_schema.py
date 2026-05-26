@@ -221,7 +221,9 @@ def build_retrieval_filter(flags: set) -> tuple:
 
 CONSTRAINT_PATTERNS = [
     # Rule 1 — specific drug dose
-    (r"\b\d+\s*mg\b",                                       "specific_dose_mg"),
+    # NOTE: mg/dL and mg/dl are blood glucose / lab units — NOT drug doses. Excluded via negative lookahead.
+    # "200 mg/dL" (blood sugar reading) must NOT trigger this. "500 mg" (drug dose) must.
+    (r"\b\d+\s*mg(?!\s*/\s*d[lL])\b",                       "specific_dose_mg"),
     (r"\b\d+\s*unit[s]?\b",                                 "specific_dose_units"),
     (r"\b\d+\s*IU\b",                                       "specific_dose_IU"),
     (r"\b\d+\s*mcg\b",                                      "specific_dose_mcg"),

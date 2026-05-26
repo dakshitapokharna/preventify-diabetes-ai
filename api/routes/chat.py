@@ -23,6 +23,7 @@ from pydantic import BaseModel, field_validator
 from api.rate_limiter import is_allowed
 from api.audit_logger import write_audit_log
 from api.session_manager import process_turn
+from schemas.phase2_schema import PHASE2_CONSTRAINT_FALLBACK_TEXT
 
 log = logging.getLogger(__name__)
 
@@ -193,10 +194,7 @@ async def _chat_stream(req: ChatRequest, request: Request) -> AsyncGenerator[str
 
         # Case 2: Constraint violation — send safe message instead
         if phase2.get("constraint_violation"):
-            safe = (
-                "I'm not able to provide that information directly. "
-                "Please consult your doctor or pharmacist for guidance on medications and dosages."
-            )
+            safe = PHASE2_CONSTRAINT_FALLBACK_TEXT
             yield _sse("status", text="Generating response...")
             async for chunk in _stream_text(safe):
                 yield chunk

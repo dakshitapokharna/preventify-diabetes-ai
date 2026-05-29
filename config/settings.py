@@ -6,17 +6,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    # Cerebras — all LLM calls (Phase 1, Phase 2, memory compressor) for testing.
-    # Single model for everything: gpt-oss-120b (free tier)
-    # Runners read CEREBRAS_API_KEY directly from os.environ.
-    # Switch back to OpenRouter (Gemini) after base model clinical sign-off.
+    # Cerebras — Phase 1/2 runners + model comparison
     cerebras_api_key: str = ""
-
-    # Cerebras base URL (OpenAI-compatible)
     cerebras_base_url: str = "https://api.cerebras.ai/v1"
-
-    # LLM model — single model for all phases during testing
     cerebras_model: str = "gpt-oss-120b"
+
+    # Groq — model comparison tool (tools/model_compare.py)
+    groq_api_key: str = ""
+    groq_base_url: str = "https://api.groq.com/openai/v1"
+
+    # Gemini — Phase 1/2 runners (current active LLM)
+    gemini_api_key: str = ""
 
     # LLM (legacy Anthropic fields — not used in current pipeline)
     llm_model: str = "claude-sonnet-4-6"

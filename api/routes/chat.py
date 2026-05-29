@@ -24,6 +24,7 @@ from api.rate_limiter import is_allowed
 from api.audit_logger import write_audit_log
 from api.session_manager import process_turn
 from schemas.phase2_schema import PHASE2_CONSTRAINT_FALLBACK_TEXT
+from engine.compare_runner import run_compare_stream
 
 log = logging.getLogger(__name__)
 
@@ -222,6 +223,35 @@ async def _chat_stream(req: ChatRequest, request: Request) -> AsyncGenerator[str
 # ─────────────────────────────────────────────────────────────────────────────
 # Route
 # ─────────────────────────────────────────────────────────────────────────────
+
+class CompareRequest(BaseModel):
+    message: str
+
+    @field_validator("message")
+    @classmethod
+    def message_not_empty(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("message cannot be empty")
+        if len(v) > 2000:
+            raise ValueError("message too long (max 2000 chars)")
+        return v
+
+
+@router.post("/compare")
+async def compare_endpoint(body: CompareRequest):
+    """
+    POST /compare -- runs the message through all available Groq + Cerebras models
+    in parallel and streams results via SSE as each model completes.
+
+    SSE events: compare_start | model_result | compare_done | error
+    """
+    return StreamingResponse(
+        run_compare_stream(body.message),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
 
 @router.post("/chat")
 async def chat_endpoint(body: ChatRequest, request: Request):

@@ -1,88 +1,151 @@
-/**
- * static/app.js — Preventify chat frontend
- *
- * Responsibilities:
- *   - Generate/persist user_id in localStorage; new session_id per page load
- *   - POST /chat with message, receive SSE stream
- *   - Render: status events, chunk events (word-by-word), clarify buttons, done metadata
- *   - Update debug panel after each turn
- *   - Handle errors and rate limit responses
- */
-
 'use strict';
 
-// ── Identity ─────────────────────────────────────────────────────────────────
+// ---------------------------------------------------------------------------
+// Identity
+// ---------------------------------------------------------------------------
 
 let userId = localStorage.getItem('preventify_user_id');
 if (!userId) {
   userId = crypto.randomUUID();
   localStorage.setItem('preventify_user_id', userId);
 }
-
-// Fresh session every page load — no history shown (per design doc Section 10)
 const sessionId = crypto.randomUUID();
 
-// ── DOM refs ──────────────────────────────────────────────────────────────────
+// ---------------------------------------------------------------------------
+// DOM refs
+// ---------------------------------------------------------------------------
 
-const chatArea     = document.getElementById('chatArea');
-const messageInput = document.getElementById('messageInput');
-const sendBtn      = document.getElementById('sendBtn');
-const debugContent = document.getElementById('debugContent');
-const debugToggle  = document.getElementById('debugToggle');
+const chatArea       = document.getElementById('chatArea');
+const compareArea    = document.getElementById('compareArea');
+const messageInput   = document.getElementById('messageInput');
+const sendBtn        = document.getElementById('sendBtn');
+const debugContent   = document.getElementById('debugContent');
+const debugToggle    = document.getElementById('debugToggle');
+const chatModeBtn    = document.getElementById('chatModeBtn');
+const compareModeBtn = document.getElementById('compareModeBtn');
 
-// Debug value elements
 const dbgQds      = document.getElementById('dbgQds');
 const dbgSources  = document.getElementById('dbgSources');
 const dbgRisk     = document.getElementById('dbgRisk');
 const dbgFallback = document.getElementById('dbgFallback');
 
-// ── State ─────────────────────────────────────────────────────────────────────
+// ---------------------------------------------------------------------------
+// Mode state
+// ---------------------------------------------------------------------------
 
-let isStreaming = false;
+let currentMode = 'chat';   // 'chat' | 'compare'
+let isStreaming  = false;
 
-// ── Debug panel toggle ────────────────────────────────────────────────────────
+function setMode(mode) {
+  currentMode = mode;
+  if (mode === 'chat') {
+    chatArea.style.display    = 'flex';
+    compareArea.style.display = 'none';
+    chatModeBtn.classList.add('active');
+    compareModeBtn.classList.remove('active');
+    messageInput.placeholder = 'Type your question...';
+  } else {
+    chatArea.style.display    = 'none';
+    compareArea.style.display = 'block';
+    chatModeBtn.classList.remove('active');
+    compareModeBtn.classList.add('active');
+    messageInput.placeholder = 'Type a question to compare all models...';
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Debug panel
+// ---------------------------------------------------------------------------
 
 function toggleDebug() {
-  const content = debugContent;
-  if (content.style.display === 'none') {
-    content.style.display = 'grid';
+  if (debugContent.style.display === 'none') {
+    debugContent.style.display = 'grid';
     debugToggle.textContent = '▲ Debug panel';
   } else {
-    content.style.display = 'none';
+    debugContent.style.display = 'none';
     debugToggle.textContent = '▼ Debug panel';
   }
 }
 
-// ── Bubble helpers ────────────────────────────────────────────────────────────
+function updateDebug(meta) {
+  if (!meta) return;
+  const qds    = meta.qds_score != null ? meta.qds_score : '—';
+  const intent = meta.intent || '—';
+  dbgQds.textContent = `${qds} / ${intent}`;
+
+  if (meta.sources && meta.sources.length > 0) {
+    dbgSources.textContent = meta.sources
+      .map(s => `${s.source} §${s.section || '?'} [G${s.grade}]`)
+      .join(', ');
+  } else {
+    dbgSources.textContent = 'none (no RAG)';
+  }
+
+  dbgRisk.textContent = `Tier ${meta.risk_tier ?? 0}`;
+  dbgRisk.className   = 'debug-value' + (meta.risk_tier >= 3 ? ' warn' : '');
+
+  const fallbacks = [];
+  if (meta.phase1_fallback)      fallbacks.push('Phase 1');
+  if (meta.phase2_fallback)      fallbacks.push('Phase 2');
+  if (meta.constraint_violation) fallbacks.push('constraint');
+  dbgFallback.textContent = fallbacks.length ? fallbacks.join(', ') : 'none';
+  dbgFallback.className   = 'debug-value' + (fallbacks.length ? ' warn' : ' ok');
+
+  if (meta.query_cache_hit) dbgSources.textContent += ' (cache hit)';
+}
+
+// ---------------------------------------------------------------------------
+// Chat mode helpers
+// ---------------------------------------------------------------------------
 
 function addBubble(cls, text) {
   const row = document.createElement('div');
   row.className = `bubble ${cls}`;
   if (text) row.textContent = text;
   chatArea.appendChild(row);
-  scrollToBottom();
+  scrollChat();
   return row;
 }
 
 function addStatusBubble(text) {
   const el = document.createElement('div');
-  el.className = 'bubble status-bubble';
+  el.className   = 'bubble status-bubble';
   el.textContent = text;
   chatArea.appendChild(el);
-  scrollToBottom();
+  scrollChat();
   return el;
 }
 
-function scrollToBottom() {
+function scrollChat() {
   chatArea.scrollTop = chatArea.scrollHeight;
 }
 
-// ── Input helpers ─────────────────────────────────────────────────────────────
+function renderClarifyOptions(bubble, options) {
+  if (!options || options.length === 0) return;
+  const row = document.createElement('div');
+  row.className = 'clarify-options';
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className  = 'clarify-btn';
+    btn.textContent = opt;
+    btn.onclick = () => {
+      row.querySelectorAll('.clarify-btn').forEach(b => b.disabled = true);
+      sendMessage(opt);
+    };
+    row.appendChild(btn);
+  });
+  bubble.appendChild(row);
+  scrollChat();
+}
+
+// ---------------------------------------------------------------------------
+// Input helpers (shared)
+// ---------------------------------------------------------------------------
 
 function setInputEnabled(enabled) {
   messageInput.disabled = !enabled;
-  sendBtn.disabled = !enabled;
-  isStreaming = !enabled;
+  sendBtn.disabled      = !enabled;
+  isStreaming           = !enabled;
 }
 
 function autoResize(el) {
@@ -97,165 +160,93 @@ function handleKey(e) {
   }
 }
 
-// ── Debug panel update ────────────────────────────────────────────────────────
-
-function updateDebug(meta) {
-  if (!meta) return;
-
-  // QDS + intent
-  const qds    = meta.qds_score != null ? meta.qds_score : '—';
-  const intent = meta.intent || '—';
-  dbgQds.textContent = `${qds} / ${intent}`;
-
-  // Sources
-  if (meta.sources && meta.sources.length > 0) {
-    dbgSources.textContent = meta.sources
-      .map(s => `${s.source} §${s.section || '?'} [G${s.grade}]`)
-      .join(', ');
-  } else {
-    dbgSources.textContent = 'none (no RAG)';
-  }
-
-  // Risk tier
-  dbgRisk.textContent = `Tier ${meta.risk_tier ?? 0}`;
-  dbgRisk.className = 'debug-value' + (meta.risk_tier >= 3 ? ' warn' : '');
-
-  // Fallback flags
-  const fallbacks = [];
-  if (meta.phase1_fallback) fallbacks.push('Phase 1');
-  if (meta.phase2_fallback) fallbacks.push('Phase 2');
-  if (meta.constraint_violation) fallbacks.push('⚠ constraint');
-  dbgFallback.textContent = fallbacks.length ? fallbacks.join(', ') : 'none';
-  dbgFallback.className = 'debug-value' + (fallbacks.length ? ' warn' : ' ok');
-
-  // Cache hit indicator
-  if (meta.query_cache_hit) {
-    dbgSources.textContent += ' (cache hit)';
-  }
-}
-
-// ── Clarify options rendering ─────────────────────────────────────────────────
-
-function renderClarifyOptions(bubble, options, question) {
-  if (!options || options.length === 0) return;
-
-  const row = document.createElement('div');
-  row.className = 'clarify-options';
-
-  options.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'clarify-btn';
-    btn.textContent = opt;
-    btn.onclick = () => {
-      // Disable all buttons after selection
-      row.querySelectorAll('.clarify-btn').forEach(b => b.disabled = true);
-      // Send selected option as next message
-      sendMessage(opt);
-    };
-    row.appendChild(btn);
-  });
-
-  bubble.appendChild(row);
-  scrollToBottom();
-}
-
-// ── Main send logic ───────────────────────────────────────────────────────────
+// ---------------------------------------------------------------------------
+// Unified send dispatcher
+// ---------------------------------------------------------------------------
 
 async function sendMessage(overrideText) {
   const text = (overrideText || messageInput.value).trim();
   if (!text || isStreaming) return;
 
-  // Clear input
   if (!overrideText) {
-    messageInput.value = '';
+    messageInput.value      = '';
     messageInput.style.height = 'auto';
   }
 
-  // Show user bubble
-  addBubble('user-bubble', text);
+  if (currentMode === 'compare') {
+    await sendCompare(text);
+  } else {
+    await sendChat(text);
+  }
+}
 
-  // Disable input during streaming
+// ---------------------------------------------------------------------------
+// Chat mode send
+// ---------------------------------------------------------------------------
+
+async function sendChat(text) {
+  addBubble('user-bubble', text);
   setInputEnabled(false);
 
-  // Create bot bubble (will accumulate chunks)
-  let statusEl = addStatusBubble('Looking up your question...');
-  let botBubble = null;
-  let clarifyBubble = null;
+  let statusEl    = addStatusBubble('Looking up your question...');
+  let botBubble   = null;
   let responseText = '';
-  let gotChunk = false;
+  let gotChunk    = false;
 
   try {
     const resp = await fetch('/chat', {
-      method: 'POST',
+      method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message:    text,
-        user_id:    userId,
-        session_id: sessionId,
-      }),
+      body:    JSON.stringify({ message: text, user_id: userId, session_id: sessionId }),
     });
 
     if (!resp.ok && resp.status === 429) {
-      // Rate limit
       statusEl.remove();
       addBubble('bot-bubble', "You've sent too many messages. Please wait a few minutes.");
       setInputEnabled(true);
       return;
     }
-
     if (!resp.body) throw new Error('No response body');
 
-    const reader = resp.body.getReader();
+    const reader  = resp.body.getReader();
     const decoder = new TextDecoder();
     let buffer = '';
 
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
-
       buffer += decoder.decode(value, { stream: true });
       const lines = buffer.split('\n');
-      buffer = lines.pop(); // keep incomplete line in buffer
+      buffer = lines.pop();
 
       for (const line of lines) {
         if (!line.startsWith('data: ')) continue;
         const raw = line.slice(6).trim();
         if (!raw) continue;
-
         let event;
-        try { event = JSON.parse(raw); }
-        catch { continue; }
+        try { event = JSON.parse(raw); } catch { continue; }
 
         switch (event.type) {
-
           case 'status':
-            if (statusEl) {
-              statusEl.textContent = event.text;
-            } else {
-              statusEl = addStatusBubble(event.text);
-            }
+            if (statusEl) statusEl.textContent = event.text;
+            else          statusEl = addStatusBubble(event.text);
             break;
 
           case 'chunk':
             if (!gotChunk) {
-              // First chunk — replace status with real bot bubble
               if (statusEl) { statusEl.remove(); statusEl = null; }
               botBubble = addBubble('bot-bubble', '');
-              gotChunk = true;
+              gotChunk  = true;
             }
-            responseText += event.text;
-            if (botBubble) {
-              botBubble.textContent = responseText;
-              scrollToBottom();
-            }
+            responseText     += event.text;
+            botBubble.textContent = responseText;
+            scrollChat();
             break;
 
           case 'clarify':
             if (statusEl) { statusEl.remove(); statusEl = null; }
-            clarifyBubble = addBubble('bot-bubble', event.question || '');
-            if (event.format !== 'open') {
-              renderClarifyOptions(clarifyBubble, event.options, event.question);
-            }
+            const clarifyBubble = addBubble('bot-bubble', event.question || '');
+            if (event.format !== 'open') renderClarifyOptions(clarifyBubble, event.options);
             break;
 
           case 'error':
@@ -270,11 +261,159 @@ async function sendMessage(overrideText) {
         }
       }
     }
-
   } catch (err) {
     if (statusEl) statusEl.remove();
     console.error('chat error:', err);
     addBubble('bot-bubble', 'Connection error. Please check your internet and try again.');
+  } finally {
+    setInputEnabled(true);
+    messageInput.focus();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Compare mode send
+// ---------------------------------------------------------------------------
+
+function _providerLabel(provider) {
+  return provider.toUpperCase();
+}
+
+function _createCompareCard(provider, model) {
+  const card = document.createElement('div');
+  card.className = 'compare-card loading';
+  card.id = 'card-' + provider + '-' + model.replace(/\//g, '-');
+
+  const header = document.createElement('div');
+  header.className = 'card-header';
+
+  const badge = document.createElement('span');
+  badge.className   = 'provider-badge badge-' + provider;
+  badge.textContent = _providerLabel(provider);
+
+  const modelName = document.createElement('span');
+  modelName.className   = 'card-model-name';
+  modelName.textContent = model;
+
+  header.appendChild(badge);
+  header.appendChild(modelName);
+
+  const spinner = document.createElement('div');
+  spinner.className = 'card-spinner';
+  spinner.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+
+  card.appendChild(header);
+  card.appendChild(spinner);
+  return card;
+}
+
+function _fillCompareCard(card, result) {
+  card.classList.remove('loading');
+
+  // Remove spinner
+  const spinner = card.querySelector('.card-spinner');
+  if (spinner) spinner.remove();
+
+  const meta = document.createElement('div');
+  meta.className   = 'card-meta';
+  meta.textContent = `${result.latency_s}s · ${result.output_tokens} tokens`;
+
+  const body = document.createElement('div');
+  body.className   = 'card-text';
+  body.textContent = result.text;
+
+  card.appendChild(meta);
+  card.appendChild(body);
+}
+
+async function sendCompare(text) {
+  setInputEnabled(false);
+
+  // Clear previous results
+  compareArea.innerHTML = '';
+
+  // Show query at top
+  const queryEl = document.createElement('div');
+  queryEl.className   = 'compare-query';
+  queryEl.textContent = text;
+  compareArea.appendChild(queryEl);
+
+  // Status line
+  const statusEl = document.createElement('div');
+  statusEl.className   = 'compare-status';
+  statusEl.textContent = 'Connecting to models...';
+  compareArea.appendChild(statusEl);
+
+  // Card grid
+  const grid = document.createElement('div');
+  grid.className = 'compare-grid';
+  compareArea.appendChild(grid);
+
+  const pendingCards = {};   // model id -> card element
+  let totalModels = 0;
+  let doneCount   = 0;
+
+  try {
+    const resp = await fetch('/compare', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ message: text }),
+    });
+    if (!resp.body) throw new Error('No response body');
+
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const raw = line.slice(6).trim();
+        if (!raw) continue;
+        let event;
+        try { event = JSON.parse(raw); } catch { continue; }
+
+        switch (event.type) {
+
+          case 'compare_start':
+            totalModels = event.total;
+            statusEl.textContent = `Running ${totalModels} models in parallel...`;
+            // Pre-create placeholder cards (we don't know model names yet,
+            // so cards will be added as results arrive instead)
+            break;
+
+          case 'model_result':
+            doneCount++;
+            statusEl.textContent = `${doneCount} / ${totalModels} responded`;
+            const card = _createCompareCard(event.provider, event.model);
+            grid.appendChild(card);
+            // Fill immediately (result came with the event)
+            _fillCompareCard(card, event);
+            compareArea.scrollTop = compareArea.scrollHeight;
+            break;
+
+          case 'compare_done':
+            statusEl.textContent = `${event.total} model${event.total !== 1 ? 's' : ''} responded`;
+            statusEl.classList.add('done');
+            break;
+
+          case 'error':
+            statusEl.textContent = event.text || 'Error running comparison.';
+            statusEl.classList.add('error');
+            break;
+        }
+      }
+    }
+  } catch (err) {
+    console.error('compare error:', err);
+    statusEl.textContent = 'Connection error. Please try again.';
+    statusEl.classList.add('error');
   } finally {
     setInputEnabled(true);
     messageInput.focus();

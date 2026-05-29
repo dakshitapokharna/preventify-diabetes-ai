@@ -8,16 +8,15 @@
 </head>
 <body>
 
-  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <!-- Header -->
   <header class="app-header">
     <span class="header-icon">🩺</span>
     <span class="header-title">Preventify Diabetes Educator</span>
     <span class="header-sub">Base model testing — English</span>
   </header>
 
-  <!-- ── Chat area ──────────────────────────────────────────────────────── -->
+  <!-- Chat area (Chat mode) -->
   <main class="chat-area" id="chatArea">
-    <!-- Welcome bubble -->
     <div class="bubble bot-bubble" id="welcomeBubble">
       Hello! I'm your diabetes education assistant. I can answer questions about
       managing diabetes — nutrition, monitoring, lifestyle, medications, and more.
@@ -26,10 +25,17 @@
     </div>
   </main>
 
-  <!-- ── Debug panel ────────────────────────────────────────────────────── -->
+  <!-- Compare area (Compare mode) -->
+  <main class="compare-area" id="compareArea">
+    <div class="compare-placeholder" id="comparePlaceholder">
+      Type a question and press Send to compare all available models side by side.
+    </div>
+  </main>
+
+  <!-- Debug panel -->
   <section class="debug-panel" id="debugPanel">
     <button class="debug-toggle" id="debugToggle" onclick="toggleDebug()">
-      ▼ Debug panel
+      &#9660; Debug panel
     </button>
     <div class="debug-content" id="debugContent" style="display:none">
       <div class="debug-row">
@@ -51,8 +57,12 @@
     </div>
   </section>
 
-  <!-- ── Input bar ──────────────────────────────────────────────────────── -->
+  <!-- Input bar -->
   <footer class="input-bar">
+    <div class="mode-toggle">
+      <button id="chatModeBtn"    class="mode-btn active" onclick="setMode('chat')">Chat</button>
+      <button id="compareModeBtn" class="mode-btn"        onclick="setMode('compare')">Compare</button>
+    </div>
     <textarea
       id="messageInput"
       class="message-input"
@@ -63,7 +73,7 @@
       oninput="autoResize(this)"
     ></textarea>
     <button id="sendBtn" class="send-btn" onclick="sendMessage()">
-      Send ▶
+      Send &#9654;
     </button>
   </footer>
 

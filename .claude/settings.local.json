@@ -185,7 +185,8 @@
       "PowerShell(cd D:\\\\intern\\\\BaseModel; $env:PYTHONPATH = \"D:\\\\intern\\\\BaseModel\"; python ingestion/embedder/run.py ADA_2026)",
       "PowerShell(uvicorn api.app:app *)",
       "PowerShell(cd D:\\\\intern\\\\BaseModel; Get-Content logs\\\\phase2_failures.jsonl | ConvertFrom-Json | Select-Object -Last 1 | Select-Object error_type, @{N=\"violations\";E={$_.extra.violations}}, @{N=\"response_preview\";E={$_.raw_output.Substring\\(0, [Math]::Min\\(200, $_.raw_output.Length\\)\\)}})",
-      "PowerShell(cd D:\\\\intern\\\\BaseModel; Start-Sleep -Seconds 5; try { $h = Invoke-WebRequest -Uri http://localhost:8000/health -UseBasicParsing -TimeoutSec 10; $h.Content } catch { $_.Exception.Message })"
+      "PowerShell(cd D:\\\\intern\\\\BaseModel; Start-Sleep -Seconds 5; try { $h = Invoke-WebRequest -Uri http://localhost:8000/health -UseBasicParsing -TimeoutSec 10; $h.Content } catch { $_.Exception.Message })",
+      "PowerShell($key = \"csk-rhj4w4rmn8f8per89ryx5tyvxhc2m69yfpjhmv4t4wpvwee9\"; Invoke-RestMethod -Uri \"https://api.cerebras.ai/v1/models\" -Headers @{\"Authorization\"=\"Bearer $key\"} | ConvertTo-Json -Depth 5)"
     ]
   }
 }

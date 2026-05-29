@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
     # Cerebras — all LLM calls (Phase 1, Phase 2, memory compressor) for testing.
-    # Single model for everything: qwen-3-235b-a22b-instruct-2507 (free tier)
+    # Single model for everything: gpt-oss-120b (free tier)
     # Runners read CEREBRAS_API_KEY directly from os.environ.
     # Switch back to OpenRouter (Gemini) after base model clinical sign-off.
     cerebras_api_key: str = ""
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     cerebras_base_url: str = "https://api.cerebras.ai/v1"
 
     # LLM model — single model for all phases during testing
-    cerebras_model: str = "qwen-3-235b-a22b-instruct-2507"
+    cerebras_model: str = "gpt-oss-120b"
 
     # LLM (legacy Anthropic fields — not used in current pipeline)
     llm_model: str = "claude-sonnet-4-6"

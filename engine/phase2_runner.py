@@ -96,7 +96,7 @@ log = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL_ID         = "qwen-3-235b-a22b-instruct-2507"   # Cerebras — matches phase1_runner and settings.py
+MODEL_ID         = "gpt-oss-120b"
 CEREBRAS_URL     = "https://api.cerebras.ai/v1"
 REQUEST_TIMEOUT  = 30.0           # Phase 2 is slower than Phase 1 — 2.5 Pro takes longer
 RETRY_SLEEP      = 2.0

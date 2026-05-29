@@ -62,10 +62,10 @@ log = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL_ID         = "qwen-3-235b-a22b-instruct-2507"   # production model; was llama3.1-8b for free-tier testing
+MODEL_ID         = "gpt-oss-120b"
 CEREBRAS_URL     = "https://api.cerebras.ai/v1"
-REQUEST_TIMEOUT  = 10.0          # seconds — 10s for qwen-3-235b; was 12s for slower llama free tier
-RETRY_SLEEP      = 5.0           # seconds to wait before retry on rate limit (qwen-3-235b needs more than 1s)
+REQUEST_TIMEOUT  = 10.0
+RETRY_SLEEP      = 5.0
 
 PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "phase1_system_prompt.txt"
 LOG_PATH    = Path(__file__).parent.parent / "logs" / "phase1_failures.jsonl"

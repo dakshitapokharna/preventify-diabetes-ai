@@ -470,7 +470,7 @@ async function sendCompare(text) {
     const resp = await fetch('/compare', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ message: text }),
+      body:    JSON.stringify({ message: text, user_id: userId, session_id: sessionId }),
     });
     if (!resp.body) throw new Error('No response body');
 
@@ -494,11 +494,13 @@ async function sendCompare(text) {
 
         switch (event.type) {
 
+          case 'status':
+            statusEl.textContent = event.text || 'Working...';
+            break;
+
           case 'compare_start':
             totalModels = event.total;
             statusEl.textContent = `Running ${totalModels} models in parallel...`;
-            // Pre-create placeholder cards (we don't know model names yet,
-            // so cards will be added as results arrive instead)
             break;
 
           case 'model_result':

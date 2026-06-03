@@ -226,7 +226,9 @@ async def _chat_stream(req: ChatRequest, request: Request) -> AsyncGenerator[str
 # ─────────────────────────────────────────────────────────────────────────────
 
 class CompareRequest(BaseModel):
-    message: str
+    message:    str
+    user_id:    str
+    session_id: str
 
     @field_validator("message")
     @classmethod
@@ -238,17 +240,55 @@ class CompareRequest(BaseModel):
             raise ValueError("message too long (max 2000 chars)")
         return v
 
+    @field_validator("user_id", "session_id")
+    @classmethod
+    def id_not_empty(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("id cannot be empty")
+        return v
+
+
+async def _compare_stream(body: CompareRequest, request: Request) -> AsyncGenerator[str, None]:
+    """SSE generator for compare mode — runs full Phase 1 + RAG, then fans out to all models."""
+    from api.session_manager import load_user_profile, load_session_turns
+    app     = request.app
+    db_pool = app.state.db_pool
+
+    async with db_pool.acquire() as conn:
+        profile       = await load_user_profile(body.user_id, conn)
+        session_turns = await load_session_turns(body.user_id, body.session_id, conn)
+
+        if profile is None:
+            profile = {}
+        if not profile.get("location_hint"):
+            profile["location_hint"] = "Kerala"
+
+        short_memory = profile.get("short_memory") or ""
+
+        async for event in run_compare_stream(
+            message=body.message,
+            session_turns=session_turns,
+            profile=profile,
+            short_memory=short_memory,
+            db_conn=conn,
+            embedder=app.state.embedder,
+            reranker=app.state.reranker,
+            user_id=body.user_id,
+        ):
+            yield event
+
 
 @router.post("/compare")
-async def compare_endpoint(body: CompareRequest):
+async def compare_endpoint(body: CompareRequest, request: Request):
     """
-    POST /compare -- runs the message through all available Groq + Cerebras models
-    in parallel and streams results via SSE as each model completes.
+    POST /compare — runs Phase 1 + RAG, then fans the enriched prompt out to all
+    available models in parallel and streams results via SSE as each completes.
 
-    SSE events: compare_start | model_result | compare_done | error
+    SSE events: status | compare_start | model_result | compare_done | error
     """
     return StreamingResponse(
-        run_compare_stream(body.message),
+        _compare_stream(body, request),
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )

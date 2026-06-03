@@ -1013,3 +1013,133 @@ async def run_phase2(
         max_retries + 1, last_error_type,
     )
     return _make_fallback(last_error_type)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Compare-mode context builder (used by compare_runner.py)
+#
+# Runs Steps 1-11 of the Phase 2 pipeline (retrieval + prompt assembly) without
+# calling any LLM. compare_runner fans the returned messages out to all models.
+# ─────────────────────────────────────────────────────────────────────────────
+
+async def prepare_rag_context(
+    current_message: str,
+    session_turns: list,
+    phase1_output: dict,
+    profile: Optional[dict],
+    short_memory: str,
+    db_conn,
+    embedder,
+    reranker,
+    user_id: Optional[str] = None,
+) -> dict:
+    """
+    Run Phase 2 retrieval pipeline without calling the LLM.
+
+    On success:
+        {"_fallback": False, "messages": [...], "chunks_used": [...], ...}
+    On failure:
+        {"_fallback": True, "_fallback_reason": "...", "messages": []}
+    """
+    if phase1_output.get("intent") == "escalation_only":
+        fb = _make_fallback("escalation_bypass")
+        fb["_fallback"] = False
+        fb["messages"] = []
+        return fb
+
+    # Step 1 — Build enriched retrieval query
+    enriched_query = build_phase2_query(
+        current_message=current_message,
+        session_turns=session_turns,
+        profile=profile,
+        mid_clarification_resolved=phase1_output.get("mid_clarification_resolved", False),
+    )
+
+    # Step 2 — Resolve condition flags
+    stored_flags = (profile or {}).get("condition_flags", [])
+    phase1_flags  = phase1_output.get("profile_signals", {}).get("condition_flags", [])
+    active_flags  = resolve_condition_flags(
+        message=current_message,
+        stored_flags=list(set((stored_flags or []) + (phase1_flags or []))),
+    )
+
+    # Step 3 — Build retrieval filter
+    tier_filter, trigger_filter = build_retrieval_filter(active_flags)
+
+    # Steps 4-7 — Retrieve top chunks (cache-first)
+    query_hash      = _compute_query_hash(enriched_query)
+    query_cache_hit = False
+    top_chunks: list = []
+
+    cached_chunk_ids = await _check_query_cache(db_conn, query_hash)
+    if cached_chunk_ids:
+        top_chunks      = await _fetch_chunks_by_ids(db_conn, cached_chunk_ids)
+        query_cache_hit = True
+    else:
+        try:
+            embedding = await _embed_async(embedder, enriched_query)
+        except Exception as exc:
+            error_type = f"embed_error:{type(exc).__name__}"
+            _log_failure(current_message, user_id, error_type, "", 1)
+            return {**_make_fallback(error_type), "messages": []}
+
+        try:
+            top_chunks = await _pgvector_search(
+                db_conn, embedding, tier_filter, trigger_filter, top_k=TOP_K_ANN
+            )
+        except Exception as exc:
+            error_type = f"pgvector_error:{type(exc).__name__}"
+            _log_failure(current_message, user_id, error_type, "", 1)
+            return {**_make_fallback(error_type), "messages": []}
+
+        if top_chunks:
+            await _write_query_cache(
+                db_conn, query_hash, [c["chunk_id"] for c in top_chunks], active_flags
+            )
+
+    # Step 8 — Rerank
+    if top_chunks:
+        try:
+            scores = await _rerank_async(reranker, enriched_query, top_chunks)
+        except Exception:
+            scores = [1.0] * len(top_chunks)
+
+        scored = sorted(zip(scores, top_chunks), key=lambda x: x[0], reverse=True)
+        top5_pairs   = scored[:TOP_K_FINAL]
+        top5_scores  = [round(s, 4) for s, _ in top5_pairs]
+        top5_chunks  = [c for _, c in top5_pairs]
+        top5_chunks.sort(key=lambda c: c.get("grade_priority", 5))
+    else:
+        top5_chunks = []
+        top5_scores = []
+
+    # Step 10 — Format chunks for prompt
+    chunk_context_block = format_chunks_for_prompt(top5_chunks)
+
+    # Step 11 — Build messages list
+    system_prompt = _load_system_prompt()
+    messages = _build_openai_messages(
+        current_message=current_message,
+        session_turns=session_turns,
+        short_memory=short_memory,
+        chunk_context_block=chunk_context_block,
+        system_prompt=system_prompt,
+        intent=phase1_output.get("intent"),
+        qds_score=phase1_output.get("qds_score"),
+        session_context=phase1_output.get("profile_signals", {}).get("session_context"),
+        location_hint=(profile or {}).get("location_hint") or "Kerala",
+    )
+
+    return {
+        "_fallback":              False,
+        "_fallback_reason":       "",
+        "messages":               messages,
+        "chunks_used":            [c["chunk_id"] for c in top5_chunks],
+        "chunks_detail":          [
+            {"source": c["source"], "section": c.get("section_title", ""), "grade": c.get("grade_priority", 5)}
+            for c in top5_chunks
+        ],
+        "condition_flags_active": list(active_flags),
+        "query_cache_hit":        query_cache_hit,
+        "reranker_scores":        top5_scores,
+    }

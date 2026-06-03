@@ -6,14 +6,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    # Cerebras — Phase 1/2 runners + model comparison
+    # Cerebras — model comparison (compare mode only)
     cerebras_api_key: str = ""
     cerebras_base_url: str = "https://api.cerebras.ai/v1"
     cerebras_model: str = "gpt-oss-120b"
 
+    # Chat pipeline LLM models (via OpenRouter)
+    phase1_model: str = "google/gemini-2.5-flash-lite"
+    phase2_model: str = "google/gemini-2.5-flash"
+
     # Groq — model comparison tool (tools/model_compare.py)
     groq_api_key: str = ""
     groq_base_url: str = "https://api.groq.com/openai/v1"
+
+    # OpenRouter — model comparison (curated fast/mid models from Gemini, GPT, Claude, Grok, DeepSeek)
+    openrouter_api_key: str = ""
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
 
     # Gemini — Phase 1/2 runners (current active LLM)
     gemini_api_key: str = ""
@@ -26,12 +34,12 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-large-en-v1.5"
 
     # Reranker
-    reranker_model: str = "BAAI/bge-reranker-large"
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L6-v2"
     reranker_top_k: int = 20
 
     # HuggingFace model cache — must point to D: drive (C: is almost full).
     # Set HF_HOME=D:\hf_cache in .env; run.py applies this before loading any model.
-    # All ML model downloads (bge-large-en-v1.5 ~1.3 GB, bge-reranker-large ~1.1 GB)
+    # All ML model downloads (bge-large-en-v1.5 ~1.3 GB, bge-reranker-v2-m3 ~570 MB)
     # land here, never on C:.
     hf_home: str = r"D:\hf_cache"
 

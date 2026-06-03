@@ -62,9 +62,9 @@ log = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL_ID         = "gpt-oss-120b"
-CEREBRAS_URL     = "https://api.cerebras.ai/v1"
-REQUEST_TIMEOUT  = 10.0
+MODEL_ID         = "google/gemini-2.5-flash-lite"
+OPENROUTER_URL   = "https://openrouter.ai/api/v1"
+REQUEST_TIMEOUT  = 20.0
 RETRY_SLEEP      = 5.0
 
 PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "phase1_system_prompt.txt"
@@ -224,9 +224,9 @@ async def run_phase1(
         and _fallback_reason internal flags.
     """
     # ── Guard: API key ─────────────────────────────────────────────────────────
-    api_key = os.environ.get("CEREBRAS_API_KEY")
+    api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
-        log.error("phase1_runner: CEREBRAS_API_KEY not set — returning fallback immediately")
+        log.error("phase1_runner: OPENROUTER_API_KEY not set — returning fallback immediately")
         _log_failure(current_message, user_id, "missing_api_key", "", 0)
         return _make_fallback("missing_api_key")
 
@@ -234,8 +234,12 @@ async def run_phase1(
     messages      = _build_messages(session_turns, current_message, system_prompt)
 
     client = openai.AsyncOpenAI(
-        base_url=CEREBRAS_URL,
+        base_url=OPENROUTER_URL,
         api_key=api_key,
+        default_headers={
+            "HTTP-Referer": "https://preventify.in",
+            "X-Title":      "Preventify Diabetes Educator",
+        },
     )
 
     last_error_type = "unknown"

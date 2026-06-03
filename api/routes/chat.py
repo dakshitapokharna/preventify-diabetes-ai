@@ -168,6 +168,7 @@ async def _chat_stream(req: ChatRequest, request: Request) -> AsyncGenerator[str
             "constraint_violation": bool(phase2.get("constraint_violation", False)),
             "query_cache_hit":     bool(phase2.get("query_cache_hit", False)),
             "session_turn_count":  turn_number,
+            "timings":             phase2.get("timings") or {},
         }
 
         # ── Phase B: Route output by response type ─────────────────────────────

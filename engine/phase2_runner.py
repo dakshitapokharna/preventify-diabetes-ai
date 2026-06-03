@@ -16,7 +16,7 @@ Pipeline steps (in order):
   6. Embed enriched query       — bge-large-en-v1.5 via thread pool (sync → async)
   7. pgvector ANN search        — top-20 candidates via asyncpg
   8. Write query_cache          — save top-20 chunk_ids for 24 hours
-  9. Rerank top-20 → top-5      — bge-reranker-large via thread pool
+  9. Rerank top-20 → top-5      — bge-reranker-v2-m3 via thread pool (ONNX INT8 if available)
   10. Sort by grade_priority    — strongest evidence first in the Gemini prompt
   11. format_chunks_for_prompt() — build <clinical_context> block
   12. Build Gemini 2.5 Pro prompt — system cache + short_memory + turns + chunks + message
@@ -77,6 +77,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+import time
+
 import numpy as np
 import openai
 
@@ -96,9 +98,9 @@ log = logging.getLogger(__name__)
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
-MODEL_ID         = "gpt-oss-120b"
-CEREBRAS_URL     = "https://api.cerebras.ai/v1"
-REQUEST_TIMEOUT  = 30.0           # Phase 2 is slower than Phase 1 — 2.5 Pro takes longer
+MODEL_ID         = "google/gemini-2.5-flash"
+OPENROUTER_URL   = "https://openrouter.ai/api/v1"
+REQUEST_TIMEOUT  = 60.0           # Phase 2 is slower — Gemini Flash via OpenRouter ~5–15s
 RETRY_SLEEP      = 2.0
 TOP_K_ANN       = 5               # reduced from 20 → CPU reranker was taking 73–204s; 5 candidates ~10s on CPU
 TOP_K_FINAL     = 5               # reranker output sent to LLM (keep same — all 5 ANN candidates go to LLM)
@@ -134,24 +136,46 @@ def _reset_module_state() -> None:
 # below which runs it in the thread pool.
 # Note: FlagEmbedding FlagReranker has a compatibility bug with transformers 5.x
 # (XLMRobertaTokenizer.prepare_for_model removed). CrossEncoder from sentence-transformers
-# uses the same BAAI/bge-reranker-large weights and is fully compatible.
+# uses the BAAI/bge-reranker-v2-m3 weights and is fully compatible.
 # ─────────────────────────────────────────────────────────────────────────────
+
+_ONNX_INT8_DIR = Path("D:/hf_cache/reranker_onnx_int8")
+
 
 def load_reranker(model_name: str):
     """
-    Load bge-reranker-large from HuggingFace via sentence-transformers CrossEncoder.
-    Cached locally after first download in HF_HOME (D:/hf_cache).
+    Load the reranker for CPU inference.
+
+    Priority order:
+      1. ONNX INT8 quantized model (D:/hf_cache/reranker_onnx_int8) — ~3-5x faster on CPU.
+         Run scripts/quantize_reranker.py once to produce this artifact.
+      2. sentence-transformers CrossEncoder fallback — works out of the box, slower.
 
     Args:
-        model_name: e.g. "BAAI/bge-reranker-large" (from settings.reranker_model)
+        model_name: e.g. "BAAI/bge-reranker-v2-m3" (from settings.reranker_model)
 
     Returns:
-        CrossEncoder instance. Thread-safe for concurrent predict() calls.
-
-    Raises:
-        ImportError if sentence-transformers is not installed.
-        RuntimeError if the model cannot be loaded.
+        dict with keys "type" ("onnx" | "crossencoder"), "model", "tokenizer" (ONNX only).
+        _rerank_async() understands both shapes.
     """
+    # ── ONNX path (fast) ──────────────────────────────────────────────────────
+    if _ONNX_INT8_DIR.exists():
+        try:
+            from optimum.onnxruntime import ORTModelForSequenceClassification
+            from transformers import AutoTokenizer
+
+            log.info("phase2_runner: loading ONNX INT8 reranker from %s", _ONNX_INT8_DIR)
+            ort_model = ORTModelForSequenceClassification.from_pretrained(
+                str(_ONNX_INT8_DIR), file_name="model_quantized.onnx"
+            )
+            # Tokenizer lives in HF hub cache, not in the quantized artifact dir
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            log.info("phase2_runner: ONNX reranker loaded OK")
+            return {"type": "onnx", "model": ort_model, "tokenizer": tokenizer}
+        except Exception as exc:
+            log.warning("phase2_runner: ONNX load failed (%s) — falling back to CrossEncoder", exc)
+
+    # ── CrossEncoder fallback (slower) ───────────────────────────────────────
     try:
         from sentence_transformers import CrossEncoder
     except ImportError as exc:
@@ -159,10 +183,10 @@ def load_reranker(model_name: str):
             "sentence-transformers is not installed. Run: pip install sentence-transformers"
         ) from exc
 
-    log.info("phase2_runner: loading reranker model: %s", model_name)
+    log.info("phase2_runner: loading CrossEncoder reranker: %s", model_name)
     reranker = CrossEncoder(model_name)
-    log.info("phase2_runner: reranker loaded OK")
-    return reranker
+    log.info("phase2_runner: CrossEncoder reranker loaded OK")
+    return {"type": "crossencoder", "model": reranker, "tokenizer": None}
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -192,39 +216,58 @@ async def _embed_async(embedder, text: str) -> np.ndarray:
     return embedding
 
 
+def _rerank_sync(reranker_handle: dict, query: str, chunks: list) -> list:
+    """
+    Synchronous reranking — called inside the thread pool by _rerank_async.
+
+    Handles both the ONNX and CrossEncoder shapes returned by load_reranker().
+    Both paths return raw logits → sigmoid → 0-1 scores.
+    """
+    import torch
+
+    texts = [chunk["text"] for chunk in chunks]
+
+    if reranker_handle["type"] == "onnx":
+        tokenizer = reranker_handle["tokenizer"]
+        model = reranker_handle["model"]
+        pairs = [[query, t] for t in texts]
+        inputs = tokenizer(
+            pairs,
+            padding=True,
+            truncation=True,
+            max_length=512,
+            return_tensors="pt",
+        )
+        with torch.no_grad():
+            logits = model(**inputs).logits.squeeze(-1)
+        return torch.sigmoid(logits).tolist()
+
+    # CrossEncoder fallback
+    model = reranker_handle["model"]
+    pairs = [(query, t) for t in texts]
+    raw = model.predict(pairs, apply_softmax=True)
+    if hasattr(raw, "tolist"):
+        return raw.tolist()
+    return list(raw) if not isinstance(raw, float) else [raw]
+
+
 async def _rerank_async(reranker, query: str, chunks: list) -> list:
     """
-    Run bge-reranker-large cross-encoder scoring in the thread pool.
-
-    Computes a relevance score for each (query, chunk_text) pair.
-    Returns scores normalized to 0–1 range via sigmoid.
+    Run reranker scoring in the thread pool (keeps async event loop unblocked).
 
     Args:
-        reranker: FlagReranker instance (loaded by load_reranker()).
-        query:    Enriched retrieval query string (NOT the patient-facing message).
+        reranker: dict returned by load_reranker() — type "onnx" or "crossencoder".
+        query:    Enriched retrieval query (NOT the patient-facing message).
         chunks:   List of chunk dicts from pgvector — each must have "text" key.
 
     Returns:
-        List of float scores, one per chunk, in the same order as chunks.
-        Scores are 0.0–1.0 (higher = more relevant).
+        List of float scores 0.0–1.0, one per chunk, same order as input.
     """
-    pairs = [(query, chunk["text"]) for chunk in chunks]
-
     loop = asyncio.get_event_loop()
-    # CrossEncoder.predict() returns a numpy array of raw logit scores.
-    # apply_softmax=True converts to 0–1 probabilities (equivalent to FlagReranker normalize=True).
-    raw_scores = await loop.run_in_executor(
+    scores = await loop.run_in_executor(
         _thread_pool,
-        lambda: reranker.predict(pairs, apply_softmax=True),
+        lambda: _rerank_sync(reranker, query, chunks),
     )
-
-    # predict() returns a numpy array — convert to plain Python floats
-    if hasattr(raw_scores, 'tolist'):
-        scores = raw_scores.tolist()
-    elif isinstance(raw_scores, float):
-        scores = [raw_scores]
-    else:
-        scores = list(raw_scores)
     return scores
 
 
@@ -624,7 +667,7 @@ async def run_phase2(
                           Empty string "" for new users.
         db_conn:          asyncpg Connection. Must have register_vector() called on it.
         embedder:         SentenceTransformer (bge-large-en-v1.5). Load with embed.load_model().
-        reranker:         FlagReranker (bge-reranker-large). Load with load_reranker().
+        reranker:         dict from load_reranker() — ONNX INT8 or CrossEncoder fallback.
         user_id:          Patient identifier for failure log. Optional.
         max_retries:      Retry attempts for recoverable errors. Default 1.
 
@@ -639,9 +682,9 @@ async def run_phase2(
             _fallback_reason        — str
     """
     # ── Guard 1: API key ───────────────────────────────────────────────────────
-    api_key = os.environ.get("CEREBRAS_API_KEY")
+    api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
-        log.error("phase2_runner: CEREBRAS_API_KEY not set — returning fallback immediately")
+        log.error("phase2_runner: OPENROUTER_API_KEY not set — returning fallback immediately")
         _log_failure(current_message, user_id, "missing_api_key", "", 0)
         return _make_fallback("missing_api_key")
 
@@ -655,9 +698,13 @@ async def run_phase2(
         fb["_fallback"] = False   # not an error — intentional bypass
         return fb
 
+    _t0 = time.perf_counter()
+    _t  = {}   # step → elapsed_ms, filled as each step completes
+
     # ─────────────────────────────────────────────────────────────────────────
     # Step 1 — Build enriched retrieval query
     # ─────────────────────────────────────────────────────────────────────────
+    _ts = time.perf_counter()
     enriched_query = build_phase2_query(
         current_message=current_message,
         session_turns=session_turns,
@@ -683,6 +730,7 @@ async def run_phase2(
     # Step 3 — Build retrieval filter
     # ─────────────────────────────────────────────────────────────────────────
     tier_filter, trigger_filter = build_retrieval_filter(active_flags)
+    _t["query_build_ms"] = round((time.perf_counter() - _ts) * 1000)
 
     # ─────────────────────────────────────────────────────────────────────────
     # Steps 4–8 — Retrieve top-20 chunks (cache-first)
@@ -692,6 +740,7 @@ async def run_phase2(
     top_20_chunks: list = []
 
     # Step 4 — Check query_cache
+    _ts = time.perf_counter()
     cached_chunk_ids = await _check_query_cache(db_conn, query_hash)
 
     if cached_chunk_ids:
@@ -699,10 +748,16 @@ async def run_phase2(
         log.debug("phase2_runner: query_cache HIT — skipping ANN search (%s)", query_hash[:12])
         top_20_chunks   = await _fetch_chunks_by_ids(db_conn, cached_chunk_ids)
         query_cache_hit = True
+        _t["cache_check_ms"] = round((time.perf_counter() - _ts) * 1000)
+        _t["embed_ms"]       = 0
+        _t["ann_search_ms"]  = 0
 
     else:
+        _t["cache_check_ms"] = round((time.perf_counter() - _ts) * 1000)
+
         # Cache miss — embed query then run ANN search
         # Step 5 — Embed enriched query
+        _ts = time.perf_counter()
         try:
             embedding = await _embed_async(embedder, enriched_query)
         except Exception as exc:
@@ -710,8 +765,10 @@ async def run_phase2(
             log.error("phase2_runner: embedding failed: %s", exc)
             _log_failure(current_message, user_id, error_type, "", 1)
             return _make_fallback(error_type)
+        _t["embed_ms"] = round((time.perf_counter() - _ts) * 1000)
 
         # Step 6 — pgvector ANN search
+        _ts = time.perf_counter()
         try:
             top_20_chunks = await _pgvector_search(
                 db_conn, embedding, tier_filter, trigger_filter, top_k=TOP_K_ANN
@@ -721,6 +778,7 @@ async def run_phase2(
             log.error("phase2_runner: pgvector search failed: %s", exc)
             _log_failure(current_message, user_id, error_type, "", 1)
             return _make_fallback(error_type)
+        _t["ann_search_ms"] = round((time.perf_counter() - _ts) * 1000)
 
         # Step 7 — Write query_cache (best-effort, non-blocking)
         if top_20_chunks:
@@ -760,6 +818,7 @@ async def run_phase2(
     # top_5_scores are already set to [] above — skip reranking entirely.
     # ─────────────────────────────────────────────────────────────────────────
     if top_20_chunks:
+        _ts = time.perf_counter()
         try:
             scores = await _rerank_async(reranker, enriched_query, top_20_chunks)
         except Exception as exc:
@@ -768,6 +827,7 @@ async def run_phase2(
             # Degraded mode: use top-5 from ANN order (no reranking) rather than blocking
             log.warning("phase2_runner: using ANN order as fallback (no reranker scores)")
             scores = [1.0] * len(top_20_chunks)  # synthetic equal scores
+        _t["rerank_ms"] = round((time.perf_counter() - _ts) * 1000)
 
         # Sort by score descending, take top-5
         scored_chunks = sorted(zip(scores, top_20_chunks), key=lambda x: x[0], reverse=True)
@@ -816,14 +876,20 @@ async def run_phase2(
     # Steps 12–13 — Gemini 2.5 Pro generation via OpenRouter
     # ─────────────────────────────────────────────────────────────────────────
     client = openai.AsyncOpenAI(
-        base_url=CEREBRAS_URL,
+        base_url=OPENROUTER_URL,
         api_key=api_key,
+        default_headers={
+            "HTTP-Referer": "https://preventify.in",
+            "X-Title":      "Preventify Diabetes Educator",
+        },
     )
 
     last_error_type = "unknown"
     last_raw        = ""
+    _t.setdefault("rerank_ms", 0)   # skipped when no chunks
 
     # ── Retry loop (mirrors phase1_runner.py) ─────────────────────────────────
+    _ts_llm = time.perf_counter()
     for attempt in range(max_retries + 1):
         try:
             response = await asyncio.wait_for(
@@ -870,6 +936,12 @@ async def run_phase2(
                 return fb
 
             # ── Success ────────────────────────────────────────────────────────
+            _t["llm_ms"]   = round((time.perf_counter() - _ts_llm) * 1000)
+            _t["total_ms"] = round((time.perf_counter() - _t0) * 1000)
+            log.info(
+                "phase2_runner: timings %s",
+                " | ".join(f"{k}={v}" for k, v in _t.items()),
+            )
             log.debug(
                 "phase2_runner: success — %d chars, sources=%s, flags=%s (attempt %d)",
                 len(raw_text), [c.get("source") for c in top_5_chunks],
@@ -894,6 +966,7 @@ async def run_phase2(
                 "constraint_violations":  [],
                 "_fallback":              False,
                 "_fallback_reason":       "",
+                "timings":                _t,
             }
 
         except asyncio.TimeoutError:

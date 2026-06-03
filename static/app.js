@@ -24,10 +24,12 @@ const debugToggle    = document.getElementById('debugToggle');
 const chatModeBtn    = document.getElementById('chatModeBtn');
 const compareModeBtn = document.getElementById('compareModeBtn');
 
-const dbgQds      = document.getElementById('dbgQds');
-const dbgSources  = document.getElementById('dbgSources');
-const dbgRisk     = document.getElementById('dbgRisk');
-const dbgFallback = document.getElementById('dbgFallback');
+const dbgQds          = document.getElementById('dbgQds');
+const dbgSources      = document.getElementById('dbgSources');
+const dbgRisk         = document.getElementById('dbgRisk');
+const dbgFallback     = document.getElementById('dbgFallback');
+const dbgTimingsTotal = document.getElementById('dbgTimingsTotal');
+const dbgTimingsChart = document.getElementById('dbgTimingsChart');
 
 // ---------------------------------------------------------------------------
 // Mode state
@@ -57,6 +59,15 @@ function setMode(mode) {
 // Debug panel
 // ---------------------------------------------------------------------------
 
+function _syncDebugHeight() {
+  // Measure the panel's rendered height and push it into --debug-h so the
+  // chat area's bottom offset stays accurate when the panel opens/closes.
+  requestAnimationFrame(() => {
+    const h = document.getElementById('debugPanel').offsetHeight;
+    document.documentElement.style.setProperty('--debug-h', h + 'px');
+  });
+}
+
 function toggleDebug() {
   if (debugContent.style.display === 'none') {
     debugContent.style.display = 'grid';
@@ -65,10 +76,20 @@ function toggleDebug() {
     debugContent.style.display = 'none';
     debugToggle.textContent = '▼ Debug panel';
   }
+  _syncDebugHeight();
+}
+
+function _openDebugIfClosed() {
+  if (debugContent.style.display === 'none') {
+    debugContent.style.display = 'grid';
+    debugToggle.textContent = '▲ Debug panel';
+    _syncDebugHeight();
+  }
 }
 
 function updateDebug(meta) {
   if (!meta) return;
+  _openDebugIfClosed();
   const qds    = meta.qds_score != null ? meta.qds_score : '—';
   const intent = meta.intent || '—';
   dbgQds.textContent = `${qds} / ${intent}`;
@@ -92,6 +113,69 @@ function updateDebug(meta) {
   dbgFallback.className   = 'debug-value' + (fallbacks.length ? ' warn' : ' ok');
 
   if (meta.query_cache_hit) dbgSources.textContent += ' (cache hit)';
+
+  // Timing breakdown — keys must match phase2_runner.py _t dict exactly
+  const t = meta.timings || {};
+  const STEPS = [
+    { key: 'query_build_ms', label: 'Query build',   barClass: ''           },
+    { key: 'cache_check_ms', label: 'Cache check',   barClass: ''           },
+    { key: 'embed_ms',       label: 'Embed',          barClass: ''           },
+    { key: 'ann_search_ms',  label: 'ANN search',    barClass: ''           },
+    { key: 'rerank_ms',      label: 'Rerank',         barClass: 'bar-rerank' },
+    { key: 'llm_ms',         label: 'LLM generate',  barClass: 'bar-llm'    },
+  ];
+
+  const totalMs = t.total_ms || 0;
+  dbgTimingsChart.innerHTML = '';
+
+  if (totalMs <= 0) {
+    dbgTimingsTotal.textContent = '—';
+    return;
+  }
+
+  dbgTimingsTotal.textContent = `${totalMs} ms total`;
+
+  // Use sum of known steps as the bar scale so bars are proportional to each other.
+  // This avoids the "bars don't add up" problem when total_ms includes unmeasured overhead.
+  const stepSum = STEPS.reduce((acc, s) => acc + (t[s.key] || 0), 0);
+  const barBase = stepSum > 0 ? stepSum : totalMs;
+  const CACHE_SKIP_KEYS = new Set(['embed_ms', 'ann_search_ms']);
+
+  STEPS.forEach(({ key, label, barClass }) => {
+    const ms = t[key];
+    if (ms == null) return;   // key absent — step didn't run at all
+
+    const pct    = Math.round((ms / barBase) * 100);
+    const msText = ms === 0
+      ? (CACHE_SKIP_KEYS.has(key) && meta.query_cache_hit ? 'cache hit' : '<1 ms')
+      : `${ms} ms`;
+
+    const row = document.createElement('div');
+    row.className = 'timing-row';
+
+    const labelEl = document.createElement('span');
+    labelEl.className   = 'timing-label';
+    labelEl.textContent = label;
+
+    const barWrap = document.createElement('div');
+    barWrap.className = 'timing-bar-wrap';
+
+    const bar = document.createElement('div');
+    bar.className = 'timing-bar' + (barClass ? ' ' + barClass : '') + (ms === 0 ? ' bar-zero' : '');
+    bar.style.width = ms === 0 ? '0%' : Math.max(pct, 1) + '%';
+
+    const msEl = document.createElement('span');
+    msEl.className   = 'timing-ms' + (ms === 0 ? ' timing-skipped' : '');
+    msEl.textContent = msText;
+
+    barWrap.appendChild(bar);
+    row.appendChild(labelEl);
+    row.appendChild(barWrap);
+    row.appendChild(msEl);
+    dbgTimingsChart.appendChild(row);
+  });
+
+  _syncDebugHeight();
 }
 
 // ---------------------------------------------------------------------------
@@ -275,8 +359,25 @@ async function sendChat(text) {
 // Compare mode send
 // ---------------------------------------------------------------------------
 
+const _PROVIDER_LABELS = {
+  groq:       'GROQ',
+  cerebras:   'CEREBRAS',
+  openrouter: 'OPENROUTER',
+};
+
 function _providerLabel(provider) {
-  return provider.toUpperCase();
+  return _PROVIDER_LABELS[provider] || provider.toUpperCase();
+}
+
+function _subProviderLabel(provider, modelId) {
+  if (provider !== 'openrouter') return null;
+  const id = modelId.toLowerCase();
+  if (id.startsWith('google/'))     return 'Gemini';
+  if (id.startsWith('openai/'))     return 'GPT';
+  if (id.startsWith('anthropic/'))  return 'Claude';
+  if (id.startsWith('x-ai/'))       return 'Grok';
+  if (id.startsWith('deepseek/'))   return 'DeepSeek';
+  return null;
 }
 
 function _createCompareCard(provider, model) {
@@ -291,11 +392,23 @@ function _createCompareCard(provider, model) {
   badge.className   = 'provider-badge badge-' + provider;
   badge.textContent = _providerLabel(provider);
 
+  const sub = _subProviderLabel(provider, model);
+  if (sub) {
+    const subBadge = document.createElement('span');
+    subBadge.className   = 'provider-sub-label';
+    subBadge.textContent = sub;
+    header.appendChild(badge);
+    header.appendChild(subBadge);
+  } else {
+    header.appendChild(badge);
+  }
+
+  // Strip the org prefix (e.g. "google/") for display — keeps card compact
+  const displayModel = model.includes('/') ? model.split('/').slice(1).join('/') : model;
   const modelName = document.createElement('span');
   modelName.className   = 'card-model-name';
-  modelName.textContent = model;
+  modelName.textContent = displayModel;
 
-  header.appendChild(badge);
   header.appendChild(modelName);
 
   const spinner = document.createElement('div');

@@ -26,6 +26,23 @@ PROVIDERS: dict = {
     "cerebras": {"base_url": "https://api.cerebras.ai/v1",      "env_key": "CEREBRAS_API_KEY"},
 }
 
+# OpenRouter uses a fixed curated list instead of live /models discovery.
+# Only fast and mid-tier models — no high-reasoning/high-cost variants.
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODELS = [
+    "google/gemini-2.5-flash-lite",
+    "google/gemini-2.5-flash",
+    "openai/gpt-4o-mini",
+    "openai/gpt-4.1-mini",
+    "anthropic/claude-3-haiku",
+    "anthropic/claude-3.5-haiku",
+    "anthropic/claude-sonnet-4.6",
+    "x-ai/grok-4.3",
+    "deepseek/deepseek-chat-v3-0324",
+    "deepseek/deepseek-r1-distill-qwen-32b",
+    "deepseek/deepseek-r1-0528",
+]
+
 _SKIP_PATTERNS = ("whisper", "orpheus", "prompt-guard", "safeguard")
 _MIN_CONTEXT   = 1024
 
@@ -60,7 +77,8 @@ def _load_system_prompt() -> str:
 
 
 def _supports_reasoning(model_id: str) -> bool:
-    return "gpt-oss" in model_id.lower()
+    mid = model_id.lower()
+    return "gpt-oss" in mid or "deepseek-r1" in mid
 
 
 def _clean_output(text: str) -> str:
@@ -112,6 +130,25 @@ async def _fetch_models(provider: str, client: httpx.AsyncClient) -> list:
 
 
 # ---------------------------------------------------------------------------
+# OpenRouter model listing (static curated list, no live /models call)
+# ---------------------------------------------------------------------------
+
+async def _fetch_openrouter_models(client: httpx.AsyncClient) -> list:
+    api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if not api_key:
+        return []
+    return [
+        {
+            "id":         model_id,
+            "_provider":  "openrouter",
+            "_api_key":   api_key,
+            "_base_url":  OPENROUTER_BASE_URL,
+        }
+        for model_id in OPENROUTER_MODELS
+    ]
+
+
+# ---------------------------------------------------------------------------
 # Single model call
 # ---------------------------------------------------------------------------
 
@@ -138,13 +175,21 @@ async def _call_model(
     if _supports_reasoning(model_id):
         body["reasoning_effort"] = "medium"
 
+    headers = {
+        "Authorization":  f"Bearer {api_key}",
+        "Content-Type":   "application/json",
+    }
+    if provider == "openrouter":
+        headers["HTTP-Referer"] = "https://preventify.in"
+        headers["X-Title"]      = "Preventify Diabetes Educator"
+
     t0 = time.time()
     try:
         resp = await client.post(
             f"{base_url}/chat/completions",
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            headers=headers,
             json=body,
-            timeout=60,
+            timeout=90,
         )
         elapsed = round(time.time() - t0, 2)
         resp.raise_for_status()
@@ -184,6 +229,7 @@ async def run_compare_stream(message: str) -> AsyncGenerator[str, None]:
         # Fetch model lists from all providers in parallel
         model_lists = await asyncio.gather(
             *[_fetch_models(p, client) for p in PROVIDERS],
+            _fetch_openrouter_models(client),
             return_exceptions=True,
         )
         all_models: list = []

@@ -22,7 +22,7 @@
   --max-width:  720px;
   --header-h:   56px;
   --input-h:    68px;
-  --debug-h:    0px;   /* updated by JS */
+  --debug-h:    48px;  /* updated by JS — full debug panel height incl. toggle */
 }
 
 html, body {
@@ -56,7 +56,7 @@ html, body {
 .chat-area {
   position: fixed;
   top: var(--header-h);
-  bottom: calc(var(--input-h) + 48px); /* 48px = collapsed debug toggle */
+  bottom: calc(var(--input-h) + var(--debug-h));
   left: 0; right: 0;
   overflow-y: auto;
   padding: 16px;
@@ -166,6 +166,8 @@ html, body {
   gap: 6px 24px;
   max-width: var(--max-width);
   margin: 0 auto;
+  max-height: 240px;
+  overflow-y: auto;
 }
 
 .debug-row {
@@ -189,6 +191,67 @@ html, body {
 
 .debug-value.warn { color: #FFB74D; }
 .debug-value.ok   { color: #81C784; }
+
+.debug-divider {
+  grid-column: 1 / -1;
+  border-top: 1px solid #37474F;
+  margin: 2px 0;
+}
+
+.debug-row--full {
+  grid-column: 1 / -1;
+}
+
+/* Timings chart — spans full width of debug panel */
+.timings-chart {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 2px;
+}
+
+.timing-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 52px;
+  align-items: center;
+  gap: 8px;
+}
+
+.timing-label {
+  font-size: 11px;
+  color: #90A4AE;
+  white-space: nowrap;
+}
+
+.timing-bar-wrap {
+  height: 8px;
+  background: #37474F;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.timing-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: #4DB6AC;
+  transition: width 0.3s ease;
+}
+
+.timing-bar.bar-rerank { background: #FF8A65; }
+.timing-bar.bar-llm    { background: #64B5F6; }
+.timing-bar.bar-zero   { background: transparent; }
+
+.timing-ms {
+  font-size: 11px;
+  color: #B0BEC5;
+  text-align: right;
+}
+
+.timing-ms.timing-skipped {
+  color: #546E7A;
+  font-style: italic;
+}
 
 /* ── Input bar ───────────────────────────────────────────────────────────── */
 .input-bar {
@@ -282,7 +345,7 @@ html, body {
 .compare-area {
   position: fixed;
   top: var(--header-h);
-  bottom: calc(var(--input-h) + 48px);
+  bottom: calc(var(--input-h) + var(--debug-h));
   left: 0; right: 0;
   overflow-y: auto;
   padding: 16px;
@@ -374,8 +437,19 @@ html, body {
   flex-shrink: 0;
 }
 
-.badge-groq     { background: #e8f5e9; color: #2e7d32; }
-.badge-cerebras { background: #ede7f6; color: #5e35b1; }
+.badge-groq       { background: #e8f5e9; color: #2e7d32; }
+.badge-cerebras   { background: #ede7f6; color: #5e35b1; }
+.badge-openrouter { background: #fff3e0; color: #e65100; }
+
+.provider-sub-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  padding: 2px 5px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
 
 .card-model-name {
   font-size: 12px;

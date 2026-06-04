@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260604_143158",
+  "prompt": "My fasting blood sugar has been 145 mg/dL for the past week even though I haven't changed my diet. Why could this\n  ▎ be happening?\"",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Fasting blood sugar levels can vary due to several factors, including stress, sleep patterns, and physical activity. Even if you haven't changed your diet, other aspects of your daily routine might be influencing your blood sugar levels. It's also possible that your body is experiencing natural fluctuations. I recommend checking your blood sugar levels regularly and discussing the readings with your doctor to understand the trend and any necessary adjustments to your management plan. One thing you can start today: ensure you're getting 7-8 hours of sleep each night, as good sleep can help regulate blood sugar levels.",
+      "latency_s": 0.98,
+      "input_tokens": 6880,
+      "output_tokens": 114
+    },
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "A fasting blood sugar of 145 mg/dL is a bit higher than the usual target. This could be due to various reasons, and it's great that you're monitoring it closely. One thing to consider is that stress, lack of sleep, or even a slight change in physical activity can affect your blood sugar levels. I would recommend checking your sugar levels at different times of the day, like after meals, to see if there's a pattern. Also, have you noticed any changes in your body, like increased thirst or urination? Your doctor can help you understand what this means for your treatment plan. One thing you can try today is to drink a full glass of water as soon as you wake up and see if that helps.",
+      "latency_s": 1.79,
+      "input_tokens": 6982,
+      "output_tokens": 150
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "A fasting blood sugar of 145 mg/dL is above the usual target, which can happen even if your diet seems the same. Many factors like stress, illness, or less physical activity can raise sugar levels temporarily. One thing you can try today: add a 15–30 minute walk after your meals and see if it helps lower your sugar.",
+      "latency_s": 2.3,
+      "input_tokens": 6915,
+      "output_tokens": 72
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "A fasting blood sugar of 145 mg/dL is higher than the usual target. Many things can affect your blood sugar, even if your diet hasn't changed, such as stress, illness, or certain medications. It's best to discuss these readings with your doctor, as they can help understand why this is happening and if any changes are needed.",
+      "latency_s": 2.44,
+      "input_tokens": 7469,
+      "output_tokens": 74
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "I understand your concern about your fasting blood sugar being higher than usual. Here are a few things that could be affecting it: Your body's need for insulin can change from day to day due to factors like stress, activity levels, and hormonal changes. Even if your diet hasn't changed, these other factors can still impact your blood sugar readings. The recommended fasting target range is usually 70-130 mg/dL, so a reading of 145 mg/dL is above the ideal but not dangerously high. However, it's good that you're monitoring it closely. One thing you could try is checking your blood sugar at different times, like before and after meals. This can help you see patterns and identify what might be causing the higher fasting level. I would suggest speaking to your doctor about this. They can review your overall trends and determine if any adjustments to your treatment plan are needed. Your doctor is the best person to provide personalized guidance on managing your blood sugar. The key is not to get discouraged. Small fluctuations are normal. Keep tracking your readings and work closely with your doctor to find the right approach for you.",
+      "latency_s": 4.69,
+      "input_tokens": 8303,
+      "output_tokens": 249
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "A fasting reading of 145 mg/dL is above the usual target. Your doctor is the right person to check what may be causing this, so keep logging your readings with times and any notes for your next visit.",
+      "latency_s": 5.47,
+      "input_tokens": 6833,
+      "output_tokens": 559
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "Your fasting sugar of 145 mg/dL is above the target range (which is usually below 126 mg/dL). This could happen due to stress, less activity, or even minor infections — common triggers in Kerala's humid climate. Check if you've been walking less after meals or having extra chaaya with sugar. One thing to try: measure your sugar 2 hours after dinner tonight and share that reading with your doctor.",
+      "latency_s": 6.29,
+      "input_tokens": 6906,
+      "output_tokens": 85
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "It's understandable to be concerned about your fasting blood sugar level of 145 mg/dL, as it's higher than the usual target range. This could happen for several reasons, including stress, changes in physical activity, or even the body's natural hormone fluctuations in the morning. One step you can take today is to monitor your blood sugar levels more frequently and keep a record of any other symptoms or changes in your routine. It's also important to discuss these readings with your doctor, as they can provide personalized guidance based on your overall health.",
+      "latency_s": 6.41,
+      "input_tokens": 6915,
+      "output_tokens": 106
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Research shows that fasting blood sugar around 145 mg/dL is higher than the usual target range, which is typically between 100-125 mg/dL. One thing you can start today is tracking not just your fasting sugar, but also your post-meal readings to give your doctor a fuller picture of what's happening. Your doctor can help understand if this is due to medication adjustment, stress, or other factors affecting your blood sugar.",
+      "latency_s": 6.64,
+      "input_tokens": 8303,
+      "output_tokens": 97
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "A fasting reading of 145 for a whole week is worth paying attention to, and it's good that you noticed the pattern. Several things can raise fasting sugar even without diet changes — poor sleep, stress, an illness coming on, or reduced physical activity can all affect your morning reading. The one clear next step: share this week's readings with your doctor, as they are the right person to decide if any change to your treatment is needed.",
+      "latency_s": 7.53,
+      "input_tokens": 8304,
+      "output_tokens": 97
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "I understand your concern about your fasting blood sugar reading 145 mg/dL consistently. This can happen due to natural morning hormone changes (like cortisol) that raise blood sugar, or if your dinner had more carbohydrates than usual—even without diet changes, portion sizes of rice or hidden sugar in chaaya can add up. One thing to try: measure your dinner rice with one medium ladle instead of eyeballing it, and check if your fasting sugar improves over the next 3–4 days. If it stays high, please discuss this with your doctor—they might need to check for other factors like stress or medication timing.",
+      "latency_s": 64.16,
+      "input_tokens": 6907,
+      "output_tokens": 1169
+    }
+  ]
+}

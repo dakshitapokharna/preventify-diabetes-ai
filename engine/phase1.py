@@ -68,7 +68,7 @@ log = logging.getLogger(__name__)
 
 def load_ml_models(settings):
     """
-    Load the embedding model (bge-large-en-v1.5) and reranker (bge-reranker-large)
+    Load the embedding model (bge-large-en-v1.5) and reranker (bge-reranker-v2-m3)
     at server startup. Both are sync PyTorch models — heavy, load once only.
 
     Args:
@@ -124,7 +124,7 @@ async def handle_phase1(
         user_id:          Patient identifier — UUID in testing, WhatsApp number in production.
         db_conn:          asyncpg Connection. Must have register_vector() called on it.
         embedder:         SentenceTransformer instance (bge-large-en-v1.5). Load at startup.
-        reranker:         FlagReranker instance (bge-reranker-large). Load at startup.
+        reranker:         FlagReranker instance (bge-reranker-v2-m3). Load at startup.
         risk_tier:        Risk Engine output 0–4. Defaults to 0 (education only) until
                           the Risk Engine is built. When built, run it in parallel with
                           Phase 1 via asyncio.gather() and pass the result here.

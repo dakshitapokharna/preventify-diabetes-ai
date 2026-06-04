@@ -1,0 +1,118 @@
+{
+  "timestamp": "20260604_143855",
+  "prompt": "My doctor put me on Metformin 500mg last month but I feel very nauseous every time I take it. Should I stop taking\n  ▎ it or switch to something else?",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Nausea is a common side effect of metformin, and your doctor determines the right dose and timing for you. Please let your doctor know about the nausea—you can discuss taking it with food or switching to another option that fits your needs.",
+      "latency_s": 1.51,
+      "input_tokens": 6814,
+      "output_tokens": 332
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "Metformin can cause nausea, especially when taken on an empty stomach; taking it with a small meal or a glass of water can help reduce that feeling. If the nausea continues, talk to your doctor about adjusting the dose or trying an extended‑release version or another medication—your doctor will decide the best plan for you. One thing you can try today: take your dose with a small bite of rice or a cup of tea and note whether the nausea improves.",
+      "latency_s": 1.61,
+      "input_tokens": 6814,
+      "output_tokens": 461
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "Nausea is a common gastrointestinal side‑effect of metformin, and many people feel better when they take it with food. Please let your doctor know about the nausea—you can try taking the tablet after a meal, but any change in the medication should be decided by your doctor.",
+      "latency_s": 1.67,
+      "input_tokens": 6814,
+      "output_tokens": 380
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "I completely understand your concern about feeling nauseous with Metformin. Many people experience gastrointestinal side effects when starting this medication. The nausea usually subsides over time, but since you're experiencing it, don't try to adjust the dose or stop taking it without consulting your doctor. Instead, take small, frequent meals, and try having a snack or a glass of milk with your medication to see if that helps. Your doctor can also advise on the best course of action, which might include a different formulation of Metformin or an alternative medication. One thing you can start today: speak with your doctor about your side effects so they can guide you on the next steps.",
+      "latency_s": 2.15,
+      "input_tokens": 6726,
+      "output_tokens": 134
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Nausea is a very common side effect when starting Metformin, but please do not stop it on your own — your doctor is the right person to decide if a change is needed. One thing you can try is taking the tablet right after your main meal to",
+      "latency_s": 2.54,
+      "input_tokens": 6867,
+      "output_tokens": 1024
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "It's completely understandable to feel concerned when a new medicine causes discomfort. Nausea can be a side effect of Metformin, but it's important not to stop or change your medication without talking to your doctor first. Your doctor can help you manage these side effects or explore other options if needed.",
+      "latency_s": 2.66,
+      "input_tokens": 7104,
+      "output_tokens": 61
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Feeling nauseous with metformin is a common side effect, but you should not stop or change your medicine on your own. Please tell your doctor about the nausea—they can adjust your treatment or suggest ways to reduce this side effect. Meanwhile, taking metformin with food may help lessen nausea.",
+      "latency_s": 3.24,
+      "input_tokens": 6749,
+      "output_tokens": 59
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Feeling nauseous after taking Metformin is a common side effect, and it's important to discuss this with your doctor before making any changes to your medication. They can help determine the best course of action for you. In the meantime, try taking Metformin with food to see if that helps reduce the nausea.",
+      "latency_s": 3.25,
+      "input_tokens": 6749,
+      "output_tokens": 61
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Nausea is a common side effect when starting Metformin. Tell your doctor about it before making any change to your medicine.",
+      "latency_s": 3.72,
+      "input_tokens": 6665,
+      "output_tokens": 356
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "I understand the nausea from the Metformin is concerning. Here's some guidance on that: Metformin is usually the first-line medication recommended for managing diabetes, as research shows it is effective and generally well-tolerated. However, some nausea or stomach upset is a common side effect, especially when starting the medication. The good news is that these side effects often improve over time as your body adjusts. I would suggest a few things to help manage the nausea: Take the Metformin with food. This can help reduce stomach upset. Try taking it with your main meals. Start with a lower dose, like 250mg, and slowly increase to the full 500mg over a week or two. This gradual increase can minimize side effects. Drink plenty of water throughout the day. Staying hydrated can help. If the nausea persists for more than 2-3 weeks despite these adjustments, then speak to your doctor. They may be able to switch you to a different medication. But I would encourage you to give the Metformin a bit more time if possible, as the benefits usually outweigh the temporary side effects. The key is to work closely with your doctor to find the right medication and dosage that works best for you.",
+      "latency_s": 5.17,
+      "input_tokens": 7909,
+      "output_tokens": 298
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Never stop or change your medication without talking to your doctor first. Metformin can cause nausea, especially when you first start taking it. One thing you can try is taking the tablet with food — this often helps reduce stomach upset. Your doctor can also adjust the dose or timing to make it more comfortable for you.",
+      "latency_s": 5.3,
+      "input_tokens": 7909,
+      "output_tokens": 70
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "That nausea is very common with Metformin, especially in the first few weeks — you are not alone in feeling this way. Do not stop or switch on your own — please call your doctor and tell them exactly what you told me, because there are simple adjustments (like taking it with food or a different timing) that can make a big difference, and your doctor is the right person to decide if any change is needed.",
+      "latency_s": 7.03,
+      "input_tokens": 7910,
+      "output_tokens": 94
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "It's completely understandable to feel concerned about nausea from your medicine. Metformin can sometimes cause stomach discomfort, especially when starting. Here's what you can do: Take it with food – Always have your tablet after a meal (like after breakfast or dinner) to reduce nausea. Don’t stop suddenly – Your doctor needs to decide if any change is needed. Call your clinic and let them know about the nausea—they may adjust the dose or timing. One thing to try today: Have your tablet with a small portion of curd rice or kanji (mild foods help). If it doesn’t improve in a few days, check back with your doctor.",
+      "latency_s": 11.22,
+      "input_tokens": 6743,
+      "output_tokens": 146
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your concern about nausea with Metformin, here's what you should know: This is a common side effect — many patients experience stomach discomfort when starting Metformin, but it often improves within a few weeks. Take it with food — always have your tablet during a meal (like with rice/breakfast) to reduce nausea. Never take it on an empty stomach. Do not stop or change your dose — your doctor needs to know about this side effect. They may adjust your treatment safely if needed. Action step: Call your clinic today to report the nausea. They can guide you best.",
+      "latency_s": 15.93,
+      "input_tokens": 6745,
+      "output_tokens": 548
+    }
+  ]
+}

@@ -325,6 +325,7 @@ async def run_compare_stream(
         }
 
         success = 0
+        collected: list = []
         while pending:
             done, pending = await asyncio.wait(pending, return_when=asyncio.FIRST_COMPLETED)
             for task in done:
@@ -334,6 +335,19 @@ async def run_compare_stream(
                     result = None
                 if result is not None:
                     yield _sse("model_result", **result)
+                    collected.append(result)
                     success += 1
+
+        # ── Persist run to logs/ ───────────────────────────────────────────────
+        try:
+            from datetime import datetime
+            logs_dir = BASE_DIR / "logs"
+            logs_dir.mkdir(exist_ok=True)
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            log_path = logs_dir / f"model_compare_{ts}.json"
+            with open(log_path, "w", encoding="utf-8") as f:
+                json.dump({"timestamp": ts, "prompt": message, "results": collected}, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
 
         yield _sse("compare_done", total=success)

@@ -4,7 +4,7 @@ api/app.py — FastAPI application entry point
 Startup sequence (runs once, blocking):
   1. Create asyncpg connection pool → app.state.db_pool
   2. Load bge-large-en-v1.5 embedder → app.state.embedder   (~20s, D: drive)
-  3. Load bge-reranker-large → app.state.reranker             (~10s, D: drive)
+  3. Load bge-reranker-v2-m3 → app.state.reranker             (~10s, D: drive)
 
 Shutdown:
   Close the asyncpg pool.

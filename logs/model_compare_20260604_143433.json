@@ -1,0 +1,118 @@
+{
+  "timestamp": "20260604_143433",
+  "prompt": "I have diabetes and my family is planning an Onam sadhya next week. What should I eat and what should I avoid at\n  ▎ the feast?",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "For the Onam sadhya, fill half your plate with non‑starchy vegetables, take one medium ladle of red parboiled (or brown) rice, choose fish or lentil dishes, and keep sugary payasam and fried snacks to a small portion. Start today by planning to swap the usual white rice with a ladle of red parboiled rice and limit sweets to just one bite at the feast.",
+      "latency_s": 1.51,
+      "input_tokens": 6651,
+      "output_tokens": 394
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Onam sadhya is a special occasion in Kerala. To enjoy it while managing your diabetes, focus on balancing your carbohydrate intake. You can have the traditional rice, but try to limit the portion to about one medium ladle of cooked matta rice, which has a lower glycemic index. Also, be mindful of the sugars in chaaya, try to limit it to one or two cups. Choose dishes with vegetables, pulses, and lean protein like fish - mathi or ayala are good choices for heart health. Avoid or limit fried foods like samosas and kachoris. One thing you can start today: make a list of the dishes you'll have at the sadhya and check the carbohydrate content, so you can plan your portions ahead.",
+      "latency_s": 1.52,
+      "input_tokens": 6577,
+      "output_tokens": 156
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "At Onam sadhya, aim for a plate that is about 50 % vegetables and a small ladle of matta (red parboiled) rice or a few pieces of fish, and keep the sweet dishes to a very small portion. Try to limit the total carbohydrate to 2–3 ladles of rice, add a bowl of mixed vegetable stew or a small portion of lentils, and skip the heavy payasam or any sugar‑sweetened drinks. One thing you can do today: ask the host to serve a small ladle of matta rice and a bowl of vegetable stew, and skip the payasam.",
+      "latency_s": 2.03,
+      "input_tokens": 6651,
+      "output_tokens": 496
+    },
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "Onam sadhya is a special occasion, and it's great that you're thinking about your diet. For someone with diabetes, it's a good idea to focus on smaller portions of the traditional dishes, especially those with high carbohydrate content like rice, idiappam, and sweet payasam. Try to balance your plate with more vegetables like thorans and avials, and opt for smaller servings of the sweeter dishes. Also, be mindful of the amount of coconut and ghee used in some dishes, as they can be high in calories. One thing you can try today is to plan ahead with your family to include some diabetes-friendly options in the sadhya, like brown rice or more vegetable dishes.",
+      "latency_s": 2.02,
+      "input_tokens": 6672,
+      "output_tokens": 144
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "For the Onam sadhya, fill about half your plate with non‑starchy vegetables, lentil dishes and a serving of fish, keep the rice to one medium ladle (preferably brown or red matta rice) and limit ghee‑rich items and sugary desserts like payasam. One simple step: before the feast, decide to swap the regular white rice for the same‑size ladle of brown/matta rice and skip the extra spoonful of sweetened chaaya.",
+      "latency_s": 2.15,
+      "input_tokens": 6651,
+      "output_tokens": 483
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Onam sadhya is a special feast, and you can enjoy it smartly by choosing small portions. Have one medium ladle of matta rice (red rice) instead of white rice, and enjoy fish curry like mathi or ayala for heart health. Avoid too many sweets and fried snacks, and try to limit sugar in chaaya during the day. One thing to try today: practice eating smaller portions of rice and adding more vegetables to your plate.",
+      "latency_s": 2.66,
+      "input_tokens": 6586,
+      "output_tokens": 95
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Onam sadhya is a wonderful occasion, and it's completely understandable to want to enjoy it while managing your diabetes. For the sadhya, you can enjoy the many vegetable dishes (thoran, avial, olan) and sambar, as these are rich in fiber. When it comes to rice, try to take a smaller portion, perhaps one ladle. It's best to avoid or take very small amounts of the very sweet payasams and pradhamans, as they can cause your blood sugar to rise quickly.",
+      "latency_s": 2.93,
+      "input_tokens": 7081,
+      "output_tokens": 109
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "At Onam sadhya, fill half your plate with thoran and vegetables, take only one medium ladle of rice, and skip payasam or sweets. One thing you can do: choose fish or avial for protein and fiber to help steady your sugar.",
+      "latency_s": 5.08,
+      "input_tokens": 6553,
+      "output_tokens": 525
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Here are some tips for enjoying the Onam sadhya while managing your diabetes: For the Onam feast, focus on filling half your plate with non-starchy vegetables like avial, olan, and parippu. These have more fiber and less impact on your blood sugar. Go for smaller portions of the higher-carb items like rice, kappa (tapioca), and payasam. Instead of the regular white rice, try having a small portion of matta rice (red parboiled rice) - it has a lower glycemic index. And be mindful of the chaaya (sweet tea) - try to limit it to 1-2 cups maximum during the feast. The fish curries like mathi (sardines) and karimeen (pearl spot) are excellent choices. The healthy fats and protein will help balance the carbs. The key is to be selective and not overindulge. Enjoy the festival, but listen to your body. If you start feeling your sugar is getting too high, stop eating and check your levels. Your doctor can also advise you on the right portions for you. One simple tip to start: replace 1-2 cups of rice with extra vegetables on your plate. That small swap can make a big difference.",
+      "latency_s": 6.03,
+      "input_tokens": 7811,
+      "output_tokens": 278
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For Onam sadhya, enjoy smaller portions of rice (1 medium ladle) with more vegetable curries and fish dishes - these help balance blood sugar. Limit banana chips and sweet payasam to small tastes, and have buttermilk instead of sugary drinks. Your doctor can advise if any medicine timing adjustments are needed for the feast day.",
+      "latency_s": 6.6,
+      "input_tokens": 6608,
+      "output_tokens": 71
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Onam is a special time for celebration, and enjoying the sadhya doesn't mean you can't manage your diabetes smartly! Here's a warm approach: fill half your plate with vegetable dishes like thoran and pachadi, choose smaller portions of rice (one medium ladle), and enjoy your favorite dishes in moderation. Your goal is balance, not total restriction. One thing you can try today: Before the feast, take a 15-minute walk after lunch to help your body manage blood sugar more effectively. This small step can make a big difference during the Onam celebration.",
+      "latency_s": 7.39,
+      "input_tokens": 7811,
+      "output_tokens": 127
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Onam sadhya is a celebration — enjoy it! The smart move is to fill half your plate with the vegetable dishes (avial, thoran, olan) first, then take a smaller portion of rice — one medium ladle instead of the usual two or three refills. The biggest things to watch: go easy on the parippu with ghee and limit sweet items like payasam to just a small taste, and skip the second serving of rice — that single change makes the biggest difference to your sugar after the meal.",
+      "latency_s": 10.34,
+      "input_tokens": 7812,
+      "output_tokens": 116
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "It's great that your family is planning an Onam sadhya! To enjoy it while managing diabetes, here are some tips: Focus on Vegetables: Fill your plate with plenty of vegetable dishes. Aim for half your plate to be made up of various cooked and raw vegetables. Choose Whole Grains: If you have rice, opt for matta rice (red parboiled rice) instead of white rice, as it has a lower glycemic index. Limit the portion to one medium ladle. Protein Options: Include dishes with lentils or beans, like sambar or avial, as they are good sources of protein and fiber. Watch the Sweets: Traditional sweets can be high in sugar. It's best to limit or avoid them. If you want to try a small piece, be mindful of your overall sugar intake for the day. Limit Coconut and Oil: While coconut is common in Kerala cuisine, try to keep the portion moderate, as it can add extra calories and fat. One thing you can do: Before the feast, check your blood sugar to see how you're doing, and enjoy the meal mindfully!",
+      "latency_s": 11.13,
+      "input_tokens": 6586,
+      "output_tokens": 247
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For your Onam sadhya, focus on enjoying the feast wisely while managing your diabetes: Fill half your banana leaf with vegetable dishes like thoran (stir-fried veggies), avial (mixed vegetables in yogurt), and olan (pumpkin curry) — these are high in fiber and help control blood sugar spikes. Limit rice to one medium ladle (preferably matta rice which digests slower) and pair it with sambar/rasam for better glucose control. Avoid second servings of rice or fried items like banana chips/papadum. Skip or take just 1-2 spoons of payasam (sweet pudding), as it’s high in sugar. Check your blood sugar 2 hours after the meal to learn how your body responds. Happy Onam!",
+      "latency_s": 15.01,
+      "input_tokens": 6611,
+      "output_tokens": 657
+    }
+  ]
+}

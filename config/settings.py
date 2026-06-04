@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-large-en-v1.5"
 
     # Reranker
-    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L6-v2"
+    reranker_model: str = "BAAI/bge-reranker-v2-m3"
     reranker_top_k: int = 20
 
     # HuggingFace model cache — must point to D: drive (C: is almost full).

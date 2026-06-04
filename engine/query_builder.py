@@ -7,18 +7,21 @@ The enriched query is NEVER shown to the patient.
 Three input paths handled by build_phase2_query():
 
   Path 1 — New user (no stored profile)
-      → current_message used as-is
-      → "Can I eat rice?"
+      → current_message + location anchor (default Kerala)
+      → "Can I eat rice? [Kerala India]"
 
   Path 2 — Returning user, fresh question
-      → enrich current_message with profile context (diabetes_type, flags, primary med)
-      → "Can I eat rice? [Patient context: T2DM; ckd; on metformin]"
+      → enrich current_message with profile context (diabetes_type, flags, primary med, location)
+      → "Can I eat rice? [Patient context: T2DM; ckd; on metformin; Kerala India]"
 
   Path 3 — Mid-clarification turn (Phase 1 set mid_clarification_resolved=True)
       → merge original patient question from session_turns with current clarification answer
       → then enrich with profile context if available
       → "my feet go numb at night — clarification: burning and tingling in both feet
-         [Patient context: T2DM; on metformin]"
+         [Patient context: T2DM; on metformin; Kerala India]"
+
+  Location default: Kerala India — always present unless profile.location_hint is set to
+  something else (e.g. "Mumbai"). session_manager.py ensures location_hint is never empty.
 
 Option C decision (see PHASE1_CONTEXT_ENGINE_SPEC.md Item 3):
   Phase 1 detects mid-clarification turns from conversation context — no separate DB flag.
@@ -55,7 +58,7 @@ def build_phase2_query(
                                     Must NOT include the current message — only prior turns.
         profile:                    Stored user profile dict, or None for new users.
                                     Used fields: diabetes_type (str), condition_flags (list),
-                                    medications_mentioned (list).
+                                    medications_mentioned (list), location_hint (str).
         mid_clarification_resolved: True when Phase 1 detected the current message is the
                                     patient answering a prior bot clarifying question.
 
@@ -63,18 +66,22 @@ def build_phase2_query(
         Enriched query string, ready to embed. Never shown to patient.
 
     Examples:
-        New user:
+        New user (defaults to Kerala):
             build_phase2_query("Can I eat rice?", [], None, False)
-            → "Can I eat rice?"
+            → "Can I eat rice? [Kerala India]"
 
-        Returning user, fresh question:
+        Returning user in Kerala, fresh question:
             build_phase2_query("Can I eat rice?", [...], profile, False)
-            → "Can I eat rice? [Patient context: T2DM; ckd; on metformin]"
+            → "Can I eat rice? [Patient context: T2DM; ckd; on metformin; Kerala India]"
+
+        Returning user in Mumbai:
+            build_phase2_query("Can I eat rice?", [...], profile, False)
+            → "Can I eat rice? [Patient context: T2DM; ckd; on metformin; Mumbai India]"
 
         Mid-clarification:
             build_phase2_query("burning and tingling", [...], profile, True)
             → "my feet go numb at night — clarification: burning and tingling
-               [Patient context: T2DM; on metformin]"
+               [Patient context: T2DM; on metformin; Kerala India]"
     """
     # ── Step 1: resolve base query ─────────────────────────────────────────────
     if mid_clarification_resolved:
@@ -82,11 +89,17 @@ def build_phase2_query(
     else:
         base_query = current_message
 
-    # ── Step 2: enrich with profile context (returning users only) ─────────────
-    if profile:
-        return _enrich_with_profile(base_query, profile)
+    # ── Step 2: resolve location — default Kerala unless profile says otherwise ─
+    # session_manager.py always sets location_hint="Kerala" for new/unknown users,
+    # so profile location is always set by the time it reaches here.
+    location = (profile or {}).get("location_hint") or "Kerala"
+    location_tag = f"{location} India"
 
-    return base_query
+    # ── Step 3: enrich with profile context ────────────────────────────────────
+    if profile:
+        return _enrich_with_profile(base_query, profile, location_tag)
+
+    return f"{base_query} [{location_tag}]"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -133,27 +146,27 @@ def _build_mid_clarification_query(session_turns: list, current_answer: str) -> 
     return f"{original_question} — clarification: {current_answer}"
 
 
-def _enrich_with_profile(query: str, profile: dict) -> str:
+def _enrich_with_profile(query: str, profile: dict, location_tag: str) -> str:
     """
     Append a [Patient context: ...] suffix to the retrieval query.
 
     This helps bge-large-en-v1.5 surface more relevant chunks. For a patient with
-    CKD, "Can I eat rice? [Patient context: T2DM; ckd; on metformin]" surfaces KDIGO
-    protein/carbohydrate guidance that a bare "Can I eat rice?" query may not rank.
+    CKD, "Can I eat rice? [Patient context: T2DM; ckd; on metformin; Kerala India]"
+    surfaces KDIGO protein/carbohydrate guidance that a bare query may not rank.
 
     Rules:
-    - Only appends non-empty signals — never adds empty brackets
+    - location_tag is always included (defaults to "Kerala India")
     - condition_flags: all active flags joined with ", " (all are clinically relevant)
     - medications_mentioned: first item only — enough signal, avoids query bloat
-    - Returns query unchanged if profile carries no useful signals
 
     Args:
-        query:   Base query (either current_message or merged mid-clarification query)
-        profile: User profile dict with keys diabetes_type, condition_flags,
-                 medications_mentioned. Extra keys are ignored.
+        query:        Base query (either current_message or merged mid-clarification query)
+        profile:      User profile dict with keys diabetes_type, condition_flags,
+                      medications_mentioned. Extra keys are ignored.
+        location_tag: e.g. "Kerala India" or "Mumbai India" — always appended.
 
     Returns:
-        Enriched query string, or the original query if profile is empty.
+        Enriched query string with location always present.
     """
     context_parts = []
 
@@ -170,7 +183,5 @@ def _enrich_with_profile(query: str, profile: dict) -> str:
         # First medication is the most salient — typically the primary OAD or insulin
         context_parts.append(f"on {medications[0]}")
 
-    if context_parts:
-        return f"{query} [Patient context: {'; '.join(context_parts)}]"
-
-    return query
+    context_parts.append(location_tag)
+    return f"{query} [Patient context: {'; '.join(context_parts)}]"

@@ -15,7 +15,7 @@ from pathlib import Path
 from optimum.onnxruntime import ORTModelForSequenceClassification, ORTQuantizer
 from optimum.onnxruntime.configuration import AutoQuantizationConfig
 
-MODEL_ID = "cross-encoder/ms-marco-MiniLM-L6-v2"
+MODEL_ID = "BAAI/bge-reranker-v2-m3"
 ONNX_DIR = Path("D:/hf_cache/reranker_onnx")
 INT8_DIR = Path("D:/hf_cache/reranker_onnx_int8")
 

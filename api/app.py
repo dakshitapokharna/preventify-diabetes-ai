@@ -37,6 +37,7 @@ from fastapi.staticfiles import StaticFiles
 from config.settings import settings
 from engine.phase1 import load_ml_models
 from api.routes.chat import router as chat_router
+from api.routes.whatsapp import router as whatsapp_router
 
 # Configure logging
 logging.basicConfig(
@@ -104,6 +105,7 @@ if STATIC_DIR.exists():
 
 # ── Routes ─────────────────────────────────────────────────────────────────
 app.include_router(chat_router)
+app.include_router(whatsapp_router)
 
 
 @app.get("/")

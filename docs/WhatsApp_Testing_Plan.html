@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WhatsApp Testing Plan — Preventify</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      padding: 40px 60px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 22px;
+      color: #1a6b3c;
+      border-bottom: 3px solid #1a6b3c;
+      padding-bottom: 8px;
+      margin-bottom: 6px;
+    }
+    .meta {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 15px;
+      color: #1a6b3c;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      border-left: 4px solid #1a6b3c;
+      padding-left: 10px;
+    }
+    h3 {
+      font-size: 13px;
+      color: #333;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    p { margin-bottom: 10px; }
+    ul, ol { margin-left: 22px; margin-bottom: 10px; }
+    li { margin-bottom: 4px; }
+    code {
+      background: #f0f4f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #1a6b3c;
+    }
+    pre {
+      background: #f0f4f0;
+      border-left: 4px solid #1a6b3c;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      margin: 10px 0 14px 0;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px 0;
+      font-size: 12px;
+    }
+    th {
+      background: #1a6b3c;
+      color: white;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #dde8dd;
+    }
+    tr:nth-child(even) td { background: #f5faf5; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #f0a500;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin: 10px 0;
+    }
+    .callout {
+      background: #e8f5e9;
+      border-left: 4px solid #1a6b3c;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin: 10px 0;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 12px;
+      border-top: 1px solid #ccc;
+      font-size: 11px;
+      color: #888;
+    }
+    @media print {
+      body { padding: 20px 40px; }
+      h2 { page-break-after: avoid; }
+      table { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WhatsApp Testing Plan</h1>
+  <div class="meta">
+    Project: Preventify Diabetes Educator AI &nbsp;|&nbsp;
+    Date: 2026-06-06 &nbsp;|&nbsp;
+    Status: Local development complete — moving to WhatsApp testing
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. Current State</h2>
+  <ul>
+    <li>Full RAG pipeline built and working on localhost</li>
+    <li>Phase 1 (context engine) + Phase 2 (retrieval + LLM response) complete</li>
+    <li>FastAPI backend running locally</li>
+    <li>Web chat frontend working for base-model validation</li>
+    <li>WhatsApp is the next testing channel before clinical sign-off and production</li>
+  </ul>
+
+  <!-- SECTION 2 -->
+  <h2>2. Why WhatsApp Testing</h2>
+  <p>The product's north-star delivery channel is WhatsApp. Testing on it early validates:</p>
+  <ul>
+    <li>Message formatting in a real WhatsApp environment</li>
+    <li>Response latency end-to-end</li>
+    <li>Conversation flow outside a controlled web UI</li>
+    <li>Any edge cases in the adapter layer before production</li>
+  </ul>
+
+  <!-- SECTION 3 -->
+  <h2>3. Architecture — What Changes</h2>
+  <p>Nothing in the core pipeline changes. A thin <strong>WhatsApp adapter layer</strong> is added on top:</p>
+  <pre>
+User messages test WhatsApp number (personal phone)
+  → Meta Cloud API receives message
+  → POSTs to your /webhook endpoint on FastAPI
+  → Webhook extracts phone number + message text
+  → Feeds into existing Phase 1 → Phase 2 pipeline (unchanged)
+  → Response sent back via Meta's send-message API
+  → User receives reply on WhatsApp
+  </pre>
+
+  <!-- SECTION 4 -->
+  <h2>4. Tools Required (All Free)</h2>
+  <table>
+    <tr><th>Tool</th><th>Purpose</th><th>Cost</th></tr>
+    <tr><td>Meta for Developers account</td><td>API access, test number, webhook config</td><td>Free</td></tr>
+    <tr><td>ngrok</td><td>Exposes localhost so Meta can reach it</td><td>Free tier</td></tr>
+    <tr><td>Your personal WhatsApp number</td><td>To send and receive test messages</td><td>Already have</td></tr>
+    <tr><td>Facebook account</td><td>To log in to Meta for Developers</td><td>Already have</td></tr>
+  </table>
+
+  <div class="callout">
+    You do <strong>not</strong> need a company WhatsApp number, the WhatsApp Business App, or any paid BSP (Twilio, Gupshup, etc.) for testing.
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>5. Step-by-Step Setup</h2>
+
+  <h3>Step 1 — Expose Localhost with ngrok</h3>
+  <ol>
+    <li>Sign up at <code>ngrok.com</code> (free)</li>
+    <li>Download and install ngrok</li>
+    <li>Run in terminal: <code>ngrok http 8000</code> &nbsp;(replace 8000 with your FastAPI port)</li>
+    <li>Copy the HTTPS URL it gives you — e.g. <code>https://abc123.ngrok-free.app</code></li>
+    <li>Keep this terminal open while testing</li>
+  </ol>
+  <div class="note">
+    On the free tier, this URL changes every time you restart ngrok. You will need to update the Meta webhook URL each session.
+  </div>
+
+  <h3>Step 2 — Create App on Meta for Developers</h3>
+  <ol>
+    <li>Go to <code>developers.facebook.com</code></li>
+    <li>Log in with your personal Facebook account</li>
+    <li>Click <strong>My Apps → Create App</strong></li>
+    <li>Choose <strong>Other → Business</strong></li>
+    <li>Give it a name (e.g. <code>PreventifyBot</code>) → Create App</li>
+  </ol>
+
+  <h3>Step 3 — Add WhatsApp Product &amp; Get Test Number</h3>
+  <ol>
+    <li>On your app dashboard, find <strong>WhatsApp</strong> → click <strong>Set up</strong></li>
+    <li>Meta provides a <strong>test phone number automatically</strong> — no SIM or company number needed</li>
+    <li>Under <strong>To</strong>, add your personal WhatsApp number as a test recipient</li>
+    <li>Send a test message from the dashboard to verify delivery works</li>
+  </ol>
+
+  <h3>Step 4 — Configure Webhook</h3>
+  <ol>
+    <li>Go to <strong>WhatsApp → Configuration → Webhook</strong></li>
+    <li>Set <strong>Webhook URL</strong> to your ngrok URL + <code>/webhook</code><br>
+      Example: <code>https://abc123.ngrok-free.app/webhook</code></li>
+    <li>Set <strong>Verify Token</strong> to any string, e.g. <code>preventify123</code></li>
+    <li>Click <strong>Verify and Save</strong></li>
+    <li>Under Webhook Fields, subscribe to <strong>messages</strong></li>
+  </ol>
+
+  <h3>Step 5 — Add /webhook Route to FastAPI</h3>
+  <p>Add one new route to your existing FastAPI app. This route:</p>
+  <ul>
+    <li>Handles Meta's one-time verification GET request (handshake)</li>
+    <li>Handles incoming POST requests (actual messages from users)</li>
+    <li>Extracts message text and sender phone number</li>
+    <li>Passes message into your existing Phase 1 → Phase 2 pipeline</li>
+    <li>Calls Meta's API to send the response back to the user</li>
+  </ul>
+  <p>This is the <strong>only new code needed</strong> — everything else stays exactly as is.</p>
+
+  <h3>Step 6 — Test End-to-End</h3>
+  <ol>
+    <li>Make sure your FastAPI server is running locally</li>
+    <li>Make sure ngrok is running and the URL is set in Meta dashboard</li>
+    <li>From your personal WhatsApp, send a diabetes-related question to the test number</li>
+    <li>Watch it flow through your pipeline and reply</li>
+  </ol>
+
+  <!-- SECTION 6 -->
+  <h2>6. Limitations of This Testing Setup</h2>
+  <table>
+    <tr><th>Limitation</th><th>Impact</th></tr>
+    <tr><td>ngrok URL changes on restart</td><td>Manually update Meta webhook URL each session</td></tr>
+    <tr><td>Max 5 test recipient numbers</td><td>Fine for internal team testing</td></tr>
+    <tr><td>1,000 free conversations/month on Meta</td><td>More than enough for testing phase</td></tr>
+    <tr><td>No message templates needed</td><td>User-initiated conversations are free-form</td></tr>
+  </table>
+
+  <!-- SECTION 7 -->
+  <h2>7. After Testing — Path to Production</h2>
+  <ol>
+    <li>Deploy FastAPI to a cloud server (Railway, Render, or a VPS) for a permanent HTTPS URL</li>
+    <li>Replace ngrok URL with production URL in Meta dashboard</li>
+    <li>Apply for a real WhatsApp Business phone number via Meta</li>
+    <li>Submit message templates for approval if initiating conversations</li>
+    <li>This comes <strong>after clinical sign-off</strong> (B2 + B4 blockers resolved)</li>
+  </ol>
+
+  <div class="callout">
+    Per the project plan (CLAUDE.md), WhatsApp goes live only after B2 (nutrition placeholders signed off by Dr. Rakesh K R) and B4 (RMP loop design) are complete. This testing phase is developer validation only.
+  </div>
+
+  <div class="footer">
+    Preventify Diabetes Educator AI &nbsp;|&nbsp; Sugar Care Clinics &nbsp;|&nbsp; Generated: 2026-06-06
+  </div>
+
+</body>
+</html>

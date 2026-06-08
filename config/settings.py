@@ -55,6 +55,11 @@ class Settings(BaseSettings):
     extracted_dir: Path = BASE_DIR / "data" / "extracted"
     chunks_dir: Path = BASE_DIR / "data" / "chunks"
 
+    # WhatsApp Cloud API (Meta for Developers)
+    whatsapp_token: str = ""           # API token from Meta dashboard
+    whatsapp_verify_token: str = ""    # Any string you set in Meta webhook config
+    whatsapp_phone_number_id: str = "" # Phone Number ID from Meta dashboard
+
     # Risk scoring
     risk_score_timeout_ms: int = 500
 

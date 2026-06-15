@@ -71,6 +71,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import uuid
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -94,12 +95,64 @@ from schemas.phase2_schema import (
 
 log = logging.getLogger(__name__)
 
+
+def _apply_kerala_food_filter(text: str) -> str:
+    """
+    Replace non-Kerala food terms with Kerala equivalents in generated responses.
+    Catches models that ignore the system prompt FORBIDDEN list.
+    """
+    # North Indian fried snacks → Kerala fried snacks
+    text = re.sub(r'\b(samosas?|kachoris?)\b', 'banana chips (ethakka upperi)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bpav\s+bhaji\b', 'puttu with kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bchaat\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bbhel\s+puri\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvada\s+pav\b', 'puttu', text, flags=re.IGNORECASE)
+
+    # North Indian dairy / protein → Kerala protein
+    text = re.sub(r'\bpaneer\b', 'kadala (brown chickpeas)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\btofu\b', 'kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bcottage\s+cheese\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bsoy\s+(milk|chunks|protein)\b', 'kadala or cherupayar', text, flags=re.IGNORECASE)
+
+    # North Indian breads → Kerala staples
+    text = re.sub(r'\b(rotis?|chapatis?|parathas?|naans?)\b', 'rice or puttu', text, flags=re.IGNORECASE)
+
+    # Western grains / cereals → Kerala staples
+    text = re.sub(r'\b(pasta|noodles)\b', 'rice', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(oatmeal|oats|granola|muesli)\b', 'puttu', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bbrown\s+rice\b', 'matta rice', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bwhole[\s-]wheat\s+(bread|roti)\b', 'puttu or idli', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(multigrain|whole[\s-]grain)\s+(bread|roti|crackers?|foods?|cereals?|products?)\b', 'matta rice or puttu', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bwhole[\s-]grains?\b', 'matta rice, kadala, and cherupayar', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(bread|toast)\b(?!\s+fruit|\s+and\s+butter)', 'idli', text, flags=re.IGNORECASE)
+
+    # Western snacks / packaged → Kerala snacks
+    text = re.sub(r'\b(crackers?|rice\s+cakes?)\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(granola|energy|protein)\s+bars?\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bdigestive\s+biscuits?\b', 'roasted kadala', text, flags=re.IGNORECASE)
+
+    # Western dairy / drinks → Kerala equivalents
+    text = re.sub(r'\bcanned\s+soups?\b', 'packaged foods', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bgreek\s+yogurt\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\blow[‑-]fat\s+yogurt\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(almond|oat|soy)\s+milk\b', 'tender coconut water (ilaneer)', text, flags=re.IGNORECASE)
+
+    # Western "healthy" foods with no Kerala equivalent
+    text = re.sub(r'\bdark\s+chocolate\b', 'a small piece of ripe nendran banana', text, flags=re.IGNORECASE)
+
+    # Sick day western foods → Kerala sick-day food
+    text = re.sub(r'\bchicken\s+soup\b', 'kanji (rice gruel)', text, flags=re.IGNORECASE)
+
+    return text
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
 MODEL_ID         = "google/gemini-2.5-flash"
 OPENROUTER_URL   = "https://openrouter.ai/api/v1"
+# prompt version: kerala-v4 — expanded forbidden list + new trap categories covered
 REQUEST_TIMEOUT  = 60.0           # Phase 2 is slower — Gemini Flash via OpenRouter ~5–15s
 RETRY_SLEEP      = 2.0
 TOP_K_ANN       = 5               # reduced from 20 → CPU reranker was taking 73–204s; 5 candidates ~10s on CPU
@@ -914,6 +967,9 @@ async def run_phase2(
                 break  # non-recoverable
 
             raw_text = choice.message.content
+
+            # ── Kerala food filter — replace non-Kerala terms before sending ────
+            raw_text = _apply_kerala_food_filter(raw_text)
 
             last_raw = raw_text
 

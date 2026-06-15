@@ -327,6 +327,10 @@ def format_chunks_for_prompt(chunks: list) -> str:
             "<clinical_context>\n"
             "No clinical evidence was retrieved for this query. "
             "Answer only from general DSMES educator knowledge. If uncertain, say so.\n"
+            "IMPORTANT: Even without retrieved evidence, all food and diet examples MUST use Kerala "
+            "foods (rice in ladles, matta rice, kappa, fish like mathi/ayala, chaaya, puttu, idli, "
+            "appam, kadala, curd). Never suggest canned foods, pasta, brown rice, oats, or Western "
+            "staples unless the patient's location is not Kerala.\n"
             "</clinical_context>"
         )
 

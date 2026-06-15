@@ -74,6 +74,56 @@ def _supports_reasoning(model_id: str) -> bool:
     return "gpt-oss" in mid or "deepseek-r1" in mid
 
 
+def _apply_kerala_food_filter(text: str) -> str:
+    """
+    Replace non-Kerala food terms with Kerala equivalents.
+    Applied after generation — catches models that ignore the system prompt instruction.
+    """
+    # North Indian fried snacks → Kerala fried snacks
+    text = re.sub(r'\b(samosas?|kachoris?)\b', 'banana chips (ethakka upperi)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bpav\s+bhaji\b', 'puttu with kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bchaat\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bbhel\s+puri\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bvada\s+pav\b', 'puttu', text, flags=re.IGNORECASE)
+
+    # North Indian dairy / protein → Kerala protein
+    text = re.sub(r'\bpaneer\b', 'kadala (brown chickpeas)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\btofu\b', 'kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bcottage\s+cheese\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bsoy\s+(milk|chunks|protein)\b', 'kadala or cherupayar', text, flags=re.IGNORECASE)
+
+    # North Indian breads → Kerala staples
+    text = re.sub(r'\b(rotis?|chapatis?|parathas?|naans?)\b', 'rice or puttu', text, flags=re.IGNORECASE)
+
+    # Western grains / cereals → Kerala staples
+    text = re.sub(r'\b(pasta|noodles)\b', 'rice', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(oatmeal|oats|granola|muesli)\b', 'puttu', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bbrown\s+rice\b', 'matta rice', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bwhole[\s-]wheat\s+(bread|roti)\b', 'puttu or idli', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(multigrain|whole[\s-]grain)\s+(bread|roti|crackers?|foods?|cereals?|products?)\b', 'matta rice or puttu', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bwhole[\s-]grains?\b', 'matta rice, kadala, and cherupayar', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(bread|toast)\b(?!\s+fruit|\s+and\s+butter)', 'idli', text, flags=re.IGNORECASE)
+
+    # Western snacks / packaged → Kerala snacks
+    text = re.sub(r'\b(crackers?|rice\s+cakes?)\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(granola|energy|protein)\s+bars?\b', 'roasted kadala', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bdigestive\s+biscuits?\b', 'roasted kadala', text, flags=re.IGNORECASE)
+
+    # Western dairy / drinks → Kerala equivalents
+    text = re.sub(r'\bcanned\s+soups?\b', 'packaged foods', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bgreek\s+yogurt\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\blow[‑-]fat\s+yogurt\b', 'curd (thayiru)', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(almond|oat|soy)\s+milk\b', 'tender coconut water (ilaneer)', text, flags=re.IGNORECASE)
+
+    # Western "healthy" foods with no Kerala equivalent
+    text = re.sub(r'\bdark\s+chocolate\b', 'a small piece of ripe nendran banana', text, flags=re.IGNORECASE)
+
+    # Sick day western foods → Kerala sick-day food
+    text = re.sub(r'\bchicken\s+soup\b', 'kanji (rice gruel)', text, flags=re.IGNORECASE)
+
+    return text
+
+
 def _clean_output(text: str) -> str:
     """
     Clean model output for display. Handles:
@@ -86,6 +136,7 @@ def _clean_output(text: str) -> str:
     7. Trailing meta ("Let me know if you have any other questions!")
     8. Numbered list markers (1. 2. 3.)
     9. Emoji
+    10. Non-Kerala food terms (replaced with Kerala equivalents)
     """
     # ── BPE byte-level encoding artifacts ─────────────────────────────────────
     # GPT-2 byte-level BPE: U+0120 (Ġ) = space, U+010A (Ċ) = newline
@@ -139,6 +190,10 @@ def _clean_output(text: str) -> str:
     # ── Whitespace normalisation ──────────────────────────────────────────────
     text = re.sub(r'\n{2,}', ' ', text)
     text = re.sub(r'\s{2,}', ' ', text)
+
+    # ── Kerala food filter ────────────────────────────────────────────────────
+    text = _apply_kerala_food_filter(text)
+
     return text.strip()
 
 

@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260612_121913",
+  "prompt": "i eat outside food daily for lunch what should i order",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Eating out every day can still fit a diabetes‑friendly plan if you pick a modest portion of matta rice (about one ladle), fill half your plate with cooked vegetables such as cheera or pavakka, and add a protein source like fish (mathi or ayala) or a lentil curry while keeping the oil light and avoiding fried snacks. One simple step to try today: order a meal with one ladle of matta rice, a fish‑curry or dal side, plenty of veg, and have your tea with no added sugar (or just a tiny pinch of sweetener) instead of the usual sweetened chaaya.",
+      "latency_s": 0.84,
+      "input_tokens": 6998,
+      "output_tokens": 461
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "When you eat out, choose a plate with a medium ladle of matta rice (or a small serving of kappa) paired with fish curry like mathi or a kadala (chickpea) curry, plenty of vegetables such as cheera or pavakka, and avoid dishes cooked in vanaspati or deep‑fried snacks. One thing you can start today: ask the restaurant for half the usual rice portion, add extra veg and fish, and replace any sweetened chaaya with black tea or tea with a tiny sweetener.",
+      "latency_s": 2.03,
+      "input_tokens": 6998,
+      "output_tokens": 418
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "For a healthy lunch outside, choose a plate that has one ladle of cooked rice or a small portion of kappa with a fish curry (mathi or ayala), a ladle of a vegetable stew (cheera or muringakka), and a small serving of kadala or cherupayar curry, and ask for it cooked with minimal oil, not fried. Also, replace your sweet chaaya with black tea or tea with a small sweetener, and keep the rice portion to one ladle; try this combination for your next lunch.",
+      "latency_s": 2.03,
+      "input_tokens": 6998,
+      "output_tokens": 757
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Eating outside daily can be tricky, but you can still make healthy choices! Try to pick meals that have plenty of vegetables and pulses like kadala or cherupayar, and ask for less oil if possible. Also, remember that sugary drinks and artificial sweeteners are best avoided, so opt for plain water or black tea instead of chaaya with sugar.",
+      "latency_s": 2.12,
+      "input_tokens": 7348,
+      "output_tokens": 70
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Eating outside food daily can be tricky for sugar control. Choose meals with more vegetables like cheera or pavakka, a small portion of matta rice (1–2 ladles), and fish like mathi or ayala for heart health. One thing you can try today: ask for less oil and avoid fried snacks like ethakka upperi when eating out.",
+      "latency_s": 2.3,
+      "input_tokens": 6933,
+      "output_tokens": 74
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Eating outside food daily can be tricky, but there are healthier options you can choose. Look for meals that include plenty of vegetables and lean proteins. For lunch, you might consider ordering a fish curry with a medium ladle of matta rice, which has a lower glycemic index than white rice. You can also add a side of steamed vegetables or a small serving of kadala (brown chickpeas) for extra fiber. One thing you can start today: try to include more vegetables in your meals and limit fried snacks.",
+      "latency_s": 2.32,
+      "input_tokens": 6933,
+      "output_tokens": 108
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For daily outside meals in Kerala, choose wisely: Opt for a balanced meal with 1 medium ladle of rice (preferably matta rice), plenty of fish curry (mathi/ayala), and veg sides like pavakka or cheera. Avoid fried items like banana chips or heavy coconut-based gravies. One simple change: Next time, ask for an extra portion of vegetable thoran instead of papadum or upperi.",
+      "latency_s": 5.8,
+      "input_tokens": 6987,
+      "output_tokens": 113
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "As your diabetes educator, I understand you're eating lunch outside daily. Let me help you make smarter choices. When ordering lunch, focus on having vegetables cover half your plate. Choose fish curry with a small ladle of matta rice, or a vegetable curry with one medium ladle of white rice. Avoid fried items like banana chips or murukku. One thing you can start today: ask for extra vegetable side dishes with your meal to increase fiber and reduce overall carbohydrate intake.",
+      "latency_s": 5.91,
+      "input_tokens": 8019,
+      "output_tokens": 109
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Understood. As your diabetes educator, here are some tips for healthier outside food options in Kerala: Instead of ordering fried snacks like banana chips or murukku, try to choose:\nA small portion of roasted kadala (chickpeas) or a piece of raw banana (kaya) as a snack. For your main meal, focus on:\n1-2 medium ladles of cooked matta rice (red parboiled rice) - this has a lower GI than white rice.\nCurries made with fish like mathi (sardines) or ayala (mackerel) - they are excellent for heart health.\nLots of cooked vegetables like cheera (spinach), pavakka (bitter gourd), or vendakka (okra).\nA small serving of a Kerala pulse like kadala (chickpeas) or vanpayar (cowpea) for protein. And be mindful of your chaaya (tea with milk and sugar) intake - try to limit it to 2-3 cups per day, or switch to black tea without sugar. The key is to build a balanced plate with the right portions of carbs, protein, and healthy fats. Your doctor can provide more personalized guidance, but I hope these Kerala-friendly tips are helpful for your outside meals.",
+      "latency_s": 6.06,
+      "input_tokens": 8019,
+      "output_tokens": 297
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Order appam with egg curry or vegetable stew, or one to two ladles of rice with fish curry and plenty of vegetables like cheera or muringakka. One thing you can start today: ask for extra vegetables and less rice when ordering.",
+      "latency_s": 6.53,
+      "input_tokens": 6928,
+      "output_tokens": 512
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "For lunch outside, look for rice-based meals like a small thali with sambar, a vegetable curry, and fish — mathi or ayala are great choices that are also good for your heart. Try to keep the rice to 1–2 medium ladles, fill the rest of your plate with the curries and vegetables, and avoid sweet drinks with your meal — plain water or black chaya is the better choice.",
+      "latency_s": 6.77,
+      "input_tokens": 8020,
+      "output_tokens": 94
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For outside lunches in Kerala, choose meals with plenty of vegetables (like thoran or avial) and fish curry (mathi/ayala) instead of fried items. Opt for one medium ladle of rice (matta rice if available) and skip sugary drinks—have buttermilk or plain water instead. Start today: Pick a lunch with fish curry + two veg dishes next time, and measure rice by the ladle.",
+      "latency_s": 36.74,
+      "input_tokens": 6989,
+      "output_tokens": 818
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260612_121954",
+  "prompt": "i travel for work to other states how do i manage my diet",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "When you travel, aim to keep meals close to what you eat at home—use one medium ladle of matta rice, load the plate with vegetables like cheera or bitter‑gourd, add a serving of fish such as mathi or ayala, and limit chaaya sugar to about one teaspoon per cup; also see your doctor a month before the trip so you can review your overall plan. One easy step you can start today: pack a small snack of roasted kadala and a piece of raw banana to eat between meals, and check your blood sugar at least twice each travel day.",
+      "latency_s": 1.11,
+      "input_tokens": 7270,
+      "output_tokens": 539
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Traveling for work can make managing your diet a bit tricky, but with some planning, you can do it well. When you are in other states, you might encounter new foods, so it's a good idea to check your blood sugar more often to see how different foods affect you [1, 5]. Try to choose meals that have plenty of vegetables, pulses, and lean protein like fish (mathi or ayala are great choices for heart health). It's also wise to avoid street foods like fried snacks and sugary drinks, as these can cause your blood sugar to rise quickly [2, 3].",
+      "latency_s": 2.31,
+      "input_tokens": 7569,
+      "output_tokens": 126
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "When traveling, look for rice-based meals and vegetables you recognize, and avoid sugary drinks like sweet hotel tea to keep your sugar steady. Carry roasted kadala or a small piece of raw banana with you as a safe snack in case you cannot find a healthy meal on time.",
+      "latency_s": 2.9,
+      "input_tokens": 7291,
+      "output_tokens": 1011
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Traveling for work can change your routine, so plan ahead by carrying your usual diabetes medicines and snacks like roasted kadala or a small piece of raw banana. Try to eat familiar Kerala foods in moderate portions—like one ladle of matta rice with fish curry and vegetables—and avoid too much sugar in chaaya by switching to black tea or tea with a sweetener. Also, check your sugar more often while traveling to stay safe.",
+      "latency_s": 3.58,
+      "input_tokens": 7205,
+      "output_tokens": 89
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Traveling for work can feel challenging when you have diabetes, but with some planning, you can manage your diet effectively. One key strategy is to carry small, Kerala-friendly snacks like roasted kadala or a small piece of raw banana. This helps you maintain steady blood sugar levels between meals. When you're traveling, try to eat regular meals and check your sugar more frequently than usual.",
+      "latency_s": 4.97,
+      "input_tokens": 8516,
+      "output_tokens": 85
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Traveling for work can be challenging for managing your diet, but with some planning, you can do it! Pack Healthy Snacks: Bring along snacks like roasted kadala or a small piece of kaya (raw banana) to avoid unhealthy options while on the go. Choose Wisely: When eating out, opt for meals that include plenty of vegetables and lean protein, like fish or pulses. Stay Hydrated: Drink plenty of water, and if you enjoy chaaya, try to limit the sugar. You can switch to black tea or use a sweetener instead. Monitor Your Sugar: Check your blood sugar more frequently while traveling to understand how different foods affect you. One thing you can start today: prepare some healthy snacks for your next trip, like roasted kadala, to keep your energy up without spiking your sugar.",
+      "latency_s": 5.58,
+      "input_tokens": 7205,
+      "output_tokens": 183
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "As a person with diabetes who travels for work, here are some tips to help manage your diet: When traveling to other states in India, it's important to be mindful of the local cuisine and portion sizes. In Kerala, focus on having: 1-2 medium ladles of cooked rice or matta rice (red parboiled rice) per meal\nCurries made with fish like mathi (sardine) or ayala (mackerel) Vegetable dishes like cheera (spinach), pavakka (bitter gourd), or muringakka (drumstick)\nA small piece of ripe nendran banana or a few roasted kadala (chickpeas) as snacks Be careful with chaaya (sweet tea with milk and sugar) - try to limit it to 2-3 cups per day, or switch to black tea or tea with a small amount of sweetener. When eating out, ask the restaurant to go easy on oil and sugar. Avoid fried snacks like banana chips or murukku. Stick to grilled, steamed or curried preparations. If your schedule is irregular during travel, check your blood sugar more often and carry healthy snacks like raw banana or a small cup of curd. This can help prevent blood sugar from going too high or low. The most important thing is to try to maintain your usual healthy eating patterns as much as possible, even when the food environment changes. Your doctor can provide more specific guidance on managing your diabetes during travel.",
+      "latency_s": 6.06,
+      "input_tokens": 8516,
+      "output_tokens": 335
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "When travelling to other states, the biggest challenge is that the food will be different from what you eat at home — stick to simple, familiar choices like plain rice with dal or a vegetable curry, and avoid heavily fried or sweet snacks. One practical tip: carry a small pack of roasted kadala or a raw banana (kaya) from home so you always have a safe snack if a meal is delayed — missed or late meals can cause your sugar to drop, especially if you are on diabetes tablets.",
+      "latency_s": 7.15,
+      "input_tokens": 8517,
+      "output_tokens": 110
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "When traveling for work, focus on keeping your meals balanced with Kerala foods you know - like having one medium ladle of rice with fish curry and vegetables. Carry roasted kadala or raw banana pieces as snacks to avoid unhealthy options on the go. Check your sugar levels more frequently since activity and meal timings may change during travel. (Key evidence from RSSDI 2022 travel guidelines on meal planning and frequent monitoring during travel)",
+      "latency_s": 7.41,
+      "input_tokens": 7287,
+      "output_tokens": 87
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "When traveling for work, check your blood sugar more often because of changes in eating times and activity levels. Keep your usual portions like one or two ladles of rice and limit sugar in chaaya to stay steady. One thing you can start today: pack roasted kadala as a simple snack for trips.",
+      "latency_s": 10.41,
+      "input_tokens": 7195,
+      "output_tokens": 797
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Traveling for work can make diabetes management challenging, but these steps can help: Pack familiar Kerala snacks like roasted kadala or small pieces of raw banana to avoid relying on fried street foods when hungry between meals. This keeps portions controlled and avoids unfamiliar high-carb options. Stay hydrated with clean water—carry a bottle and refill safely. Check your blood sugar more often, as travel stress and changed routines can affect levels. Wear comfortable shoes to protect your feet during extra walking, and choose simple meals like rice with fish curry or vegetables when eating out—stick to one medium ladle of rice per meal. One thing to try today: Pack roasted kadala in a small container before your next trip—it’s filling and won’t spike your sugar. Safe travels!",
+      "latency_s": 27.09,
+      "input_tokens": 7288,
+      "output_tokens": 620
+    }
+  ]
+}

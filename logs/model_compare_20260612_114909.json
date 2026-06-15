@@ -1,0 +1,54 @@
+{
+  "timestamp": "20260612_114909",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Your blood sugar of 200 mg/dL is higher than the usual target range of 70‑130 mg/dL before meals, so it’s helpful to look at foods that raise glucose quickly. Try to limit sugary drinks, chaaya with added sugar, sweets, large portions of white rice or kappa eaten alone, and packaged salty snacks; instead, have one ladle of matta rice with fish curry and cut the chaaya sugar to 1‑2 teaspoons (or use a sweetener) today.",
+      "latency_s": 0.89,
+      "input_tokens": 6735,
+      "output_tokens": 701
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "A reading of 200 mg/dL is higher than the usual target of about 140 mg/dL for most adults with diabetes. To help bring it down, avoid sugary drinks, sweet tea with sugar, high‑GI foods like white rice and fried snacks, and replace them with matta rice, fresh vegetables, and fish curry.",
+      "latency_s": 1.63,
+      "input_tokens": 6735,
+      "output_tokens": 582
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "I understand your concern about managing your blood sugar levels. With a blood sugar reading of 200, it's essential to focus on making dietary changes that can help regulate your sugar intake and improve insulin sensitivity. To help manage your blood sugar levels, I recommend avoiding or limiting foods that are high in sugar, refined carbohydrates, and unhealthy fats. Here are some specific Kerala foods you can limit or avoid: Chaaya (sweet tea): Try reducing the number of cups you drink per day or switch to a sweetener. Sugar-sweetened beverages: Limit or avoid drinks like lassi, camera, or other sweetened beverages. Indian fast foods: Try to limit or avoid street foods like kachori and samosa. Canned or packaged foods: These often contain high amounts of sodium and preservatives. Instead, focus on whole, nutrient-dense foods like: Vegetables and fruits: Include a variety of colorful vegetables and fruits in your diet. Whole grains: Choose brown rice, matta rice, or other whole grains over refined carbohydrates. Lean protein sources**: Include lean protein sources like fish, chicken, or legumes in your meals. One thing you can start today: Replace one cup of chaaya with a cup of black tea or a sweetener, and see how you feel after a week. This small change can help you reduce your sugar intake and make a positive impact on your blood sugar levels.",
+      "latency_s": 1.9,
+      "input_tokens": 6681,
+      "output_tokens": 306
+    },
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "Having a blood sugar level of 200 is a concern. To manage it, try to avoid foods that are high in sugar and salt, like packaged snacks, canned foods, and sweetened beverages. Also, limit your intake of white rice and refined carbohydrates. Instead, focus on whole, unprocessed foods like vegetables, fruits, and whole grains. For example, you can try having a medium ladle of matta rice with vegetable curry and a piece of fish, like mathi or ayala, which are good for heart health. One thing you can start today: replace two cups of sweet chaaya with black tea or tea with a sweetener, and see how you feel after a week.",
+      "latency_s": 1.91,
+      "input_tokens": 6778,
+      "output_tokens": 142
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "With a reading around 200 mg/dL, it helps to limit foods that raise sugar quickly—skip sweetened tea (chaaya) with full sugar, sugary drinks, sweets, fried snacks like kachori or samosa, and large portions of plain white rice. One easy change today: replace two cups of regular chaaya with black tea or tea using a low‑calorie sweetener and keep rice portions to one medium ladle per meal.",
+      "latency_s": 2.65,
+      "input_tokens": 6735,
+      "output_tokens": 605
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "A reading of 200 is above the usual target, so it is good to be careful with your food right now. You should strictly avoid adding sugar to your tea or coffee and skip sweets like payasam and snacks made of maida like puffs or buns.",
+      "latency_s": 4.22,
+      "input_tokens": 6749,
+      "output_tokens": 1012
+    }
+  ]
+}

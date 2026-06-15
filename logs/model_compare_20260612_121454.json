@@ -1,0 +1,118 @@
+{
+  "timestamp": "20260612_121454",
+  "prompt": "my doctor said eat more protein what foods have protein",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "In Kerala, we have many good sources of protein that you can include in your diet. For non-vegetarians, consider egg white, fish like mathi and ayala, and lean chicken. For vegetarians, you can have soya, pulses like cherupayar and kadala, whole grains, milk, and low-fat dairy products. One thing you can start today: try adding a small serving of roasted kadala or a bowl of cherupayar curry to your meal, and see how you feel.",
+      "latency_s": 0.72,
+      "input_tokens": 6776,
+      "output_tokens": 106
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Protein helps build and repair body tissue, and Kerala sources include fish such as mathi or ayala, eggs, and pulses like kadala or cherupayar—try adding one medium ladle of kadala curry or a few boiled eggs to your meals today.",
+      "latency_s": 0.94,
+      "input_tokens": 6847,
+      "output_tokens": 483
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "Add a small piece of fish such as mathi or a ladle of cooked kadala curry to your meals to get more protein.",
+      "latency_s": 1.95,
+      "input_tokens": 6847,
+      "output_tokens": 501
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "Good protein sources in Kerala are fish such as mathi or ayala, eggs, milk or curd, and pulses like kadala, cherupayar or vanpayar, so try adding a small serving of fish curry or a cup of curd to your meals each day.",
+      "latency_s": 2.18,
+      "input_tokens": 6847,
+      "output_tokens": 442
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Fish like mathi and ayala, egg whites, and pulses like kadala and cherupayar are excellent sources of protein. One simple change you can try is adding a small cup of cherupayar or kadala curry to your daily meal.",
+      "latency_s": 2.3,
+      "input_tokens": 6850,
+      "output_tokens": 901
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "That's a great question! Getting enough protein is important for managing diabetes. In Kerala, good protein sources include fish like mathi or ayala, chicken, eggs, and pulses like kadala, cherupayar, or vanpayar.",
+      "latency_s": 2.35,
+      "input_tokens": 7120,
+      "output_tokens": 50
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For protein, you can eat fish like mathi (sardine) and ayala (mackerel), eggs, and pulses like kadala (brown chickpeas) and cherupayar (green moong). One thing you can try today: add a small ladle of kadala curry with your puttu or have a small piece of mathi with kappa.",
+      "latency_s": 3.39,
+      "input_tokens": 6782,
+      "output_tokens": 77
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Fish like mathi or ayala and pulses such as kadala or cherupayar give good protein. Try adding a small piece of fish to one meal today.",
+      "latency_s": 4.91,
+      "input_tokens": 6755,
+      "output_tokens": 365
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Okay, let me share some information on good protein sources for you: According to the guidelines, the recommended protein intake for adults with diabetes is about 1 gram per kilogram of body weight per day. Good sources of protein include: Non-vegetarian options: egg white, fish like mathi (sardine) and ayala (mackerel), and lean chicken. Vegetarian options: soya, pulses like kadala (brown chickpeas), cherupayar (green moong), vanpayar (red cowpea), milk, and low-fat dairy products. The guidelines suggest trying to get 10-15% of your total daily calories from protein. This helps maintain muscle mass and overall health. Some easy ways to add more protein to your meals could be: Have a small piece of grilled mathi or ayala fish with your rice and kappa.\nAdd a spoonful of kadala or vanpayar to your vegetable curries.\nDrink a small cup of low-fat curd (thayiru/thairu) as a snack. The key is to focus on lean, unprocessed protein sources.",
+      "latency_s": 5.43,
+      "input_tokens": 7840,
+      "output_tokens": 273
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "For protein in Kerala, you have excellent local options! Cherupayar (green moong), kadala (brown chickpeas), and fish like mathi (sardines) and ayala (mackerel) are great protein sources. One medium piece of fish or a small cup of cherupayar can give you good protein. Try adding these to your meals — they're tasty and healthy.",
+      "latency_s": 6.27,
+      "input_tokens": 7840,
+      "output_tokens": 88
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For good protein in Kerala meals, have fish like mathi (sardine) or ayala (mackerel), eggs, and pulses like kadala (brown chickpeas). One simple change: add a piece of fish or a boiled egg to your lunch.",
+      "latency_s": 6.32,
+      "input_tokens": 6828,
+      "output_tokens": 91
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "To help your family member managing diabetes, good protein sources include fish like mathi (sardine) and ayala (mackerel), as well as pulses like kadala (chickpeas) and cherupayar (green moong). Including these in meals can support their protein intake. One thing they can start today: try having a serving of fish with their meal or a small bowl of kadala curry.",
+      "latency_s": 8.65,
+      "input_tokens": 6782,
+      "output_tokens": 85
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Great question — here are the best protein foods for Kerala meals: Fish like mathi (sardine) and ayala (mackerel) are excellent choices — good for both protein and heart health. Kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) are great vegetarian protein sources, and eggs are also very good. One easy start today: add a small bowl of kadala curry or a piece of mathi to your lunch or dinner.",
+      "latency_s": 11.17,
+      "input_tokens": 7841,
+      "output_tokens": 124
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your doctor's advice to include more protein, here are good Kerala-friendly choices: Fish: Mathi (sardines) or ayala (mackerel) — excellent for heart health too. Pulses: Cherupayar (green moong) or kadala (brown chickpeas) in curries or roasted. Eggs/Dairy: Egg whites or a small cup of curd (thayiru). One simple step: Try adding a piece of fish or a handful of roasted kadala to one meal daily. Always pair with vegetables like cheera or pavakka for balance.",
+      "latency_s": 18.71,
+      "input_tokens": 6830,
+      "output_tokens": 539
+    }
+  ]
+}

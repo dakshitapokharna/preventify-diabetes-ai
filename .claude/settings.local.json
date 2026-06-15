@@ -225,7 +225,9 @@
       "Bash(python3 *)",
       "Bash(start *)",
       "Bash(dir D:\\\\dakshita\\\\exlaty\\\\tests\\\\ *)",
-      "Bash(dir D:\\\\dakshita\\\\exlaty\\\\logs\\\\ *)"
+      "Bash(dir D:\\\\dakshita\\\\exlaty\\\\logs\\\\ *)",
+      "Bash(uvicorn api.app:app *)",
+      "Bash(wait)"
     ]
   }
 }

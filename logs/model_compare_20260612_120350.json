@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260612_120350",
+  "prompt": "what is the best breakfast for a diabetic\ni skip breakfast, is that okay, what should i eat in the morning",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "Skipping breakfast is not a good idea, especially for people with diabetes. Eating a healthy breakfast helps control blood sugar levels throughout the day. For a diabetic, a good breakfast option could be puttu with kadala curry or idli with sambar. These foods are rich in fiber and protein, which can help regulate blood sugar. One thing you can start today: try having a small puttu with kadala curry or a couple of idlis with sambar in the morning, and see how it makes you feel.",
+      "latency_s": 1.31,
+      "input_tokens": 7900,
+      "output_tokens": 105
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Skipping breakfast can make blood‑sugar spikes later in the day, so a balanced morning meal with a small portion of low‑GI carbs, protein and vegetables is helpful—try one medium ladle of matta rice with sambar (or vegetable stew) and a piece of grilled mathi or a boiled egg. One concrete step you can start today: have that ladle of rice with the fish or egg, and sip a cup of black tea (or chaaya with only 1 teaspoon of sugar) instead of the usual amount, and notice how you feel over the next week.",
+      "latency_s": 1.39,
+      "input_tokens": 7877,
+      "output_tokens": 562
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Skipping breakfast can affect your blood sugar levels and energy throughout the day. For diabetics, a balanced breakfast is crucial. In Kerala, a typical healthy breakfast for diabetics could be puttu with kadala curry, idli with sambar, or appam with egg curry or vegetable stew. These options provide a good mix of carbohydrates, protein, and fiber. One thing you can start today: try having a small serving of puttu (about 1-2 ladles) with kadala curry and a cup of black tea or chaaya with a small amount of sugar. This will help regulate your blood sugar and give you energy for the morning.",
+      "latency_s": 1.45,
+      "input_tokens": 7780,
+      "output_tokens": 135
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Skipping breakfast might not be the best idea, as eating regularly can help manage blood sugar levels. For a good breakfast, you could consider having puttu with kadala curry, idli with sambar, or appam with egg curry or vegetable stew. These are common Kerala breakfast options that can be part of a balanced meal.",
+      "latency_s": 2.47,
+      "input_tokens": 8449,
+      "output_tokens": 67
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Skipping breakfast isn't the best choice, especially for managing diabetes. A good breakfast can help keep your sugar levels stable. You can try having idli with sambar or puttu with kadala curry. These options are nutritious and can provide a good balance of carbohydrates and protein. One thing you can start today: have a small plate of idli with sambar in the morning and see how it makes you feel!",
+      "latency_s": 3.36,
+      "input_tokens": 7812,
+      "output_tokens": 84
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Skipping breakfast is not good for diabetes because it can cause sugar swings. A good Kerala breakfast is puttu with kadala curry or idli with sambar, which gives steady energy without raising sugar too fast. One thing you can try today: eat a small plate of puttu with kadala curry and drink black tea or chaaya with less sugar.",
+      "latency_s": 3.51,
+      "input_tokens": 7812,
+      "output_tokens": 72
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Here are some healthy breakfast ideas for you as a person with diabetes in Kerala: The best breakfast options are:\nPuttu with kadala curry - The fiber and protein in the kadala (brown chickpeas) curry helps slow down the absorption of carbs from the puttu.\nIdli with sambar - The sambar, made with vegetables like drumstick and okra, provides fiber to balance the carbs in the idli.\nAppam with egg curry or vegetable stew - The protein from the eggs or vegetables helps control the blood sugar rise from the appam. Skipping breakfast is generally not recommended, as it can lead to blood sugar swings later in the day. Try to have a small, balanced breakfast like one of these options. Eating something in the morning kick-starts your metabolism and helps keep your sugar levels more stable. The key is to pair the carb-rich staples like puttu, idli or appam with a protein and fiber-rich side dish. This helps slow down the absorption of the carbs. Avoid having just plain rice, kappa or dosa without any accompaniment. And remember to watch your portion sizes - aim for 1-2 medium ladles of cooked rice or puttu, not heaping plates. Also be mindful of how much chaaya (tea with milk and sugar) you are drinking, as that can add a lot of extra sugar.",
+      "latency_s": 6.21,
+      "input_tokens": 9310,
+      "output_tokens": 323
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Skipping breakfast can lead to bigger blood sugar rises later in the day. Try one or two idlis with sambar or a small puttu with kadala curry for a steady start.",
+      "latency_s": 7.11,
+      "input_tokens": 7707,
+      "output_tokens": 482
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For diabetes, a good Kerala breakfast is puttu with kadala curry or idli with sambar - these give steady energy without spiking sugar too much. Skipping breakfast can make sugar levels unstable later - try at least a small portion like 1 idli or a piece of puttu with protein (like kadala or egg). One thing to start today: Have black tea instead of sweet chaaya in the morning - this alone cuts out much hidden sugar.",
+      "latency_s": 7.28,
+      "input_tokens": 7831,
+      "output_tokens": 133
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Let me help you with a diabetes-friendly Kerala breakfast plan. Skipping breakfast is not a good idea. Research shows that eating a balanced morning meal helps manage blood sugar levels. For people with diabetes in Kerala, the best breakfast options are traditional local dishes that provide steady energy. Try puttu with kadala curry or an idli with sambar. One medium ladle of puttu with a small portion of kadala curry gives you protein, fiber, and controlled carbohydrates. If you walk for 15 minutes after breakfast, it helps lower your post-meal sugar spike. One thing you can start today: prepare puttu with matta rice (red rice) instead of white rice for an even better blood sugar response.",
+      "latency_s": 7.46,
+      "input_tokens": 9310,
+      "output_tokens": 156
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Skipping breakfast can cause your sugar to drop too low in the morning and then spike sharply when you eat later — this makes control harder through the day. A good Kerala breakfast for diabetes is puttu with kadala curry, or idli with sambar, or appam with egg curry — these give you protein and fibre alongside the carbs, which helps keep sugar steadier. One thing to start today: try having a small breakfast like 2 idlis with sambar, and swap your morning chaaya to black tea or tea with just a pinch of sweetener instead of 2 spoons of sugar.",
+      "latency_s": 9.01,
+      "input_tokens": 9311,
+      "output_tokens": 134
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your diabetes management needs, here's what works best for Kerala mornings: Don't skip breakfast – it can cause unstable sugar levels later. Start with something small if needed.\nChoose Kerala breakfasts with lower impact on sugar: Idli (2 pieces) with sambar (lentil soup with vegetables) Puttu (1 small portion) with kadala curry (brown chickpea curry) Appam (1) with vegetable stew (use more veggies like drumstick/bitter gourd)\nOne thing to start today: Try having 1-2 idlis with sambar in the morning. If you take morning chaaya*, use just a tiny bit of sugar or a sweetener. These options balance carbs with fiber and protein, helping manage sugar better than skipping.",
+      "latency_s": 29.65,
+      "input_tokens": 7833,
+      "output_tokens": 702
+    }
+  ]
+}

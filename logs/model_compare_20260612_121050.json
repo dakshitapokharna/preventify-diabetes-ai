@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260612_121050",
+  "prompt": "i am 90 kg and have sugar give me a diet chart",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A balanced Kerala‑style plan focuses on smaller portions of rice (one medium ladle of matta rice per meal), plenty of low‑GI vegetables such as bitter gourd or drumstick, a good protein source like a piece of mathi or ayala, and a handful of pulses or roasted kadala for fibre; also try to cut the added sugar in your chaaya (each cup with 2 tsp sugar adds about 8 g sugar). One simple step you can start today: replace one of your four daily cups of sweet chaaya with black tea and keep your rice portion to one ladle, served with a fish curry and a side of sautéed cheera.",
+      "latency_s": 1.48,
+      "input_tokens": 7820,
+      "output_tokens": 471
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Thank you for sharing your concern. As a diabetes educator, I'll provide you with some general dietary advice. Please consult your doctor for a personalized plan. To manage sugar levels, focus on balancing carbohydrates, protein, and healthy fats. As a Kerala resident, let's tailor this to local food preferences. Key Takeaways: Carbohydrates: Limit to 50-60% of total calories. Focus on complex carbs like matta rice, puttu, idli, and dosa.\nFiber: Aim for 25-40 grams per day from sources like vegetables, fruits, and whole grains.\nProtein: Include protein-rich foods like fish (mathi, ayala), pulses (kadala, cherupayar), and nuts. Sample Diet Plan: Breakfast: Puttu with kadala curry (1 ladle puttu, 1/2 cup kadala curry) or idli with sambar (2 idlis, 1/2 cup sambar) Lunch: Rice (1-2 ladles), fish curry (1/2 cup), and vegetables (1 cup) Snacks: Roasted kadala (1/2 cup) or a small piece of raw banana Dinner: Similar to lunch, with a focus on vegetables and lean protein Chaaya Sugar Check:\nBe mindful of your chaaya (sweet tea) intake. Try reducing sugar to 1 teaspoon per cup or switch to black tea. Next Steps: Start with small changes and monitor your sugar levels.\nConsult a registered dietitian or your doctor for a personalized plan. Your doctor can provide more specific guidance based on your individual needs. How does this sound? Would you like more details on any of these points?",
+      "latency_s": 1.9,
+      "input_tokens": 7732,
+      "output_tokens": 369
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For managing your sugar, focus on eating smaller portions of rice—about 1 to 2 medium ladles per meal—and choose matta rice when possible. Include healthy Kerala foods like puttu with kadala curry, appam with vegetable stew, and fish like mathi or ayala for good protein. Also, watch the sugar in your chaaya—try cutting down or switching to black tea without sugar. One thing to start today: reduce your rice to 1 ladle and add more vegetables like cheera or pavakka to your plate.",
+      "latency_s": 2.37,
+      "input_tokens": 7755,
+      "output_tokens": 112
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "It's great that you're looking for ways to manage your sugar levels through diet! As a diabetes educator, I can help you understand general healthy eating principles, but I cannot create a specific diet chart for you. That is best done by a doctor or a trained dietitian who can consider your personal health needs, lifestyle, and food preferences in detail [RSSDI_2022 2022 — Detection)Andremission]. However, I can share some general guidance that is helpful for many people in Kerala managing diabetes: Carbohydrates: In Kerala, carbohydrates like rice are a big part of our diet. It's recommended to limit the quantity of rice, perhaps choosing matta rice over white rice when possible, as matta rice has a slightly lower glycemic index [RSSDI_2022 2022 — Detection)Andremission]. Fiber: Including more fiber-rich foods like vegetables (cheera, pavakka, muringakka) and pulses (kadala, cherupayar) can be very beneficial [RSSDI_2022 2022 — Detection)Andremission]. Chaaya:** Many people in Kerala drink several cups of sweet chaaya daily. Reducing the sugar in your chaaya, or switching to black tea or tea with a small amount of sweetener, can make a big difference in your daily sugar intake. Remember, even small changes can help. Your doctor or a dietitian can help you create a personalized plan that fits your needs.",
+      "latency_s": 3.19,
+      "input_tokens": 8288,
+      "output_tokens": 323
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Switching to matta rice (red parboiled rice) is one of the best changes you can make — it has a lower effect on blood sugar than white rice, and keeping it to 1–2 medium ladles per meal makes a real difference. Also, how many cups of chaaya (tea) do you have each day, and do you add sugar? That alone can quietly add a lot of extra sugar — switching to black tea or tea with a small sweetener is one of the easiest wins.",
+      "latency_s": 4.88,
+      "input_tokens": 9154,
+      "output_tokens": 111
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "It sounds like you're looking for guidance on managing your diet. While I can't provide a specific diet chart, I can share some general tips for healthy eating that can help you manage your sugar levels. Rice: Limit your portion to 1–2 medium ladles of cooked rice, and consider using matta rice instead of white rice, as it has a lower glycemic index. Vegetables: Include plenty of non-starchy vegetables like pavakka (bitter gourd), cheera (spinach), and muringakka (drumstick) in your meals. They are great for managing blood sugar. Protein: Incorporate good sources of protein like fish (mathi or ayala) and pulses (kadala or cherupayar). Aim for a serving with each meal. Snacks: Choose healthy snacks like roasted kadala or a small piece of raw banana instead of fried snacks. Chaaya: If you drink chaaya, try to reduce the sugar. You can switch to black tea or use a small amount of sweetener. One thing you can start today: replace white rice with matta rice and see how you feel after a week.",
+      "latency_s": 5.05,
+      "input_tokens": 7755,
+      "output_tokens": 252
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Okay, let's discuss a healthy eating plan for you. As a person with diabetes in Kerala, here are some guidelines: The most important thing is to focus on the type and amount of carbohydrates you eat. Carbohydrates should make up 50-60% of your total calories. Choose complex carbs like matta rice, puttu, and idli over refined white rice, which has a high glycemic index. For a 90 kg person, aim for:\n1-2 medium ladles of cooked matta rice per meal\n1-2 idlis or a small portion of puttu for breakfast\nIncrease fiber-rich vegetables like cheera, pavakka, and muringakka Be mindful of your chaaya (tea with milk and sugar) intake. Each cup with 2 tsp of sugar has about 8g of sugar. Try to limit to 2-3 cups per day, and use a small amount of sweetener instead. For snacks, go for roasted kadala, a small piece of raw banana, or a small cup of curd. Avoid fried snacks like banana chips and murukku. Remember, the key is to make sustainable changes you can stick to long-term. Start with small steps, like replacing one cup of chaaya with black tea. Your doctor can provide more personalized guidance on the right diet plan for you. Does this help provide some initial direction?",
+      "latency_s": 5.61,
+      "input_tokens": 9153,
+      "output_tokens": 333
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Let me help you with a diabetes-friendly eating approach that works for Kerala's food culture. Research shows that for people managing diabetes, it's important to focus on the type, amount, and frequency of foods. For someone at your weight, I recommend: • One medium ladle of matta rice (lower glycemic index than white rice) at meals\n• Include fish like mathi or ayala for heart health\n• Add vegetables like cheera (spinach), pavakka (bitter gourd), or vendakka (okra)\n• Replace sugar in chaaya with a small sweetener or switch to black tea\n• Have a small piece of roasted kadala as a healthy snack One thing you can start today: Replace two cups of sweet chaaya with black tea or tea with a small sweetener, and see how you feel after a week.",
+      "latency_s": 7.17,
+      "input_tokens": 9153,
+      "output_tokens": 185
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "A full diet chart needs to be made by a dietitian for your weight and sugar. One thing you can start today is to limit rice to 1-2 ladles per meal using matta rice and switch your chaaya to black tea without sugar.",
+      "latency_s": 7.17,
+      "input_tokens": 7695,
+      "output_tokens": 686
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For your weight and diabetes management in Kerala, here's a simple diet plan based on local foods: Breakfast: 1-2 idlis with sambar (less coconut oil) or puttu with kadala curry (small portion) Lunch: 1 medium ladle of matta rice (red rice) with fish curry (mathi/ayala) and pavakka (bitter gourd) stir-fry Evening: Black tea without sugar + a handful of roasted kadala Dinner: 1 small dosa with vegetable stew (more drumstick/cheera) Key changes to start today: Reduce chaaya sugar – try black tea or use a sweetener for 2 cups daily. Pick matta rice over white rice – it has lower GI and keeps sugar steady. Your doctor or dietitian can adjust this further based on your sugar readings. Small steps make a big difference! (Portions are personalized for your 90kg weight and Kerala diet preferences.)",
+      "latency_s": 11.03,
+      "input_tokens": 7800,
+      "output_tokens": 223
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For a personalized diet chart, I recommend consulting a local dietitian who can tailor it to your needs. Based on guidelines for Kerala, focus on: Rice: 1-2 medium ladles of matta rice (red rice) per meal instead of white rice Proteins: Include fish like mathi (sardine) or ayala (mackerel) daily, and pulses like kadala (chickpeas) Vegetables: Fill half your plate with pavakka (bitter gourd) or cheera (spinach) One thing to start today: Swap sugar in your chaaya (tea) for a small sweetener or try black tea. This simple change can significantly help manage sugar levels. (Always coordinate with your doctor for personalized advice.)",
+      "latency_s": 60.02,
+      "input_tokens": 7801,
+      "output_tokens": 1567
+    }
+  ]
+}

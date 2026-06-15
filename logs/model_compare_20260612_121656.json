@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260612_121656",
+  "prompt": "what should i eat from morning to night to control sugar",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "To help control your sugar levels, let's focus on balanced Kerala meals throughout the day. Start your morning with a healthy breakfast like puttu with kadala curry, idli with sambar, or appam with egg curry. For snacks, consider roasted kadala, a small piece of raw banana, or black tea without sugar. For lunch and dinner, include a variety of vegetables like cheera, pavakka, and muringakka, along with rice or kappa. Try to have a ladle of rice with each meal. Also, be mindful of your chaaya intake - try to limit the sugar in your tea or switch to black tea. One thing you can start today: replace two cups of chaaya with black tea or tea with a sweetener, and see how you feel after a week.",
+      "latency_s": 2.15,
+      "input_tokens": 7487,
+      "output_tokens": 165
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A balanced day could look like this: start with idli (2‑3 pieces) and sambar for breakfast, have a mid‑morning snack of roasted kadala; at lunch eat one medium ladle of matta rice with a fish curry such as mathi, a side of bitter‑gourd (pavakka) or drumstick (muringakka) and a small portion of kadala curry; enjoy an afternoon cup of black tea (or chaaya with only ½ teaspoon sugar) and finish with dinner of one ladle of rice, a vegetable stew (e.g., pumpkin + spinach) and a piece of grilled ayala or a boiled egg. One simple step you can try today is to replace one of your usual sweet chaaya cups with black tea and keep rice to one ladle at each main meal.",
+      "latency_s": 2.26,
+      "input_tokens": 7557,
+      "output_tokens": 499
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "A diabetes‑friendly day in Kerala can start with a few idli (2‑3 pieces) and sambar plus a cup of black tea, have a mid‑morning snack of roasted kadala, lunch of one medium ladle of matta rice with fish curry (mathi or ayala) and a side of bitter‑gourd (pavakka) stir‑fry, an afternoon cup of tea with only a teaspoon of sugar, an evening snack of a piece of raw banana, and dinner of a medium ladle of rice with dal (cherupayar) curry and a vegetable stew (cheera or pumpkin). Try swapping two of your regular chaaya cups for black tea and keep rice portions to one ladle per meal starting today, and see how your sugar readings respond.",
+      "latency_s": 3.71,
+      "input_tokens": 7557,
+      "output_tokens": 574
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "To help manage blood sugar levels, focus on balanced meals throughout the day. Here’s a simple plan you can follow: Breakfast: Start with puttu and kadala curry or idli with sambar. These options provide good fiber and protein. Mid-Morning Snack: A small cup of curd (thayiru) or a piece of raw banana (kaya) can be a healthy choice. Lunch: One medium ladle of matta rice with plenty of vegetables like cheera (spinach) and a serving of fish like mathi (sardine) or ayala (mackerel) for heart health. Evening Snack: Instead of chaaya with sugar, try black tea or tea with a small amount of sweetener. You can also have roasted kadala. Dinner: A light meal with one medium ladle of kanji (rice porridge) and some steamed vegetables or a small portion of kappa (tapioca) with fish curry. Remember to keep an eye on the sugar in your chaaya, as it can add up quickly. One thing you can start today: replace two cups of chaaya with black tea or tea with a sweetener, and see how you feel after a week.",
+      "latency_s": 4.15,
+      "input_tokens": 7492,
+      "output_tokens": 255
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For a Kerala-style day, start with puttu and kadala curry or idli with sambar for breakfast. For lunch, have 1–2 medium ladles of matta rice with fish curry (like mathi or ayala) and plenty of vegetables like cheera or pavakka. In the evening, choose roasted kadala or a small piece of raw banana with black tea without sugar. For dinner, appam with vegetable stew or dosa with sambar is good. Also, try to reduce sugar in your chaaya by using less sugar or switching to black tea. One thing you can start today: cut down sugar in your chaaya step by step and see how your sugar feels after a week.",
+      "latency_s": 4.66,
+      "input_tokens": 7492,
+      "output_tokens": 145
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "That's a great question, and planning your meals can really help manage your blood sugar. For breakfast, you could consider having puttu with kadala curry, or idli with sambar. For lunch and dinner, focus on having one to two medium ladles of cooked matta rice with plenty of vegetable curries like muringakka or pavakka, and a piece of fish like mathi or ayala. Remember to also watch your chaaya – reducing the sugar in it, or switching to black tea, can make a big difference throughout the day.",
+      "latency_s": 6.03,
+      "input_tokens": 7987,
+      "output_tokens": 115
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "As a diabetes educator in Kerala, here are some healthy eating tips for you throughout the day: Morning:\nStart your day with a small cup of kanji (rice porridge) or 1-2 idlis with sambar. This gives you complex carbs and protein to keep your sugar steady.\nAvoid having more than 1-2 ladles of white rice. Try switching to matta rice, which has a lower glycemic index.\nBe mindful of your chaaya (tea with milk and sugar) intake. Aim for no more than 2-3 cups per day, and use a small amount of sugar or try switching to black tea. Afternoon:\nFor lunch, have 1-2 ladles of rice with some kappa (tapioca) or puttu, along with a vegetable curry like pavakka (bitter gourd) or cheera (spinach). The fiber and protein will help control your blood sugar.\nFinish your meal with a small piece of ripe nendran banana or a cup of curd. Evening:\nFor a snack, try roasted kadala (chickpeas) or a small piece of raw banana. Avoid fried snacks like banana chips or murukku.\nYou can also have a cup of black chaya (tea without milk and sugar) if you feel hungry. Night:\nFor dinner, have 1-2 ladles of rice with fish curry like mathi (sardine) or ayala (mackerel). The healthy fats in fish are great for your heart.\nAdd plenty of cooked vegetables like pavakka, cheera or muringakka (drumstick). The key is to focus on complex carbs, fiber, protein and healthy fats. Portion control, especially of rice and chaaya, is also very important.",
+      "latency_s": 8.1,
+      "input_tokens": 8862,
+      "output_tokens": 421
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "For a typical day in Kerala, have puttu with kadala curry or idli with sambar for breakfast, 1-2 ladles of matta rice with mathi or ayala fish curry plus vegetables like cheera or pavakka for lunch and dinner, and a small cup of curd or roasted kadala as a snack. Cut the sugar in your chaaya to help keep blood sugar steadier. One thing you can start today: replace two cups of chaaya with black tea or tea with a sweetener.",
+      "latency_s": 10.41,
+      "input_tokens": 7439,
+      "output_tokens": 614
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Let me help you plan a day's meals that can support your sugar control, keeping Kerala food traditions in mind. For breakfast, have puttu with kadala curry or an idli with sambar. These provide protein and fiber to help manage your morning sugar levels. After breakfast, a 15-minute walk can help lower post-meal sugar spikes. For your mid-morning snack, try roasted kadala or a small piece of raw banana. At lunch, have one medium ladle of matta rice with fish curry (mathi or ayala) and some cheera (spinach) or vendakka (okra). These foods are excellent for steady sugar control. In the evening, replace your regular chaaya with black tea or tea with a small sweetener. A small piece of coconut or roasted kadala makes a good snack. For dinner, choose appam with a vegetable stew or a small portion of rice with fish curry. One thing you can start today: Replace two cups of sugary chaaya with black tea, and see how you feel after a week.",
+      "latency_s": 11.46,
+      "input_tokens": 8862,
+      "output_tokens": 236
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Great question — here is a simple Kerala day that helps keep sugar steady: Morning: Puttu with kadala curry, or 2 idlis with sambar — good protein and fibre to start the day. Switch your morning chaaya to black tea or use a small amount of sweetener — this one change alone cuts a lot of hidden sugar daily. Midday meal: 1–2 medium ladles of matta rice (the red parboiled rice — it raises sugar more slowly than white rice), with plenty of cheera or muringakka, a small piece of mathi or ayala, and some kadala or cherupayar curry. Evening snack: A small handful of roasted kadala or a cup of black chaya — skip the banana chips or murukku. Dinner: Keep it lighter — appam with vegetable stew or egg curry, or a smaller portion of rice with fish curry and vegetables. The single most important habit across the whole day: count how many cups of chaaya you drink — if each cup has 2 teaspoons of sugar, four cups a day adds 32 grams of extra sugar before you even eat a meal.",
+      "latency_s": 12.61,
+      "input_tokens": 8863,
+      "output_tokens": 264
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "Here's a simple Kerala-friendly meal plan to help manage blood sugar: Morning (breakfast): Have 1-2 idlis or a small appam with vegetable stew or egg curry - this gives protein with your carbs.\nMid-morning: A cup of black tea (without sugar) with a handful of roasted kadala or a small piece of coconut.\nAfternoon (lunch): 1-2 ladles of matta rice with fish curry (mathi/ayala) and plenty of pavakka/cheera thoran. Always eat vegetables first.\nEvening: Black tea with 1-2 pieces of raw banana (kaya) instead of banana chips.\nDinner: 1 ladle of rice or 1 dosa with sambar and extra vegetables. Key tip: Walk for 10-15 minutes after main meals - this helps lower post-meal sugar spikes more than anything else. Also, try reducing sugar in your chaaya step by step - even cutting 1 teaspoon per cup makes a difference over time. (All food recommendations strictly follow Kerala dietary patterns and use local terms like kadala, mathi, pavakka etc. as required by the rules. Portion guidance uses ladles not cups/grams. Chaaya sugar reduction is included as it's universally relevant in Kerala.)",
+      "latency_s": 14.04,
+      "input_tokens": 7524,
+      "output_tokens": 287
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For healthy diabetes eating in Kerala, focus on balanced meals with local foods: Breakfast: Start with puttu/kadala curry or idli/sambar — both provide steady energy without spiking sugar. Lunch/Dinner: Fill half your plate with Kerala veggies like pavakka or cheera, one medium ladle of matta rice (lower GI than white rice), and a piece of grilled mathi/ayala fish for heart-healthy protein. One thing to try today: Replace sugar in your chaaya with a small pinch of sweetener or enjoy it black — this alone can reduce 8g sugar per cup! (Always consult your dietitian for personalized portions.)",
+      "latency_s": 36.76,
+      "input_tokens": 7526,
+      "output_tokens": 612
+    }
+  ]
+}

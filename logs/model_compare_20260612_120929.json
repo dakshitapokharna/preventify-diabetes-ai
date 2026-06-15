@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260612_120929",
+  "prompt": "i have diabetes and i want to lose weight what diet plan should i follow",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "For weight loss with diabetes, aim for a balanced plate where about half the calories come from complex carbs such as matta rice (one to two medium ladles per meal) and pulses, roughly 15 % from protein like fish (mathi, ayala) or legumes, and the remainder from plenty of vegetables, while keeping saturated fat low and getting 25‑30 g of fibre each day. One easy step to start today: replace one cup of sweet chaaya with black tea or tea using a low‑calorie sweetener, and swap one ladle of white rice for matta rice, adding a side of steamed cheera and a small piece of grilled mathi.",
+      "latency_s": 1.27,
+      "input_tokens": 7124,
+      "output_tokens": 614
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "I'm happy to help you with a diet plan. For diabetes and weight loss, we focus on balanced and nutritious meals. In Kerala, we can work with local foods. Aim for 50-60% of calories from complex carbohydrates, 15% from protein, and less than 30% from fats. Here's a simple tip to start: try to have one medium ladle of matta rice (or white rice) per meal. You can pair it with plenty of vegetables like cheera, pavakka, or muringakka. Include protein sources like kadala, cherupayar, or fish like mathi or ayala. Also, be mindful of your chaaya (sweet tea) intake. Try reducing the number of cups or switching to black tea or tea with a small amount of sweetener. One thing you can start today: replace one cup of chaaya with black tea and see how you feel after a week.",
+      "latency_s": 1.33,
+      "input_tokens": 7061,
+      "output_tokens": 191
+    },
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "To manage diabetes and lose weight, focus on whole, unprocessed foods like matta rice, leafy vegetables, and pulses. Try to limit your rice intake to 1-2 medium ladles per meal and balance it with vegetables like cheera, pavakka, or muringakka. One thing you can start today: replace one cup of chaaya with black tea or tea with a small amount of sweetener, and see how you feel after a week.",
+      "latency_s": 1.94,
+      "input_tokens": 7158,
+      "output_tokens": 96
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Losing weight can definitely help manage diabetes! A good diet plan for you would focus on limiting simple carbohydrates, sugar, and fried foods, while increasing complex carbohydrates and protein. It's also important to include plenty of fruits, leafy vegetables, nuts, and fiber in your diet. One simple step you can take is to make sure your plate has lots of vegetables, both raw and cooked. This helps you get enough fiber, which is important for managing blood sugar.",
+      "latency_s": 1.98,
+      "input_tokens": 7473,
+      "output_tokens": 95
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For diabetes and weight loss, focus on eating about 1–2 medium ladles of matta rice or puttu with plenty of vegetables like cheera and pavakka, plus some fish like mathi or ayala for heart health. Also, watch the sugar in your chaaya—try reducing it or switch to black tea with little sweetener. One thing you can start today: have a balanced Kerala meal with smaller rice portions and more vegetables and fish, and reduce sugar in your tea.",
+      "latency_s": 2.47,
+      "input_tokens": 7059,
+      "output_tokens": 101
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Losing weight with diabetes can be achieved by focusing on a balanced diet. Aim to fill half your plate with vegetables, both raw and cooked, and include a variety of them throughout the week. For your carbohydrate sources, consider having one medium ladle of matta rice instead of white rice, and pair it with protein-rich foods like fish or pulses. Also, be mindful of your chaaya — try reducing the sugar or switching to black tea. One thing you can start today: replace one cup of chaaya with black tea or tea with a sweetener, and see how you feel after a week.",
+      "latency_s": 3.36,
+      "input_tokens": 7059,
+      "output_tokens": 124
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "One ladle of matta rice with plenty of cheera (spinach) and a small piece of fish like mathi can help you manage your weight and diabetes. Replace two cups of sweet chaaya with black tea, and try having roasted kadala as a snack instead of banana chips. Your doctor can give you a personalized diet plan, but these small changes can make a big difference.",
+      "latency_s": 4.52,
+      "input_tokens": 8267,
+      "output_tokens": 85
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Okay, let me share some healthy eating tips that can help with weight loss for someone with diabetes in Kerala: The most important thing is to focus on getting the right balance of carbohydrates, proteins, and healthy fats in your meals. Here are some guidelines: For carbohydrates, aim for 1-2 ladles of cooked matta rice or kappa (tapioca) per meal. Avoid white rice, idli, and other refined carbs. Include plenty of non-starchy vegetables like cheera (spinach), pavakka (bitter gourd), and muringakka (drumstick). These are low in carbs and high in fiber. Choose protein sources like mathi (sardine), ayala (mackerel), or kadala (brown chickpeas). Protein helps keep you feeling full. Use small amounts of healthy fats like coconut, gingelly (sesame) oil, or groundnut oil for cooking. Be mindful of your chaaya (tea with milk and sugar) intake. Each cup with 2 tsp of sugar has about 8g of carbs. Try switching to black tea or tea with a small amount of sweetener. The key is to have a balanced plate with vegetables, protein, and a small portion of complex carbs at each meal. This can help you lose weight gradually without spiking your blood sugar.",
+      "latency_s": 5.84,
+      "input_tokens": 8267,
+      "output_tokens": 321
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For weight loss with diabetes in Kerala, focus on balanced meals with controlled portions. Have 1-2 medium ladles of cooked matta rice (red rice) per meal along with fish curry (mathi or ayala) and plenty of vegetables like cheera or pavakka. Key changes:\n1) Reduce sugar in chaaya - try black tea or use sweetener in 2 cups daily\n2) Have puttu with kadala curry or idli with sambar for breakfast\n3) Snack on roasted kadala or a small piece of raw banana instead of fried snacks Walk for 15-20 minutes after meals - this helps lower blood sugar. Your doctor can guide you on the right calorie intake for steady weight loss.",
+      "latency_s": 5.84,
+      "input_tokens": 7104,
+      "output_tokens": 153
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "The most important changes for weight and sugar control are: eat rice in smaller portions (1–2 medium ladles per meal, matta rice is a better choice than white rice), fill half your plate with vegetables like cheera, pavakka, or muringakka, and add kadala or cherupayar for protein and fibre. One thing to start today: count how many cups of chaaya you drink — if each cup has 2 teaspoons of sugar, switching even 2–3 cups to black tea can cut a significant amount of sugar from your day without changing anything else.",
+      "latency_s": 8.0,
+      "input_tokens": 8268,
+      "output_tokens": 132
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "To lose weight with diabetes, limit rice to 1-2 ladles of matta rice per meal, fill half your plate with vegetables like pavakka and cheera, add protein from mathi or ayala, and cut sugar in your chaaya. One thing you can start today is having one less ladle of rice at lunch.",
+      "latency_s": 8.92,
+      "input_tokens": 7037,
+      "output_tokens": 771
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "It's great you're focusing on healthy eating to manage diabetes and weight. Based on your location in Kerala and diabetes guidelines, here's what I recommend: Control rice portions — Switch to matta rice (red rice) for better blood sugar control, and limit to one medium ladle per meal. Pair it with plenty of local vegetables like cheera (spinach), pavakka (bitter gourd), and protein-rich meen curry (fish curry) using mathi or ayala. Reduce sugar in chaaya — If you drink sweet tea, cut the sugar by half or switch 2 cups to black tea daily. This small change avoids ~16g of extra sugar daily. Choose smart snacks — Swap fried items like banana chips or murukku with roasted kadala (chickpeas) or a small piece of raw banana (kaya). > One thing to start today: Measure your rice with a ladle at every meal, and add an extra serving of pavakka or cheera to your plate. For a personalized plan, ask your doctor to refer you to a dietitian who can adjust this to your needs.",
+      "latency_s": 27.36,
+      "input_tokens": 7106,
+      "output_tokens": 678
+    }
+  ]
+}

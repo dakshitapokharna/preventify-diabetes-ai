@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260612_115208",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A reading of 200 mg/dL after a meal is higher than the usual target for most people with diabetes. To help lower it, limit sugary chaaya (use only 1 teaspoon of sugar per cup or switch to black tea), avoid sweet snacks like banana chips, murukku, achappam, and keep rice to about one medium ladle (preferably matta rice); today, try cutting the sugar in each cup of chaaya to just 1 teaspoon and see how your next reading looks.",
+      "latency_s": 1.32,
+      "input_tokens": 7162,
+      "output_tokens": 701
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Fasting blood sugar of 200 mg/dL is high. To manage this, let's focus on dietary changes. Research shows that reducing carbohydrate intake, especially high-GI foods, can help control blood sugar. One thing you can start today: limit your intake of white rice to one medium ladle per meal, and try to replace it with matta rice (red parboiled rice) which has a lower GI. Also, be mindful of your chaaya (sweet tea) intake - try to limit the sugar in your tea to 1 teaspoon per cup. For other foods, focus on fresh vegetables like cheera (spinach), pavakka (bitter gourd), and muringakka (drumstick). Your doctor can give more specific guidance on managing your blood sugar levels.",
+      "latency_s": 1.72,
+      "input_tokens": 7109,
+      "output_tokens": 166
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "A blood sugar of 200 mg/dL is above the usual target range for most readings. Try cutting the sugar in your chaaya to half a teaspoon (or switch to black tea) and keep your rice portion to one medium ladle today.",
+      "latency_s": 1.75,
+      "input_tokens": 7162,
+      "output_tokens": 412
+    }
+  ]
+}

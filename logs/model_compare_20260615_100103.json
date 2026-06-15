@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260615_100103",
+  "prompt": "i have cold and fever and my sugar is also high what should i eat",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "When you have a cold and fever, choose easy‑to‑digest, lower‑carb meals such as one medium ladle of matta rice with a fish curry (like mathi or ayala) and plenty of non‑starchy vegetables such as cheera, bitter gourd, or drumstick, and keep chaaya sugar to a minimum or switch to black tea. Today you could have a thin bowl of kanji with a boiled egg and a cup of black tea, then check your sugar again in a couple of hours and let your doctor know if it remains high.",
+      "latency_s": 0.92,
+      "input_tokens": 7488,
+      "output_tokens": 457
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "I'm so sorry to hear you're not feeling well. When you have a cold, fever, and high sugar, it's essential to eat nourishing foods that are easy to digest. In Kerala, we usually have rice porridge, also known as kanji, when we're unwell. It's gentle on the stomach and can help with hydration. You can make kanji with a small amount of rice and plenty of water. Additionally, having a small piece of roasted kadala or a bowl of warm, clear soup made with vegetables like muringakka or cheera might help. Make sure to drink plenty of fluids, like chaaya or water, to stay hydrated. However, I want to emphasize that it's crucial to consult with your doctor to get personalized advice on managing your sugar levels and cold and fever. They can provide guidance on adjusting your medication or treatment plan if needed. For now, focus on taking it easy, resting, and eating gentle, comforting foods. Take care!",
+      "latency_s": 1.31,
+      "input_tokens": 7426,
+      "output_tokens": 198
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "When you have a cold and fever, it's common for blood sugar to be higher, and it's important to eat regularly even if you don't feel like it. Try to have soft, easy-to-digest foods like kanji (rice porridge) or soft idli with sambar. Remember to check your blood sugar more often during this time and talk to your doctor if it stays very high.",
+      "latency_s": 1.74,
+      "input_tokens": 7736,
+      "output_tokens": 85
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "When you have cold and fever with high sugar, eat easy-to-digest foods like kanji (rice gruel) or soft idli with sambar. Drink black chaya or tea with little sweetener instead of sugary chaaya to avoid raising sugar more. One thing you can do today: have a small bowl of kanji and avoid adding sugar to your tea until you feel better.",
+      "latency_s": 2.25,
+      "input_tokens": 7423,
+      "output_tokens": 80
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "I'm sorry to hear you're feeling unwell. When you have a cold and fever, it's important to eat light and easy-to-digest foods. You can try having kanji (rice porridge) as it's soothing and gentle on the stomach. Also, make sure to stay hydrated by drinking plenty of water or warm fluids. If your sugar levels are high, it's best to avoid heavy meals and stick to smaller portions. Please remember to check in with your doctor about your sugar levels and any changes in your health.",
+      "latency_s": 3.06,
+      "input_tokens": 7423,
+      "output_tokens": 105
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "When you're sick with a cold and fever, and your sugar is high, focus on light, easy-to-digest foods that help you recover. Kanji (rice porridge) is the perfect Kerala food for this situation. Have small portions of kanji with a little salt, and drink plenty of warm water. If you feel like eating, a soft idli with sambar is another good choice. One thing to try today: Make a light kanji and check your sugar more frequently while you're unwell. If your sugar remains high, contact your doctor.",
+      "latency_s": 5.89,
+      "input_tokens": 8815,
+      "output_tokens": 122
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "When you are sick, your sugar tends to rise — this is normal, so keep checking it more often than usual. Have kanji (rice gruel) — make it thin and warm, eat small amounts every few hours, and do not skip your diabetes medicines even if you are eating less.",
+      "latency_s": 6.17,
+      "input_tokens": 8816,
+      "output_tokens": 64
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "I'm sorry to hear you're not feeling well with a cold, fever, and high blood sugar. As your diabetes educator, here are a few suggestions that may help during this time: Focus on easy-to-digest, soft foods. Good options are kanji (rice porridge), soft idli with sambar, or a vegetable stew. These will be gentle on your stomach but still provide the nutrition you need. Be extra vigilant about checking your blood sugar more frequently, as illness can cause it to fluctuate. If your sugar stays high, contact your doctor about any medication adjustments they recommend. Remember to stay hydrated. Sip on water, black tea, or tender coconut water throughout the day. Avoid sugary drinks like chaaya, which can spike your blood sugar further. Try to get plenty of rest. Your body needs the energy to fight off the cold and fever. The most important thing is to listen to your body and not skip any of your regular diabetes medications, even if your appetite is low. Your doctor is the best person to advise on any changes needed during this time. Please reach out to them if you have any other concerns.",
+      "latency_s": 6.2,
+      "input_tokens": 8815,
+      "output_tokens": 261
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "When you're sick with fever and high sugar, focus on easy-to-digest Kerala foods that won't spike your glucose further: Have small portions of kanji (rice gruel) with a little fish curry or cherupayar (green moong) for protein — this is gentle on your stomach. Drink warm black tea (without sugar) or tender coconut water (ilaneer) to stay hydrated. Remember to check your sugar more often when sick, and don't skip your diabetes medicines unless your doctor advises otherwise. If sugar stays high for more than a day, please contact your clinic.",
+      "latency_s": 6.99,
+      "input_tokens": 7495,
+      "output_tokens": 127
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "When you have cold and fever with high sugar, eat small amounts of thin kanji more often instead of regular meals. One thing you can start today: make kanji with less rice and check your sugar before and after eating.",
+      "latency_s": 11.62,
+      "input_tokens": 7375,
+      "output_tokens": 730
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your symptoms (cold, fever, and high sugar), here's what to focus on for your meals: Easy-to-digest Kerala foods: Opt for plain kanji (rice gruel) with a pinch of salt or soft idli with light sambar. Have small portions every 2-3 hours to avoid overloading your system. Hydration is key: Drink warm water, black tea (without sugar), or tender coconut water to stay hydrated and help manage sugar levels. Important: Continue your regular diabetes medications, check your blood sugar every 3-4 hours, and contact your doctor if sugar stays high (>250 mg/dL) or if you can't keep food down. > One thing to try today: Sip warm black tea with a squeeze of lemon (no sugar) between meals.",
+      "latency_s": 37.3,
+      "input_tokens": 7497,
+      "output_tokens": 995
+    }
+  ]
+}

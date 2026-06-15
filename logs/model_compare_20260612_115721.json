@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260612_115721",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A blood‑sugar reading of 200 mg/dL is above the usual target, so it’s helpful to look at foods that add extra sugar or raise glucose quickly. One practical step you can try today is to cut the added sugar in your chaaya (use 1 teaspoon instead of 2) and replace one cup of sweet tea with black tea, while keeping your rice portion to about one medium ladle of cooked matta rice served with plenty of vegetables and fish.",
+      "latency_s": 1.27,
+      "input_tokens": 7169,
+      "output_tokens": 554
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Acknowledge the concern. With a blood sugar level of 200, you are experiencing hyperglycemia. To manage this, let's focus on dietary changes. To help control your blood sugar, it's essential to limit foods that can cause a spike. Here are some Kerala-specific suggestions: Limit your rice intake to 1-2 ladles per meal. Try to use matta rice (red parboiled rice) as it has a lower glycemic index. Reduce the sugar in your chaaya (tea). Try to limit it to 1-2 teaspoons per cup or consider switching to black tea or tea with a sweetener. Avoid or limit banana chips, murukku, and achappam (fried snacks). Limit or avoid foods high in added sugars, like sweetened lassi or camera (sweet drinks). Instead, focus on: Eating more vegetables like cheera (spinach), pavakka (bitter gourd), and muringakka (drumstick). Incorporating protein-rich foods like kadala (brown chickpeas), cherupayar (green moong), and fish like mathi (sardine) or ayala (mackerel). One thing you can start today: Replace one cup of chaaya with black tea or tea with a sweetener and see how you feel after a week. Your doctor can provide personalized guidance on managing your blood sugar levels.",
+      "latency_s": 1.6,
+      "input_tokens": 7116,
+      "output_tokens": 289
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Having a sugar level of 200 is a concern, and it's great that you're looking to manage it. To help control your sugar, try to avoid foods that are high in sugar and refined carbohydrates, such as sweets, sugary drinks, and fried snacks like banana chips. One thing you can start today: replace your sweet chaaya with black tea or tea with a small amount of sweetener. This can help reduce your daily sugar intake.",
+      "latency_s": 2.11,
+      "input_tokens": 7104,
+      "output_tokens": 90
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Having a blood sugar reading of 200 mg/dL means it's a good time to be mindful of your food choices. To help manage your sugar levels, it's best to avoid foods that can cause a quick rise in blood sugar. For example, try to limit sugary drinks like chaaya with sugar, and also avoid street foods like banana chips or unniyappam, which are often fried and can be high in unhealthy fats and sugar. Your doctor or a dietitian can help you create a personalized meal plan.",
+      "latency_s": 2.36,
+      "input_tokens": 7511,
+      "output_tokens": 110
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "A blood sugar of 200 is high, so it’s best to avoid sugar in chaaya (tea), sweets, and sweetened drinks. Also, reduce white rice to one medium ladle and choose matta rice or have kappa with fish curry instead. One thing you can start today: replace two cups of sweet chaaya with black tea or tea with a little sweetener.",
+      "latency_s": 2.74,
+      "input_tokens": 7104,
+      "output_tokens": 79
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Understood. With a blood sugar reading of 200 mg/dL, there are a few things you can focus on in your diet: Reduce your intake of chaaya (sweet tea with milk and sugar). Each cup with 2 teaspoons of sugar has about 8 grams of sugar. Try switching to black tea or tea with just a small amount of sweetener. Be mindful of your portion sizes of rice. Stick to 1-2 medium ladles of cooked white rice or try switching to matta (parboiled) rice, which has a lower glycemic index. Avoid fried Kerala snacks like banana chips, murukku, and unniyappam, as these can spike your blood sugar quickly. Instead, opt for healthier snacks like roasted kadala (chickpeas) or a small piece of raw banana. The key is to focus on high-fiber, low-GI foods like leafy greens, bitter gourd, drumstick, and fish. Your doctor can provide more personalized guidance on the right meal plan for you.",
+      "latency_s": 4.22,
+      "input_tokens": 8340,
+      "output_tokens": 256
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Your sugar reading of 200 is above the usual target. Start today by cutting the sugar in your chaaya to one teaspoon or less per cup.",
+      "latency_s": 4.4,
+      "input_tokens": 7081,
+      "output_tokens": 526
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Your blood sugar reading of 200 suggests you need to be careful about your food choices. Here are two key things you can do today: First, replace white rice with one medium ladle of matta rice at meals. Matta rice has a lower impact on blood sugar compared to white rice. Second, check your chaaya (tea) sugar. If you're having 4 cups daily with 2 teaspoons of sugar each, that's adding about 32g of extra sugar. Try switching to black tea or tea with a small sweetener instead.",
+      "latency_s": 6.42,
+      "input_tokens": 8340,
+      "output_tokens": 123
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "A reading of 200 is above the usual target, and your doctor is the right person to explain what it means for your treatment plan. For food, the biggest change you can make today is with your chaaya — if you drink 4–5 cups a day with sugar, that alone adds a lot of extra sugar to your blood; try switching to black tea or chaaya with just a small pinch of sweetener. Also keep your rice to 1–2 medium ladles per meal, and if you eat kappa, always have it with fish curry rather than alone — matta rice (red parboiled rice) is a better choice than white rice as it raises blood sugar more slowly.",
+      "latency_s": 8.61,
+      "input_tokens": 8341,
+      "output_tokens": 153
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "When your sugar is high (200 mg/dL), focus on reducing foods that spike blood sugar quickly. Here's what to be careful with in Kerala meals: Chaaya (tea) with sugar - Each cup with 2 teaspoons adds ~8g sugar. Try black tea or reduce to 1/2 teaspoon per cup. White rice portions - Stick to 1 medium ladle (prefer matta/red rice) paired with fish curry or vegetables. Fried snacks - Avoid banana chips (ethakka upperi), unniyappam, or murukku. Opt for roasted kadala or a small piece of raw banana instead. One thing to try today: Replace two cups of sweet chaaya with black tea, and have kappa with meen curry (fish curry) instead of plain boiled kappa. For sustained control, check your sugar 2 hours after meals and take a short walk. Let your doctor know if readings stay above 200 often. **",
+      "latency_s": 12.24,
+      "input_tokens": 7177,
+      "output_tokens": 233
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "I understand your sugar reading is high at 200 mg/dL. Let's focus on simple food adjustments that can help: Reduce sweetened drinks Cut back on sugary tea (chaaya) - each cup with 2 teaspoons of sugar adds ~8g carbs. Try black tea with just a pinch of sweetener instead. Adjust rice portions Have just 1 medium ladle of matta rice (red rice) per meal instead of white rice. Matta rice digests slower, helping control sugar spikes. Start today: Replace two cups of sweet chaaya with black tea, and measure your rice with one ladle. Check your sugar levels before/after meals to see what works best for you. **",
+      "latency_s": 60.12,
+      "input_tokens": 7179,
+      "output_tokens": 1127
+    }
+  ]
+}

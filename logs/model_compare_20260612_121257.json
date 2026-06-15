@@ -1,0 +1,102 @@
+{
+  "timestamp": "20260612_121257",
+  "prompt": "i work in an office what snacks should i keep at my desk",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "For office snacks, consider keeping small, healthy options like roasted kadala (chickpeas), a small piece of raw banana (kaya), or a piece of coconut. These snacks are easy to store and can help manage hunger without adding too much sugar or unhealthy fats. Try replacing one unhealthy snack with one of these options and see how you feel.",
+      "latency_s": 0.98,
+      "input_tokens": 7201,
+      "output_tokens": 71
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "For desk snacks, choose high‑fiber, low‑added‑sugar options such as a small handful of roasted kadala (brown chickpeas), a piece of raw banana (kaya), a tiny cup of curd, or a few pieces of fresh coconut; these foods give steady carbs and protein and research shows fiber‑rich snacks help keep blood‑sugar stable. One thing you can try today: keep a small bowl of roasted kadala and one raw banana at your desk and replace one cup of sweet chaaya with black tea, then notice how your energy feels after a week.",
+      "latency_s": 1.94,
+      "input_tokens": 7271,
+      "output_tokens": 534
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "That's a great question! Choosing the right snacks for your desk can help manage your blood sugar throughout the day. For healthy snacking at your office desk, consider options like roasted kadala (chickpeas), a small piece of raw banana (kaya), or even a small cup of curd (thayiru). These provide good energy without causing a big spike in your sugar levels. Also, remember that the sugar in your chaaya can add up, so try black tea or tea with a small amount of sweetener instead.",
+      "latency_s": 2.48,
+      "input_tokens": 7614,
+      "output_tokens": 107
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Good options to keep at your desk are roasted kadala or a small cup of cherupayar, as they provide fibre and help manage sugar levels. One thing you can try today:",
+      "latency_s": 3.03,
+      "input_tokens": 7296,
+      "output_tokens": 1024
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For office snacks, keep roasted kadala or a small piece of raw banana (kaya) handy—they are healthy and Kerala-friendly. Also, try to drink black chaya or tea with a little sweetener instead of sugary chaaya to reduce extra sugar. One thing you can start today: replace any fried snacks with roasted kadala for a healthier choice.",
+      "latency_s": 4.09,
+      "input_tokens": 7206,
+      "output_tokens": 73
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "One small piece of roasted kadala (chickpeas) or a small piece of raw banana is an excellent desk snack for someone managing diabetes. These options provide protein and fiber without spiking your sugar, and they're perfect Kerala-style choices that won't disrupt your blood sugar between meals.",
+      "latency_s": 4.71,
+      "input_tokens": 8424,
+      "output_tokens": 66
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "As your diabetes educator, here are some healthy snack ideas you can keep at your desk in the office: A small piece of raw banana (kaya) - about the size of your palm. Ripe nendran banana is fine in moderation. A small cup of plain curd (thayiru/thairu) - around 100-150 ml. Avoid sweetened or flavored yogurt. A small handful of roasted kadala (brown chickpeas). About 2-3 tablespoons. A small piece of fresh coconut. Coconut is fine in normal amounts as part of your overall diet. The key is to choose snacks that are low in carbs and sugar. Avoid fried Kerala snacks like banana chips, murukku, or unniyappam. Also stay away from sugary drinks like chaaya (tea with lots of sugar). Instead, have black tea or tea with just a small amount of sweetener. Remember, portion size is important. Stick to small servings of these healthy Kerala snacks. And don't forget to check your blood sugar before and after having a snack, to see how it affects you.",
+      "latency_s": 5.53,
+      "input_tokens": 8424,
+      "output_tokens": 276
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Keep a small handful of roasted kadala (brown chickpeas) at your desk — it's filling, high in fibre, and won't spike your sugar the way banana chips or murukku would. Also check: if you're having 3–4 cups of chaaya through the workday, switching to black tea or tea with a small sweetener can quietly cut a lot of extra sugar without changing anything else.",
+      "latency_s": 6.42,
+      "input_tokens": 8425,
+      "output_tokens": 93
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Keep roasted kadala or a small piece of kaya at your desk. Start today by packing a small handful of roasted kadala for your afternoon break.",
+      "latency_s": 7.0,
+      "input_tokens": 7177,
+      "output_tokens": 456
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For your office desk in Kerala, keep these diabetes-friendly snacks: Roasted kadala (brown chickpeas) - Good protein and fiber Small piece of raw banana (kaya) - Better than fried banana chips Black chaya without sugar - Swap sugary tea for this Avoid keeping banana chips (ethakka upperi) or murukku—these raise sugar quickly. One thing to try: Pack a small box of roasted kadala tomorrow. It’s filling and won’t spike your sugar like office sweets.",
+      "latency_s": 7.7,
+      "input_tokens": 7273,
+      "output_tokens": 140
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "To help manage diabetes while working in an office, consider keeping healthy snacks at your desk. Good options include roasted kadala (chickpeas) for protein and fiber, or a small piece of kaya (raw banana) for a quick energy boost. One thing you can start today: try keeping a small container of roasted kadala at your desk for a nutritious snack!",
+      "latency_s": 16.18,
+      "input_tokens": 7206,
+      "output_tokens": 75
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your office setting in Kerala, here are diabetes-friendly snack ideas to keep at your desk: Roasted kadala (chickpeas): A small handful provides protein and fiber without spiking sugar. Pair with black tea (sugarless chaaya) instead of sweet tea. Raw banana (kaya) pieces: Boil or steam 1 small piece (size of your palm) – it’s filling and lower in carbs than ripe banana. One thing to try today: Swap sugary office chaaya with black tea using a pinch of cardamom for flavor. This cuts hidden sugar while keeping your energy steady.",
+      "latency_s": 33.46,
+      "input_tokens": 7276,
+      "output_tokens": 613
+    }
+  ]
+}

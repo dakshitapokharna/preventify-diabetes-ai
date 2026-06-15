@@ -1,0 +1,38 @@
+{
+  "timestamp": "20260612_114829",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Your reading of 200 mg/dL is higher than the usual target range (70‑130 mg/dL fasting), so it’s a good time to watch foods that raise sugar quickly. Try to avoid sugar‑sweetened chaaya, sweets, packaged salty snacks, and large servings of plain white rice; today you could cut the tea sugar to just 1 tsp (or switch to black tea) and choose a smaller ladle of matta rice with fish curry instead of a big ladle of white rice.",
+      "latency_s": 1.28,
+      "input_tokens": 6735,
+      "output_tokens": 603
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Your sugar level is 200, that's a bit high. To manage it, let's focus on some simple dietary changes. First, try to limit your intake of chaaya (sweet tea) for now. You can switch to black tea or use a sweetener. Chaaya with 2 tsp sugar is about 8g of sugar. Also, try to avoid or reduce foods that are high in sugar, like sweets, jaggery, and sugar-sweetened beverages. For now, focus on having a balanced meal with plenty of vegetables, some protein, and whole grains like matta rice or roti. One thing you can start today: replace two cups of chaaya with black tea or tea with a sweetener, and see how you feel after a week. Your doctor can give you more specific guidance on managing your sugar levels.",
+      "latency_s": 1.34,
+      "input_tokens": 6681,
+      "output_tokens": 173
+    },
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "text": "Having a blood sugar level of 200 mg/dL is high. To manage it, try to avoid foods that are high in sugar and carbohydrates. For example, you can limit your intake of sweetened chaaya, which is a common drink in Kerala, and opt for black tea or tea with a sweetener instead. Also, be mindful of your rice portions - try to have only one medium ladle of cooked rice per meal. One thing you can try today: replace two cups of sweetened chaaya with black tea or tea with a sweetener, and see how you feel after a week.",
+      "latency_s": 2.36,
+      "input_tokens": 6778,
+      "output_tokens": 123
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "A reading of 200 is above the usual target, so for now, avoid sweet tea, pickles, and",
+      "latency_s": 3.2,
+      "input_tokens": 6749,
+      "output_tokens": 1024
+    }
+  ]
+}

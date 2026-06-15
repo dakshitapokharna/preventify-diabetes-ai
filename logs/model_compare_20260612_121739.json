@@ -1,0 +1,118 @@
+{
+  "timestamp": "20260612_121739",
+  "prompt": "onam is coming what can i eat at the sadhya",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Onam sadhya is a special occasion in Kerala. To enjoy it while managing diabetes, focus on balancing your carbohydrate intake. You can have a small portion of rice, about one medium ladle, and pair it with protein-rich and fiber-rich foods like kappa with fish curry, or cherupayar (green moong) curry. Include plenty of vegetables like cheera (spinach), pavakka (bitter gourd), and muringakka (drumstick). Also, be mindful of the sugar in chaaya (sweet tea) - try to limit it or switch to black tea or tea with a sweetener. Enjoy your Onam sadhya with these smart choices.",
+      "latency_s": 1.47,
+      "input_tokens": 7197,
+      "output_tokens": 144
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "Onam sadhya is a feast, but you can keep it balanced by choosing one ladle of matta rice (a lower‑GI option) with a fish curry such as mathi or ayala, a small portion of kadala curry, and a cup of black tea without sugar. One thing you can start today: swap the usual white rice ladle for matta rice, pair it with fish, and limit your chaaya to one cup with no added sugar.",
+      "latency_s": 1.89,
+      "input_tokens": 7270,
+      "output_tokens": 498
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Enjoy the Onam sadhya, but keep the rice to just one medium ladle of matta rice, add a generous portion of fish like mathi or ayala, and fill the rest of your plate with low‑GI vegetables (pavakka, cheera, drumstick) and a small serving of kadala curry for protein and fibre. One easy step you can try today: make half your plate vegetables and fish, limit rice to one ladle, and swap one cup of sweet chaaya for black tea or tea with a tiny sweetener.",
+      "latency_s": 1.97,
+      "input_tokens": 7270,
+      "output_tokens": 535
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "For the Onam sadhya you can enjoy traditional dishes such as fish (mathi or ayala), bitter gourd (pavakka), drumstick (muringakka) and a moderate portion of rice—aim for one medium ladle of cooked rice, preferably matta rice, and keep sweet payasam to a small serving. Also, try cutting back on the sugar in your chaaya by switching one cup to black tea or using a tiny sweetener today while you enjoy the feast.",
+      "latency_s": 2.3,
+      "input_tokens": 7270,
+      "output_tokens": 463
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Onam sadhya is a special time! You can enjoy it by having one medium ladle of matta rice with vegetable stew or sambar, and include some pavakka (bitter gourd) and cheera (spinach) for good sugar control. Try to limit sugar in chaaya by drinking black tea or tea with a sweetener instead.",
+      "latency_s": 2.81,
+      "input_tokens": 7205,
+      "output_tokens": 74
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Onam greetings! It's wonderful that you're thinking about how to enjoy the Sadya while managing your diabetes. For the Onam Sadya, you can enjoy many traditional dishes. Focus on having smaller portions of rice, maybe one to two ladles, and fill your plate with more of the vegetable curries like avial, thoran, and olan. These vegetable dishes are rich in fiber and nutrients. Also, try to limit the payasam to a small serving, as it can be quite sweet.",
+      "latency_s": 2.94,
+      "input_tokens": 7570,
+      "output_tokens": 106
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Onam is a time for celebration, so enjoy the Sadhya with your family! To manage your sugar, stick to just one or two ladles of rice—preferably Matta rice—and fill half your plate with tasty vegetable dishes like avial, thoran, and olan. You can have a small serving of payasam, but try to stop there to avoid a big sugar spike.",
+      "latency_s": 2.96,
+      "input_tokens": 7283,
+      "output_tokens": 1021
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Wonderful, Onam is a special time in Kerala! Here are some tips for enjoying the Onam sadhya while managing your diabetes: For the main rice dish, go for 1-2 medium ladles of matta rice (the red parboiled variety). Matta rice has a lower glycemic index compared to white rice, so it won't spike your sugar as much. Focus on the delicious vegetable curries like parippu (lentil curry), olan (pumpkin and coconut curry), and avial (mixed vegetable curry). These are all excellent choices that are high in fiber and nutrients. For protein, have a small portion of fish curry, like mathi (sardine) or ayala (mackerel). Fish is very heart-healthy. Be mindful of the banana chips (ethakka upperi) and other fried snacks - these are high in carbs and fat. Enjoy just a small piece as a treat. And don't forget to watch out for the sugar in your chaaya (tea with milk and sugar) during the celebrations. Try having black tea or tea with just a little sweetener instead. The key is to enjoy the festive foods in moderation. Focus on the delicious vegetable dishes, lean proteins, and smaller portions of the higher-carb items. This way you can fully participate in the Onam celebrations while keeping your diabetes in check.",
+      "latency_s": 4.75,
+      "input_tokens": 8465,
+      "output_tokens": 311
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "During Onam sadhya, you can enjoy your favorite dishes with some smart choices! One thing you can do is have smaller portions of rice — about one medium ladle of matta rice instead of white rice. This helps manage your blood sugar while still enjoying the festival. For proteins, choose fish like mathi or ayala, which are excellent for heart health, and include plenty of vegetable dishes like cheera (spinach) and pavakka (bitter gourd), which are great for diabetes management.",
+      "latency_s": 5.95,
+      "input_tokens": 8465,
+      "output_tokens": 109
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "Onam is a special time, and you can enjoy the sadhya while being mindful of your diabetes. Here are some sensible choices: Opt for 1-2 medium ladles of matta rice (red rice) instead of white rice - it has lower GI. Enjoy parippu (dal) and meen curry (fish curry) generously - these provide good protein and healthy fats. Limit sarkara upperi (sweet banana chips) and parippu payasam - have just 1-2 small spoons if desired. Most importantly: → Walk for 15-20 minutes after the meal to help manage blood sugar. Wishing you a joyful Onam! The key is balancing tradition with moderation.",
+      "latency_s": 6.57,
+      "input_tokens": 7262,
+      "output_tokens": 167
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Onam sadhya is a celebration — enjoy it! The key is portions: take rice in 1–2 medium ladles rather than a full plate, and fill the rest with the vegetable curries, olan, avial, and thoran, which are lighter on sugar. One smart move: go easy on the parippu with ghee at the start (it's easy to overeat), enjoy the sambar and rasam freely, and skip the second or third serving of payasam — or take just a small taste rather than a full cup.",
+      "latency_s": 7.3,
+      "input_tokens": 8466,
+      "output_tokens": 123
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Onam Sadhya is a joyful time with family — enjoy it by taking just 1-2 ladles of matta rice and filling the rest of your plate with vegetable dishes like thoran or avial made from muringakka and cheera. One thing you can start today: plan to eat a small piece of mathi or ayala along with the meal to help keep your sugar steadier.",
+      "latency_s": 11.46,
+      "input_tokens": 7187,
+      "output_tokens": 804
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Onam sadhya is a wonderful celebration! You can enjoy a variety of dishes while keeping your health in mind. Focus on having smaller portions of rice (preferably matta rice), and include plenty of vegetables like pavakka (bitter gourd), cheera (spinach), and mathanga (pumpkin). You can also enjoy some fish curry, which is great for heart health. One thing you can do is limit the amount of sweet payasam and opt for a small serving instead. Enjoy the festivities, and remember to balance your plate!",
+      "latency_s": 13.93,
+      "input_tokens": 7205,
+      "output_tokens": 114
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Onam is a beautiful time to celebrate with family, and you can enjoy Sadhya while keeping your sugar in check. Here's how: Focus on vegetable dishes — fill half your banana leaf with fiber-rich options like olan (pumpkin in coconut milk), avial (mixed veggies in coconut-curd sauce), and thoran (stir-fried greens). These digest slowly and help control sugar spikes. Rice portion — stick to 1 medium ladle of matta rice (red rice) instead of white rice. Matta rice has lower GI and pairs well with parippu (lentil curry) for balanced carbs and protein. Limit sweets — have just 2-3 spoonfuls of payasam, preferably earlier in the meal. If available, choose cherupayar payasam (mung bean) over rice-based versions for slightly lower sugar impact. One thing to try: Start your meal with a small portion of salad (cucumber/onion) and veggies before touching rice — this helps manage hunger and sugar levels. Wishing you a joyful Onam! Remember, it’s about savoring flavors, not overfilling your plate. If you check your sugar after Sadhya, note the reading to discuss with your dietitian later.",
+      "latency_s": 31.17,
+      "input_tokens": 7264,
+      "output_tokens": 650
+    }
+  ]
+}

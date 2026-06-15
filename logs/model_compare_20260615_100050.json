@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260615_100050",
+  "prompt": "i have a sweet tooth what sweet can i eat without spiking sugar",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A sweet tooth can be satisfied with a small piece of ripe nendran banana, a tiny cup of curd with just a pinch of jaggery, or a few sips of tender coconut water—these add far less added sugar than regular chaaya or traditional sweets. One thing you can try today is to cut the sugar in one of your daily chaaya cups (use 1 teaspoon instead of 2) and replace the treat with a bite of ripe banana, then check how your sugar readings look.",
+      "latency_s": 1.14,
+      "input_tokens": 7519,
+      "output_tokens": 460
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Traditional sweets like payasam or halwa are high in added sugar and usually cause a spike, so they are best restricted. For a sweet craving, try a small piece of ripe nendran banana or a small cup of tender coconut water instead.",
+      "latency_s": 2.56,
+      "input_tokens": 7569,
+      "output_tokens": 1000
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "It's common to crave sweets, and managing that is a big part of living with diabetes. While it's best to limit sweets, if you have a strong craving, a small piece of ripe nendran banana or a small cup of thayiru (curd) with a pinch of jaggery could be options. Tender coconut water (ilaneer) in small amounts can also help. However, remember that sweets, sweetened beverages like chaaya, and other added sugars contribute significantly to sugar intake, especially in India. Your doctor or a dietitian can help you find the best way to manage these cravings while keeping your sugar levels in check.",
+      "latency_s": 2.61,
+      "input_tokens": 7831,
+      "output_tokens": 132
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Having a sweet tooth is common, and you can enjoy small amounts of Kerala sweets like a small piece of ripe nendran banana or a small cup of curd with a pinch of jaggery. Also, watch the sugar in your chaaya—try reducing it or switching to black tea to help control sugar spikes. One thing to try today: replace one cup of sweet chaaya with black tea and see how you feel.",
+      "latency_s": 2.76,
+      "input_tokens": 7454,
+      "output_tokens": 88
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "It's great that you're thinking about your sugar levels! For a sweet treat that won't spike your sugar too much, you can try a small piece of ripe nendran banana or a small cup of curd (thayiru) with a pinch of jaggery. Remember to keep the portion small and enjoy it in moderation. One thing you can start today: try having a small piece of ripe nendran banana as a sweet snack and see how it fits into your day!",
+      "latency_s": 3.34,
+      "input_tokens": 7454,
+      "output_tokens": 99
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "I understand you have a sweet tooth, and it's common for people with diabetes in Kerala to crave sweets. Here are some healthier sweet options you can enjoy without spiking your blood sugar too much: A small piece of ripe nendran banana. The ripe version has a lower glycemic index compared to the raw green banana. A small cup of plain curd (thayiru) with a pinch of jaggery. The protein and probiotics in curd help balance the effect of the jaggery. Tender coconut water (ilaneer) in moderation. It has natural sweetness without added sugar. The key is to have these in small portions, like a small piece of banana or a small cup of curd. Avoid having too much at once, as even healthy sweets can add up quickly. And remember to keep an eye on your chaaya (tea) intake, as the sugar in chaaya can really add up over the day. Let me know if you have any other questions! Your doctor can also provide more personalized guidance on managing your sweet cravings.",
+      "latency_s": 5.37,
+      "input_tokens": 8805,
+      "output_tokens": 246
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For your sweet cravings, try a small piece of ripe nendran banana or a small cup of curd (thayiru) with just a pinch of jaggery. These are better choices than sweets with added sugar. Also, consider reducing sugar in your chaaya gradually—this alone can make a big difference in managing sugar levels. One thing to try today: Swap one cup of sweet chaaya for black tea with a small sweetener, and see how you feel.",
+      "latency_s": 5.54,
+      "input_tokens": 7544,
+      "output_tokens": 98
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "One small piece of ripe nendran banana or a small cup of curd (thayiru) with a pinch of jaggery can satisfy your sweet craving without causing a big sugar spike. If you enjoy chaaya, try switching to black tea or tea with a small sweetener to reduce extra sugar intake.",
+      "latency_s": 5.63,
+      "input_tokens": 8805,
+      "output_tokens": 70
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "A small piece of ripe nendran banana or a small cup of thayiru (curd) with just a tiny pinch of jaggery can satisfy a sweet craving without a big sugar spike — these are much better than sweets made with added sugar. The one thing to watch most is chaaya — if you're having 4–5 cups a day with sugar, that's adding a lot of hidden sugar; try switching even 2 cups to black chaya or chaya with a small sweetener, and your overall sugar control will improve noticeably.",
+      "latency_s": 8.0,
+      "input_tokens": 8806,
+      "output_tokens": 125
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "A small piece of ripe nendran banana or a small cup of curd with a pinch of jaggery is a better option than sweets with added sugar. Try one small piece of ripe nendran banana after your next meal today.",
+      "latency_s": 9.06,
+      "input_tokens": 7399,
+      "output_tokens": 593
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "I understand your love for sweets! For your Kerala context, here's how to enjoy sweetness safely: Small portions of Kerala-friendly options: A tiny piece of ripe nendran banana or a small cup of curd (thayiru) with just a pinch of jaggery can satisfy cravings without major spikes. Clinical guidelines show these traditional choices have better glycemic impact than sugary treats. Chaaya sugar swap: Since sweetened drinks contribute significantly to sugar intake, try reducing sugar in your tea gradually. Switch 1-2 cups daily to black tea or use a small amount of sweetener - this alone can cut 16-32g sugar daily. One thing to try today: Replace your evening sweet snack with a thumb-sized piece of ripe nendran banana and note your sugar levels after 2 hours. Your doctor can help personalize this further!",
+      "latency_s": 23.67,
+      "input_tokens": 7546,
+      "output_tokens": 585
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260612_121826",
+  "prompt": "during ramadan i fast what should i eat at suhoor and iftar",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "For Ramadan, have Suhoor as late as possible and include protein‑rich, low‑GI foods such as one ladle of matta rice with fish (mathi or ayala) curry and a side of cheera or kadala curry, and start Iftar with plenty of water and 1‑2 dates before the main meal. Today you could try this plan: at Suhoor eat the rice‑fish combo with a small serving of cheera, and at Iftar drink a glass of water, eat two dates, then the same rice‑fish meal, and replace one cup of sweet chaaya with black tea to cut extra sugar.",
+      "latency_s": 0.92,
+      "input_tokens": 6568,
+      "output_tokens": 700
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Fasting during Ramadan is special, and for Suhoor, eat foods with good protein and healthy fat like puttu with kadala curry or appam with egg curry to keep you full longer and keep sugar steady. At Iftar, start with water and 1-3 small dates to raise your sugar safely, then have a balanced meal like rice with fish curry and vegetables. One thing to try today: eat Suhoor as close to dawn as possible and avoid too much sugar in chaaya.",
+      "latency_s": 3.04,
+      "input_tokens": 6503,
+      "output_tokens": 103
+    },
+    {
+      "provider": "cerebras",
+      "model": "zai-glm-4.7",
+      "text": "Eat Suhoor as late as possible before dawn, choosing protein like eggs or fish curry with a small portion of matt",
+      "latency_s": 3.41,
+      "input_tokens": 6542,
+      "output_tokens": 1024
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "For someone fasting during Ramadan, it's important to choose foods that help maintain your energy and blood sugar levels. At Suhoor, try to have a meal that includes lean protein and healthy fats, like an egg with some vegetable stew or a small bowl of kadala curry with puttu. This can help keep you full longer. For Iftar, start with plenty of water and a few dates to quickly raise your blood sugar. Then, enjoy a balanced meal with rice (preferably matta rice), some fish like mathi or ayala, and plenty of vegetables like pavakka or cheera. One thing you can start today: plan to have your Suhoor as close to dawn as possible to help you through the fasting day.",
+      "latency_s": 3.68,
+      "input_tokens": 6503,
+      "output_tokens": 152
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "It's good that you're thinking about what to eat during Ramadan to manage your diabetes well. For Suhoor, try to eat as close to dawn as possible, focusing on foods rich in protein and good fats, and carbohydrates that are low on the glycemic index, like kadala or cherupayar with a small amount of matta rice, to help you feel full longer. When breaking your fast at Iftar, start with water to rehydrate, and then you can have 1-3 small dates to gently raise your blood sugar. Your main Iftar meal can be taken later, and it's best to choose foods that are not too high in sugar and unhealthy fats.",
+      "latency_s": 3.98,
+      "input_tokens": 6840,
+      "output_tokens": 142
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Okay, let me share some helpful tips for managing your diabetes during Ramadan fasting: At Suhoor (pre-dawn meal):\nAim to have Suhoor as close to dawn as possible to minimize the fasting period. Choose foods that are higher in protein and healthy fats, like eggs, nuts, or a small portion of matta rice with fish curry. These foods digest more slowly and won't spike your sugar as quickly.\nAvoid heavy, carb-rich foods that can cause a blood sugar spike before your fast.\nDrink plenty of water to stay hydrated through the day. At Iftar (breaking the fast):\nStart with some dates or a small glass of water to gently raise your blood sugar.\nThen have a balanced meal with protein, vegetables, and a small portion of rice or kappa. Avoid heavy, oily, or very sweet foods.\nYou can also have a healthy snack like roasted kadala or a small piece of raw banana between Iftar and your main evening meal. The key is to focus on consistent carb intake at Suhoor and Iftar, stay hydrated, and monitor your blood sugar closely. Your doctor can help you adjust your diabetes medications as needed during Ramadan.",
+      "latency_s": 4.87,
+      "input_tokens": 7345,
+      "output_tokens": 295
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "For suhoor, eat as late as possible (close to dawn) and include protein-rich foods like eggs or fish (mathi/ayala) with a small amount of matta rice — protein and healthy fat keep you fuller longer and cause less sugar spike than a carb-heavy meal. For iftar, start with water and 1–3 dates to gently raise your sugar, then have your main meal — and avoid continuous snacking through the night, as that can push your sugar up by morning. Most importantly, please discuss your medication timing with your doctor before Ramadan begins, as fasting changes when your medicines need to be taken.",
+      "latency_s": 5.78,
+      "input_tokens": 7346,
+      "output_tokens": 141
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For suhoor (pre-dawn meal), have protein-rich foods like egg curry or fish (mathi/ayala) with 1-2 ladles of matta rice or puttu to keep you full longer. At iftar, break your fast with 1-2 dates and water, then after prayer have a balanced meal with fish/vegetable curry and rice. Avoid overeating fried snacks like banana chips - have roasted kadala or a small piece of coconut instead. Check your sugar levels regularly during fasting hours.",
+      "latency_s": 7.2,
+      "input_tokens": 6589,
+      "output_tokens": 108
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "During Ramadan, here are two key strategies for your meals: At Suhoor (pre-dawn meal), focus on lean protein and low glycemic index foods to keep you feeling full. A good option could be puttu with a small portion of kadala curry, which provides protein and slow-release energy. Try to eat this meal as close to dawn as possible. For Iftar (breaking the fast), start with water and 1-3 small dates to gently raise your blood sugar. Then have a balanced meal. One thing you can try today: have a handful of roasted kadala or a small piece of fish like mathi along with your meal to help manage your blood sugar during fasting.",
+      "latency_s": 8.55,
+      "input_tokens": 7345,
+      "output_tokens": 155
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "Fasting during Ramadan holds deep meaning, and choosing balanced meals can support your health while you fast. For Suhoor eat as late as possible with protein and fat like kadala curry with puttu or idli plus a piece of mathi, and start Iftar with water plus 1-3 dates before your main meal. Your doctor should confirm the right blood sugar thresholds for you before breaking the fast.",
+      "latency_s": 11.38,
+      "input_tokens": 6533,
+      "output_tokens": 829
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For Suhoor (pre-dawn meal), have a balanced meal with protein and healthy fats to keep you full longer—like puttu with kadala curry and a piece of fish (mathi/ayala) or appam with egg curry, using 1 medium ladle of matta rice if included. This helps avoid sugar spikes during fasting. At Iftar (sunset meal), break your fast with water and 1-2 dates or a small banana, then after prayers, eat a moderate meal like 1 ladle of matta rice with fish curry and cheera thoran—avoid fried snacks like banana chips. One thing to start today: Swap sugary chaaya for black tea or tea with a pinch of sweetener at Suhoor to help manage sugar levels. Always discuss your fasting plan and medication timing with your doctor.",
+      "latency_s": 38.25,
+      "input_tokens": 6590,
+      "output_tokens": 911
+    }
+  ]
+}

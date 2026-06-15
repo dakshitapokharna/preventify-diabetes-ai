@@ -1,0 +1,86 @@
+{
+  "timestamp": "20260612_121154",
+  "prompt": "i feel hungry between meals what can i eat as a snack",
+  "results": [
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Feeling hungry between meals is common, and choosing the right snack can help manage your blood sugar. Instead of fried snacks, you could try a small handful of roasted kadala (chickpeas), a small piece of raw banana (kaya), or a small cup of curd (thayiru). These options provide some protein and fiber, which can help you feel full.",
+      "latency_s": 1.73,
+      "input_tokens": 7886,
+      "output_tokens": 74
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "For a quick snack, you can try roasted kadala (chickpeas) or a small piece of raw banana (kaya). Both are good options to manage hunger between meals. Roasted kadala is a good source of protein and fibre, while raw banana is easy to digest. You can also have a small cup of curd (thayiru) or a piece of coconut as a snack. These will help keep your hunger under control without affecting your sugar levels too much. Try one of these options and see how you feel!",
+      "latency_s": 1.85,
+      "input_tokens": 7423,
+      "output_tokens": 109
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Feeling hungry between meals is common. For snacks, try roasted kadala, a small piece of raw banana (kaya), or a small cup of curd (thayiru). Also, check your chaaya sugar—switching to black tea or tea with a sweetener can help control hunger and sugar levels.",
+      "latency_s": 2.26,
+      "input_tokens": 7438,
+      "output_tokens": 65
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Feeling hungry between meals is common, and it's great to have healthy snack options! You can try roasted kadala, which is high in protein and fiber, or a small piece of raw banana (kaya). These snacks can help keep your energy up and manage your blood sugar. One thing you can start today: keep some roasted kadala handy for when you feel hungry!",
+      "latency_s": 2.57,
+      "input_tokens": 7438,
+      "output_tokens": 77
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "As a person with diabetes living in Kerala, I understand the challenge of managing hunger between meals. Here are some healthy snack options you can try: A small piece of raw banana (kaya) - this is a good low-GI choice. You can also have a small cup of curd (thayiru/thairu) or a few roasted kadala (chickpeas). These provide protein and fiber to help keep you feeling full. Avoid fried snacks like banana chips (ethakka upperi) or murukku, as they are high in carbs and unhealthy fats. Instead, opt for a small piece of fresh coconut or a cup of black tea (chaya) without added sugar. The key is to choose snacks that are low in carbs and high in fiber or protein. This will help prevent your blood sugar from spiking. Remember, even healthy snacks should be consumed in moderation.",
+      "latency_s": 4.15,
+      "input_tokens": 8774,
+      "output_tokens": 215
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "One small piece of roasted kadala (brown chickpeas) or a small piece of raw banana (kaya) can be a good snack. These are low in sugar and will help keep you feeling full between meals. Try having these with a cup of black tea without sugar.",
+      "latency_s": 5.26,
+      "input_tokens": 8774,
+      "output_tokens": 62
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "A small handful of roasted kadala or a small piece of raw banana works well as a snack when you feel hungry between meals. One thing you can start today: keep some roasted kadala at home and eat a small handful instead of waiting for the next meal.",
+      "latency_s": 6.52,
+      "input_tokens": 7383,
+      "output_tokens": 440
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Roasted kadala (brown chickpeas) is one of the best snacks for diabetes — it is filling, high in protein and fibre, and keeps your sugar steady between meals. A small piece of raw banana (kaya) or a small cup of curd (thayiru) also works well — and swap one of those chaaya breaks for black tea without sugar, which helps cut extra sugar through the day.",
+      "latency_s": 6.71,
+      "input_tokens": 8775,
+      "output_tokens": 93
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "Here’s a simple and practical suggestion based on Kerala-friendly foods and clinical evidence: \"Try roasted kadala (brown chickpeas) or a small piece of raw banana (kaya) when hungry between meals — these are filling and won’t spike your sugar too much. Also, check if you’re drinking sweet chaaya often, as reducing sugar in tea can help manage hunger better.\" Why this works: Roasted kadala and raw banana are low-glycemic snacks (supported by RSSDI 2022 evidence on fiber-rich foods). Addressing chaaya sugar aligns with Kerala dietary habits and helps control cravings. Let me know if you'd like more snack ideas!",
+      "latency_s": 8.7,
+      "input_tokens": 7493,
+      "output_tokens": 145
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Feeling hungry between meals is common with diabetes — choosing low-GI snacks helps manage sugar spikes. Try a small handful of roasted kadala (chickpeas) or a piece of raw banana (kaya) — both keep you full without spiking sugar. One thing to start today: Swap one snack for roasted kadala and check if your hunger eases in 2–3 days.",
+      "latency_s": 26.31,
+      "input_tokens": 7494,
+      "output_tokens": 465
+    }
+  ]
+}

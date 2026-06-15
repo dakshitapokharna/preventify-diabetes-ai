@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260612_114733",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A blood‑sugar reading of 200 mg/dL is above the usual target range, so keeping it lower will help you feel better and protect your health. Try cutting out sugar‑sweetened drinks (like tea with added sugar) and sweets such as jaggery or pastries, and replace them with water or plain tea and a moderate portion of rice (one ladle) paired with plenty of vegetables at each meal.",
+      "latency_s": 1.03,
+      "input_tokens": 6735,
+      "output_tokens": 523
+    },
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "I understand your concern about managing your blood sugar levels. With a blood sugar reading of 200, it's essential to focus on making dietary changes that can help regulate your sugar intake and improve insulin sensitivity. To help manage your blood sugar levels, I recommend avoiding or limiting foods that are high in sugar, refined carbohydrates, and unhealthy fats. Here are some specific Kerala foods you can limit or avoid: Chaaya (sweet tea): Try reducing the number of cups you drink per day or switching to black tea or tea with a sweetener. One cup of chaaya with 2 tsp sugar contains around 8 grams of sugar. Sugar-sweetened beverages: Avoid or limit drinks like lassi, camera, or other sweetened beverages. Refined carbohydrates: Limit foods like white rice, idli, or dosa, which can cause a spike in blood sugar levels. Consider switching to brown rice or matta rice, which have a lower glycemic index. Instead, focus on whole, nutrient-dense foods like: Vegetables: Include a variety of colorful vegetables in your meals, such as carrots, beans, and leafy greens. Fruits: Choose fruits that are low in sugar, like nendran banana or other seasonal fruits. Protein sources: Include protein-rich foods like fish (mathi, ayala, or netholi), poultry, or legumes in your meals. Healthy fats**: Nuts, seeds, and coconut are good sources of healthy fats. One thing you can start today: Replace two cups of chaaya with black tea or tea with a sweetener, and see how you feel after a week. This small change can help you reduce your sugar intake and develop healthier habits.",
+      "latency_s": 2.06,
+      "input_tokens": 6681,
+      "output_tokens": 367
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "A reading of 200 mg/dL is above the usual target range, so it’s helpful to limit foods that raise sugar quickly. Try cutting back on sugar‑sweetened chaaya, sweets, large ladles of white rice, and kappa eaten alone, and replace a cup of chaaya with unsweetened tea or a small piece of fruit today.",
+      "latency_s": 2.75,
+      "input_tokens": 6735,
+      "output_tokens": 538
+    }
+  ]
+}

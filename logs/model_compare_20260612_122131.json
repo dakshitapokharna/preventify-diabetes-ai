@@ -1,0 +1,94 @@
+{
+  "timestamp": "20260612_122131",
+  "prompt": "my doctor said increase fiber in diet what foods should i have",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Your doctor is right—adding more fiber helps control blood sugar; aim for about 25‑30 g a day by including a medium ladle of matta rice, a cup of cooked pulses such as kadala or green moong, plenty of high‑fiber vegetables like cheera, pavakka (bitter gourd) and muringakka, plus a small fruit (e.g., a guava) or a handful of roasted kadala as a snack. One simple step you can try today: add a small bowl of kadala curry to your lunch and swap one cup of chaaya for black tea to start boosting your fiber intake.",
+      "latency_s": 1.08,
+      "input_tokens": 7473,
+      "output_tokens": 623
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "That's a great question! Increasing fiber is very helpful for managing blood sugar. You can get more fiber from foods like cheera (spinach), pavakka (bitter gourd), muringakka (drumstick), and pulses like kadala (brown chickpeas) and cherupayar (green moong). Your doctor can help you figure out how much fiber is right for you.",
+      "latency_s": 2.67,
+      "input_tokens": 7946,
+      "output_tokens": 78
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "You can boost fiber by adding pulses such as kadala or cherupayar, choosing matta rice (one medium ladle) instead of white rice, and filling half your plate with leafy greens and vegetables like cheera, pavakka, and muringakka. Try today to include a small bowl of kadala curry with lunch and replace one cup of chaaya with black tea or tea with a little sweetener.",
+      "latency_s": 2.75,
+      "input_tokens": 7473,
+      "output_tokens": 553
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "Increasing fiber is great for your sugar control and digestion. In Kerala, you can eat more cheera (spinach), pavakka (bitter gourd), muringakka (drumstick), and pulses like kadala (brown chickpeas) and cherupayar (green moong). One thing you can start today: add a small bowl of kadala curry with your puttu or have a cup of chaaya with less sugar.",
+      "latency_s": 3.9,
+      "input_tokens": 7408,
+      "output_tokens": 90
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "Increasing fiber in your diet is a great step! You can include foods like puttu with kadala curry, idli with sambar, and a variety of vegetables like cheera (spinach) and pavakka (bitter gourd). Also, consider adding pulses like kadala (brown chickpeas) and cherupayar (green moong) to your meals. One thing you can start today: try to have at least one serving of a vegetable with each meal.",
+      "latency_s": 4.28,
+      "input_tokens": 7408,
+      "output_tokens": 97
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Okay, let's talk about adding more fiber to your diet in a way that works for you as a person living in Kerala. The research shows that increasing your fiber intake, especially soluble fiber from foods like puttu, beans, nuts, and seeds, can help improve your blood sugar control. Some good high-fiber Kerala foods to focus on are: Matta rice (red parboiled rice) - have 1-2 medium ladles per meal instead of white rice\nKappa (tapioca) with meen curry (fish curry) - the fiber in kappa is better absorbed with the curry\nPulses like kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) - have a small portion with your meals\nVegetables like pavakka (bitter gourd), muringakka (drumstick/moringa), and cheera (spinach/amaranth) - aim for 2-3 servings per day\nFruits like raw banana (kaya) and guava - have a small piece as a snack One thing to watch is your chaaya (sweet tea) intake. Each cup with 2 teaspoons of sugar adds about 8 grams of sugar. Try switching to black tea or tea with just a small amount of sweetener instead. The key is to make gradual changes and find high-fiber Kerala foods you enjoy. Your doctor can give you more personalized guidance on the right fiber target for you.",
+      "latency_s": 5.7,
+      "input_tokens": 8680,
+      "output_tokens": 348
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "To increase fiber, add vegetables like cheera, pavakka, muringakka, vendakka and pulses like kadala or cherupayar to your meals with rice. One thing you can start today: include a small bowl of kadala or cherupayar curry with two ladles of rice at lunch.",
+      "latency_s": 6.38,
+      "input_tokens": 7355,
+      "output_tokens": 411
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "Great question! Research shows fiber is excellent for managing diabetes. In Kerala, you have many delicious high-fiber food options. One thing you can start today: include one serving of cherupayar (green moong) or kadala (brown chickpeas) in your daily meals, and have a small piece of raw banana or a handful of roasted kadala as a snack. These will help improve your blood sugar control while keeping you full.",
+      "latency_s": 8.35,
+      "input_tokens": 8680,
+      "output_tokens": 98
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For increasing fiber in your diet, focus on Kerala foods like: Kadala (brown chickpeas) and cherupayar (green moong) - excellent fiber sources to add to meals\nCheera (spinach) and pavakka (bitter gourd) - have one extra serving daily\nMatta rice (red rice) instead of white rice - keeps 1-2 ladles per meal\nA handful of roasted kadala as a snack instead of fried items Also try reducing sugar in your chaaya - each cup without sugar helps fiber work better for your sugar control. Would you like simple meal ideas using these?",
+      "latency_s": 9.34,
+      "input_tokens": 7457,
+      "output_tokens": 136
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Great advice from your doctor — fibre helps slow down sugar absorption after meals. The easiest Kerala foods to boost fibre: cherupayar (green moong) or kadala curry with your meals, muringakka (drumstick) and vendakka (ladies finger) in your curries, and pavakka (bitter gourd) which is especially good for sugar control — and swap to matta rice (red parboiled rice) which has more fibre than white rice, keeping portions to 1–2 medium ladles. One quick start today: if your morning chaaya has sugar, swap two cups to black tea — that alone removes hidden sugar, and adding cherupayar curry to one meal gives you a solid fibre boost right away.",
+      "latency_s": 10.02,
+      "input_tokens": 8681,
+      "output_tokens": 175
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "Based on your doctor's advice, focus on Kerala foods rich in fiber like cheera (spinach), pavakka (bitter gourd), and whole pulses like cherupayar (green moong) or kadala (chickpeas). These help manage blood sugar and digestion. For example: Add a side of cheera thoran to rice meals. Swap white rice for 1-2 ladles of matta rice (higher fiber). Try roasted kadala as a snack instead of fried items. Also, reduce sugar in chaaya — switch 2 cups to black tea or use a small sweetener. Start with one change today!",
+      "latency_s": 36.29,
+      "input_tokens": 7459,
+      "output_tokens": 460
+    }
+  ]
+}

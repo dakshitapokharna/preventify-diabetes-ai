@@ -1,0 +1,22 @@
+{
+  "timestamp": "20260612_115230",
+  "prompt": "i am having 200 sugar what food should i avoid",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "Fasting blood sugar of 200 mg/dL is high. To manage this, let's focus on dietary changes. Research shows that reducing carbohydrate intake, especially high-GI foods, can help control blood sugar. One thing you can start today: limit your carbohydrate intake, especially white rice, and replace it with matta rice or have kappa with fish curry. Also, be mindful of your chaaya (sweet tea) intake - try reducing the sugar in your tea or switching to black tea. What is your typical daily meal plan like? I can give more specific guidance.",
+      "latency_s": 1.42,
+      "input_tokens": 7109,
+      "output_tokens": 119
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "A blood sugar of 200 mg/dL is higher than the usual target, and it often reflects extra sugars from drinks and high‑glycemic foods. Try swapping one cup of sweet chaaya for black tea (or tea with a tiny sweetener) and keep your rice to one medium ladle of matta rice, while avoiding packaged salty snacks and fried treats like banana chips or murukku.",
+      "latency_s": 1.72,
+      "input_tokens": 7162,
+      "output_tokens": 499
+    }
+  ]
+}

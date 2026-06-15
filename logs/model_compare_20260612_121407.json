@@ -1,0 +1,110 @@
+{
+  "timestamp": "20260612_121407",
+  "prompt": "i am vegetarian and diabetic what are good protein sources for me",
+  "results": [
+    {
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "text": "As a vegetarian with diabetes, you have many good protein sources to choose from. For protein, you can consider soya, pulses like chana, rajma, and green gram, and milk and low-fat dairy products. These are all good sources of protein that can help you manage your diabetes. One thing you can try today: include a ladle of dal or a small cup of curd (thayiru) in your daily meals to boost your protein intake.",
+      "latency_s": 1.0,
+      "input_tokens": 6408,
+      "output_tokens": 97
+    },
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "Good vegetarian protein sources for diabetes include kadala (brown chickpeas), cherupayar (green moong), vanpayar (red cowpea), thatta payar (cow pea) and a small cup of curd, and you can start today by adding a ladle of kadala curry to your lunch rice.",
+      "latency_s": 1.07,
+      "input_tokens": 6487,
+      "output_tokens": 644
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "text": "Good vegetarian protein choices include pulses such as kadala (brown chickpeas), cherupayar (green moong) or vanpayar (red cowpea), soy products, and a small cup of curd—try adding a ladle of kadala curry to your next rice serving.",
+      "latency_s": 2.12,
+      "input_tokens": 6487,
+      "output_tokens": 391
+    },
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "text": "Good vegetarian protein sources are pulses like kadala, cherupayar, thatta payar, low‑fat curd, and egg whites.",
+      "latency_s": 2.41,
+      "input_tokens": 6487,
+      "output_tokens": 951
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "For a vegetarian diet, good protein sources include pulses like kadala (brown chickpeas), cherupayar (green moong), and thatta payar (cow pea). You can also include low-fat dairy products like milk and curd. One thing you can start today: try adding a ladle of kadala curry to your meals for a healthy protein boost!",
+      "latency_s": 2.48,
+      "input_tokens": 6422,
+      "output_tokens": 75
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For a vegetarian with diabetes, good protein sources include pulses like kadala (brown chickpeas), cherupayar (green moong), and thatta payar (cow pea), as well as soya and low-fat dairy like curd (thayiru). Including these with your meals can help manage sugar and keep you strong. One thing to try today: add a small bowl of kadala curry with your puttu or idli.",
+      "latency_s": 3.1,
+      "input_tokens": 6422,
+      "output_tokens": 90
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "For vegetarians with diabetes, good protein sources include pulses like kadala, cherupayar, and vanpayar, as well as soya and low-fat dairy products. These can help you get enough protein, which should be about 10-15% of your total daily calories.",
+      "latency_s": 3.36,
+      "input_tokens": 6826,
+      "output_tokens": 59
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Great question — pulses like kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) are excellent protein sources for vegetarian diabetics, and they also have a low glycaemic index which helps keep sugar levels steady. A simple start today: add a small bowl of kadala curry or cherupayar thoran to at least one meal.",
+      "latency_s": 4.75,
+      "input_tokens": 7476,
+      "output_tokens": 91
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Here are some good protein sources for a vegetarian person with diabetes in Kerala: Pulses (dals) like kadala (brown chickpeas), cherupayar (green moong), vanpayar (red cowpea), and thatta payar (cow pea) are excellent choices. They are high in protein and fiber, which helps manage blood sugar. You can also get protein from milk and low-fat dairy products like curd (thayiru/thairu). Soya products like tofu are another good option. Nuts and seeds like roasted kadala (chickpeas) are portable protein snacks you can have. Just be mindful of portion sizes, as they are high in calories. The key is to include a variety of these protein-rich vegetarian foods in your meals and snacks throughout the day. This will help meet your protein needs while also keeping your blood sugar stable. Remember, your doctor or dietitian can give you more personalized guidance on the right protein intake and portion sizes for your individual needs.",
+      "latency_s": 5.23,
+      "input_tokens": 7475,
+      "output_tokens": 239
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "For vegetarian diabetic patients in Kerala, excellent protein sources include kadala (brown chickpeas), cherupayar (green moong), vanpayar (red cowpea), soya, and low-fat dairy like thayiru (curd). Research suggests about one ladle of pulses per meal can help manage your blood sugar while providing good protein. A small cup of curd or a handful of roasted kadala makes a great protein-rich snack.",
+      "latency_s": 5.56,
+      "input_tokens": 7475,
+      "output_tokens": 104
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For vegetarian protein in Kerala, include kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) in your meals. Pair these with small portions of rice (1-2 ladles) for balanced nutrition. Also, have curd (thayiru) daily for protein - it goes well with Kerala meals like puttu or rice. One thing to try today: Swap one cup of sweet chaaya with black tea to reduce sugar intake while keeping your protein sources strong.",
+      "latency_s": 6.4,
+      "input_tokens": 6468,
+      "output_tokens": 110
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "For vegetarians with diabetes, good protein sources are kadala and cherupayar. One thing you can start today: add a small bowl of kadala curry with your puttu or idli.",
+      "latency_s": 7.53,
+      "input_tokens": 6392,
+      "output_tokens": 583
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "As a vegetarian with diabetes in Kerala, focus on these protein-rich foods that also help manage blood sugar: Pulses (Paruppu): Include kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) in your meals. These provide protein and fiber, which slow sugar absorption. Try adding them to rice dishes or as thoran. Soya and Dairy: Opt for soya chunks in curries and low-fat curd (thayiru). These are excellent protein sources without spiking sugar. Simple swap: Replace one fried snack daily with a small cup of roasted kadala – it's filling, protein-packed, and helps control cravings. Always pair with vegetables for balanced nutrition.",
+      "latency_s": 38.65,
+      "input_tokens": 6469,
+      "output_tokens": 733
+    }
+  ]
+}

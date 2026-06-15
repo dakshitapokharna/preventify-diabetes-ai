@@ -1,0 +1,86 @@
+{
+  "timestamp": "20260612_122033",
+  "prompt": "what are high fiber foods i should eat for diabetes",
+  "results": [
+    {
+      "provider": "cerebras",
+      "model": "gpt-oss-120b",
+      "text": "High‑fiber foods such as roasted kadala (brown chickpeas) or cheera (spinach) help slow the rise of blood sugar, so try adding a small handful of roasted kadala to your lunch today.",
+      "latency_s": 1.45,
+      "input_tokens": 7204,
+      "output_tokens": 349
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "text": "High-fiber foods are great for managing diabetes. In Kerala, you can include foods like: Pulses: Kadala (brown chickpeas) and cherupayar (green moong) are excellent sources of fiber.\nVegetables: Include pavakka (bitter gourd), cheera (spinach), and muringakka (drumstick) in your meals.\nWhole grains: Opt for matta rice instead of white rice, as it has more fiber. One thing you can start today: try adding a ladle of kadala curry to your meals for extra fiber!",
+      "latency_s": 2.66,
+      "input_tokens": 7139,
+      "output_tokens": 128
+    },
+    {
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash",
+      "text": "Eating foods rich in fiber is very good for managing diabetes! You can find plenty of fiber in foods like pulses such as kadala, cherupayar, and vanpayar, as well as in green leafy vegetables like cheera. These foods can help with blood sugar control and overall metabolic health.",
+      "latency_s": 2.82,
+      "input_tokens": 7647,
+      "output_tokens": 60
+    },
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini",
+      "text": "For diabetes, high-fiber Kerala foods like cheera (spinach), pavakka (bitter gourd), kadala (brown chickpeas), and whole pulses are very good. Also, choose matta rice instead of white rice and include puttu with kadala curry for fiber and better sugar control. One thing you can start today: add a small ladle of matta rice and a serving of cheera or pavakka to your meal.",
+      "latency_s": 2.82,
+      "input_tokens": 7139,
+      "output_tokens": 92
+    },
+    {
+      "provider": "openrouter",
+      "model": "x-ai/grok-4.3",
+      "text": "High-fiber foods like cheera, pavakka, vendakka, and pulses such as kadala or cherupayar help control blood sugar.",
+      "latency_s": 3.75,
+      "input_tokens": 7080,
+      "output_tokens": 580
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-haiku",
+      "text": "One ladle of cherupayar (green moong dal) or vanpayar (red cowpea) can help you manage diabetes. Research shows that adding fiber, especially from pulses, helps control blood sugar levels and improves overall metabolic health.",
+      "latency_s": 4.12,
+      "input_tokens": 8372,
+      "output_tokens": 58
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-3-haiku",
+      "text": "Here are some high-fiber foods that can be good choices for managing diabetes in Kerala: Matta rice (red parboiled rice) is a better option than white rice. Have 1-2 medium ladles of cooked matta rice per meal. The fiber helps slow down sugar absorption. Kappa (tapioca) is also a high-fiber staple. But it's best to have kappa with a fish curry, as the fish helps lower the overall glycemic impact. Pulses like kadala (brown chickpeas), cherupayar (green moong), and vanpayar (red cowpea) are excellent sources of fiber and protein. Try to include them in your meals. Vegetables like pavakka (bitter gourd), muringakka (drumstick/moringa), and vendakka (okra/ladies finger) are very high in fiber and nutrients. Aim for 2-3 servings of these per day. Lastly, be mindful of your chaaya (tea with milk and sugar) intake. Even 4 cups with 2 teaspoons of sugar each adds up to 32 grams of extra sugar per day. Switch to black tea or tea with a small amount of sweetener. The key is to focus on high-fiber, minimally processed Kerala foods, and be aware of hidden sugars in your daily drinks and snacks. Your doctor can provide more personalized guidance on the right carbohydrate and fiber targets for you.",
+      "latency_s": 5.08,
+      "input_tokens": 8372,
+      "output_tokens": 333
+    },
+    {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "text": "Great question — fibre helps slow down sugar absorption after meals, which keeps your blood sugar steadier. Good high-fibre choices from your everyday Kerala food: kadala (brown chickpeas), cherupayar (green moong), vanpayar, pavakka (bitter gourd), muringakka (drumstick), cheera (spinach), and matta rice instead of white rice — even one or two ladles of matta rice makes a difference. One easy start today: swap your regular rice for matta rice and add a small kadala or cherupayar curry to at least one meal.",
+      "latency_s": 7.97,
+      "input_tokens": 8373,
+      "output_tokens": 137
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "text": "For diabetes, focus on Kerala's high-fiber foods like: Matta rice (red rice): 1-2 ladles per meal has more fiber than white rice Cheera (spinach) and pavakka (bitter gourd): Cook them with coconut for a balanced meal Roasted kadala (chickpeas): A handful makes a great fiber-rich snack Try swapping one cup of sweet chaaya with black tea daily - this small change reduces sugar while keeping your routine. (All recommendations align with RSSDI 2022 guidelines for high-fiber diets in diabetes, using Kerala-specific foods from the approved list.)",
+      "latency_s": 9.27,
+      "input_tokens": 7180,
+      "output_tokens": 143
+    },
+    {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-r1-0528",
+      "text": "For diabetes, high-fiber foods help control blood sugar and keep you full. In Kerala, focus on these everyday options: Cheera (spinach) and pavakka (bitter gourd): Have 1 small cup cooked with meals. Kadala (brown chickpeas): A handful roasted as a snack or in curries. Matta rice: Choose 1 medium ladle instead of white rice—it has more fiber. Also, reduce sugar in your chaaya—try black tea or a small sweetener. This alone cuts hidden sugar. Start with one swap today!",
+      "latency_s": 26.11,
+      "input_tokens": 7182,
+      "output_tokens": 452
+    }
+  ]
+}

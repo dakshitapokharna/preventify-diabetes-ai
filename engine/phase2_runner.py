@@ -281,19 +281,19 @@ def _rerank_sync(reranker_handle: dict, query: str, chunks: list) -> list:
     texts = [chunk["text"] for chunk in chunks]
 
     if reranker_handle["type"] == "onnx":
+        import numpy as np
         tokenizer = reranker_handle["tokenizer"]
         model = reranker_handle["model"]
-        pairs = [[query, t] for t in texts]
+        pairs = [[query, text] for text in texts]
         inputs = tokenizer(
             pairs,
             padding=True,
             truncation=True,
-            max_length=512,
-            return_tensors="pt",
+            max_length=128,
+            return_tensors="np",
         )
-        with torch.no_grad():
-            logits = model(**inputs).logits.squeeze(-1)
-        return torch.sigmoid(logits).tolist()
+        logits = model(**inputs).logits.squeeze(-1)
+        return (1 / (1 + np.exp(-logits))).tolist()
 
     # CrossEncoder fallback
     model = reranker_handle["model"]
@@ -562,12 +562,12 @@ def _build_openai_messages(
     Returns:
         List of {"role": ..., "content": ...} dicts for the chat completions API.
     """
-    messages = [{"role": "system", "content": system_prompt}]
+    # ── Build context injection (appended to system prompt) ──────────────────
+    # Keeping phase1_context, patient_memory, and clinical_context in the system
+    # role prevents models from echoing them back as a response to the user turn.
+    context_parts = []
 
-    # Opening user turn — inject phase1_context + patient memory + clinical context
-    opening_parts = []
-
-    # ── Phase 1 context block ─────────────────────────────────────────────────
+    # Phase 1 context block
     phase1_lines = []
     if intent and intent != "general_dsmes":
         phase1_lines.append(f"Question intent: {intent}")
@@ -584,23 +584,21 @@ def _build_openai_messages(
             "and seasonal/cultural context relevant to this region."
         )
     if phase1_lines:
-        opening_parts.append("<phase1_context>\n" + "\n".join(phase1_lines) + "\n</phase1_context>")
+        context_parts.append("<phase1_context>\n" + "\n".join(phase1_lines) + "\n</phase1_context>")
 
-    # ── Patient memory ────────────────────────────────────────────────────────
+    # Patient memory
     if short_memory:
-        opening_parts.append(f"<patient_memory>\n{short_memory}\n</patient_memory>")
-    opening_parts.append(chunk_context_block)
+        context_parts.append(f"<patient_memory>\n{short_memory}\n</patient_memory>")
 
-    messages.append({"role": "user", "content": "\n\n".join(opening_parts)})
+    # Clinical context
+    context_parts.append(chunk_context_block)
 
-    # Placeholder assistant turn — keeps user/assistant alternating before history
-    messages.append({
-        "role": "assistant",
-        "content": (
-            "Understood. I have read the patient's profile and the clinical evidence. "
-            "Please share the conversation."
-        ),
-    })
+    # Append all context to the system prompt so the model treats it as instructions
+    full_system = system_prompt
+    if context_parts:
+        full_system = system_prompt + "\n\n" + "\n\n".join(context_parts)
+
+    messages = [{"role": "system", "content": full_system}]
 
     # Session history — last 5 prior turns
     for turn in session_turns[-5:]:

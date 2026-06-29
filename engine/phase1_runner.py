@@ -253,7 +253,7 @@ async def run_phase1(
                     model=MODEL_ID,
                     messages=messages,
                     response_format={"type": "json_object"},
-                    max_completion_tokens=1024,
+                    max_completion_tokens=2048,
                     temperature=0.1,
                 ),
                 timeout=REQUEST_TIMEOUT,

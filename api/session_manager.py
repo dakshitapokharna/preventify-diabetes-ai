@@ -63,6 +63,7 @@ async def load_session_turns(user_id: str, session_id: str, db_conn) -> list:
             SELECT role, content
             FROM session_turns
             WHERE user_id = $1 AND session_id = $2
+              AND role != 'system'
             ORDER BY turn_number ASC
             """,
             user_id,

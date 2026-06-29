@@ -25,6 +25,7 @@ from api.audit_logger import write_audit_log
 from api.session_manager import process_turn
 from schemas.phase2_schema import PHASE2_CONSTRAINT_FALLBACK_TEXT
 from engine.compare_runner import run_compare_stream
+from engine.translator import translate_to_english
 
 log = logging.getLogger(__name__)
 
@@ -126,10 +127,13 @@ async def _chat_stream(req: ChatRequest, request: Request) -> AsyncGenerator[str
         # ── Phase A: Status events ─────────────────────────────────────────────
         yield _sse("status", text="Looking up your question...")
 
+        # ── Translate Malayalam input → English for pipeline ───────────────────
+        english_message = translate_to_english(req.message)
+
         # ── Run full pipeline ──────────────────────────────────────────────────
         try:
             result, turn_number = await process_turn(
-                message=req.message,
+                message=english_message,
                 user_id=req.user_id,
                 session_id=req.session_id,
                 db_conn=conn,

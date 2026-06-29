@@ -121,6 +121,7 @@ async def write_profile_signals(
     signals: dict,
     conn,  # asyncpg Connection
     highest_qds: Optional[int] = None,
+    current_qds: Optional[int] = None,
 ) -> None:
     """
     Write Phase 1 profile_signals to the users table, applying all merge rules.
@@ -213,7 +214,8 @@ async def write_profile_signals(
                 condition_flags         = $5,
                 complications_mentioned = $6,
                 location_hint           = $7,
-                highest_qds_ever        = $8
+                highest_qds_ever        = $8,
+                lifetime_score          = LEAST(lifetime_score + $9, 100.0)
             WHERE user_id = $1
             """,
             user_id,
@@ -224,6 +226,7 @@ async def write_profile_signals(
             new_complications,
             new_location,
             new_highest_qds,
+            float(current_qds or 0),
         )
 
         log.debug(

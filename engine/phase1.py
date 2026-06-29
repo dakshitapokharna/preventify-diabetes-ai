@@ -201,6 +201,7 @@ async def handle_phase1(
         signals=phase1_output["profile_signals"],
         conn=db_conn,
         highest_qds=phase1_output.get("qds_score"),
+        current_qds=phase1_output.get("qds_score"),
     )
 
     # ── Step 3: Run Phase 2 RAG pipeline (conditional) ────────────────────────

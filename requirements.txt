@@ -30,6 +30,9 @@ anthropic
 # HTTP client (memory_compressor.py async calls to OpenRouter)
 httpx
 
+# Translation
+deep-translator
+
 # Utilities
 python-dotenv
 tqdm
